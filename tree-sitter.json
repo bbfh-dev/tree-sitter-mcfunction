@@ -1,41 +1,44 @@
 {
-  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
-  "grammars": [
-    {
-      "name": "mcfunction",
-      "camelcase": "MCFunction",
-      "title": "MCFunction",
-      "scope": "source.mcfunction",
-      "file-types": [
-        "mcfunction",
-        "bolt"
-      ],
-      "injection-regex": "^mcfunction$",
-      "class-name": "TreeSitterMcfunction"
-    }
-  ],
-  "metadata": {
-    "version": "1.0.0",
-    "license": "ISC",
-    "description": "Tree-sitter for the latest version of Minecraft mcfunction syntax",
-    "authors": [
-      {
-        "name": "BubbleFish",
-        "email": "daforsastudia@gmail.com",
-        "url": "https://bbfh.me/"
-      }
-    ],
-    "links": {
-      "repository": "https://github.com/bbfh-dev/tree-sitter-mcfunction"
-    }
-  },
-  "bindings": {
-    "c": true,
-    "go": true,
-    "node": true,
-    "python": true,
-    "rust": true,
-    "swift": true,
-    "zig": false
-  }
+	"$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+	"grammars": [
+		{
+			"name": "mcfunction",
+			"camelcase": "MCFunction",
+			"title": "MCFunction",
+			"scope": "source.mcfunction",
+			"file-types": [
+				"mcfunction",
+				"bolt"
+			],
+			"highlights": "queries/tome/highlights.scm",
+			"injection-regex": "^mcfunction$",
+			"class-name": "TreeSitterMcfunction"
+		}
+	],
+	"metadata": {
+		"version": "1.0.0",
+		"license": "ISC",
+		"description": "Tree-sitter for the latest version of Minecraft mcfunction syntax",
+		"authors": [
+			{
+				"name": "BubbleFish",
+				"email": "daforsastudia@gmail.com",
+				"url": "https://bbfh.me/"
+			}
+		],
+		"links": {
+			"repository": "https://github.com/bbfh-dev/tree-sitter-mcfunction",
+			"funding": "https://opencollective.com/bbfh"
+		}
+	},
+	"bindings": {
+		"c": true,
+		"go": true,
+		"node": true,
+		"python": true,
+		"rust": true,
+		"swift": true,
+		"zig": false
+	}
 }
+
