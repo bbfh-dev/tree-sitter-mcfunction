@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=62.4.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tree-sitter-mcfunction"
+description = "Tree-sitter for the latest version of Minecraft mcfunction syntax"
+version = "1.0.0"
+keywords = ["incremental", "parsing", "tree-sitter", "mcfunction"]
+classifiers = [
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Compilers",
+  "Topic :: Text Processing :: Linguistic",
+  "Typing :: Typed",
+]
+authors = [{ name = "BubbleFish", email = "daforsastudia@gmail.com" }]
+requires-python = ">=3.10"
+license.text = "ISC"
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/bbfh-dev/tree-sitter-mcfunction"
+
+[project.optional-dependencies]
+core = ["tree-sitter~=0.24"]
+
+[tool.cibuildwheel]
+build = "cp310-*"
+build-frontend = "build"
