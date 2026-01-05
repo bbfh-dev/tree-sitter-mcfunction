@@ -391,7 +391,7 @@ module.exports = grammar({
 				/player\.crafting\.[\d\*]+/,
 				"contents",
 				"player.cursor",
-				/(weapon|armor|horse)(\.[a-z\*]+)?/
+				/(weapon|armor|horse)\.[a-z\*]+/
 			),
 
 		string: (_) => choice(/[-\+\._a-zA-Z0-9]+/, seq('"', /[^"]*/, '"')),
