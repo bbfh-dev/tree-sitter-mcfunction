@@ -10,15 +10,18 @@
  (subcommand_identifier)
 ] @keyword
 
-(command_keyword) @tag
-
 [
   (string)
 ] @constant
 
+[
+  (slot)
+] @number
+
 (resource) @string
 
 [
+ (command_keyword)
  (selector)
  (position)
  (rotation)
