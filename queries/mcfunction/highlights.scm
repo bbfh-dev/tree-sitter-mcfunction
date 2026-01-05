@@ -29,7 +29,7 @@
  (boolean)
  "~"
  "^"
-] @function
+] @variable
 
 [
  (macro_identifier)
