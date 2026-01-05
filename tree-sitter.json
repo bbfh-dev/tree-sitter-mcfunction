@@ -10,7 +10,7 @@
 				"mcfunction",
 				"bolt"
 			],
-			"highlights": "queries/tome/highlights.scm",
+			"highlights": "queries/mcfunction/highlights.scm",
 			"injection-regex": "^mcfunction$",
 			"class-name": "TreeSitterMcfunction"
 		}
@@ -41,4 +41,3 @@
 		"zig": false
 	}
 }
-

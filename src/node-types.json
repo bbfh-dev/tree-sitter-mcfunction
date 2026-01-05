@@ -1,0 +1,1194 @@
+[
+  {
+    "type": "argument",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "command_keyword",
+          "named": true
+        },
+        {
+          "type": "heightmap",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "resource",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "scale",
+          "named": true
+        },
+        {
+          "type": "selector",
+          "named": true
+        },
+        {
+          "type": "slot",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "command",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "argument",
+          "named": true
+        },
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_identifier",
+          "named": true
+        },
+        {
+          "type": "heightmap",
+          "named": true
+        },
+        {
+          "type": "macro_identifier",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "resource",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "scale",
+          "named": true
+        },
+        {
+          "type": "selector",
+          "named": true
+        },
+        {
+          "type": "slot",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "subcommand_identifier",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "command_identifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "command_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "macro",
+    "named": true,
+    "extra": true,
+    "fields": {}
+  },
+  {
+    "type": "position",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "scale",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rotation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "scale",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "selector",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "slot",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "subcommand_identifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": " ",
+    "named": false
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "$(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "^",
+    "named": false
+  },
+  {
+    "type": "add",
+    "named": false
+  },
+  {
+    "type": "add_multiplied_base",
+    "named": false
+  },
+  {
+    "type": "add_multiplied_total",
+    "named": false
+  },
+  {
+    "type": "add_value",
+    "named": false
+  },
+  {
+    "type": "advancement",
+    "named": false
+  },
+  {
+    "type": "align",
+    "named": false
+  },
+  {
+    "type": "all",
+    "named": false
+  },
+  {
+    "type": "amount",
+    "named": false
+  },
+  {
+    "type": "anchored",
+    "named": false
+  },
+  {
+    "type": "append",
+    "named": false
+  },
+  {
+    "type": "as",
+    "named": false
+  },
+  {
+    "type": "at",
+    "named": false
+  },
+  {
+    "type": "attacker",
+    "named": false
+  },
+  {
+    "type": "attribute",
+    "named": false
+  },
+  {
+    "type": "backslash",
+    "named": true
+  },
+  {
+    "type": "ban",
+    "named": false
+  },
+  {
+    "type": "ban-ip",
+    "named": false
+  },
+  {
+    "type": "banlist",
+    "named": false
+  },
+  {
+    "type": "base",
+    "named": false
+  },
+  {
+    "type": "biome",
+    "named": false
+  },
+  {
+    "type": "block",
+    "named": false
+  },
+  {
+    "type": "blocks",
+    "named": false
+  },
+  {
+    "type": "boolean",
+    "named": true
+  },
+  {
+    "type": "bossbar",
+    "named": false
+  },
+  {
+    "type": "buffer",
+    "named": false
+  },
+  {
+    "type": "by",
+    "named": false
+  },
+  {
+    "type": "center",
+    "named": false
+  },
+  {
+    "type": "clear",
+    "named": false
+  },
+  {
+    "type": "clone",
+    "named": false
+  },
+  {
+    "type": "color",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "contents",
+    "named": false
+  },
+  {
+    "type": "controller",
+    "named": false
+  },
+  {
+    "type": "create",
+    "named": false
+  },
+  {
+    "type": "damage",
+    "named": false
+  },
+  {
+    "type": "data",
+    "named": false
+  },
+  {
+    "type": "datapack",
+    "named": false
+  },
+  {
+    "type": "day",
+    "named": false
+  },
+  {
+    "type": "daytime",
+    "named": false
+  },
+  {
+    "type": "debug",
+    "named": false
+  },
+  {
+    "type": "defaultgamemode",
+    "named": false
+  },
+  {
+    "type": "deop",
+    "named": false
+  },
+  {
+    "type": "destroy",
+    "named": false
+  },
+  {
+    "type": "dialog",
+    "named": false
+  },
+  {
+    "type": "difficulty",
+    "named": false
+  },
+  {
+    "type": "dimension",
+    "named": false
+  },
+  {
+    "type": "disable",
+    "named": false
+  },
+  {
+    "type": "dismount",
+    "named": false
+  },
+  {
+    "type": "distance",
+    "named": false
+  },
+  {
+    "type": "effect",
+    "named": false
+  },
+  {
+    "type": "enable",
+    "named": false
+  },
+  {
+    "type": "enchant",
+    "named": false
+  },
+  {
+    "type": "entity",
+    "named": false
+  },
+  {
+    "type": "everything",
+    "named": false
+  },
+  {
+    "type": "execute",
+    "named": false
+  },
+  {
+    "type": "experience",
+    "named": false
+  },
+  {
+    "type": "export",
+    "named": false
+  },
+  {
+    "type": "exportclosest",
+    "named": false
+  },
+  {
+    "type": "exportthat",
+    "named": false
+  },
+  {
+    "type": "exportthese",
+    "named": false
+  },
+  {
+    "type": "eyes",
+    "named": false
+  },
+  {
+    "type": "facing",
+    "named": false
+  },
+  {
+    "type": "fail",
+    "named": false
+  },
+  {
+    "type": "feature",
+    "named": false
+  },
+  {
+    "type": "feet",
+    "named": false
+  },
+  {
+    "type": "fetchprofile",
+    "named": false
+  },
+  {
+    "type": "fill",
+    "named": false
+  },
+  {
+    "type": "fillbiome",
+    "named": false
+  },
+  {
+    "type": "fish",
+    "named": false
+  },
+  {
+    "type": "flush",
+    "named": false
+  },
+  {
+    "type": "force",
+    "named": false
+  },
+  {
+    "type": "forceload",
+    "named": false
+  },
+  {
+    "type": "from",
+    "named": false
+  },
+  {
+    "type": "function",
+    "named": false
+  },
+  {
+    "type": "gamemode",
+    "named": false
+  },
+  {
+    "type": "gamerule",
+    "named": false
+  },
+  {
+    "type": "gametime",
+    "named": false
+  },
+  {
+    "type": "get",
+    "named": false
+  },
+  {
+    "type": "give",
+    "named": false
+  },
+  {
+    "type": "grant",
+    "named": false
+  },
+  {
+    "type": "heightmap",
+    "named": true
+  },
+  {
+    "type": "help",
+    "named": false
+  },
+  {
+    "type": "hollow",
+    "named": false
+  },
+  {
+    "type": "id",
+    "named": false
+  },
+  {
+    "type": "if",
+    "named": false
+  },
+  {
+    "type": "in",
+    "named": false
+  },
+  {
+    "type": "insert",
+    "named": false
+  },
+  {
+    "type": "ips",
+    "named": false
+  },
+  {
+    "type": "item",
+    "named": false
+  },
+  {
+    "type": "items",
+    "named": false
+  },
+  {
+    "type": "jfr",
+    "named": false
+  },
+  {
+    "type": "jigsaw",
+    "named": false
+  },
+  {
+    "type": "join",
+    "named": false
+  },
+  {
+    "type": "keep",
+    "named": false
+  },
+  {
+    "type": "kick",
+    "named": false
+  },
+  {
+    "type": "kill",
+    "named": false
+  },
+  {
+    "type": "leasher",
+    "named": false
+  },
+  {
+    "type": "leave",
+    "named": false
+  },
+  {
+    "type": "levels",
+    "named": false
+  },
+  {
+    "type": "list",
+    "named": false
+  },
+  {
+    "type": "loaded",
+    "named": false
+  },
+  {
+    "type": "locate",
+    "named": false
+  },
+  {
+    "type": "loot",
+    "named": false
+  },
+  {
+    "type": "macro_identifier",
+    "named": true
+  },
+  {
+    "type": "mainhand",
+    "named": false
+  },
+  {
+    "type": "masked",
+    "named": false
+  },
+  {
+    "type": "max",
+    "named": false
+  },
+  {
+    "type": "me",
+    "named": false
+  },
+  {
+    "type": "merge",
+    "named": false
+  },
+  {
+    "type": "midnight",
+    "named": false
+  },
+  {
+    "type": "mine",
+    "named": false
+  },
+  {
+    "type": "modifier",
+    "named": false
+  },
+  {
+    "type": "modify",
+    "named": false
+  },
+  {
+    "type": "mount",
+    "named": false
+  },
+  {
+    "type": "move",
+    "named": false
+  },
+  {
+    "type": "msg",
+    "named": false
+  },
+  {
+    "type": "name",
+    "named": false
+  },
+  {
+    "type": "night",
+    "named": false
+  },
+  {
+    "type": "noon",
+    "named": false
+  },
+  {
+    "type": "normal",
+    "named": false
+  },
+  {
+    "type": "off",
+    "named": false
+  },
+  {
+    "type": "offhand",
+    "named": false
+  },
+  {
+    "type": "on",
+    "named": false
+  },
+  {
+    "type": "only",
+    "named": false
+  },
+  {
+    "type": "op",
+    "named": false
+  },
+  {
+    "type": "origin",
+    "named": false
+  },
+  {
+    "type": "outline",
+    "named": false
+  },
+  {
+    "type": "over",
+    "named": false
+  },
+  {
+    "type": "owner",
+    "named": false
+  },
+  {
+    "type": "pardon",
+    "named": false
+  },
+  {
+    "type": "pardon-ip",
+    "named": false
+  },
+  {
+    "type": "particle",
+    "named": false
+  },
+  {
+    "type": "passengers",
+    "named": false
+  },
+  {
+    "type": "perf",
+    "named": false
+  },
+  {
+    "type": "place",
+    "named": false
+  },
+  {
+    "type": "player.cursor",
+    "named": false
+  },
+  {
+    "type": "players",
+    "named": false
+  },
+  {
+    "type": "playsound",
+    "named": false
+  },
+  {
+    "type": "poi",
+    "named": false
+  },
+  {
+    "type": "points",
+    "named": false
+  },
+  {
+    "type": "pos",
+    "named": false
+  },
+  {
+    "type": "positioned",
+    "named": false
+  },
+  {
+    "type": "predicate",
+    "named": false
+  },
+  {
+    "type": "prepend",
+    "named": false
+  },
+  {
+    "type": "publish",
+    "named": false
+  },
+  {
+    "type": "query",
+    "named": false
+  },
+  {
+    "type": "rain",
+    "named": false
+  },
+  {
+    "type": "random",
+    "named": false
+  },
+  {
+    "type": "recipe",
+    "named": false
+  },
+  {
+    "type": "reload",
+    "named": false
+  },
+  {
+    "type": "remove",
+    "named": false
+  },
+  {
+    "type": "replace",
+    "named": false
+  },
+  {
+    "type": "reset",
+    "named": false
+  },
+  {
+    "type": "resetclosest",
+    "named": false
+  },
+  {
+    "type": "resetthat",
+    "named": false
+  },
+  {
+    "type": "resetthese",
+    "named": false
+  },
+  {
+    "type": "resource",
+    "named": true
+  },
+  {
+    "type": "result",
+    "named": false
+  },
+  {
+    "type": "return",
+    "named": false
+  },
+  {
+    "type": "revoke",
+    "named": false
+  },
+  {
+    "type": "ride",
+    "named": false
+  },
+  {
+    "type": "roll",
+    "named": false
+  },
+  {
+    "type": "rotate",
+    "named": false
+  },
+  {
+    "type": "rotated",
+    "named": false
+  },
+  {
+    "type": "run",
+    "named": false
+  },
+  {
+    "type": "runclosest",
+    "named": false
+  },
+  {
+    "type": "runfailed",
+    "named": false
+  },
+  {
+    "type": "runthat",
+    "named": false
+  },
+  {
+    "type": "runthese",
+    "named": false
+  },
+  {
+    "type": "save-all",
+    "named": false
+  },
+  {
+    "type": "save-off",
+    "named": false
+  },
+  {
+    "type": "save-on",
+    "named": false
+  },
+  {
+    "type": "say",
+    "named": false
+  },
+  {
+    "type": "scale",
+    "named": true
+  },
+  {
+    "type": "schedule",
+    "named": false
+  },
+  {
+    "type": "score",
+    "named": false
+  },
+  {
+    "type": "scoreboard",
+    "named": false
+  },
+  {
+    "type": "seed",
+    "named": false
+  },
+  {
+    "type": "set",
+    "named": false
+  },
+  {
+    "type": "setblock",
+    "named": false
+  },
+  {
+    "type": "setdisplay",
+    "named": false
+  },
+  {
+    "type": "setidletimeout",
+    "named": false
+  },
+  {
+    "type": "setworldspawn",
+    "named": false
+  },
+  {
+    "type": "show",
+    "named": false
+  },
+  {
+    "type": "spawn",
+    "named": false
+  },
+  {
+    "type": "spawnpoint",
+    "named": false
+  },
+  {
+    "type": "spectate",
+    "named": false
+  },
+  {
+    "type": "spreadplayers",
+    "named": false
+  },
+  {
+    "type": "start",
+    "named": false
+  },
+  {
+    "type": "stop",
+    "named": false
+  },
+  {
+    "type": "stopsound",
+    "named": false
+  },
+  {
+    "type": "storage",
+    "named": false
+  },
+  {
+    "type": "store",
+    "named": false
+  },
+  {
+    "type": "strict",
+    "named": false
+  },
+  {
+    "type": "string",
+    "named": false
+  },
+  {
+    "type": "structure",
+    "named": false
+  },
+  {
+    "type": "style",
+    "named": false
+  },
+  {
+    "type": "success",
+    "named": false
+  },
+  {
+    "type": "summon",
+    "named": false
+  },
+  {
+    "type": "swing",
+    "named": false
+  },
+  {
+    "type": "tag",
+    "named": false
+  },
+  {
+    "type": "take",
+    "named": false
+  },
+  {
+    "type": "target",
+    "named": false
+  },
+  {
+    "type": "team",
+    "named": false
+  },
+  {
+    "type": "teammsg",
+    "named": false
+  },
+  {
+    "type": "teleport",
+    "named": false
+  },
+  {
+    "type": "tell",
+    "named": false
+  },
+  {
+    "type": "tellraw",
+    "named": false
+  },
+  {
+    "type": "template",
+    "named": false
+  },
+  {
+    "type": "test",
+    "named": false
+  },
+  {
+    "type": "through",
+    "named": false
+  },
+  {
+    "type": "thunder",
+    "named": false
+  },
+  {
+    "type": "time",
+    "named": false
+  },
+  {
+    "type": "times",
+    "named": false
+  },
+  {
+    "type": "title",
+    "named": false
+  },
+  {
+    "type": "tm",
+    "named": false
+  },
+  {
+    "type": "to",
+    "named": false
+  },
+  {
+    "type": "tp",
+    "named": false
+  },
+  {
+    "type": "transfer",
+    "named": false
+  },
+  {
+    "type": "trigger",
+    "named": false
+  },
+  {
+    "type": "type",
+    "named": true
+  },
+  {
+    "type": "under",
+    "named": false
+  },
+  {
+    "type": "unless",
+    "named": false
+  },
+  {
+    "type": "until",
+    "named": false
+  },
+  {
+    "type": "uuids",
+    "named": false
+  },
+  {
+    "type": "value",
+    "named": false
+  },
+  {
+    "type": "vehicle",
+    "named": false
+  },
+  {
+    "type": "verify",
+    "named": false
+  },
+  {
+    "type": "version",
+    "named": false
+  },
+  {
+    "type": "visible",
+    "named": false
+  },
+  {
+    "type": "w",
+    "named": false
+  },
+  {
+    "type": "warning",
+    "named": false
+  },
+  {
+    "type": "waypoint",
+    "named": false
+  },
+  {
+    "type": "weather",
+    "named": false
+  },
+  {
+    "type": "whitelist",
+    "named": false
+  },
+  {
+    "type": "with",
+    "named": false
+  },
+  {
+    "type": "worldborder",
+    "named": false
+  },
+  {
+    "type": "xp",
+    "named": false
+  },
+  {
+    "type": "~",
+    "named": false
+  }
+]

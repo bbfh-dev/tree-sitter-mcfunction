@@ -1,0 +1,1559 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
+  "name": "mcfunction",
+  "rules": {
+    "source_file": {
+      "type": "REPEAT",
+      "content": {
+        "type": "SYMBOL",
+        "name": "_statement"
+      }
+    },
+    "_newline": {
+      "type": "PATTERN",
+      "value": "\\r?\\n"
+    },
+    "_space": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": " "
+        },
+        {
+          "type": "SYMBOL",
+          "name": "backslash"
+        }
+      ]
+    },
+    "backslash": {
+      "type": "PATTERN",
+      "value": "\\s*\\\\\\r?\\n\\s*"
+    },
+    "_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "PATTERN",
+              "value": "\\s+"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "comment"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "command"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_newline"
+        }
+      ]
+    },
+    "command": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "macro_identifier"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "PREC_RIGHT",
+              "value": 2,
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "execute"
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
+                      "type": "SEQ",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "_space"
+                        },
+                        {
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "selector"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "position"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "rotation"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "heightmap"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "resource"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "scale"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "type"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "slot"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "string"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "boolean"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "subcommand_identifier"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "_space"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "run"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "_space"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "command"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "PREC_LEFT",
+              "value": 2,
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "command_identifier"
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
+                      "type": "SEQ",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "_space"
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "argument"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "command_identifier": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "advancement"
+        },
+        {
+          "type": "STRING",
+          "value": "attribute"
+        },
+        {
+          "type": "STRING",
+          "value": "ban"
+        },
+        {
+          "type": "STRING",
+          "value": "ban-ip"
+        },
+        {
+          "type": "STRING",
+          "value": "banlist"
+        },
+        {
+          "type": "STRING",
+          "value": "bossbar"
+        },
+        {
+          "type": "STRING",
+          "value": "clear"
+        },
+        {
+          "type": "STRING",
+          "value": "clone"
+        },
+        {
+          "type": "STRING",
+          "value": "damage"
+        },
+        {
+          "type": "STRING",
+          "value": "data"
+        },
+        {
+          "type": "STRING",
+          "value": "datapack"
+        },
+        {
+          "type": "STRING",
+          "value": "debug"
+        },
+        {
+          "type": "STRING",
+          "value": "defaultgamemode"
+        },
+        {
+          "type": "STRING",
+          "value": "deop"
+        },
+        {
+          "type": "STRING",
+          "value": "dialog"
+        },
+        {
+          "type": "STRING",
+          "value": "difficulty"
+        },
+        {
+          "type": "STRING",
+          "value": "effect"
+        },
+        {
+          "type": "STRING",
+          "value": "enchant"
+        },
+        {
+          "type": "STRING",
+          "value": "experience"
+        },
+        {
+          "type": "STRING",
+          "value": "fetchprofile"
+        },
+        {
+          "type": "STRING",
+          "value": "fill"
+        },
+        {
+          "type": "STRING",
+          "value": "fillbiome"
+        },
+        {
+          "type": "STRING",
+          "value": "forceload"
+        },
+        {
+          "type": "STRING",
+          "value": "function"
+        },
+        {
+          "type": "STRING",
+          "value": "gamemode"
+        },
+        {
+          "type": "STRING",
+          "value": "gamerule"
+        },
+        {
+          "type": "STRING",
+          "value": "give"
+        },
+        {
+          "type": "STRING",
+          "value": "help"
+        },
+        {
+          "type": "STRING",
+          "value": "item"
+        },
+        {
+          "type": "STRING",
+          "value": "jfr"
+        },
+        {
+          "type": "STRING",
+          "value": "kick"
+        },
+        {
+          "type": "STRING",
+          "value": "kill"
+        },
+        {
+          "type": "STRING",
+          "value": "list"
+        },
+        {
+          "type": "STRING",
+          "value": "locate"
+        },
+        {
+          "type": "STRING",
+          "value": "loot"
+        },
+        {
+          "type": "STRING",
+          "value": "me"
+        },
+        {
+          "type": "STRING",
+          "value": "msg"
+        },
+        {
+          "type": "STRING",
+          "value": "op"
+        },
+        {
+          "type": "STRING",
+          "value": "pardon"
+        },
+        {
+          "type": "STRING",
+          "value": "pardon-ip"
+        },
+        {
+          "type": "STRING",
+          "value": "particle"
+        },
+        {
+          "type": "STRING",
+          "value": "perf"
+        },
+        {
+          "type": "STRING",
+          "value": "place"
+        },
+        {
+          "type": "STRING",
+          "value": "playsound"
+        },
+        {
+          "type": "STRING",
+          "value": "publish"
+        },
+        {
+          "type": "STRING",
+          "value": "random"
+        },
+        {
+          "type": "STRING",
+          "value": "recipe"
+        },
+        {
+          "type": "STRING",
+          "value": "reload"
+        },
+        {
+          "type": "STRING",
+          "value": "return"
+        },
+        {
+          "type": "STRING",
+          "value": "ride"
+        },
+        {
+          "type": "STRING",
+          "value": "rotate"
+        },
+        {
+          "type": "STRING",
+          "value": "save-all"
+        },
+        {
+          "type": "STRING",
+          "value": "save-off"
+        },
+        {
+          "type": "STRING",
+          "value": "save-on"
+        },
+        {
+          "type": "STRING",
+          "value": "say"
+        },
+        {
+          "type": "STRING",
+          "value": "schedule"
+        },
+        {
+          "type": "STRING",
+          "value": "scoreboard"
+        },
+        {
+          "type": "STRING",
+          "value": "seed"
+        },
+        {
+          "type": "STRING",
+          "value": "setblock"
+        },
+        {
+          "type": "STRING",
+          "value": "setidletimeout"
+        },
+        {
+          "type": "STRING",
+          "value": "setworldspawn"
+        },
+        {
+          "type": "STRING",
+          "value": "spawnpoint"
+        },
+        {
+          "type": "STRING",
+          "value": "spectate"
+        },
+        {
+          "type": "STRING",
+          "value": "spreadplayers"
+        },
+        {
+          "type": "STRING",
+          "value": "stop"
+        },
+        {
+          "type": "STRING",
+          "value": "stopsound"
+        },
+        {
+          "type": "STRING",
+          "value": "summon"
+        },
+        {
+          "type": "STRING",
+          "value": "swing"
+        },
+        {
+          "type": "STRING",
+          "value": "tag"
+        },
+        {
+          "type": "STRING",
+          "value": "team"
+        },
+        {
+          "type": "STRING",
+          "value": "teammsg"
+        },
+        {
+          "type": "STRING",
+          "value": "teleport"
+        },
+        {
+          "type": "STRING",
+          "value": "tell"
+        },
+        {
+          "type": "STRING",
+          "value": "tellraw"
+        },
+        {
+          "type": "STRING",
+          "value": "test"
+        },
+        {
+          "type": "STRING",
+          "value": "time"
+        },
+        {
+          "type": "STRING",
+          "value": "title"
+        },
+        {
+          "type": "STRING",
+          "value": "tm"
+        },
+        {
+          "type": "STRING",
+          "value": "tp"
+        },
+        {
+          "type": "STRING",
+          "value": "transfer"
+        },
+        {
+          "type": "STRING",
+          "value": "trigger"
+        },
+        {
+          "type": "STRING",
+          "value": "version"
+        },
+        {
+          "type": "STRING",
+          "value": "w"
+        },
+        {
+          "type": "STRING",
+          "value": "waypoint"
+        },
+        {
+          "type": "STRING",
+          "value": "weather"
+        },
+        {
+          "type": "STRING",
+          "value": "whitelist"
+        },
+        {
+          "type": "STRING",
+          "value": "worldborder"
+        },
+        {
+          "type": "STRING",
+          "value": "xp"
+        }
+      ]
+    },
+    "subcommand_identifier": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "align"
+        },
+        {
+          "type": "STRING",
+          "value": "anchored"
+        },
+        {
+          "type": "STRING",
+          "value": "eyes"
+        },
+        {
+          "type": "STRING",
+          "value": "feet"
+        },
+        {
+          "type": "STRING",
+          "value": "as"
+        },
+        {
+          "type": "STRING",
+          "value": "at"
+        },
+        {
+          "type": "STRING",
+          "value": "facing"
+        },
+        {
+          "type": "STRING",
+          "value": "biome"
+        },
+        {
+          "type": "STRING",
+          "value": "block"
+        },
+        {
+          "type": "STRING",
+          "value": "blocks"
+        },
+        {
+          "type": "STRING",
+          "value": "items"
+        },
+        {
+          "type": "STRING",
+          "value": "entity"
+        },
+        {
+          "type": "STRING",
+          "value": "bossbar"
+        },
+        {
+          "type": "STRING",
+          "value": "score"
+        },
+        {
+          "type": "STRING",
+          "value": "storage"
+        },
+        {
+          "type": "STRING",
+          "value": "in"
+        },
+        {
+          "type": "STRING",
+          "value": "on"
+        },
+        {
+          "type": "STRING",
+          "value": "attacker"
+        },
+        {
+          "type": "STRING",
+          "value": "controller"
+        },
+        {
+          "type": "STRING",
+          "value": "leasher"
+        },
+        {
+          "type": "STRING",
+          "value": "origin"
+        },
+        {
+          "type": "STRING",
+          "value": "owner"
+        },
+        {
+          "type": "STRING",
+          "value": "passengers"
+        },
+        {
+          "type": "STRING",
+          "value": "target"
+        },
+        {
+          "type": "STRING",
+          "value": "vehicle"
+        },
+        {
+          "type": "STRING",
+          "value": "positioned"
+        },
+        {
+          "type": "STRING",
+          "value": "over"
+        },
+        {
+          "type": "STRING",
+          "value": "rotated"
+        },
+        {
+          "type": "STRING",
+          "value": "store"
+        },
+        {
+          "type": "STRING",
+          "value": "result"
+        },
+        {
+          "type": "STRING",
+          "value": "success"
+        },
+        {
+          "type": "STRING",
+          "value": "max"
+        },
+        {
+          "type": "STRING",
+          "value": "value"
+        },
+        {
+          "type": "STRING",
+          "value": "summon"
+        },
+        {
+          "type": "STRING",
+          "value": "if"
+        },
+        {
+          "type": "STRING",
+          "value": "unless"
+        },
+        {
+          "type": "STRING",
+          "value": "data"
+        },
+        {
+          "type": "STRING",
+          "value": "all"
+        },
+        {
+          "type": "STRING",
+          "value": "masked"
+        },
+        {
+          "type": "STRING",
+          "value": "dimension"
+        },
+        {
+          "type": "STRING",
+          "value": "function"
+        },
+        {
+          "type": "STRING",
+          "value": "items"
+        },
+        {
+          "type": "STRING",
+          "value": "loaded"
+        },
+        {
+          "type": "STRING",
+          "value": "predicate"
+        },
+        {
+          "type": "STRING",
+          "value": "score"
+        }
+      ]
+    },
+    "macro_identifier": {
+      "type": "PATTERN",
+      "value": "\\$"
+    },
+    "command_keyword": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "add"
+        },
+        {
+          "type": "STRING",
+          "value": "add_multiplied_base"
+        },
+        {
+          "type": "STRING",
+          "value": "add_multiplied_total"
+        },
+        {
+          "type": "STRING",
+          "value": "add_value"
+        },
+        {
+          "type": "STRING",
+          "value": "amount"
+        },
+        {
+          "type": "STRING",
+          "value": "append"
+        },
+        {
+          "type": "STRING",
+          "value": "at"
+        },
+        {
+          "type": "STRING",
+          "value": "base"
+        },
+        {
+          "type": "STRING",
+          "value": "biome"
+        },
+        {
+          "type": "STRING",
+          "value": "buffer"
+        },
+        {
+          "type": "STRING",
+          "value": "by"
+        },
+        {
+          "type": "STRING",
+          "value": "center"
+        },
+        {
+          "type": "STRING",
+          "value": "clear"
+        },
+        {
+          "type": "STRING",
+          "value": "color"
+        },
+        {
+          "type": "STRING",
+          "value": "create"
+        },
+        {
+          "type": "STRING",
+          "value": "damage"
+        },
+        {
+          "type": "STRING",
+          "value": "day"
+        },
+        {
+          "type": "STRING",
+          "value": "daytime"
+        },
+        {
+          "type": "STRING",
+          "value": "destroy"
+        },
+        {
+          "type": "STRING",
+          "value": "disable"
+        },
+        {
+          "type": "STRING",
+          "value": "dismount"
+        },
+        {
+          "type": "STRING",
+          "value": "distance"
+        },
+        {
+          "type": "STRING",
+          "value": "enable"
+        },
+        {
+          "type": "STRING",
+          "value": "everything"
+        },
+        {
+          "type": "STRING",
+          "value": "export"
+        },
+        {
+          "type": "STRING",
+          "value": "exportclosest"
+        },
+        {
+          "type": "STRING",
+          "value": "exportthat"
+        },
+        {
+          "type": "STRING",
+          "value": "exportthese"
+        },
+        {
+          "type": "STRING",
+          "value": "facing"
+        },
+        {
+          "type": "STRING",
+          "value": "fail"
+        },
+        {
+          "type": "STRING",
+          "value": "feature"
+        },
+        {
+          "type": "STRING",
+          "value": "fish"
+        },
+        {
+          "type": "STRING",
+          "value": "flush"
+        },
+        {
+          "type": "STRING",
+          "value": "force"
+        },
+        {
+          "type": "STRING",
+          "value": "from"
+        },
+        {
+          "type": "STRING",
+          "value": "function"
+        },
+        {
+          "type": "STRING",
+          "value": "gametime"
+        },
+        {
+          "type": "STRING",
+          "value": "get"
+        },
+        {
+          "type": "STRING",
+          "value": "give"
+        },
+        {
+          "type": "STRING",
+          "value": "grant"
+        },
+        {
+          "type": "STRING",
+          "value": "hollow"
+        },
+        {
+          "type": "STRING",
+          "value": "id"
+        },
+        {
+          "type": "STRING",
+          "value": "insert"
+        },
+        {
+          "type": "STRING",
+          "value": "ips"
+        },
+        {
+          "type": "STRING",
+          "value": "jigsaw"
+        },
+        {
+          "type": "STRING",
+          "value": "join"
+        },
+        {
+          "type": "STRING",
+          "value": "keep"
+        },
+        {
+          "type": "STRING",
+          "value": "leave"
+        },
+        {
+          "type": "STRING",
+          "value": "levels"
+        },
+        {
+          "type": "STRING",
+          "value": "list"
+        },
+        {
+          "type": "STRING",
+          "value": "locate"
+        },
+        {
+          "type": "STRING",
+          "value": "mainhand"
+        },
+        {
+          "type": "STRING",
+          "value": "max"
+        },
+        {
+          "type": "STRING",
+          "value": "merge"
+        },
+        {
+          "type": "STRING",
+          "value": "midnight"
+        },
+        {
+          "type": "STRING",
+          "value": "mine"
+        },
+        {
+          "type": "STRING",
+          "value": "modifier"
+        },
+        {
+          "type": "STRING",
+          "value": "modify"
+        },
+        {
+          "type": "STRING",
+          "value": "mount"
+        },
+        {
+          "type": "STRING",
+          "value": "move"
+        },
+        {
+          "type": "STRING",
+          "value": "name"
+        },
+        {
+          "type": "STRING",
+          "value": "night"
+        },
+        {
+          "type": "STRING",
+          "value": "noon"
+        },
+        {
+          "type": "STRING",
+          "value": "normal"
+        },
+        {
+          "type": "STRING",
+          "value": "off"
+        },
+        {
+          "type": "STRING",
+          "value": "offhand"
+        },
+        {
+          "type": "STRING",
+          "value": "on"
+        },
+        {
+          "type": "STRING",
+          "value": "only"
+        },
+        {
+          "type": "STRING",
+          "value": "outline"
+        },
+        {
+          "type": "STRING",
+          "value": "players"
+        },
+        {
+          "type": "STRING",
+          "value": "poi"
+        },
+        {
+          "type": "STRING",
+          "value": "points"
+        },
+        {
+          "type": "STRING",
+          "value": "pos"
+        },
+        {
+          "type": "STRING",
+          "value": "prepend"
+        },
+        {
+          "type": "STRING",
+          "value": "query"
+        },
+        {
+          "type": "STRING",
+          "value": "rain"
+        },
+        {
+          "type": "STRING",
+          "value": "reload"
+        },
+        {
+          "type": "STRING",
+          "value": "remove"
+        },
+        {
+          "type": "STRING",
+          "value": "replace"
+        },
+        {
+          "type": "STRING",
+          "value": "reset"
+        },
+        {
+          "type": "STRING",
+          "value": "resetclosest"
+        },
+        {
+          "type": "STRING",
+          "value": "resetthat"
+        },
+        {
+          "type": "STRING",
+          "value": "resetthese"
+        },
+        {
+          "type": "STRING",
+          "value": "revoke"
+        },
+        {
+          "type": "STRING",
+          "value": "roll"
+        },
+        {
+          "type": "STRING",
+          "value": "run"
+        },
+        {
+          "type": "STRING",
+          "value": "runclosest"
+        },
+        {
+          "type": "STRING",
+          "value": "runfailed"
+        },
+        {
+          "type": "STRING",
+          "value": "runthat"
+        },
+        {
+          "type": "STRING",
+          "value": "runthese"
+        },
+        {
+          "type": "STRING",
+          "value": "set"
+        },
+        {
+          "type": "STRING",
+          "value": "setdisplay"
+        },
+        {
+          "type": "STRING",
+          "value": "show"
+        },
+        {
+          "type": "STRING",
+          "value": "spawn"
+        },
+        {
+          "type": "STRING",
+          "value": "start"
+        },
+        {
+          "type": "STRING",
+          "value": "stop"
+        },
+        {
+          "type": "STRING",
+          "value": "strict"
+        },
+        {
+          "type": "STRING",
+          "value": "string"
+        },
+        {
+          "type": "STRING",
+          "value": "structure"
+        },
+        {
+          "type": "STRING",
+          "value": "style"
+        },
+        {
+          "type": "STRING",
+          "value": "take"
+        },
+        {
+          "type": "STRING",
+          "value": "template"
+        },
+        {
+          "type": "STRING",
+          "value": "through"
+        },
+        {
+          "type": "STRING",
+          "value": "thunder"
+        },
+        {
+          "type": "STRING",
+          "value": "time"
+        },
+        {
+          "type": "STRING",
+          "value": "times"
+        },
+        {
+          "type": "STRING",
+          "value": "to"
+        },
+        {
+          "type": "STRING",
+          "value": "under"
+        },
+        {
+          "type": "STRING",
+          "value": "until"
+        },
+        {
+          "type": "STRING",
+          "value": "uuids"
+        },
+        {
+          "type": "STRING",
+          "value": "value"
+        },
+        {
+          "type": "STRING",
+          "value": "verify"
+        },
+        {
+          "type": "STRING",
+          "value": "visible"
+        },
+        {
+          "type": "STRING",
+          "value": "warning"
+        },
+        {
+          "type": "STRING",
+          "value": "with"
+        }
+      ]
+    },
+    "argument": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "selector"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "position"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "rotation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "heightmap"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "resource"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "scale"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "slot"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "boolean"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "command_keyword"
+        }
+      ]
+    },
+    "selector": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "PATTERN",
+              "value": "@[a-z]"
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "PATTERN",
+                  "value": "\\[[^\\]]*\\]"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "position": {
+      "type": "PREC_LEFT",
+      "value": 2,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "~"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PREC",
+                "value": 2,
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "scale"
+                }
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "rotation": {
+      "type": "PREC_LEFT",
+      "value": 2,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "^"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PREC",
+                "value": 2,
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "scale"
+                }
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "heightmap": {
+      "type": "PATTERN",
+      "value": "(world_surface|motion_blocking|motion_blocking_no_leaves|ocean_floor)"
+    },
+    "resource": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "[a-z_]+\\:"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "PATTERN",
+            "value": "[a-z_/][a-z0-9_\\-\\+/]*"
+          }
+        ]
+      }
+    },
+    "scale": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "\\d+"
+              },
+              {
+                "type": "PATTERN",
+                "value": "\\d*\\.\\d+"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "[tsmhd]"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "type": {
+      "type": "PATTERN",
+      "value": "(byte|short|int|long|float|double)"
+    },
+    "slot": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "container\\.[\\d\\*]+"
+        },
+        {
+          "type": "PATTERN",
+          "value": "hotbar\\.[\\d\\*]+"
+        },
+        {
+          "type": "PATTERN",
+          "value": "inventory\\.[\\d\\*]+"
+        },
+        {
+          "type": "PATTERN",
+          "value": "enderchest\\.[\\d\\*]+"
+        },
+        {
+          "type": "PATTERN",
+          "value": "villager\\.[\\d\\*]+"
+        },
+        {
+          "type": "PATTERN",
+          "value": "horse\\.[\\d\\*]+"
+        },
+        {
+          "type": "PATTERN",
+          "value": "player\\.crafting\\.[\\d\\*]+"
+        },
+        {
+          "type": "STRING",
+          "value": "contents"
+        },
+        {
+          "type": "STRING",
+          "value": "player.cursor"
+        },
+        {
+          "type": "PATTERN",
+          "value": "(weapon|armor|horse)(\\.[a-z\\*]+)?"
+        }
+      ]
+    },
+    "string": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "[-\\+\\._a-zA-Z0-9]+"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "\""
+            },
+            {
+              "type": "PATTERN",
+              "value": "[^\"]*"
+            },
+            {
+              "type": "STRING",
+              "value": "\""
+            }
+          ]
+        }
+      ]
+    },
+    "boolean": {
+      "type": "PATTERN",
+      "value": "(true|false)"
+    },
+    "nbt_compound": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{"
+        },
+        {
+          "type": "STRING",
+          "value": "}"
+        }
+      ]
+    },
+    "macro": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "$("
+        },
+        {
+          "type": "PATTERN",
+          "value": "[a-zA-Z_]+"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "comment": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "#"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[^\\r\\n]*"
+          }
+        ]
+      }
+    }
+  },
+  "extras": [
+    {
+      "type": "SYMBOL",
+      "name": "macro"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": [],
+  "reserved": {}
+}
