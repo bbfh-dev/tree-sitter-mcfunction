@@ -5,6 +5,7 @@
 
 [
  "execute"
+ "run"
  (command_identifier)
  (subcommand_identifier)
 ] @keyword
