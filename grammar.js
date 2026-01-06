@@ -159,9 +159,9 @@ module.exports = grammar({
 				$.nbt_compound,
 				$.nbt_array,
 				$.range,
-				$.nbt_identifier,
-				$.boolean,
-				$.scale
+				$.scale,
+				$.string,
+				$.boolean
 			),
 
 		range: (_) => token(choice(/\-?\d+\.\.\-?\d*/, /\-?\d*\.\.\-?\d+/)),

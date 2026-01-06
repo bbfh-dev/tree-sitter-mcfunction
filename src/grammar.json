@@ -1848,15 +1848,15 @@
         },
         {
           "type": "SYMBOL",
-          "name": "nbt_identifier"
+          "name": "scale"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
         },
         {
           "type": "SYMBOL",
           "name": "boolean"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "scale"
         }
       ]
     },

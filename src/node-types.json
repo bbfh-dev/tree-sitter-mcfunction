@@ -236,15 +236,15 @@
           "named": true
         },
         {
-          "type": "nbt_identifier",
-          "named": true
-        },
-        {
           "type": "range",
           "named": true
         },
         {
           "type": "scale",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -284,6 +284,10 @@
         },
         {
           "type": "scale",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -401,6 +405,10 @@
         },
         {
           "type": "scale",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
