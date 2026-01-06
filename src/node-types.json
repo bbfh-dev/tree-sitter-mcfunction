@@ -970,6 +970,10 @@
     "named": false
   },
   {
+    "type": "matches",
+    "named": false
+  },
+  {
     "type": "max",
     "named": false
   },

@@ -723,6 +723,10 @@
         },
         {
           "type": "STRING",
+          "value": "matches"
+        },
+        {
+          "type": "STRING",
           "value": "max"
         },
         {
