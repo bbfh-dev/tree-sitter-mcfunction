@@ -107,8 +107,8 @@
  "spawn"
  "start"
  "stop"
- "storage",
- "strict",
+ "storage"
+ "strict"
  "string"
  "structure"
  "style"
