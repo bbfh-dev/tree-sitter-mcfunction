@@ -98,6 +98,7 @@ module.exports = [
 	"spawn",
 	"start",
 	"stop",
+	"storage",
 	"strict",
 	"string",
 	"structure",

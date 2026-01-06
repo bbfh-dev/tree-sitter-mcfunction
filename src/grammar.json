@@ -1264,6 +1264,10 @@
         },
         {
           "type": "STRING",
+          "value": "storage"
+        },
+        {
+          "type": "STRING",
           "value": "strict"
         },
         {
