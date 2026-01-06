@@ -11,30 +11,47 @@
 ] @keyword
 
 [
-  (string)
-] @constant
+ (macro_indicator)
+ (macro)
+] @label
 
 [
-  (slot)
-] @number
-
-(resource) @string
-
-[
- (command_keyword)
- (selector)
- (position)
- (rotation)
- (heightmap)
- (type)
- (slot)
- (scale)
  (boolean)
- "~"
- "^"
+ (slot)
+ (type)
+ (heightmap)
+] @type.builtin
+
+[
+ (string)
+] @string
+
+[
+ (resource)
+] @method
+
+[
+ (word)
+ (nbt_identifier)
+ (selector_identifier)
 ] @variable
 
 [
- (macro_identifier)
- (macro)
-] @module
+ (selector_query)
+] @tag
+
+(query_identifier) @namespace
+
+[
+ (scale)
+] @number
+
+[
+ (position)
+ (rotation)
+] @punctuation.special
+
+    ; ├ ƒ argument
+    ; ├ ƒ selector
+    ; ├ ƒ nbt_compound
+    ; └ ƒ nbt_array

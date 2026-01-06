@@ -7,264 +7,24 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
-const SUBCOMMANDS = [
-	"align",
-	"anchored",
-	"eyes",
-	"feet",
-	"as",
-	"at",
-	"facing",
-	"biome",
-	"block",
-	"blocks",
-	"items",
-	"entity",
-	"bossbar",
-	"score",
-	"storage",
-	"in",
-	"on",
-	"attacker",
-	"controller",
-	"leasher",
-	"origin",
-	"owner",
-	"passengers",
-	"target",
-	"vehicle",
-	"positioned",
-	"over",
-	"rotated",
-	"store",
-	"result",
-	"success",
-	"max",
-	"value",
-	"summon",
-	"if",
-	"unless",
-	"data",
-	"all",
-	"masked",
-	"dimension",
-	"function",
-	"items",
-	"loaded",
-	"predicate",
-	"score",
-];
+const EXECUTE_SUBCOMMANDS = require("./data/execute_subcommands.js");
+const GENERIC_COMMANDS = require("./data/generic_commands.js");
+const COMMAND_KEYWORDS = require("./data/command_keywords.js");
 
-const COMMANDS = [
-	"advancement",
-	"attribute",
-	"ban",
-	"ban-ip",
-	"banlist",
-	"bossbar",
-	"clear",
-	"clone",
-	"damage",
-	"data",
-	"datapack",
-	"debug",
-	"defaultgamemode",
-	"deop",
-	"dialog",
-	"difficulty",
-	"effect",
-	"enchant",
-	"experience",
-	"fetchprofile",
-	"fill",
-	"fillbiome",
-	"forceload",
-	"function",
-	"gamemode",
-	"gamerule",
-	"give",
-	"help",
-	"item",
-	"jfr",
-	"kick",
-	"kill",
-	"list",
-	"locate",
-	"loot",
-	"me",
-	"msg",
-	"op",
-	"pardon",
-	"pardon-ip",
-	"particle",
-	"perf",
-	"place",
-	"playsound",
-	"publish",
-	"random",
-	"recipe",
-	"reload",
-	"return",
-	"ride",
-	"rotate",
-	"save-all",
-	"save-off",
-	"save-on",
-	"say",
-	"schedule",
-	"scoreboard",
-	"seed",
-	"setblock",
-	"setidletimeout",
-	"setworldspawn",
-	"spawnpoint",
-	"spectate",
-	"spreadplayers",
-	"stop",
-	"stopsound",
-	"summon",
-	"swing",
-	"tag",
-	"team",
-	"teammsg",
-	"teleport",
-	"tell",
-	"tellraw",
-	"test",
-	"time",
-	"title",
-	"tm",
-	"tp",
-	"transfer",
-	"trigger",
-	"version",
-	"w",
-	"waypoint",
-	"weather",
-	"whitelist",
-	"worldborder",
-	"xp",
-];
-
-const KEYWORDS = [
-	"add",
-	"add_multiplied_base",
-	"add_multiplied_total",
-	"add_value",
-	"amount",
-	"append",
-	"at",
-	"base",
-	"biome",
-	"block",
-	"blocks",
-	"buffer",
-	"by",
-	"center",
-	"clear",
-	"color",
-	"create",
-	"damage",
-	"day",
-	"daytime",
-	"destroy",
-	"disable",
-	"dismount",
-	"distance",
-	"enable",
-	"entity",
-	"everything",
-	"export",
-	"exportclosest",
-	"exportthat",
-	"exportthese",
-	"facing",
-	"fail",
-	"feature",
-	"fish",
-	"flush",
-	"force",
-	"from",
-	"function",
-	"gametime",
-	"get",
-	"give",
-	"grant",
-	"hollow",
-	"id",
-	"insert",
-	"ips",
-	"jigsaw",
-	"join",
-	"keep",
-	"leave",
-	"levels",
-	"list",
-	"locate",
-	"mainhand",
-	"max",
-	"merge",
-	"midnight",
-	"mine",
-	"modifier",
-	"modify",
-	"mount",
-	"move",
-	"name",
-	"night",
-	"noon",
-	"normal",
-	"off",
-	"offhand",
-	"on",
-	"only",
-	"outline",
-	"players",
-	"poi",
-	"points",
-	"pos",
-	"prepend",
-	"query",
-	"rain",
-	"reload",
-	"remove",
-	"replace",
-	"reset",
-	"resetclosest",
-	"resetthat",
-	"resetthese",
-	"revoke",
-	"roll",
-	"run",
-	"runclosest",
-	"runfailed",
-	"runthat",
-	"runthese",
-	"set",
-	"setdisplay",
-	"show",
-	"spawn",
-	"start",
-	"stop",
-	"strict",
-	"string",
-	"structure",
-	"style",
-	"take",
-	"template",
-	"through",
-	"thunder",
-	"time",
-	"times",
-	"to",
-	"under",
-	"until",
-	"uuids",
-	"value",
-	"verify",
-	"visible",
-	"warning",
-	"with",
+const ARGUMENT = ($) => [
+	$.nbt_compound,
+	$.nbt_array,
+	$.selector,
+	$.position,
+	$.rotation,
+	$.heightmap,
+	$.resource,
+	$.scale,
+	$.type,
+	$.slot,
+	$.string,
+	$.word,
+	$.boolean,
 ];
 
 module.exports = grammar({
@@ -277,92 +37,70 @@ module.exports = grammar({
 
 		_newline: (_) => /\r?\n/,
 
-		_space: ($) =>
-			choice(
-				" ",
-				// This monstrocity is a padded backslash that can be used for multi-line statements
-				$.backslash
-			),
+		_space: ($) => choice(/ /, $.backslash),
 
 		backslash: (_) => /\s*\\\r?\n\s*/,
 
-		// A statement is a single Minecraft command
 		_statement: ($) =>
 			seq(
+				// Allow for indentation (such as bolt).
 				optional(/\s+/),
 				optional(choice($.comment, $.command)),
 				$._newline
 			),
 
+		comment: (_) => token(seq("#", /[^\r\n]*/)),
+
 		command: ($) =>
 			seq(
-				optional($.macro_identifier),
-				choice(
-					prec.right(
-						2,
-						seq(
-							"execute",
-							repeat(
-								seq(
-									$._space,
-									choice(
-										$.selector,
-										$.position,
-										$.rotation,
-										$.heightmap,
-										$.resource,
-										$.scale,
-										$.type,
-										$.slot,
-										$.string,
-										$.boolean,
-										$.subcommand_identifier
-									)
-								)
-							),
-							$._space,
-							"run",
-							$._space,
-							$.command
-						)
-					),
-					prec.left(
-						2,
-						seq(
-							$.command_identifier,
-							repeat(seq($._space, $.argument))
-						)
-					)
+				optional($.macro_indicator),
+				choice($._execute_command, $._generic_command)
+			),
+
+		_execute_command: ($) =>
+			prec.right(
+				2,
+				seq(
+					"execute",
+					repeat(seq($._space, $._subcommand)),
+					$._space,
+					"run",
+					$._space,
+					$.command
 				)
 			),
 
-		command_identifier: (_) => choice(...COMMANDS),
+		_subcommand: ($) => choice(...ARGUMENT($), $.subcommand_identifier),
 
-		subcommand_identifier: (_) => choice(...SUBCOMMANDS),
-
-		macro_identifier: (_) => /\$/,
-
-		command_keyword: (_) => choice(...KEYWORDS),
-
-		argument: ($) =>
-			choice(
-				$.selector,
-				$.position,
-				$.rotation,
-				$.heightmap,
-				$.resource,
-				$.scale,
-				$.type,
-				$.slot,
-				$.string,
-				$.boolean,
-				$.command_keyword
+		_generic_command: ($) =>
+			prec.left(
+				2,
+				seq($.command_identifier, repeat(seq($._space, $.argument)))
 			),
 
-		selector: (_) =>
-			choice(
-				// TODO: Actual selector queries
-				seq(/@[a-z]/, optional(/\[[^\]]*\]/))
+		macro_indicator: (_) => /\$/,
+
+		command_identifier: (_) => choice(...GENERIC_COMMANDS),
+		subcommand_identifier: (_) => choice(...EXECUTE_SUBCOMMANDS),
+
+		argument: ($) => choice(...ARGUMENT($), ...COMMAND_KEYWORDS),
+
+		selector: ($) =>
+			seq(
+				$.selector_identifier,
+				optional(seq(/\[/, repeat($.selector_query), /\]/))
+			),
+
+		selector_identifier: (_) => /@[a-z]/,
+
+		query_identifier: (_) => /[-\+\.!:_a-zA-Z0-9]+/,
+
+		selector_query: ($) =>
+			seq(
+				$.query_identifier,
+				choice("=", "=!"),
+				choice(...ARGUMENT($)),
+				optional(/,/)
 			),
 
 		position: ($) => prec.left(2, seq("~", optional(prec(2, $.scale)))),
@@ -372,11 +110,16 @@ module.exports = grammar({
 		heightmap: (_) =>
 			/(world_surface|motion_blocking|motion_blocking_no_leaves|ocean_floor)/,
 
-		resource: (_) =>
-			token(seq(optional(/[a-z_]+\:/), /[a-z_/][a-z0-9_\-\+/]*/)),
+		resource: (_) => token(seq(/[a-z_]+\:/, /[a-z_/][a-z0-9_\-\+/]*/)),
 
-		scale: (_) =>
-			token(seq(choice(/\d+/, /\d*\.\d+/), optional(/[tsmhd]/))),
+		scale: ($) =>
+			seq(
+				optional(/-/),
+				choice(/\d+/, /\d+\.\d*/, /\.\d+/),
+				optional(/[tsmhdf]/)
+			),
+
+		macro: (_) => seq("$(", /[a-zA-Z_]+/, ")"),
 
 		type: (_) => /(byte|short|int|long|float|double)/,
 
@@ -394,14 +137,30 @@ module.exports = grammar({
 				/(weapon|armor|horse)\.[a-z\*]+/
 			),
 
-		string: (_) => choice(/[-\+\._a-zA-Z0-9]+/, seq('"', /[^"]*/, '"')),
+		word: (_) => /[-\+\.!:_a-zA-Z0-9]+/,
+
+		string: (_) => choice(seq('"', /[^"]*/, '"'), seq("'", /[^']*/, "'")),
 
 		boolean: (_) => /(true|false)/,
 
-		nbt_compound: ($) => seq("{", "}"),
+		_nbt_element: ($) =>
+			choice(
+				$.nbt_compound,
+				$.nbt_array,
+				$.nbt_identifier,
+				$.boolean,
+				$.scale
+			),
 
-		macro: (_) => seq("$(", /[a-zA-Z_]+/, ")"),
+		nbt_identifier: ($) => choice($.string, /[-\+\.!_a-zA-Z0-9]+/),
 
-		comment: (_) => token(seq("#", /[^\r\n]*/)),
+		nbt_compound: ($) =>
+			seq(
+				"{",
+				repeat(choice(seq($.nbt_identifier, ":", $._nbt_element), /,/)),
+				"}"
+			),
+
+		nbt_array: ($) => seq("[", repeat(choice($._nbt_element, /,/)), "]"),
 	},
 });
