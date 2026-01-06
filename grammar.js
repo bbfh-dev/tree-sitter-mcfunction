@@ -147,7 +147,7 @@ module.exports = grammar({
 
 		string: (_) => choice(seq('"', /[^"]*/, '"'), seq("'", /[^']*/, "'")),
 
-		boolean: (_) => /(true|false)/,
+		boolean: (_) => /(true|false|1b|0b)/,
 
 		_nbt_element: ($) =>
 			choice(

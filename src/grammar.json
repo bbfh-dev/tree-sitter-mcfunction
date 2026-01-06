@@ -1774,7 +1774,7 @@
     },
     "boolean": {
       "type": "PATTERN",
-      "value": "(true|false)"
+      "value": "(true|false|1b|0b)"
     },
     "_nbt_element": {
       "type": "CHOICE",
