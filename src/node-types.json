@@ -24,6 +24,10 @@
           "named": true
         },
         {
+          "type": "operator",
+          "named": true
+        },
+        {
           "type": "position",
           "named": true
         },
@@ -107,6 +111,10 @@
           "named": true
         },
         {
+          "type": "operator",
+          "named": true
+        },
+        {
           "type": "position",
           "named": true
         },
@@ -185,6 +193,10 @@
           "named": true
         },
         {
+          "type": "range",
+          "named": true
+        },
+        {
           "type": "scale",
           "named": true
         }
@@ -200,6 +212,10 @@
       "required": false,
       "types": [
         {
+          "type": "backslash",
+          "named": true
+        },
+        {
           "type": "boolean",
           "named": true
         },
@@ -213,6 +229,10 @@
         },
         {
           "type": "nbt_identifier",
+          "named": true
+        },
+        {
+          "type": "range",
           "named": true
         },
         {
@@ -238,6 +258,11 @@
     }
   },
   {
+    "type": "operator",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "position",
     "named": true,
     "fields": {},
@@ -251,11 +276,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "query_identifier",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "rotation",
@@ -297,6 +317,49 @@
     }
   },
   {
+    "type": "selector_compound",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "nbt_array",
+          "named": true
+        },
+        {
+          "type": "nbt_compound",
+          "named": true
+        },
+        {
+          "type": "nbt_identifier",
+          "named": true
+        },
+        {
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "resource",
+          "named": true
+        },
+        {
+          "type": "scale",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "selector_query",
     "named": true,
     "fields": {},
@@ -304,6 +367,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
         {
           "type": "boolean",
           "named": true
@@ -318,6 +385,10 @@
         },
         {
           "type": "nbt_compound",
+          "named": true
+        },
+        {
+          "type": "operator",
           "named": true
         },
         {
@@ -342,6 +413,10 @@
         },
         {
           "type": "selector",
+          "named": true
+        },
+        {
+          "type": "selector_compound",
           "named": true
         },
         {
@@ -399,16 +474,15 @@
     "fields": {}
   },
   {
-    "type": "word",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "\"",
     "named": false
   },
   {
     "type": "$(",
+    "named": false
+  },
+  {
+    "type": "%=",
     "named": false
   },
   {
@@ -420,7 +494,27 @@
     "named": false
   },
   {
+    "type": "*=",
+    "named": false
+  },
+  {
+    "type": "+=",
+    "named": false
+  },
+  {
+    "type": "-=",
+    "named": false
+  },
+  {
+    "type": "/=",
+    "named": false
+  },
+  {
     "type": ":",
+    "named": false
+  },
+  {
+    "type": "<",
     "named": false
   },
   {
@@ -429,6 +523,14 @@
   },
   {
     "type": "=!",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "><",
     "named": false
   },
   {
@@ -1028,12 +1130,20 @@
     "named": false
   },
   {
+    "type": "query_identifier",
+    "named": true
+  },
+  {
     "type": "rain",
     "named": false
   },
   {
     "type": "random",
     "named": false
+  },
+  {
+    "type": "range",
+    "named": true
   },
   {
     "type": "recipe",
@@ -1386,6 +1496,10 @@
   {
     "type": "with",
     "named": false
+  },
+  {
+    "type": "word",
+    "named": true
   },
   {
     "type": "worldborder",

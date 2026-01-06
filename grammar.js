@@ -25,12 +25,15 @@ const ARGUMENT = ($) => [
 	$.string,
 	$.word,
 	$.boolean,
+	$.operator,
 ];
 
 module.exports = grammar({
 	name: "mcfunction",
 
 	extras: ($) => [$.macro],
+
+	conflicts: ($) => [[$.nbt_compound, $.selector_compound]],
 
 	rules: {
 		source_file: ($) => repeat($._statement),
@@ -98,30 +101,33 @@ module.exports = grammar({
 		selector_query: ($) =>
 			seq(
 				$.query_identifier,
+				repeat($._space),
 				choice("=", "=!"),
-				choice(...ARGUMENT($)),
+				repeat($._space),
+				choice(...ARGUMENT($), $.selector_compound),
 				optional(/,/)
 			),
 
 		position: ($) => prec.left(2, seq("~", optional(prec(2, $.scale)))),
 
 		rotation: ($) => prec.left(2, seq("^", optional(prec(2, $.scale)))),
-
 		heightmap: (_) =>
 			/(world_surface|motion_blocking|motion_blocking_no_leaves|ocean_floor)/,
 
 		resource: (_) => token(seq(/[a-z_]+\:/, /[a-z_/][a-z0-9_\-\+/]*/)),
 
-		scale: ($) =>
+		scale: (_) =>
 			seq(
 				optional(/-/),
 				choice(/\d+/, /\d+\.\d*/, /\.\d+/),
 				optional(/[tsmhdf]/)
 			),
 
-		macro: (_) => seq("$(", /[a-zA-Z_]+/, ")"),
+		macro: () => seq("$(", /[a-zA-Z_]+/, ")"),
 
 		type: (_) => /(byte|short|int|long|float|double)/,
+
+		operator: (_) => choice("+=", "-=", "*=", "/=", "%=", "><", "<", ">"),
 
 		slot: (_) =>
 			choice(
@@ -137,7 +143,7 @@ module.exports = grammar({
 				/(weapon|armor|horse)\.[a-z\*]+/
 			),
 
-		word: (_) => /[-\+\.!:_a-zA-Z0-9]+/,
+		word: (_) => /[-\+\.!#:_a-zA-Z0-9]+/,
 
 		string: (_) => choice(seq('"', /[^"]*/, '"'), seq("'", /[^']*/, "'")),
 
@@ -147,20 +153,52 @@ module.exports = grammar({
 			choice(
 				$.nbt_compound,
 				$.nbt_array,
+				$.range,
 				$.nbt_identifier,
 				$.boolean,
 				$.scale
 			),
 
-		nbt_identifier: ($) => choice($.string, /[-\+\.!_a-zA-Z0-9]+/),
+		range: (_) => token(choice(/\-?\d+\.\.\-?\d*/, /\-?\d*\.\.\-?\d+/)),
+
+		nbt_identifier: ($) => choice($.string, /[-\+\.#!_a-zA-Z0-9]+/),
 
 		nbt_compound: ($) =>
 			seq(
 				"{",
-				repeat(choice(seq($.nbt_identifier, ":", $._nbt_element), /,/)),
+				repeat(
+					choice(
+						seq(
+							$.nbt_identifier,
+							repeat($._space),
+							":",
+							repeat($._space),
+							$._nbt_element
+						),
+						/,/
+					)
+				),
 				"}"
 			),
 
 		nbt_array: ($) => seq("[", repeat(choice($._nbt_element, /,/)), "]"),
+
+		selector_compound: ($) =>
+			seq(
+				"{",
+				repeat(
+					choice(
+						seq(
+							choice($.nbt_identifier, $.resource),
+							repeat($._space),
+							"=",
+							repeat($._space),
+							$._nbt_element
+						),
+						/,/
+					)
+				),
+				"}"
+			),
 	},
 });

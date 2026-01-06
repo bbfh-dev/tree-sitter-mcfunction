@@ -20,7 +20,7 @@
  (slot)
  (type)
  (heightmap)
-] @type.builtin
+] @constant.builtin
 
 [
  (string)
@@ -36,14 +36,11 @@
  (selector_identifier)
 ] @variable
 
-[
- (selector_query)
-] @tag
-
-(query_identifier) @namespace
+(query_identifier) @field
 
 [
  (scale)
+ (range)
 ] @number
 
 [
@@ -51,7 +48,25 @@
  (rotation)
 ] @punctuation.special
 
-    ; ├ ƒ argument
-    ; ├ ƒ selector
-    ; ├ ƒ nbt_compound
-    ; └ ƒ nbt_array
+[
+ "{"
+ "}"
+ "["
+ "]"
+] @punctuation.bracket
+
+[
+ ":"
+ (selector_query)
+] @punctuation.delimiter
+
+[
+ "+="
+ "-="
+ "*="
+ "/="
+ "%="
+ "><"
+ "<"
+ ">"
+] @operator
