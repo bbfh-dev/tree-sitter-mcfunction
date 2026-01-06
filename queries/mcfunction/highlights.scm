@@ -151,11 +151,13 @@
 
 [
  (word)
- (nbt_identifier)
  (selector_identifier)
 ] @variable
 
-(query_identifier) @field
+[
+  (query_identifier)
+  (nbt_identifier)
+] @field
 
 [
  (scale)
