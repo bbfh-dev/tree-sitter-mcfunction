@@ -1493,7 +1493,7 @@
           "members": [
             {
               "type": "PATTERN",
-              "value": ","
+              "value": "\\s*,\\s*"
             },
             {
               "type": "BLANK"
@@ -1730,8 +1730,63 @@
       ]
     },
     "word": {
-      "type": "PATTERN",
-      "value": "[-\\+\\.!#:_a-zA-Z0-9]+"
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "[-\\+\\.!#:_a-zA-Z0-9]+"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "item_compound"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "word"
+                },
+                {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "string"
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "word"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
     },
     "string": {
       "type": "CHOICE",
@@ -1879,7 +1934,7 @@
               },
               {
                 "type": "PATTERN",
-                "value": ","
+                "value": "\\s*,\\s*"
               }
             ]
           }
@@ -1904,11 +1959,15 @@
             "members": [
               {
                 "type": "SYMBOL",
+                "name": "_space"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "_nbt_element"
               },
               {
                 "type": "PATTERN",
-                "value": ","
+                "value": "\\s*,\\s*"
               }
             ]
           }
@@ -1973,7 +2032,7 @@
               },
               {
                 "type": "PATTERN",
-                "value": ","
+                "value": "\\s*,\\s*"
               }
             ]
           }
@@ -1981,6 +2040,105 @@
         {
           "type": "STRING",
           "value": "}"
+        }
+      ]
+    },
+    "item_compound": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "["
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "nbt_identifier"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "resource"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SEQ",
+                        "members": [
+                          {
+                            "type": "REPEAT",
+                            "content": {
+                              "type": "SYMBOL",
+                              "name": "_space"
+                            }
+                          },
+                          {
+                            "type": "STRING",
+                            "value": "="
+                          },
+                          {
+                            "type": "REPEAT",
+                            "content": {
+                              "type": "SYMBOL",
+                              "name": "_space"
+                            }
+                          },
+                          {
+                            "type": "CHOICE",
+                            "members": [
+                              {
+                                "type": "SYMBOL",
+                                "name": "nbt_compound"
+                              },
+                              {
+                                "type": "SYMBOL",
+                                "name": "nbt_array"
+                              },
+                              {
+                                "type": "SYMBOL",
+                                "name": "range"
+                              },
+                              {
+                                "type": "SYMBOL",
+                                "name": "boolean"
+                              },
+                              {
+                                "type": "SYMBOL",
+                                "name": "scale"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "BLANK"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "PATTERN",
+                "value": "\\s*,\\s*"
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "]"
         }
       ]
     }

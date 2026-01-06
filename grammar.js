@@ -105,7 +105,7 @@ module.exports = grammar({
 				choice("=", "=!"),
 				repeat($._space),
 				choice(...ARGUMENT($), $.selector_compound),
-				optional(/,/)
+				optional(/\s*,\s*/)
 			),
 
 		position: ($) => prec.left(2, seq("~", optional(prec(2, $.scale)))),
@@ -143,7 +143,12 @@ module.exports = grammar({
 				/(weapon|armor|horse)\.[a-z\*]+/
 			),
 
-		word: (_) => /[-\+\.!#:_a-zA-Z0-9]+/,
+		word: ($) =>
+			seq(
+				/[-\+\.!#:_a-zA-Z0-9]+/,
+				optional($.item_compound),
+				optional(choice($.word, seq($.string, optional($.word))))
+			),
 
 		string: (_) => choice(seq('"', /[^"]*/, '"'), seq("'", /[^']*/, "'")),
 
@@ -175,13 +180,14 @@ module.exports = grammar({
 							repeat($._space),
 							$._nbt_element
 						),
-						/,/
+						/\s*,\s*/
 					)
 				),
 				"}"
 			),
 
-		nbt_array: ($) => seq("[", repeat(choice($._nbt_element, /,/)), "]"),
+		nbt_array: ($) =>
+			seq("[", repeat(choice($._space, $._nbt_element, /\s*,\s*/)), "]"),
 
 		selector_compound: ($) =>
 			seq(
@@ -195,10 +201,38 @@ module.exports = grammar({
 							repeat($._space),
 							$._nbt_element
 						),
-						/,/
+						/\s*,\s*/
 					)
 				),
 				"}"
+			),
+
+		item_compound: ($) =>
+			seq(
+				"[",
+				repeat(
+					choice(
+						seq(
+							choice($.nbt_identifier, $.resource),
+							optional(
+								seq(
+									repeat($._space),
+									"=",
+									repeat($._space),
+									choice(
+										$.nbt_compound,
+										$.nbt_array,
+										$.range,
+										$.boolean,
+										$.scale
+									)
+								)
+							)
+						),
+						/\s*,\s*/
+					)
+				),
+				"]"
 			),
 	},
 });

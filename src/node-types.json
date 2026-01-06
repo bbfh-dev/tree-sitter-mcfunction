@@ -163,6 +163,49 @@
     "fields": {}
   },
   {
+    "type": "item_compound",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "nbt_array",
+          "named": true
+        },
+        {
+          "type": "nbt_compound",
+          "named": true
+        },
+        {
+          "type": "nbt_identifier",
+          "named": true
+        },
+        {
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "resource",
+          "named": true
+        },
+        {
+          "type": "scale",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "macro",
     "named": true,
     "extra": true,
@@ -176,6 +219,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
         {
           "type": "boolean",
           "named": true
@@ -472,6 +519,29 @@
     "type": "subcommand_identifier",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "word",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "item_compound",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "\"",
@@ -1500,10 +1570,6 @@
   {
     "type": "with",
     "named": false
-  },
-  {
-    "type": "word",
-    "named": true
   },
   {
     "type": "worldborder",
