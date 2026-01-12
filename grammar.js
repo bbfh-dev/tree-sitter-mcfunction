@@ -114,12 +114,12 @@ module.exports = grammar({
 		heightmap: (_) =>
 			/(world_surface|motion_blocking|motion_blocking_no_leaves|ocean_floor)/,
 
-		resource: (_) => token(seq(/[a-z_]+\:/, /[a-z_/][a-z0-9_\-\+/]*/)),
+		resource: (_) => token(seq(/[a-z_]+\:/, /[a-z_/][a-z0-9_\-\+/\.]*/)),
 
 		scale: (_) =>
 			seq(
-				optional(/-/),
-				choice(/\d+/, /\d+\.\d*/, /\.\d+/),
+				optional("-"),
+				token.immediate(choice(/\d+/, /\d+\.\d*/, /\.\d+/)),
 				optional(/[tsmhdf]/)
 			),
 

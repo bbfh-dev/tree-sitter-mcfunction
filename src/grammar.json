@@ -1575,7 +1575,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "[a-z_/][a-z0-9_\\-\\+/]*"
+            "value": "[a-z_/][a-z0-9_\\-\\+/\\.]*"
           }
         ]
       }
@@ -1587,7 +1587,7 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "PATTERN",
+              "type": "STRING",
               "value": "-"
             },
             {
@@ -1596,21 +1596,24 @@
           ]
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "PATTERN",
-              "value": "\\d+"
-            },
-            {
-              "type": "PATTERN",
-              "value": "\\d+\\.\\d*"
-            },
-            {
-              "type": "PATTERN",
-              "value": "\\.\\d+"
-            }
-          ]
+          "type": "IMMEDIATE_TOKEN",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "\\d+"
+              },
+              {
+                "type": "PATTERN",
+                "value": "\\d+\\.\\d*"
+              },
+              {
+                "type": "PATTERN",
+                "value": "\\.\\d+"
+              }
+            ]
+          }
         },
         {
           "type": "CHOICE",
