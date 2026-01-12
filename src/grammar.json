@@ -1581,53 +1581,57 @@
       }
     },
     "scale": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "-"
-            },
-            {
-              "type": "BLANK"
+      "type": "PREC",
+      "value": 4,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "-"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "IMMEDIATE_TOKEN",
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "PATTERN",
+                  "value": "\\d+"
+                },
+                {
+                  "type": "PATTERN",
+                  "value": "\\d+\\.\\d*"
+                },
+                {
+                  "type": "PATTERN",
+                  "value": "\\.\\d+"
+                }
+              ]
             }
-          ]
-        },
-        {
-          "type": "IMMEDIATE_TOKEN",
-          "content": {
+          },
+          {
             "type": "CHOICE",
             "members": [
               {
                 "type": "PATTERN",
-                "value": "\\d+"
+                "value": "[tsmhdf]"
               },
               {
-                "type": "PATTERN",
-                "value": "\\d+\\.\\d*"
-              },
-              {
-                "type": "PATTERN",
-                "value": "\\.\\d+"
+                "type": "BLANK"
               }
             ]
           }
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "PATTERN",
-              "value": "[tsmhdf]"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        }
-      ]
+        ]
+      }
     },
     "macro": {
       "type": "SEQ",
@@ -1737,7 +1741,7 @@
       "members": [
         {
           "type": "PATTERN",
-          "value": "[-\\+\\.!#:_a-zA-Z0-9]+"
+          "value": "[\\+\\.!#:_a-zA-Z0-9]+"
         },
         {
           "type": "CHOICE",

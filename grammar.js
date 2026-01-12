@@ -117,10 +117,13 @@ module.exports = grammar({
 		resource: (_) => token(seq(/[a-z_]+\:/, /[a-z_/][a-z0-9_\-\+/\.]*/)),
 
 		scale: (_) =>
-			seq(
-				optional("-"),
-				token.immediate(choice(/\d+/, /\d+\.\d*/, /\.\d+/)),
-				optional(/[tsmhdf]/)
+			prec(
+				4,
+				seq(
+					optional("-"),
+					token.immediate(choice(/\d+/, /\d+\.\d*/, /\.\d+/)),
+					optional(/[tsmhdf]/)
+				)
 			),
 
 		macro: () => seq("$(", /[a-zA-Z_]+/, ")"),
@@ -145,7 +148,7 @@ module.exports = grammar({
 
 		word: ($) =>
 			seq(
-				/[-\+\.!#:_a-zA-Z0-9]+/,
+				/[\+\.!#:_a-zA-Z0-9]+/,
 				optional($.item_compound),
 				optional(choice($.word, seq($.string, optional($.word))))
 			),
