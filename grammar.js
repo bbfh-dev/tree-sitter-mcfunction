@@ -31,7 +31,7 @@ const ARGUMENT = ($) => [
 module.exports = grammar({
 	name: "mcfunction",
 
-	extras: ($) => [$.macro],
+	extras: ($) => [$.macro, $.substitution],
 
 	conflicts: ($) => [[$.nbt_compound, $.selector_compound]],
 
@@ -127,6 +127,9 @@ module.exports = grammar({
 			),
 
 		macro: () => seq("$(", /[a-zA-Z_]+/, ")"),
+
+		// This is not a vanilla feature, but rather something from my Mime project
+		substitution: () => seq("%[", /[a-zA-Z_]+/, "]"),
 
 		type: (_) => /(byte|short|int|long|float|double)/,
 

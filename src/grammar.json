@@ -1650,6 +1650,23 @@
         }
       ]
     },
+    "substitution": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "%["
+        },
+        {
+          "type": "PATTERN",
+          "value": "[a-zA-Z_]+"
+        },
+        {
+          "type": "STRING",
+          "value": "]"
+        }
+      ]
+    },
     "type": {
       "type": "PATTERN",
       "value": "(byte|short|int|long|float|double)"
@@ -2154,6 +2171,10 @@
     {
       "type": "SYMBOL",
       "name": "macro"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "substitution"
     }
   ],
   "conflicts": [

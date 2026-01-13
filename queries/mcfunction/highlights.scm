@@ -132,6 +132,7 @@
 [
  (macro_indicator)
  (macro)
+ (substitution)
 ] @label
 
 [

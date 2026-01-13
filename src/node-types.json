@@ -529,6 +529,12 @@
     "fields": {}
   },
   {
+    "type": "substitution",
+    "named": true,
+    "extra": true,
+    "fields": {}
+  },
+  {
     "type": "word",
     "named": true,
     "fields": {},
@@ -561,6 +567,10 @@
   },
   {
     "type": "%=",
+    "named": false
+  },
+  {
+    "type": "%[",
     "named": false
   },
   {
