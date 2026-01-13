@@ -1659,11 +1659,7 @@
         },
         {
           "type": "PATTERN",
-          "value": "[a-zA-Z_]+"
-        },
-        {
-          "type": "STRING",
-          "value": "]"
+          "value": "[a-zA-Z_]+\\]"
         }
       ]
     },
