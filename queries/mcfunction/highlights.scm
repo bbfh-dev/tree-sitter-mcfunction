@@ -75,6 +75,7 @@
  "night"
  "noon"
  "normal"
+ "objectives"
  "off"
  "offhand"
  "on"
