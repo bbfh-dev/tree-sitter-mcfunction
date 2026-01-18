@@ -1626,8 +1626,33 @@
             "type": "CHOICE",
             "members": [
               {
-                "type": "PATTERN",
-                "value": "[tsmhdf]"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "PATTERN",
+                    "value": "t"
+                  },
+                  {
+                    "type": "PATTERN",
+                    "value": "s"
+                  },
+                  {
+                    "type": "PATTERN",
+                    "value": "m"
+                  },
+                  {
+                    "type": "PATTERN",
+                    "value": "h"
+                  },
+                  {
+                    "type": "PATTERN",
+                    "value": "d"
+                  },
+                  {
+                    "type": "PATTERN",
+                    "value": "f"
+                  }
+                ]
               },
               {
                 "type": "BLANK"
@@ -2132,15 +2157,15 @@
                               },
                               {
                                 "type": "SYMBOL",
+                                "name": "scale"
+                              },
+                              {
+                                "type": "SYMBOL",
                                 "name": "range"
                               },
                               {
                                 "type": "SYMBOL",
                                 "name": "boolean"
-                              },
-                              {
-                                "type": "SYMBOL",
-                                "name": "scale"
                               }
                             ]
                           }

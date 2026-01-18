@@ -122,7 +122,7 @@ module.exports = grammar({
 				seq(
 					optional("-"),
 					token.immediate(choice(/\d+/, /\d+\.\d*/, /\.\d+/)),
-					optional(/[tsmhdf]/)
+					optional(choice(/t/, /s/, /m/, /h/, /d/, /f/))
 				)
 			),
 
@@ -228,9 +228,9 @@ module.exports = grammar({
 									choice(
 										$.nbt_compound,
 										$.nbt_array,
+										$.scale,
 										$.range,
-										$.boolean,
-										$.scale
+										$.boolean
 									)
 								)
 							)
