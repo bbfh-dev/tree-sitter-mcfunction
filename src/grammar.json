@@ -1136,6 +1136,10 @@
         },
         {
           "type": "STRING",
+          "value": "objectives"
+        },
+        {
+          "type": "STRING",
           "value": "off"
         },
         {

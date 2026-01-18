@@ -1122,6 +1122,10 @@
     "named": false
   },
   {
+    "type": "objectives",
+    "named": false
+  },
+  {
     "type": "off",
     "named": false
   },
