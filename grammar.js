@@ -201,7 +201,7 @@ module.exports = grammar({
 				repeat(
 					choice(
 						seq(
-							choice($.nbt_identifier, $.resource),
+							choice($.nbt_identifier, $.resource, $.word),
 							repeat($._space),
 							"=",
 							repeat($._space),

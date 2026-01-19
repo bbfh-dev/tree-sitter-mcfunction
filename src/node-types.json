@@ -410,6 +410,10 @@
         {
           "type": "string",
           "named": true
+        },
+        {
+          "type": "word",
+          "named": true
         }
       ]
     }
