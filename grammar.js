@@ -156,7 +156,11 @@ module.exports = grammar({
 				optional(choice($.word, seq($.string, optional($.word))))
 			),
 
-		string: (_) => choice(seq('"', /[^"]*/, '"'), seq("'", /[^']*/, "'")),
+		string: (_) =>
+			choice(
+				seq('"', repeat(/[^"(\$\())]+/), '"'),
+				seq("'", /[^'(\$\())]*/, "'")
+			),
 
 		boolean: (_) => /(true|false|1b|0b)/,
 

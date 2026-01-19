@@ -1851,8 +1851,11 @@
               "value": "\""
             },
             {
-              "type": "PATTERN",
-              "value": "[^\"]*"
+              "type": "REPEAT",
+              "content": {
+                "type": "PATTERN",
+                "value": "[^\"(\\$\\())]+"
+              }
             },
             {
               "type": "STRING",
@@ -1869,7 +1872,7 @@
             },
             {
               "type": "PATTERN",
-              "value": "[^']*"
+              "value": "[^'(\\$\\())]*"
             },
             {
               "type": "STRING",
