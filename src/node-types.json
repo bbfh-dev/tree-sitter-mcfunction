@@ -410,10 +410,6 @@
         {
           "type": "string",
           "named": true
-        },
-        {
-          "type": "word",
-          "named": true
         }
       ]
     }
@@ -699,7 +695,8 @@
   },
   {
     "type": "backslash",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "ban",

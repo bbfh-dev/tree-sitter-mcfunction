@@ -31,7 +31,7 @@ const ARGUMENT = ($) => [
 module.exports = grammar({
 	name: "mcfunction",
 
-	extras: ($) => [$.macro, $.substitution],
+	extras: ($) => [$.macro, $.substitution, $.backslash],
 
 	conflicts: ($) => [[$.nbt_compound, $.selector_compound]],
 
@@ -201,7 +201,7 @@ module.exports = grammar({
 				repeat(
 					choice(
 						seq(
-							choice($.nbt_identifier, $.resource, $.word),
+							choice($.nbt_identifier, $.resource),
 							repeat($._space),
 							"=",
 							repeat($._space),

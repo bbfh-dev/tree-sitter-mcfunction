@@ -2052,10 +2052,6 @@
                       {
                         "type": "SYMBOL",
                         "name": "resource"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "word"
                       }
                     ]
                   },
@@ -2204,6 +2200,10 @@
     {
       "type": "SYMBOL",
       "name": "substitution"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "backslash"
     }
   ],
   "conflicts": [
