@@ -76,6 +76,7 @@
  "noon"
  "normal"
  "objectives"
+ "operation"
  "off"
  "offhand"
  "on"

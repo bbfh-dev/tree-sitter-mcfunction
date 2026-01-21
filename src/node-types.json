@@ -1146,6 +1146,10 @@
     "named": false
   },
   {
+    "type": "operation",
+    "named": false
+  },
+  {
     "type": "origin",
     "named": false
   },

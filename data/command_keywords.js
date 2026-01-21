@@ -67,6 +67,7 @@ module.exports = [
 	"noon",
 	"normal",
 	"objectives",
+	"operation",
 	"off",
 	"offhand",
 	"on",
