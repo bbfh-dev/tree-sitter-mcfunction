@@ -144,10 +144,6 @@
 ] @constant.builtin
 
 [
- (string)
-] @string
-
-[
  (resource)
 ] @method
 
@@ -160,11 +156,6 @@
   (query_identifier)
   (nbt_identifier)
 ] @field
-
-[
- (scale)
- (range)
-] @number
 
 [
  (position)
@@ -193,3 +184,12 @@
  "<"
  ">"
 ] @operator
+
+[
+ (scale)
+ (range)
+] @number
+
+[
+ (string)
+] @string

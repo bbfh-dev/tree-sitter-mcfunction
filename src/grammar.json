@@ -1574,8 +1574,17 @@
         "type": "SEQ",
         "members": [
           {
-            "type": "PATTERN",
-            "value": "[a-z_]+\\:"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "\\.\\/"
+              },
+              {
+                "type": "PATTERN",
+                "value": "[a-z_]+\\:"
+              }
+            ]
           },
           {
             "type": "PATTERN",
@@ -1678,6 +1687,18 @@
           {
             "type": "STRING",
             "value": ")"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": " "
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
           }
         ]
       }
@@ -1733,6 +1754,10 @@
         {
           "type": "STRING",
           "value": ">"
+        },
+        {
+          "type": "STRING",
+          "value": "="
         }
       ]
     },
@@ -1854,7 +1879,7 @@
               "type": "REPEAT",
               "content": {
                 "type": "PATTERN",
-                "value": "[^\"(\\$\\())]+"
+                "value": "[^'\"(\\$\\())]+"
               }
             },
             {
@@ -1872,11 +1897,28 @@
             },
             {
               "type": "PATTERN",
-              "value": "[^'(\\$\\())]*"
+              "value": "[^'\"(\\$\\())]*"
             },
             {
               "type": "STRING",
               "value": "'"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "'\""
+            },
+            {
+              "type": "PATTERN",
+              "value": "[^'\"(\\$\\())]*"
+            },
+            {
+              "type": "STRING",
+              "value": "\"'"
             }
           ]
         }

@@ -114,7 +114,8 @@ module.exports = grammar({
 		heightmap: (_) =>
 			/(world_surface|motion_blocking|motion_blocking_no_leaves|ocean_floor)/,
 
-		resource: (_) => token(seq(/[a-z_]+\:/, /[a-z_/][a-z0-9_\-\+/\.]*/)),
+		resource: (_) =>
+			token(seq(choice(/\.\//, /[a-z_]+\:/), /[a-z_/][a-z0-9_\-\+/\.]*/)),
 
 		scale: (_) =>
 			prec(
@@ -126,14 +127,15 @@ module.exports = grammar({
 				)
 			),
 
-		macro: () => token(seq("$(", /[a-zA-Z_]+/, ")")),
+		macro: () => token(seq("$(", /[a-zA-Z_]+/, ")", optional(/ /))),
 
 		// This is not a vanilla feature, but rather something from my Mime project
 		substitution: () => seq("%[", /[a-zA-Z_]+\]/),
 
 		type: (_) => /(byte|short|int|long|float|double)/,
 
-		operator: (_) => choice("+=", "-=", "*=", "/=", "%=", "><", "<", ">"),
+		operator: (_) =>
+			choice("+=", "-=", "*=", "/=", "%=", "><", "<", ">", "="),
 
 		slot: (_) =>
 			choice(
@@ -158,8 +160,9 @@ module.exports = grammar({
 
 		string: (_) =>
 			choice(
-				seq('"', repeat(/[^"(\$\())]+/), '"'),
-				seq("'", /[^'(\$\())]*/, "'")
+				seq('"', repeat(/[^'"(\$\())]+/), '"'),
+				seq("'", /[^'"(\$\())]*/, "'"),
+				seq("'\"", /[^'"(\$\())]*/, "\"'")
 			),
 
 		boolean: (_) => /(true|false|1b|0b)/,
