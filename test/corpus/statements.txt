@@ -1,0 +1,44 @@
+==================
+Comments
+==================
+
+# Hello World!
+
+------------------
+
+(source_file
+	(comment
+		(line_contents)))
+
+==================
+Mime Comments
+==================
+
+#!for [#x my.scoreboard] ..2
+
+------------------
+
+(source_file
+	(mime_comment
+		(simple_identifier)
+		(line_contents)))
+
+==================
+Execute statements
+==================
+
+execute run return fail
+execute run execute run return fail
+
+------------------
+
+(source_file
+	(execute_statement
+		(command
+			(command_identifier)
+			(command_keyword)))
+	(execute_statement
+		(execute_statement
+			(command
+			(command_identifier)
+			(command_keyword)))))

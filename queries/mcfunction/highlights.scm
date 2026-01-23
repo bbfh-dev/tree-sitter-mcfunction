@@ -1,196 +1,33 @@
+(ERROR) @error
+
 [
-  (comment)
-  (backslash)
+ (comment)
+ (backslash)
 ] @comment
+
+[
+ (macro_indicator)
+ ; (macro)
+ ; (substitution)
+] @label
+
+[
+ "#!"
+] @keyword.operator
+
+(mime_comment
+   (simple_identifier) @keyword)
+
+[
+ (mime_comment
+   (line_contents))
+] @text
 
 [
  "execute"
  "run"
  (command_identifier)
  (subcommand_identifier)
- "add"
- "add_multiplied_base"
- "add_multiplied_total"
- "add_value"
- "amount"
- "append"
- "at"
- "base"
- "biome"
- "block"
- "blocks"
- "buffer"
- "by"
- "center"
- "clear"
- "color"
- "create"
- "damage"
- "day"
- "daytime"
- "destroy"
- "disable"
- "dismount"
- "distance"
- "enable"
- "entity"
- "everything"
- "export"
- "exportclosest"
- "exportthat"
- "exportthese"
- "facing"
- "fail"
- "feature"
- "fish"
- "flush"
- "force"
- "from"
- "function"
- "gametime"
- "get"
- "give"
- "grant"
- "hollow"
- "id"
- "insert"
- "ips"
- "jigsaw"
- "join"
- "keep"
- "leave"
- "levels"
- "list"
- "locate"
- "mainhand"
- "max"
- "merge"
- "midnight"
- "mine"
- "modifier"
- "modify"
- "mount"
- "move"
- "name"
- "night"
- "noon"
- "normal"
- "objectives"
- "operation"
- "off"
- "offhand"
- "on"
- "only"
- "outline"
- "players"
- "poi"
- "points"
- "pos"
- "prepend"
- "query"
- "rain"
- "reload"
- "remove"
- "replace"
- "reset"
- "resetclosest"
- "resetthat"
- "resetthese"
- "revoke"
- "roll"
- "run"
- "runclosest"
- "runfailed"
- "runthat"
- "runthese"
- "set"
- "setdisplay"
- "show"
- "spawn"
- "start"
- "stop"
- "storage"
- "strict"
- "string"
- "structure"
- "style"
- "take"
- "template"
- "through"
- "thunder"
- "time"
- "times"
- "to"
- "under"
- "until"
- "uuids"
- "value"
- "verify"
- "visible"
- "warning"
- "with"
+ (command_keyword)
 ] @keyword
 
-[
- (macro_indicator)
- (macro)
- (substitution)
-] @label
-
-[
- (boolean)
- (slot)
- (type)
- (heightmap)
-] @constant.builtin
-
-[
- (resource)
-] @method
-
-[
- (word)
- (selector_identifier)
-] @variable
-
-[
-  (query_identifier)
-  (nbt_identifier)
-] @field
-
-[
- (position)
- (rotation)
-] @punctuation.special
-
-[
- "{"
- "}"
- "["
- "]"
-] @punctuation.bracket
-
-[
- ":"
- (selector_query)
-] @punctuation.delimiter
-
-[
- "+="
- "-="
- "*="
- "/="
- "%="
- "><"
- "<"
- ">"
-] @operator
-
-[
- (scale)
- (range)
-] @number
-
-[
- (string)
-] @string

@@ -1,72 +1,5 @@
 [
   {
-    "type": "argument",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "heightmap",
-          "named": true
-        },
-        {
-          "type": "nbt_array",
-          "named": true
-        },
-        {
-          "type": "nbt_compound",
-          "named": true
-        },
-        {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "position",
-          "named": true
-        },
-        {
-          "type": "resource",
-          "named": true
-        },
-        {
-          "type": "rotation",
-          "named": true
-        },
-        {
-          "type": "scale",
-          "named": true
-        },
-        {
-          "type": "selector",
-          "named": true
-        },
-        {
-          "type": "slot",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "type",
-          "named": true
-        },
-        {
-          "type": "word",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "command",
     "named": true,
     "fields": {},
@@ -75,19 +8,7 @@
       "required": true,
       "types": [
         {
-          "type": "argument",
-          "named": true
-        },
-        {
           "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "command",
           "named": true
         },
         {
@@ -95,63 +16,7 @@
           "named": true
         },
         {
-          "type": "heightmap",
-          "named": true
-        },
-        {
-          "type": "macro_indicator",
-          "named": true
-        },
-        {
-          "type": "nbt_array",
-          "named": true
-        },
-        {
-          "type": "nbt_compound",
-          "named": true
-        },
-        {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "position",
-          "named": true
-        },
-        {
-          "type": "resource",
-          "named": true
-        },
-        {
-          "type": "rotation",
-          "named": true
-        },
-        {
-          "type": "scale",
-          "named": true
-        },
-        {
-          "type": "selector",
-          "named": true
-        },
-        {
-          "type": "slot",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "subcommand_identifier",
-          "named": true
-        },
-        {
-          "type": "type",
-          "named": true
-        },
-        {
-          "type": "word",
+          "type": "command_keyword",
           "named": true
         }
       ]
@@ -163,253 +28,27 @@
     "fields": {}
   },
   {
-    "type": "item_compound",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "nbt_array",
-          "named": true
-        },
-        {
-          "type": "nbt_compound",
-          "named": true
-        },
-        {
-          "type": "nbt_identifier",
-          "named": true
-        },
-        {
-          "type": "range",
-          "named": true
-        },
-        {
-          "type": "resource",
-          "named": true
-        },
-        {
-          "type": "scale",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "nbt_array",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "nbt_array",
-          "named": true
-        },
-        {
-          "type": "nbt_compound",
-          "named": true
-        },
-        {
-          "type": "range",
-          "named": true
-        },
-        {
-          "type": "scale",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "nbt_compound",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "nbt_array",
-          "named": true
-        },
-        {
-          "type": "nbt_compound",
-          "named": true
-        },
-        {
-          "type": "nbt_identifier",
-          "named": true
-        },
-        {
-          "type": "range",
-          "named": true
-        },
-        {
-          "type": "scale",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "nbt_identifier",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "operator",
+    "type": "command_keyword",
     "named": true,
     "fields": {}
   },
   {
-    "type": "position",
+    "type": "comment",
     "named": true,
     "fields": {},
     "children": {
       "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "scale",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "rotation",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "scale",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "scale",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "selector",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "selector_identifier",
-          "named": true
-        },
-        {
-          "type": "selector_query",
+          "type": "line_contents",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "selector_compound",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "nbt_array",
-          "named": true
-        },
-        {
-          "type": "nbt_compound",
-          "named": true
-        },
-        {
-          "type": "nbt_identifier",
-          "named": true
-        },
-        {
-          "type": "range",
-          "named": true
-        },
-        {
-          "type": "resource",
-          "named": true
-        },
-        {
-          "type": "scale",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "selector_query",
+    "type": "execute_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -421,76 +60,42 @@
           "named": true
         },
         {
-          "type": "boolean",
+          "type": "command",
           "named": true
         },
         {
-          "type": "heightmap",
+          "type": "execute_statement",
           "named": true
         },
         {
-          "type": "nbt_array",
-          "named": true
-        },
-        {
-          "type": "nbt_compound",
-          "named": true
-        },
-        {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "position",
-          "named": true
-        },
-        {
-          "type": "query_identifier",
-          "named": true
-        },
-        {
-          "type": "resource",
-          "named": true
-        },
-        {
-          "type": "rotation",
-          "named": true
-        },
-        {
-          "type": "scale",
-          "named": true
-        },
-        {
-          "type": "selector",
-          "named": true
-        },
-        {
-          "type": "selector_compound",
-          "named": true
-        },
-        {
-          "type": "slot",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "type",
-          "named": true
-        },
-        {
-          "type": "word",
+          "type": "subcommand_identifier",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "slot",
+    "type": "mime_comment",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "line_contents",
+          "named": true
+        },
+        {
+          "type": "simple_identifier",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "source_file",
@@ -508,14 +113,21 @@
         {
           "type": "comment",
           "named": true
+        },
+        {
+          "type": "execute_statement",
+          "named": true
+        },
+        {
+          "type": "macro_indicator",
+          "named": true
+        },
+        {
+          "type": "mime_comment",
+          "named": true
         }
       ]
     }
-  },
-  {
-    "type": "string",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "subcommand_identifier",
@@ -523,112 +135,7 @@
     "fields": {}
   },
   {
-    "type": "substitution",
-    "named": true,
-    "extra": true,
-    "fields": {}
-  },
-  {
-    "type": "word",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "item_compound",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "word",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "\"",
-    "named": false
-  },
-  {
-    "type": "\"'",
-    "named": false
-  },
-  {
-    "type": "%=",
-    "named": false
-  },
-  {
-    "type": "%[",
-    "named": false
-  },
-  {
-    "type": "'",
-    "named": false
-  },
-  {
-    "type": "'\"",
-    "named": false
-  },
-  {
-    "type": "*=",
-    "named": false
-  },
-  {
-    "type": "+=",
-    "named": false
-  },
-  {
-    "type": "-",
-    "named": false
-  },
-  {
-    "type": "-=",
-    "named": false
-  },
-  {
-    "type": "/=",
-    "named": false
-  },
-  {
-    "type": ":",
-    "named": false
-  },
-  {
-    "type": "<",
-    "named": false
-  },
-  {
-    "type": "=",
-    "named": false
-  },
-  {
-    "type": "=!",
-    "named": false
-  },
-  {
-    "type": ">",
-    "named": false
-  },
-  {
-    "type": "><",
-    "named": false
-  },
-  {
-    "type": "[",
-    "named": false
-  },
-  {
-    "type": "]",
-    "named": false
-  },
-  {
-    "type": "^",
+    "type": "#!",
     "named": false
   },
   {
@@ -689,8 +196,7 @@
   },
   {
     "type": "backslash",
-    "named": true,
-    "extra": true
+    "named": true
   },
   {
     "type": "ban",
@@ -721,10 +227,6 @@
     "named": false
   },
   {
-    "type": "boolean",
-    "named": true
-  },
-  {
     "type": "bossbar",
     "named": false
   },
@@ -750,14 +252,6 @@
   },
   {
     "type": "color",
-    "named": false
-  },
-  {
-    "type": "comment",
-    "named": true
-  },
-  {
-    "type": "contents",
     "named": false
   },
   {
@@ -953,10 +447,6 @@
     "named": false
   },
   {
-    "type": "heightmap",
-    "named": true
-  },
-  {
     "type": "help",
     "named": false
   },
@@ -1029,6 +519,10 @@
     "named": false
   },
   {
+    "type": "line_contents",
+    "named": true
+  },
+  {
     "type": "list",
     "named": false
   },
@@ -1043,11 +537,6 @@
   {
     "type": "loot",
     "named": false
-  },
-  {
-    "type": "macro",
-    "named": true,
-    "extra": true
   },
   {
     "type": "macro_indicator",
@@ -1190,10 +679,6 @@
     "named": false
   },
   {
-    "type": "player.cursor",
-    "named": false
-  },
-  {
     "type": "players",
     "named": false
   },
@@ -1234,20 +719,12 @@
     "named": false
   },
   {
-    "type": "query_identifier",
-    "named": true
-  },
-  {
     "type": "rain",
     "named": false
   },
   {
     "type": "random",
     "named": false
-  },
-  {
-    "type": "range",
-    "named": true
   },
   {
     "type": "recipe",
@@ -1280,10 +757,6 @@
   {
     "type": "resetthese",
     "named": false
-  },
-  {
-    "type": "resource",
-    "named": true
   },
   {
     "type": "result",
@@ -1366,10 +839,6 @@
     "named": false
   },
   {
-    "type": "selector_identifier",
-    "named": true
-  },
-  {
     "type": "set",
     "named": false
   },
@@ -1392,6 +861,10 @@
   {
     "type": "show",
     "named": false
+  },
+  {
+    "type": "simple_identifier",
+    "named": true
   },
   {
     "type": "spawn",
@@ -1538,10 +1011,6 @@
     "named": false
   },
   {
-    "type": "type",
-    "named": true
-  },
-  {
     "type": "under",
     "named": false
   },
@@ -1607,18 +1076,6 @@
   },
   {
     "type": "xp",
-    "named": false
-  },
-  {
-    "type": "{",
-    "named": false
-  },
-  {
-    "type": "}",
-    "named": false
-  },
-  {
-    "type": "~",
     "named": false
   }
 ]
