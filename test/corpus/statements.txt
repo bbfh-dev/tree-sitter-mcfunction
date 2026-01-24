@@ -223,7 +223,7 @@ scoreboard players operation a example /= 15
 Built-in words
 ==================
 
-say hotbar.4
+say inventory.15
 say weapon.mainhand
 say motion_blocking_no_leaves
 say motion_blocking_no_leaves

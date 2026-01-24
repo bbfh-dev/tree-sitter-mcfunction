@@ -1883,31 +1883,59 @@
       "members": [
         {
           "type": "PATTERN",
-          "value": "container\\.[\\*(\\d+)]"
+          "value": "container\\.\\*"
         },
         {
           "type": "PATTERN",
-          "value": "hotbar\\.[\\*(\\d+)]"
+          "value": "container\\.\\d+"
         },
         {
           "type": "PATTERN",
-          "value": "inventory\\.[\\*(\\d+)]"
+          "value": "hotbar\\.\\*"
         },
         {
           "type": "PATTERN",
-          "value": "enderchest\\.[\\*(\\d+)]"
+          "value": "hotbar\\.\\d+"
         },
         {
           "type": "PATTERN",
-          "value": "villager\\.[\\*(\\d+)]"
+          "value": "inventory\\.\\*"
         },
         {
           "type": "PATTERN",
-          "value": "horse\\.[\\*(\\d+)]"
+          "value": "inventory\\.\\d+"
         },
         {
           "type": "PATTERN",
-          "value": "player\\.crafting\\.[\\*(\\d+)]"
+          "value": "enderchest\\.\\*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "enderchest\\.\\d+"
+        },
+        {
+          "type": "PATTERN",
+          "value": "villager\\.\\*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "villager\\.\\d+"
+        },
+        {
+          "type": "PATTERN",
+          "value": "horse\\.\\*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "horse\\.\\d+"
+        },
+        {
+          "type": "PATTERN",
+          "value": "player\\.crafting\\.\\*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "player\\.crafting\\.\\d+"
         },
         {
           "type": "PATTERN",
@@ -2178,6 +2206,10 @@
             {
               "type": "STRING",
               "value": ":"
+            },
+            {
+              "type": "STRING",
+              "value": "~"
             }
           ]
         },
