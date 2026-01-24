@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-mcfunction"
 description = "Tree-sitter for the latest version of Minecraft mcfunction syntax"
-version = "1.0.0"
+version = "0.1.0"
 authors = ["BubbleFish <daforsastudia@gmail.com>"]
 license = "ISC"
 readme = "README.md"

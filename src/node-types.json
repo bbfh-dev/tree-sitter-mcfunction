@@ -12,11 +12,87 @@
           "named": true
         },
         {
+          "type": "boolean",
+          "named": true
+        },
+        {
           "type": "command_identifier",
           "named": true
         },
         {
           "type": "command_keyword",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "heightmap",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "nbt_compound",
+          "named": true
+        },
+        {
+          "type": "nbt_list",
+          "named": true
+        },
+        {
+          "type": "nbt_typed_array",
+          "named": true
+        },
+        {
+          "type": "operator",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "resource",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "scoreboard_criteria",
+          "named": true
+        },
+        {
+          "type": "selector",
+          "named": true
+        },
+        {
+          "type": "slot",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "type",
           "named": true
         }
       ]
@@ -48,6 +124,80 @@
     }
   },
   {
+    "type": "compound_identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "compound_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "nbt_compound",
+          "named": true
+        },
+        {
+          "type": "nbt_list",
+          "named": true
+        },
+        {
+          "type": "nbt_typed_array",
+          "named": true
+        },
+        {
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "resource",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "execute_statement",
     "named": true,
     "fields": {},
@@ -60,6 +210,10 @@
           "named": true
         },
         {
+          "type": "boolean",
+          "named": true
+        },
+        {
           "type": "command",
           "named": true
         },
@@ -68,11 +222,116 @@
           "named": true
         },
         {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "heightmap",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "nbt_compound",
+          "named": true
+        },
+        {
+          "type": "nbt_list",
+          "named": true
+        },
+        {
+          "type": "nbt_typed_array",
+          "named": true
+        },
+        {
+          "type": "operator",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "resource",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "scoreboard_criteria",
+          "named": true
+        },
+        {
+          "type": "selector",
+          "named": true
+        },
+        {
+          "type": "slot",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
           "type": "subcommand_identifier",
+          "named": true
+        },
+        {
+          "type": "type",
           "named": true
         }
       ]
     }
+  },
+  {
+    "type": "heightmap",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "integer",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "byte_indicator",
+          "named": true
+        },
+        {
+          "type": "long_indicator",
+          "named": true
+        },
+        {
+          "type": "short_indicator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "macro",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "mime_comment",
@@ -96,6 +355,224 @@
         }
       ]
     }
+  },
+  {
+    "type": "nbt_compound",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "compound_identifier",
+          "named": true
+        },
+        {
+          "type": "compound_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "nbt_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "compound_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "nbt_typed_array",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "number",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "float",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "operator",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "path",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "nbt_compound",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "position",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "range",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "resource",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "macro",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rotation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scoreboard_criteria",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "selector",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "compound_identifier",
+          "named": true
+        },
+        {
+          "type": "compound_value",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "simple_identifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "slot",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "source_file",
@@ -130,12 +607,172 @@
     }
   },
   {
+    "type": "string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "macro",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "subcommand_identifier",
     "named": true,
     "fields": {}
   },
   {
+    "type": "word",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
     "type": "#!",
+    "named": false
+  },
+  {
+    "type": "$(",
+    "named": false
+  },
+  {
+    "type": "%=",
+    "named": false
+  },
+  {
+    "type": "%[",
+    "named": false
+  },
+  {
+    "type": "'",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "*=",
+    "named": false
+  },
+  {
+    "type": "+=",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-=",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "..",
+    "named": false
+  },
+  {
+    "type": "./",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": "/=",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "><",
+    "named": false
+  },
+  {
+    "type": "@a",
+    "named": false
+  },
+  {
+    "type": "@e",
+    "named": false
+  },
+  {
+    "type": "@n",
+    "named": false
+  },
+  {
+    "type": "@p",
+    "named": false
+  },
+  {
+    "type": "@r",
+    "named": false
+  },
+  {
+    "type": "@s",
+    "named": false
+  },
+  {
+    "type": "B",
+    "named": false
+  },
+  {
+    "type": "I",
+    "named": false
+  },
+  {
+    "type": "L",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "^",
     "named": false
   },
   {
@@ -159,6 +796,10 @@
     "named": false
   },
   {
+    "type": "air",
+    "named": false
+  },
+  {
     "type": "align",
     "named": false
   },
@@ -176,6 +817,10 @@
   },
   {
     "type": "append",
+    "named": false
+  },
+  {
+    "type": "armor",
     "named": false
   },
   {
@@ -227,6 +872,10 @@
     "named": false
   },
   {
+    "type": "boolean",
+    "named": true
+  },
+  {
     "type": "bossbar",
     "named": false
   },
@@ -237,6 +886,10 @@
   {
     "type": "by",
     "named": false
+  },
+  {
+    "type": "byte_indicator",
+    "named": true
   },
   {
     "type": "center",
@@ -283,6 +936,10 @@
     "named": false
   },
   {
+    "type": "deathCount",
+    "named": false
+  },
+  {
     "type": "debug",
     "named": false
   },
@@ -320,6 +977,10 @@
   },
   {
     "type": "distance",
+    "named": false
+  },
+  {
+    "type": "dummy",
     "named": false
   },
   {
@@ -403,7 +1064,15 @@
     "named": false
   },
   {
+    "type": "float",
+    "named": true
+  },
+  {
     "type": "flush",
+    "named": false
+  },
+  {
+    "type": "food",
     "named": false
   },
   {
@@ -444,6 +1113,10 @@
   },
   {
     "type": "grant",
+    "named": false
+  },
+  {
+    "type": "health",
     "named": false
   },
   {
@@ -515,6 +1188,10 @@
     "named": false
   },
   {
+    "type": "level",
+    "named": false
+  },
+  {
     "type": "levels",
     "named": false
   },
@@ -533,6 +1210,10 @@
   {
     "type": "locate",
     "named": false
+  },
+  {
+    "type": "long_indicator",
+    "named": true
   },
   {
     "type": "loot",
@@ -583,6 +1264,14 @@
     "named": false
   },
   {
+    "type": "motion_blocking",
+    "named": false
+  },
+  {
+    "type": "motion_blocking_no_leaves",
+    "named": false
+  },
+  {
     "type": "mount",
     "named": false
   },
@@ -612,6 +1301,10 @@
   },
   {
     "type": "objectives",
+    "named": false
+  },
+  {
+    "type": "ocean_floor",
     "named": false
   },
   {
@@ -676,6 +1369,10 @@
   },
   {
     "type": "place",
+    "named": false
+  },
+  {
+    "type": "playerKillCount",
     "named": false
   },
   {
@@ -859,12 +1556,12 @@
     "named": false
   },
   {
-    "type": "show",
-    "named": false
+    "type": "short_indicator",
+    "named": true
   },
   {
-    "type": "simple_identifier",
-    "named": true
+    "type": "show",
+    "named": false
   },
   {
     "type": "spawn",
@@ -999,6 +1696,10 @@
     "named": false
   },
   {
+    "type": "totalKillCount",
+    "named": false
+  },
+  {
     "type": "tp",
     "named": false
   },
@@ -1009,6 +1710,10 @@
   {
     "type": "trigger",
     "named": false
+  },
+  {
+    "type": "type",
+    "named": true
   },
   {
     "type": "under",
@@ -1071,11 +1776,27 @@
     "named": false
   },
   {
+    "type": "world_surface",
+    "named": false
+  },
+  {
     "type": "worldborder",
     "named": false
   },
   {
     "type": "xp",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "~",
     "named": false
   }
 ]

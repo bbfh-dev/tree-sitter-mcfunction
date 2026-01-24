@@ -24,21 +24,286 @@ Mime Comments
 		(line_contents)))
 
 ==================
-Execute statements
+Primitive data types
 ==================
 
-execute run return fail
-execute run execute run return fail
+say 1 .51 98.401 false true 0b 17s 48581237L
 
 ------------------
 
 (source_file
+	(command
+		(command_identifier)
+		(integer)
+		(float)
+		(float)
+		(boolean)
+		(boolean)
+		(integer
+			(byte_indicator))
+		(integer
+			(short_indicator))
+		(integer
+			(long_indicator))))
+
+==================
+Coordinates
+==================
+
+tp ~.25 ~ ~5 ^0.98 ^
+
+------------------
+
+(source_file
+	(command
+		(command_identifier)
+        (position
+          (float))
+        (position)
+        (position
+          (integer))
+        (rotation
+          (float))
+		(rotation)))
+
+==================
+Strings
+==================
+
+say "Hello World!" '"Something $(with) a macro"'
+
+------------------
+
+(source_file
+	(command
+		(command_identifier)
+        (string)
+        (string
+          (macro))))
+
+==================
+Resources
+==================
+
+function #minecraft:load
+function ./_my_local_function_01/and/subfunction
+function #example:$(macro)/path/%[sub]/to
+
+------------------
+
+(source_file
+	(command
+		(command_identifier)
+		(resource))
+	(command
+		(command_identifier)
+		(resource))
+	(command
+		(command_identifier)
+		(resource
+			(macro)
+			(macro))))
+
+==================
+Selectors
+==================
+
+kill @s
+kill @e[distance=..5,type = #minecraft:skeleton,nbt=!{item:{"minecraft:property":false, another_value : $(macro)}}]
+
+------------------
+
+(source_file
+ (command
+  (command_identifier)
+  (selector))
+ (command
+  (command_identifier)
+  (selector
+   (compound_identifier)
+   (compound_value
+	(range
+	 (number)))
+   (compound_identifier)
+   (compound_value
+	(resource))
+   (compound_identifier)
+   (compound_value
+	(nbt_compound
+	 (compound_identifier)
+	 (compound_value
+	  (nbt_compound
+	   (compound_identifier
+		(string))
+	   (compound_value
+		(boolean))
+	   (compound_identifier)
+	   (compound_value
+		(macro)))))))))
+
+==================
+Paths
+==================
+
+data get entity @s item.components."minecraft:custom_data".item[5]
+
+------------------
+
+(source_file
+ (command
+  (command_identifier)
+  (command_keyword)
+  (command_keyword)
+  (selector)
+  (path
+   (string)
+   (number))))
+
+==================
+Operators
+==================
+
+scoreboard players operation a example = 15
+scoreboard players operation a example += 15
+scoreboard players operation a example /= 15
+
+------------------
+
+(source_file
+ (command
+  (command_identifier)
+  (command_keyword)
+  (command_keyword)
+  (selector
+   (word))
+  (selector
+   (word))
+  (operator)
+  (integer))
+ (command
+  (command_identifier)
+  (command_keyword)
+  (command_keyword)
+  (selector
+   (word))
+  (selector
+   (word))
+  (operator)
+  (integer))
+ (command
+  (command_identifier)
+  (command_keyword)
+  (command_keyword)
+  (selector
+   (word))
+  (selector
+   (word))
+  (operator)
+  (integer)))
+
+==================
+Built-in words
+==================
+
+say hotbar.4
+say weapon.mainhand
+say motion_blocking_no_leaves
+say motion_blocking_no_leaves
+scoreboard objectives add test dummy
+scoreboard objectives add test minecraft:stat.custom
+scoreboard objectives add test killedByTeam.red
+
+------------------
+
+(source_file
+ (command
+  (command_identifier)
+  (slot))
+ (command
+  (command_identifier)
+  (slot))
+ (command
+  (command_identifier)
+  (heightmap))
+ (command
+  (command_identifier)
+  (heightmap))
+ (command
+  (command_identifier)
+  (command_keyword)
+  (command_keyword)
+  (selector
+   (word))
+  (scoreboard_criteria))
+ (command
+  (command_identifier)
+  (command_keyword)
+  (command_keyword)
+  (selector
+   (word))
+  (resource))
+(command
+ (command_identifier)
+ (command_keyword)
+ (command_keyword)
+ (selector
+  (word))
+ (scoreboard_criteria)))
+
+==================
+NBT Compounds
+==================
+
+data {\
+	a: [I; 1, 2, 3], \
+	abc: {value: false} \
+}
+
+------------------
+
+(source_file
+  (command
+	(command_identifier)
+	(nbt_compound
+	  (backslash)
+	  (compound_identifier)
+	  (compound_value
+		(nbt_typed_array
+		  (integer)
+		  (integer)
+		  (integer)))
+	  (backslash)
+	  (compound_identifier)
+	  (compound_value
+		(nbt_compound
+		  (compound_identifier)
+		  (compound_value
+			(boolean))))
+	  (backslash))))
+
+==================
+Execute statements
+==================
+
+execute run return fail
+execute as @e[type=zombie] at @s run execute run return fail
+
+------------------
+
+(source_file
+  (execute_statement
+	(command
+	  (command_identifier)
+	  (command_keyword)))
+  (execute_statement
+	(subcommand_identifier)
+	(selector
+	  (compound_identifier)
+	  (compound_value
+		(word)))
+	(subcommand_identifier)
+	(selector)
 	(execute_statement
-		(command
-			(command_identifier)
-			(command_keyword)))
-	(execute_statement
-		(execute_statement
-			(command
-			(command_identifier)
-			(command_keyword)))))
+	  (command
+		(command_identifier)
+		(command_keyword)))))
