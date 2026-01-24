@@ -214,7 +214,10 @@ module.exports = grammar({
 				"ocean_floor",
 			),
 
-		scoreboard_criteria: (_) =>
+		_color: (_) =>
+			/(black|dark_blue|dark_green|dark_aqua|dark_red|dark_purple|gold|gray|dark_gray|blue|green|aqua|red|light_purple|yellow|white)/,
+
+		scoreboard_criteria: ($) =>
 			choice(
 				"dummy",
 				"trigger",
@@ -227,8 +230,8 @@ module.exports = grammar({
 				"food",
 				"air",
 				"armor",
-				/teamkill.(black|dark_blue|dark_green|dark_aqua|dark_red|dark_purple|gold|gray|dark_gray|blue|green|aqua|red|light_purple|yellow|white)/,
-				/killedByTeam.(black|dark_blue|dark_green|dark_aqua|dark_red|dark_purple|gold|gray|dark_gray|blue|green|aqua|red|light_purple|yellow|white)/,
+				seq("teamkill.", choice($._color, $.macro)),
+				seq("killedByTeam.", choice($._color, $.macro)),
 			),
 
 		resource: ($) =>

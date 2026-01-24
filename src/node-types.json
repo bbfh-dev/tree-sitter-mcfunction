@@ -479,6 +479,10 @@
         {
           "type": "integer",
           "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
         }
       ]
     }
@@ -528,6 +532,10 @@
         {
           "type": "integer",
           "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
         }
       ]
     }
@@ -535,7 +543,17 @@
   {
     "type": "scoreboard_criteria",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "macro",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "selector",
@@ -1180,6 +1198,10 @@
     "named": false
   },
   {
+    "type": "killedByTeam.",
+    "named": false
+  },
+  {
     "type": "leasher",
     "named": false
   },
@@ -1641,6 +1663,10 @@
   },
   {
     "type": "team",
+    "named": false
+  },
+  {
+    "type": "teamkill.",
     "named": false
   },
   {

@@ -1587,6 +1587,10 @@
                 {
                   "type": "SYMBOL",
                   "name": "float"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "macro"
                 }
               ]
             },
@@ -1617,6 +1621,10 @@
                 {
                   "type": "SYMBOL",
                   "name": "float"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "macro"
                 }
               ]
             },
@@ -1884,6 +1892,10 @@
         }
       ]
     },
+    "_color": {
+      "type": "PATTERN",
+      "value": "(black|dark_blue|dark_green|dark_aqua|dark_red|dark_purple|gold|gray|dark_gray|blue|green|aqua|red|light_purple|yellow|white)"
+    },
     "scoreboard_criteria": {
       "type": "CHOICE",
       "members": [
@@ -1932,12 +1944,48 @@
           "value": "armor"
         },
         {
-          "type": "PATTERN",
-          "value": "teamkill.(black|dark_blue|dark_green|dark_aqua|dark_red|dark_purple|gold|gray|dark_gray|blue|green|aqua|red|light_purple|yellow|white)"
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "teamkill."
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "_color"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "macro"
+                }
+              ]
+            }
+          ]
         },
         {
-          "type": "PATTERN",
-          "value": "killedByTeam.(black|dark_blue|dark_green|dark_aqua|dark_red|dark_purple|gold|gray|dark_gray|blue|green|aqua|red|light_purple|yellow|white)"
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "killedByTeam."
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "_color"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "macro"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
