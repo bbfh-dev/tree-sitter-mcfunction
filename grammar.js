@@ -254,7 +254,11 @@ module.exports = grammar({
 		// ————————————————————————————————
 
 		compound_identifier: ($) =>
-			choice(/[a-z_]+:[a-zA-Z_\.]+/, /[a-zA-Z_\.]+/, $.string, $.macro),
+			choice(
+				seq(optional("minecraft:"), /[a-zA-Z_\.]+/),
+				$.string,
+				$.macro,
+			),
 
 		compound_value: ($) =>
 			choice(

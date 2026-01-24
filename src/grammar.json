@@ -2124,12 +2124,25 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "PATTERN",
-          "value": "[a-z_]+:[a-zA-Z_\\.]+"
-        },
-        {
-          "type": "PATTERN",
-          "value": "[a-zA-Z_\\.]+"
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "minecraft:"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "PATTERN",
+              "value": "[a-zA-Z_\\.]+"
+            }
+          ]
         },
         {
           "type": "SYMBOL",
