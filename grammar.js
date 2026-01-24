@@ -150,8 +150,10 @@ module.exports = grammar({
 
 		number: ($) => choice(/\-?[0-9]+/, $.float),
 
-		position: ($) => seq("~", optional(choice($.integer, $.float))),
-		rotation: ($) => seq("^", optional(choice($.integer, $.float))),
+		position: ($) =>
+			seq("~", optional(choice($.integer, $.float, $.macro))),
+		rotation: ($) =>
+			seq("^", optional(choice($.integer, $.float, $.macro))),
 
 		operator: (_) =>
 			choice("=", "+=", "-=", "*=", "/=", "%=", "><", "<", ">"),
