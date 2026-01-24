@@ -912,6 +912,10 @@
         },
         {
           "type": "STRING",
+          "value": "kill"
+        },
+        {
+          "type": "STRING",
           "value": "leave"
         },
         {
@@ -925,6 +929,10 @@
         {
           "type": "STRING",
           "value": "locate"
+        },
+        {
+          "type": "STRING",
+          "value": "loot"
         },
         {
           "type": "STRING",
