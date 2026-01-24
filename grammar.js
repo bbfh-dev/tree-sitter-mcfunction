@@ -303,7 +303,14 @@ module.exports = grammar({
 			choice(
 				seq(
 					choice("@s", "@a", "@e", "@p", "@n", "@r", "*", $.word),
-					optional(ARRAY($, "[", "]", $._key_value_pair)),
+					optional(
+						choice(
+							ARRAY($, "[", "]", $._key_value_pair),
+							// FIXME: This is a bandage rather than an actual fix to $.path
+							// only taking place when "." is inside
+							seq("[", $.number, "]"),
+						),
+					),
 				),
 				seq($.macro, ARRAY($, "[", "]", $._key_value_pair)),
 			),

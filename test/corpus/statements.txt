@@ -155,6 +155,7 @@ Paths
 ==================
 
 data get entity @s item.components."minecraft:custom_data".item[5]
+data get entity @s Pos[0]
 
 ------------------
 
@@ -166,6 +167,14 @@ data get entity @s item.components."minecraft:custom_data".item[5]
   (selector)
   (path
    (string)
+   (number)))
+ (command
+  (command_identifier)
+  (command_keyword)
+  (command_keyword)
+  (selector)
+  (selector
+   (word)
    (number))))
 
 ==================
