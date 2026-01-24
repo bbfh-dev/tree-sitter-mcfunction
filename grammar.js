@@ -243,7 +243,11 @@ module.exports = grammar({
 		// ————————————————————————————————
 
 		compound_identifier: ($) =>
-			choice(token(seq(optional(/[a-z_]+:/), /[a-zA-Z_\.]+/)), $.string),
+			choice(
+				token(seq(optional(/[a-z_]+:/), /[a-zA-Z_\.]+/)),
+				$.string,
+				$.macro,
+			),
 
 		compound_value: ($) =>
 			choice(
@@ -296,9 +300,12 @@ module.exports = grammar({
 		// ————————————————————————————————
 
 		selector: ($) =>
-			seq(
-				choice("@s", "@a", "@e", "@p", "@n", "@r", "*", $.word),
-				optional(ARRAY($, "[", "]", $._key_value_pair)),
+			choice(
+				seq(
+					choice("@s", "@a", "@e", "@p", "@n", "@r", "*", $.word),
+					optional(ARRAY($, "[", "]", $._key_value_pair)),
+				),
+				seq($.macro, ARRAY($, "[", "]", $._key_value_pair)),
 			),
 
 		path: ($) =>

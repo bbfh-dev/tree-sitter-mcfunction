@@ -110,6 +110,7 @@ Selectors
 
 kill @s
 kill @e[distance=..5,type = #minecraft:skeleton,nbt=!{item:{"minecraft:property":false, another_value : $(macro)}}]
+say $(macro)[distance=..5]
 
 ------------------
 
@@ -139,7 +140,15 @@ kill @e[distance=..5,type = #minecraft:skeleton,nbt=!{item:{"minecraft:property"
 		(boolean))
 	   (compound_identifier)
 	   (compound_value
-		(macro)))))))))
+		(macro))))))))
+	(command
+	 (command_identifier)
+	 (selector
+	  (macro)
+	  (compound_identifier)
+	  (compound_value
+	   (range
+		(number))))))
 
 ==================
 Paths

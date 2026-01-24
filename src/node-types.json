@@ -132,6 +132,10 @@
       "required": false,
       "types": [
         {
+          "type": "macro",
+          "named": true
+        },
+        {
           "type": "string",
           "named": true
         }
@@ -573,6 +577,10 @@
         },
         {
           "type": "compound_value",
+          "named": true
+        },
+        {
+          "type": "macro",
           "named": true
         },
         {
