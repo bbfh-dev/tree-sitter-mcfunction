@@ -59,6 +59,9 @@
 (selector
     "=" @punctuation.delimiter)
 
+(selector
+    "~" @punctuation.delimiter)
+
 [
  "["
  "]"

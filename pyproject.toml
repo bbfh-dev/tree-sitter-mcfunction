@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "tree-sitter-mcfunction"
 description = "Tree-sitter for the latest version of Minecraft mcfunction syntax"
-version = "0.1.5"
+version = "0.1.6"
 keywords = ["incremental", "parsing", "tree-sitter", "mcfunction"]
 classifiers = [
   "Intended Audience :: Developers",

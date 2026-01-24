@@ -106,10 +106,14 @@ module.exports = grammar({
 			seq(
 				"execute",
 				repeat(seq($._space, $._execute_subcommand)),
-				$._space,
-				"run",
-				$._space,
-				choice($.execute_statement, $.command),
+				optional(
+					seq(
+						$._space,
+						"run",
+						$._space,
+						choice($.execute_statement, $.command),
+					),
+				),
 			),
 
 		_execute_subcommand: ($) =>
@@ -250,11 +254,7 @@ module.exports = grammar({
 		// ————————————————————————————————
 
 		compound_identifier: ($) =>
-			choice(
-				token(seq(optional(/[a-z_]+:/), /[a-zA-Z_\.]+/)),
-				$.string,
-				$.macro,
-			),
+			choice(/[a-z_]+:[a-zA-Z_\.]+/, /[a-zA-Z_\.]+/, $.string, $.macro),
 
 		compound_value: ($) =>
 			choice(

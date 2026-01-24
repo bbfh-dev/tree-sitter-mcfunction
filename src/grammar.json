@@ -1298,27 +1298,40 @@
           }
         },
         {
-          "type": "SYMBOL",
-          "name": "_space"
-        },
-        {
-          "type": "STRING",
-          "value": "run"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_space"
-        },
-        {
           "type": "CHOICE",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "execute_statement"
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "_space"
+                },
+                {
+                  "type": "STRING",
+                  "value": "run"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_space"
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "execute_statement"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "command"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "SYMBOL",
-              "name": "command"
+              "type": "BLANK"
             }
           ]
         }
@@ -2111,28 +2124,12 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "PATTERN",
-                    "value": "[a-z_]+:"
-                  },
-                  {
-                    "type": "BLANK"
-                  }
-                ]
-              },
-              {
-                "type": "PATTERN",
-                "value": "[a-zA-Z_\\.]+"
-              }
-            ]
-          }
+          "type": "PATTERN",
+          "value": "[a-z_]+:[a-zA-Z_\\.]+"
+        },
+        {
+          "type": "PATTERN",
+          "value": "[a-zA-Z_\\.]+"
         },
         {
           "type": "SYMBOL",
