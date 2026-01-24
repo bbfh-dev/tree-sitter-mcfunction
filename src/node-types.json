@@ -806,6 +806,10 @@
     "named": false
   },
   {
+    "type": "actionbar",
+    "named": false
+  },
+  {
     "type": "add",
     "named": false
   },
@@ -1675,6 +1679,10 @@
   },
   {
     "type": "style",
+    "named": false
+  },
+  {
+    "type": "subtitle",
     "named": false
   },
   {

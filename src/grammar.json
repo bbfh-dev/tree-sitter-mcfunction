@@ -700,6 +700,10 @@
       "members": [
         {
           "type": "STRING",
+          "value": "actionbar"
+        },
+        {
+          "type": "STRING",
           "value": "add"
         },
         {
@@ -1152,6 +1156,10 @@
         },
         {
           "type": "STRING",
+          "value": "subtitle"
+        },
+        {
+          "type": "STRING",
           "value": "take"
         },
         {
@@ -1173,6 +1181,10 @@
         {
           "type": "STRING",
           "value": "times"
+        },
+        {
+          "type": "STRING",
+          "value": "title"
         },
         {
           "type": "STRING",
