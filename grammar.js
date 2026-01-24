@@ -47,7 +47,7 @@ const ARRAY = ($, open_char, close_char, element) =>
 module.exports = grammar({
 	name: "mcfunction",
 
-	extras: ($) => [],
+	extras: (_) => [],
 
 	rules: {
 		source_file: ($) => repeat($._statement),
