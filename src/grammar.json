@@ -716,6 +716,10 @@
         },
         {
           "type": "STRING",
+          "value": "ambient"
+        },
+        {
+          "type": "STRING",
           "value": "amount"
         },
         {
@@ -876,6 +880,10 @@
         },
         {
           "type": "STRING",
+          "value": "hostile"
+        },
+        {
+          "type": "STRING",
           "value": "id"
         },
         {
@@ -920,6 +928,10 @@
         },
         {
           "type": "STRING",
+          "value": "master"
+        },
+        {
+          "type": "STRING",
           "value": "max"
         },
         {
@@ -952,7 +964,15 @@
         },
         {
           "type": "STRING",
+          "value": "music"
+        },
+        {
+          "type": "STRING",
           "value": "name"
+        },
+        {
+          "type": "STRING",
+          "value": "neutral"
         },
         {
           "type": "STRING",
@@ -996,6 +1016,10 @@
         },
         {
           "type": "STRING",
+          "value": "player"
+        },
+        {
+          "type": "STRING",
           "value": "players"
         },
         {
@@ -1021,6 +1045,10 @@
         {
           "type": "STRING",
           "value": "rain"
+        },
+        {
+          "type": "STRING",
+          "value": "record"
         },
         {
           "type": "STRING",
@@ -1152,6 +1180,10 @@
         },
         {
           "type": "STRING",
+          "value": "ui"
+        },
+        {
+          "type": "STRING",
           "value": "under"
         },
         {
@@ -1176,7 +1208,15 @@
         },
         {
           "type": "STRING",
+          "value": "voice"
+        },
+        {
+          "type": "STRING",
           "value": "warning"
+        },
+        {
+          "type": "STRING",
+          "value": "weather"
         },
         {
           "type": "STRING",

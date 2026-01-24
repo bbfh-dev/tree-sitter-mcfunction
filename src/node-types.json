@@ -838,6 +838,10 @@
     "named": false
   },
   {
+    "type": "ambient",
+    "named": false
+  },
+  {
     "type": "amount",
     "named": false
   },
@@ -1158,6 +1162,10 @@
     "named": false
   },
   {
+    "type": "hostile",
+    "named": false
+  },
+  {
     "type": "id",
     "named": false
   },
@@ -1266,6 +1274,10 @@
     "named": false
   },
   {
+    "type": "master",
+    "named": false
+  },
+  {
     "type": "matches",
     "named": false
   },
@@ -1318,7 +1330,15 @@
     "named": false
   },
   {
+    "type": "music",
+    "named": false
+  },
+  {
     "type": "name",
+    "named": false
+  },
+  {
+    "type": "neutral",
     "named": false
   },
   {
@@ -1406,6 +1426,10 @@
     "named": false
   },
   {
+    "type": "player",
+    "named": false
+  },
+  {
     "type": "playerKillCount",
     "named": false
   },
@@ -1459,6 +1483,10 @@
   },
   {
     "type": "recipe",
+    "named": false
+  },
+  {
+    "type": "record",
     "named": false
   },
   {
@@ -1754,6 +1782,10 @@
     "named": true
   },
   {
+    "type": "ui",
+    "named": false
+  },
+  {
     "type": "under",
     "named": false
   },
@@ -1787,6 +1819,10 @@
   },
   {
     "type": "visible",
+    "named": false
+  },
+  {
+    "type": "voice",
     "named": false
   },
   {

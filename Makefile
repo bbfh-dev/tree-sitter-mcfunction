@@ -4,7 +4,7 @@ endif
 
 LANGUAGE_NAME := tree-sitter-mcfunction
 HOMEPAGE_URL := https://github.com/bbfh-dev/tree-sitter-mcfunction
-VERSION := 0.1.2
+VERSION := 0.1.3
 
 # repository
 SRC_DIR := src
