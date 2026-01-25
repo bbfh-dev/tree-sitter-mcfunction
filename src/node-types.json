@@ -333,11 +333,6 @@
     }
   },
   {
-    "type": "macro",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "mime_comment",
     "named": true,
     "fields": {},
@@ -595,11 +590,6 @@
     }
   },
   {
-    "type": "simple_identifier",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "slot",
     "named": true,
     "fields": {}
@@ -678,23 +668,11 @@
     "named": false
   },
   {
-    "type": "$(",
-    "named": false
-  },
-  {
     "type": "%=",
     "named": false
   },
   {
-    "type": "%[",
-    "named": false
-  },
-  {
     "type": "'",
-    "named": false
-  },
-  {
-    "type": ")",
     "named": false
   },
   {
@@ -1270,6 +1248,10 @@
     "named": false
   },
   {
+    "type": "macro",
+    "named": true
+  },
+  {
     "type": "macro_indicator",
     "named": true
   },
@@ -1636,6 +1618,10 @@
   {
     "type": "show",
     "named": false
+  },
+  {
+    "type": "simple_identifier",
+    "named": true
   },
   {
     "type": "spawn",

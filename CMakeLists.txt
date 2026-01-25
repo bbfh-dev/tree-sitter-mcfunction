@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-mcfunction
-        VERSION "0.1.9"
+        VERSION "0.1.10"
         DESCRIPTION "Tree-sitter for the latest version of Minecraft mcfunction syntax"
         HOMEPAGE_URL "https://github.com/bbfh-dev/tree-sitter-mcfunction"
         LANGUAGES C)

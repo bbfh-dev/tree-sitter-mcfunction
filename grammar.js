@@ -78,10 +78,12 @@ module.exports = grammar({
 
 		macro_indicator: (_) => /\$/,
 		macro: (_) =>
-			choice(
-				seq("$(", /[a-z_]+/, ")"),
-				// from Mime preprocessor
-				seq("%[", /[a-z_\.]+/, "]"),
+			token(
+				choice(
+					seq("$(", /[a-z_]+/, ")"),
+					// from Mime preprocessor
+					seq("%[", /[a-z_\.]+/, "]"),
+				),
 			),
 
 		// ————————————————————————————————
