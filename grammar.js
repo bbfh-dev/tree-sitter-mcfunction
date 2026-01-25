@@ -81,7 +81,7 @@ module.exports = grammar({
 			choice(
 				seq("$(", /[a-z_]+/, ")"),
 				// from Mime preprocessor
-				seq("%[", /[a-z_]+/, "]"),
+				seq("%[", /[a-z_\.]+/, "]"),
 			),
 
 		// ————————————————————————————————
