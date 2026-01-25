@@ -626,6 +626,10 @@
           "named": true
         },
         {
+          "type": "macro",
+          "named": true
+        },
+        {
           "type": "macro_indicator",
           "named": true
         },
