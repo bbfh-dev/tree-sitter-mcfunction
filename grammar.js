@@ -206,6 +206,8 @@ module.exports = grammar({
 				/hotbar\.\d+/,
 				/inventory\.\*/,
 				/inventory\.\d+/,
+				/mob\.inventory\.\*/,
+				/mob\.inventory\.\d+/,
 				/enderchest\.\*/,
 				/enderchest\.\d+/,
 				/villager\.\*/,

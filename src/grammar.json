@@ -1935,6 +1935,14 @@
         },
         {
           "type": "PATTERN",
+          "value": "mob\\.inventory\\.\\*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "mob\\.inventory\\.\\d+"
+        },
+        {
+          "type": "PATTERN",
           "value": "enderchest\\.\\*"
         },
         {
