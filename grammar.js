@@ -251,7 +251,7 @@ module.exports = grammar({
 
 		resource: ($) =>
 			seq(
-				choice("./", /#?[a-z_]+\:/),
+				choice("./", "../", /#?[a-z_]+\:/),
 				repeat1(choice($.macro, "/", /[a-z0-9_\.\+\-]+/)),
 			),
 

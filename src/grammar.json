@@ -2116,6 +2116,10 @@
               "value": "./"
             },
             {
+              "type": "STRING",
+              "value": "../"
+            },
+            {
               "type": "PATTERN",
               "value": "#?[a-z_]+\\:"
             }
