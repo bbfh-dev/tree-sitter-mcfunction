@@ -6,7 +6,7 @@
 ] @comment
 
 [
- "#!"
+ "#!/"
 ] @keyword.operator
 
 (mime_comment

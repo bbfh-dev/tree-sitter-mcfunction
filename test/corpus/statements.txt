@@ -14,7 +14,7 @@ Comments
 Mime Comments
 ==================
 
-#!for [#x my.scoreboard] ..2
+#!/for [#x my.scoreboard] ..2
 
 ------------------
 

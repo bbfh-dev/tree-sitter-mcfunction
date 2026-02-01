@@ -100,7 +100,7 @@ module.exports = grammar({
 		comment: ($) => seq(/#[^!]/, $.line_contents),
 
 		mime_comment: ($) =>
-			seq("#!", $.simple_identifier, $._space, $.line_contents),
+			seq("#!/", $.simple_identifier, $._space, $.line_contents),
 
 		// ————————————————————————————————
 
