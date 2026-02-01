@@ -3,12 +3,15 @@ Comments
 ==================
 
 # Hello World!
+#! test
 
 ------------------
 
 (source_file
-	(comment
-		(line_contents)))
+  (comment
+    (line_contents))
+  (comment
+    (line_contents)))
 
 ==================
 Mime Comments
@@ -19,9 +22,9 @@ Mime Comments
 ------------------
 
 (source_file
-	(mime_comment
-		(simple_identifier)
-		(line_contents)))
+  (mime_comment
+    (simple_identifier)
+    (line_contents)))
 
 ==================
 Primitive data types
@@ -32,19 +35,19 @@ say 1 .51 98.401 false true 0b 17s 48581237L
 ------------------
 
 (source_file
-	(command
-		(command_identifier)
-		(integer)
-		(float)
-		(float)
-		(boolean)
-		(boolean)
-		(integer
-			(byte_indicator))
-		(integer
-			(short_indicator))
-		(integer
-			(long_indicator))))
+  (command
+    (command_identifier)
+    (integer)
+    (float)
+    (float)
+    (boolean)
+    (boolean)
+    (integer
+      (byte_indicator))
+    (integer
+      (short_indicator))
+    (integer
+      (long_indicator))))
 
 ==================
 Coordinates
@@ -55,16 +58,16 @@ tp ~.25 ~ ~5 ^0.98 ^
 ------------------
 
 (source_file
-	(command
-		(command_identifier)
-        (position
-          (float))
-        (position)
-        (position
-          (integer))
-        (rotation
-          (float))
-		(rotation)))
+  (command
+    (command_identifier)
+    (position
+      (float))
+    (position)
+    (position
+      (integer))
+    (rotation
+      (float))
+    (rotation)))
 
 ==================
 Strings
@@ -75,11 +78,11 @@ say "Hello World!" '"Something $(with) a macro"'
 ------------------
 
 (source_file
-	(command
-		(command_identifier)
-        (string)
-        (string
-          (macro))))
+  (command
+    (command_identifier)
+    (string)
+    (string
+      (macro))))
 
 ==================
 Resources
@@ -92,17 +95,17 @@ function #example:$(macro)/path/%[sub]/to
 ------------------
 
 (source_file
-	(command
-		(command_identifier)
-		(resource))
-	(command
-		(command_identifier)
-		(resource))
-	(command
-		(command_identifier)
-		(resource
-			(macro)
-			(macro))))
+  (command
+    (command_identifier)
+    (resource))
+  (command
+    (command_identifier)
+    (resource))
+  (command
+    (command_identifier)
+    (resource
+      (macro)
+      (macro))))
 
 ==================
 Selectors
@@ -115,40 +118,40 @@ say $(macro)[distance=..5]
 ------------------
 
 (source_file
- (command
-  (command_identifier)
-  (selector))
- (command
-  (command_identifier)
-  (selector
-   (compound_identifier)
-   (compound_value
-	(range
-	 (number)))
-   (compound_identifier)
-   (compound_value
-	(resource))
-   (compound_identifier)
-   (compound_value
-	(nbt_compound
-	 (compound_identifier)
-	 (compound_value
-	  (nbt_compound
-	   (compound_identifier
-		(string))
-	   (compound_value
-		(boolean))
-	   (compound_identifier)
-	   (compound_value
-		(macro))))))))
-	(command
-	 (command_identifier)
-	 (selector
-	  (macro)
-	  (compound_identifier)
-	  (compound_value
-	   (range
-		(number))))))
+  (command
+    (command_identifier)
+    (selector))
+  (command
+    (command_identifier)
+    (selector
+      (compound_identifier)
+      (compound_value
+        (range
+          (number)))
+      (compound_identifier)
+      (compound_value
+        (resource))
+      (compound_identifier)
+      (compound_value
+        (nbt_compound
+          (compound_identifier)
+          (compound_value
+            (nbt_compound
+              (compound_identifier
+                (string))
+              (compound_value
+                (boolean))
+              (compound_identifier)
+              (compound_value
+                (macro))))))))
+  (command
+    (command_identifier)
+    (selector
+      (macro)
+      (compound_identifier)
+      (compound_value
+        (range
+          (number))))))
 
 ==================
 Paths
@@ -160,22 +163,22 @@ data get entity @s Pos[0]
 ------------------
 
 (source_file
- (command
-  (command_identifier)
-  (command_keyword)
-  (command_keyword)
-  (selector)
-  (path
-   (string)
-   (number)))
- (command
-  (command_identifier)
-  (command_keyword)
-  (command_keyword)
-  (selector)
-  (selector
-   (word)
-   (number))))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (selector)
+    (path
+      (string)
+      (number)))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (selector)
+    (selector
+      (word)
+      (number))))
 
 ==================
 Operators
@@ -188,36 +191,36 @@ scoreboard players operation a example /= 15
 ------------------
 
 (source_file
- (command
-  (command_identifier)
-  (command_keyword)
-  (command_keyword)
-  (selector
-   (word))
-  (selector
-   (word))
-  (operator)
-  (integer))
- (command
-  (command_identifier)
-  (command_keyword)
-  (command_keyword)
-  (selector
-   (word))
-  (selector
-   (word))
-  (operator)
-  (integer))
- (command
-  (command_identifier)
-  (command_keyword)
-  (command_keyword)
-  (selector
-   (word))
-  (selector
-   (word))
-  (operator)
-  (integer)))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (selector
+      (word))
+    (selector
+      (word))
+    (operator)
+    (integer))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (selector
+      (word))
+    (selector
+      (word))
+    (operator)
+    (integer))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (selector
+      (word))
+    (selector
+      (word))
+    (operator)
+    (integer)))
 
 ==================
 Built-in words
@@ -234,39 +237,39 @@ scoreboard objectives add test killedByTeam.red
 ------------------
 
 (source_file
- (command
-  (command_identifier)
-  (slot))
- (command
-  (command_identifier)
-  (slot))
- (command
-  (command_identifier)
-  (heightmap))
- (command
-  (command_identifier)
-  (heightmap))
- (command
-  (command_identifier)
-  (command_keyword)
-  (command_keyword)
-  (selector
-   (word))
-  (scoreboard_criteria))
- (command
-  (command_identifier)
-  (command_keyword)
-  (command_keyword)
-  (selector
-   (word))
-  (resource))
-(command
- (command_identifier)
- (command_keyword)
- (command_keyword)
- (selector
-  (word))
- (scoreboard_criteria)))
+  (command
+    (command_identifier)
+    (slot))
+  (command
+    (command_identifier)
+    (slot))
+  (command
+    (command_identifier)
+    (heightmap))
+  (command
+    (command_identifier)
+    (heightmap))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (selector
+      (word))
+    (scoreboard_criteria))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (selector
+      (word))
+    (resource))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (selector
+      (word))
+    (scoreboard_criteria)))
 
 ==================
 NBT Compounds
@@ -281,23 +284,23 @@ data {\
 
 (source_file
   (command
-	(command_identifier)
-	(nbt_compound
-	  (backslash)
-	  (compound_identifier)
-	  (compound_value
-		(nbt_typed_array
-		  (integer)
-		  (integer)
-		  (integer)))
-	  (backslash)
-	  (compound_identifier)
-	  (compound_value
-		(nbt_compound
-		  (compound_identifier)
-		  (compound_value
-			(boolean))))
-	  (backslash))))
+    (command_identifier)
+    (nbt_compound
+      (backslash)
+      (compound_identifier)
+      (compound_value
+        (nbt_typed_array
+          (integer)
+          (integer)
+          (integer)))
+      (backslash)
+      (compound_identifier)
+      (compound_value
+        (nbt_compound
+          (compound_identifier)
+          (compound_value
+            (boolean))))
+      (backslash))))
 
 ==================
 Execute statements
@@ -310,18 +313,18 @@ execute as @e[type=zombie] at @s run execute run return fail
 
 (source_file
   (execute_statement
-	(command
-	  (command_identifier)
-	  (command_keyword)))
+    (command
+      (command_identifier)
+      (command_keyword)))
   (execute_statement
-	(subcommand_identifier)
-	(selector
-	  (compound_identifier)
-	  (compound_value
-		(word)))
-	(subcommand_identifier)
-	(selector)
-	(execute_statement
-	  (command
-		(command_identifier)
-		(command_keyword)))))
+    (subcommand_identifier)
+    (selector
+      (compound_identifier)
+      (compound_value
+        (word)))
+    (subcommand_identifier)
+    (selector)
+    (execute_statement
+      (command
+        (command_identifier)
+        (command_keyword)))))

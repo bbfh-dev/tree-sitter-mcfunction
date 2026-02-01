@@ -97,7 +97,7 @@ module.exports = grammar({
 
 		line_contents: (_) => /[^\r\n]*/,
 
-		comment: ($) => seq(/#[^!]/, $.line_contents),
+		comment: ($) => seq(/#!?[^\/]/, $.line_contents),
 
 		mime_comment: ($) =>
 			seq("#!/", $.simple_identifier, $._space, $.line_contents),
