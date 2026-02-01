@@ -17,14 +17,18 @@ Comments
 Mime Comments
 ==================
 
-#!/for [#x my.scoreboard] ..2
+#!/for #x my.scoreboard ..2
 
 ------------------
 
 (source_file
   (mime_comment
     (simple_identifier)
-    (line_contents)))
+    (selector
+      (word))
+    (path)
+    (range
+      (number))))
 
 ==================
 Primitive data types

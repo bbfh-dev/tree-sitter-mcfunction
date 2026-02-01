@@ -345,11 +345,83 @@
           "named": true
         },
         {
-          "type": "line_contents",
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "heightmap",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "nbt_compound",
+          "named": true
+        },
+        {
+          "type": "nbt_list",
+          "named": true
+        },
+        {
+          "type": "nbt_typed_array",
+          "named": true
+        },
+        {
+          "type": "operator",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
+          "type": "position",
+          "named": true
+        },
+        {
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "resource",
+          "named": true
+        },
+        {
+          "type": "rotation",
+          "named": true
+        },
+        {
+          "type": "scoreboard_criteria",
+          "named": true
+        },
+        {
+          "type": "selector",
           "named": true
         },
         {
           "type": "simple_identifier",
+          "named": true
+        },
+        {
+          "type": "slot",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "type",
           "named": true
         }
       ]

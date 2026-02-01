@@ -33,11 +33,6 @@
 ] @keyword
 
 [
- (mime_comment
-   (line_contents))
-] @text
-
-[
  (compound_identifier)
 ] @field
 

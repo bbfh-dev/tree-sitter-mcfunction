@@ -1280,12 +1280,77 @@
           "name": "simple_identifier"
         },
         {
-          "type": "SYMBOL",
-          "name": "_space"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "line_contents"
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_space"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "macro"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "_primitive_type"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "position"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "rotation"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "string"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "selector"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "resource"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "range"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "_nbt_type"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "path"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "operator"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "slot"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "heightmap"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "scoreboard_criteria"
+                  }
+                ]
+              }
+            ]
+          }
         }
       ]
     },
