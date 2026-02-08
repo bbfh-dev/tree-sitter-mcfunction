@@ -191,6 +191,7 @@ Operators
 scoreboard players operation a example = 15
 scoreboard players operation a example += 15
 scoreboard players operation a example /= 15
+scoreboard players operation #%[example] example /= 15
 
 ------------------
 
@@ -221,6 +222,16 @@ scoreboard players operation a example /= 15
     (command_keyword)
     (selector
       (word))
+    (selector
+      (word))
+    (operator)
+    (integer))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (selector
+      (macro))
     (selector
       (word))
     (operator)

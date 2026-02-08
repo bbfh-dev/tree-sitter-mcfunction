@@ -321,7 +321,17 @@ module.exports = grammar({
 		selector: ($) =>
 			choice(
 				seq(
-					choice("@s", "@a", "@e", "@p", "@n", "@r", "*", $.word),
+					choice(
+						"@s",
+						"@a",
+						"@e",
+						"@p",
+						"@n",
+						"@r",
+						"*",
+						$.word,
+						seq(choice("#", "."), $.macro),
+					),
 					optional(
 						choice(
 							ARRAY($, "[", "]", $._key_value_pair),

@@ -2705,6 +2705,28 @@
                 {
                   "type": "SYMBOL",
                   "name": "word"
+                },
+                {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "STRING",
+                          "value": "#"
+                        },
+                        {
+                          "type": "STRING",
+                          "value": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "macro"
+                    }
+                  ]
                 }
               ]
             },
