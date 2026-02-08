@@ -53,7 +53,7 @@
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "mime_comment"
+                  "name": "vintage_comment"
                 },
                 {
                   "type": "SYMBOL",
@@ -1268,12 +1268,12 @@
         }
       ]
     },
-    "mime_comment": {
+    "vintage_comment": {
       "type": "SEQ",
       "members": [
         {
           "type": "STRING",
-          "value": "#!/"
+          "value": "#~>"
         },
         {
           "type": "SYMBOL",

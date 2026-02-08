@@ -59,11 +59,11 @@ module.exports = grammar({
 
 		_statement: ($) =>
 			seq(
-				// Allow for indentation (such as bolt or mime).
+				// Allow for indentation (such as bolt or vintage).
 				optional(/\s+/),
 				optional(
 					choice(
-						$.mime_comment,
+						$.vintage_comment,
 						$.comment,
 						seq(
 							optional($.macro_indicator),
@@ -81,7 +81,7 @@ module.exports = grammar({
 			token(
 				choice(
 					seq("$(", /[a-z_]+/, ")"),
-					// from Mime preprocessor
+					// from Vintage preprocessor
 					seq("%[", /[a-z_\.]+/, "]"),
 				),
 			),
@@ -99,9 +99,9 @@ module.exports = grammar({
 
 		comment: ($) => seq(/#!?[^\/]/, $.line_contents),
 
-		mime_comment: ($) =>
+		vintage_comment: ($) =>
 			seq(
-				"#!/",
+				"#~>",
 				$.simple_identifier,
 				repeat(seq($._space, choice(...ARGUMENT($)))),
 			),

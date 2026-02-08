@@ -6,10 +6,10 @@
 ] @comment
 
 [
- "#!/"
+ "#~>"
 ] @keyword.operator
 
-(mime_comment
+(vintage_comment
    (simple_identifier) @keyword)
 
 (integer
