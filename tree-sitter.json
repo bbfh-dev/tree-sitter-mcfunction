@@ -16,7 +16,7 @@
 		}
 	],
 	"metadata": {
-		"version": "0.1.13",
+		"version": "0.1.14",
 		"license": "ISC",
 		"description": "Tree-sitter for the latest version of Minecraft mcfunction syntax",
 		"authors": [
