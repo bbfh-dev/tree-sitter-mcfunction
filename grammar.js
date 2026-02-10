@@ -82,7 +82,7 @@ module.exports = grammar({
 				choice(
 					seq("$(", /[a-z_]+/, ")"),
 					// from Vintage preprocessor
-					seq("%[", /[a-z_\.]+/, "]"),
+					seq("%[", /[a-z_\.:]+/, "]"),
 				),
 			),
 

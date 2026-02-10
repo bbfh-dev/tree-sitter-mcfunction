@@ -141,7 +141,7 @@
               },
               {
                 "type": "PATTERN",
-                "value": "[a-z_\\.]+"
+                "value": "[a-z_\\.:]+"
               },
               {
                 "type": "STRING",
