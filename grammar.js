@@ -108,6 +108,16 @@ module.exports = grammar({
 
 		// ————————————————————————————————
 
+		return_statement: ($) =>
+			prec.left(
+				2,
+				seq(
+					"return run",
+					$._space,
+					choice($.execute_statement, $.command, $.return_statement),
+				),
+			),
+
 		execute_statement: ($) =>
 			seq(
 				"execute",
@@ -117,7 +127,11 @@ module.exports = grammar({
 						$._space,
 						"run",
 						$._space,
-						choice($.execute_statement, $.command),
+						choice(
+							$.execute_statement,
+							$.command,
+							$.return_statement,
+						),
 					),
 				),
 			),
@@ -193,7 +207,16 @@ module.exports = grammar({
 		string: ($) => choice($._single_quoted_string, $._double_quoted_string),
 
 		word: (_) =>
-			choice(/#[0-9a-zA-Z_+\-]+/, /\.?[a-zA-Z_\+\-][0-9a-zA-Z_\+\-]*/),
+			choice(
+				seq(
+					/#[0-9a-zA-Z_+\-\.]+/,
+					optional(seq(".", /[0-9a-zA-Z_+\-\.]+/)),
+				),
+				seq(
+					/\.?[a-zA-Z_\+\-][0-9a-zA-Z_\+\-]*/,
+					optional(seq(".", /[0-9a-zA-Z_+\-\.]+/)),
+				),
+			),
 
 		range: ($) =>
 			choice(

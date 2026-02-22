@@ -274,6 +274,10 @@
           "named": true
         },
         {
+          "type": "return_statement",
+          "named": true
+        },
+        {
           "type": "rotation",
           "named": true
         },
@@ -488,6 +492,33 @@
       "types": [
         {
           "type": "macro",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "return_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "execute_statement",
+          "named": true
+        },
+        {
+          "type": "return_statement",
           "named": true
         }
       ]
@@ -1597,6 +1628,10 @@
   },
   {
     "type": "return",
+    "named": false
+  },
+  {
+    "type": "return run",
     "named": false
   },
   {

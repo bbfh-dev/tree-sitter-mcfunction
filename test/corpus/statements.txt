@@ -118,6 +118,7 @@ Selectors
 kill @s
 kill @e[distance=..5,type = #minecraft:skeleton,nbt=!{item:{"minecraft:property":false, another_value : $(macro)}}]
 say $(macro)[distance=..5]
+return run @s[tag=--my.example]
 
 ------------------
 
@@ -155,7 +156,14 @@ say $(macro)[distance=..5]
       (compound_identifier)
       (compound_value
         (range
-          (number))))))
+          (number)))))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (selector
+      (compound_identifier)
+      (compound_value
+        (word)))))
 
 ==================
 Paths
