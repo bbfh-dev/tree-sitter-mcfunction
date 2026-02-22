@@ -24,6 +24,7 @@
 [
  "execute"
  "run"
+ "return run"
  (command_identifier)
  (subcommand_identifier)
  (command_keyword)

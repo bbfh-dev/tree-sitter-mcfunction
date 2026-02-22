@@ -67,7 +67,12 @@ module.exports = grammar({
 						$.comment,
 						seq(
 							optional($.macro_indicator),
-							choice($.execute_statement, $.command, $.macro),
+							choice(
+								$.execute_statement,
+								$.command,
+								$.return_statement,
+								$.macro,
+							),
 						),
 					),
 				),

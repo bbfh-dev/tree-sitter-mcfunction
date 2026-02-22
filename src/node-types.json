@@ -632,6 +632,10 @@
           "named": true
         },
         {
+          "type": "return_statement",
+          "named": true
+        },
+        {
           "type": "vintage_comment",
           "named": true
         }

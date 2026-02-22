@@ -87,6 +87,10 @@
                         },
                         {
                           "type": "SYMBOL",
+                          "name": "return_statement"
+                        },
+                        {
+                          "type": "SYMBOL",
                           "name": "macro"
                         }
                       ]

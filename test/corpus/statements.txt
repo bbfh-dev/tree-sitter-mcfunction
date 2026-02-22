@@ -118,7 +118,7 @@ Selectors
 kill @s
 kill @e[distance=..5,type = #minecraft:skeleton,nbt=!{item:{"minecraft:property":false, another_value : $(macro)}}]
 say $(macro)[distance=..5]
-return run @s[tag=--my.example]
+return run say @s[tag=--my.example]
 
 ------------------
 
@@ -157,13 +157,13 @@ return run @s[tag=--my.example]
       (compound_value
         (range
           (number)))))
-  (command
-    (command_identifier)
-    (command_keyword)
-    (selector
-      (compound_identifier)
-      (compound_value
-        (word)))))
+  (return_statement
+    (command
+      (command_identifier)
+      (selector
+        (compound_identifier)
+        (compound_value
+          (word))))))
 
 ==================
 Paths
@@ -331,6 +331,7 @@ Execute statements
 
 execute run return fail
 execute as @e[type=zombie] at @s run execute run return fail
+return run execute if score #a m.ytmp = #b my.tmp
 
 ------------------
 
@@ -350,4 +351,15 @@ execute as @e[type=zombie] at @s run execute run return fail
     (execute_statement
       (command
         (command_identifier)
-        (command_keyword)))))
+        (command_keyword))))
+  (return_statement
+    (execute_statement
+      (subcommand_identifier)
+      (subcommand_identifier)
+      (selector
+        (word))
+      (path)
+      (operator)
+      (selector
+        (word))
+      (path))))
