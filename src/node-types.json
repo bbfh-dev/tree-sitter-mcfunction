@@ -1,6 +1,11 @@
 [
   {
-    "type": "command",
+    "type": "block_comment_statement",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "block_selector",
     "named": true,
     "fields": {},
     "children": {
@@ -8,7 +13,39 @@
       "required": true,
       "types": [
         {
+          "type": "component_compound",
+          "named": true
+        },
+        {
+          "type": "data_compound",
+          "named": true
+        },
+        {
+          "type": "selector_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "command_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "command_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
           "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "block_selector",
           "named": true
         },
         {
@@ -24,11 +61,31 @@
           "named": true
         },
         {
+          "type": "command_statement",
+          "named": true
+        },
+        {
+          "type": "data_array",
+          "named": true
+        },
+        {
+          "type": "data_compound",
+          "named": true
+        },
+        {
+          "type": "entity_selector",
+          "named": true
+        },
+        {
           "type": "float",
           "named": true
         },
         {
-          "type": "heightmap",
+          "type": "greedy_string",
+          "named": true
+        },
+        {
+          "type": "hexadecimal",
           "named": true
         },
         {
@@ -36,31 +93,27 @@
           "named": true
         },
         {
+          "type": "item_selector",
+          "named": true
+        },
+        {
           "type": "macro",
           "named": true
         },
         {
-          "type": "nbt_compound",
+          "type": "nbt_path",
           "named": true
         },
         {
-          "type": "nbt_list",
+          "type": "number_with_unit",
           "named": true
         },
         {
-          "type": "nbt_typed_array",
+          "type": "operation",
           "named": true
         },
         {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "path",
-          "named": true
-        },
-        {
-          "type": "position",
+          "type": "plain_string",
           "named": true
         },
         {
@@ -72,71 +125,59 @@
           "named": true
         },
         {
-          "type": "rotation",
-          "named": true
-        },
-        {
-          "type": "scoreboard_criteria",
-          "named": true
-        },
-        {
-          "type": "selector",
-          "named": true
-        },
-        {
-          "type": "slot",
-          "named": true
-        },
-        {
           "type": "string",
           "named": true
         },
         {
-          "type": "type",
+          "type": "subcommand_keyword",
           "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "command_identifier",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "command_keyword",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "comment",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
+        },
         {
-          "type": "line_contents",
+          "type": "uuid",
+          "named": true
+        },
+        {
+          "type": "vector_caret",
+          "named": true
+        },
+        {
+          "type": "vector_tilde",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "compound_identifier",
+    "type": "comment_statement",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "component_compound",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "macro",
+          "type": "backslash",
           "named": true
         },
         {
-          "type": "string",
+          "type": "compound_value",
+          "named": true
+        },
+        {
+          "type": "data_compound",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "property_identifier",
           "named": true
         }
       ]
@@ -151,7 +192,23 @@
       "required": true,
       "types": [
         {
+          "type": "block_selector",
+          "named": true
+        },
+        {
           "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "data_array",
+          "named": true
+        },
+        {
+          "type": "data_compound",
+          "named": true
+        },
+        {
+          "type": "entity_selector",
           "named": true
         },
         {
@@ -159,7 +216,15 @@
           "named": true
         },
         {
+          "type": "hexadecimal",
+          "named": true
+        },
+        {
           "type": "integer",
+          "named": true
+        },
+        {
+          "type": "item_selector",
           "named": true
         },
         {
@@ -167,15 +232,19 @@
           "named": true
         },
         {
-          "type": "nbt_compound",
+          "type": "nbt_path",
           "named": true
         },
         {
-          "type": "nbt_list",
+          "type": "number_with_unit",
           "named": true
         },
         {
-          "type": "nbt_typed_array",
+          "type": "operation",
+          "named": true
+        },
+        {
+          "type": "plain_string",
           "named": true
         },
         {
@@ -191,7 +260,169 @@
           "named": true
         },
         {
-          "type": "type",
+          "type": "uuid",
+          "named": true
+        },
+        {
+          "type": "vector_caret",
+          "named": true
+        },
+        {
+          "type": "vector_tilde",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_array",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_type_identifier",
+          "named": true
+        },
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "compound_value",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_compound",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "compound_value",
+          "named": true
+        },
+        {
+          "type": "property_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "entity_selector",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "component_compound",
+          "named": true
+        },
+        {
+          "type": "target_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "escape_sequence",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "greedy_string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "macro",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "item_selector",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "component_compound",
+          "named": true
+        },
+        {
+          "type": "selector_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "nbt_path",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "nbt_path_identifier",
+          "named": true
+        },
+        {
+          "type": "nbt_path_slice",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "nbt_path_identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "command_keyword",
+          "named": true
+        },
+        {
+          "type": "data_compound",
+          "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         },
         {
@@ -202,196 +433,19 @@
     }
   },
   {
-    "type": "execute_statement",
+    "type": "nbt_path_slice",
     "named": true,
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
-        {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "command",
-          "named": true
-        },
-        {
-          "type": "execute_statement",
-          "named": true
-        },
-        {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "heightmap",
-          "named": true
-        },
-        {
-          "type": "integer",
-          "named": true
-        },
-        {
-          "type": "macro",
-          "named": true
-        },
-        {
-          "type": "nbt_compound",
-          "named": true
-        },
-        {
-          "type": "nbt_list",
-          "named": true
-        },
-        {
-          "type": "nbt_typed_array",
-          "named": true
-        },
-        {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "path",
-          "named": true
-        },
-        {
-          "type": "position",
-          "named": true
-        },
-        {
-          "type": "range",
-          "named": true
-        },
-        {
-          "type": "resource",
-          "named": true
-        },
-        {
-          "type": "return_statement",
-          "named": true
-        },
-        {
-          "type": "rotation",
-          "named": true
-        },
-        {
-          "type": "scoreboard_criteria",
-          "named": true
-        },
-        {
-          "type": "selector",
-          "named": true
-        },
-        {
-          "type": "slot",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "subcommand_identifier",
-          "named": true
-        },
-        {
-          "type": "type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "heightmap",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "integer",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "byte_indicator",
-          "named": true
-        },
-        {
-          "type": "long_indicator",
-          "named": true
-        },
-        {
-          "type": "short_indicator",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "nbt_compound",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "compound_identifier",
-          "named": true
-        },
         {
           "type": "compound_value",
           "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "nbt_list",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "backslash",
-          "named": true
         },
         {
-          "type": "compound_value",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "nbt_typed_array",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "integer",
+          "type": "word",
           "named": true
         }
       ]
@@ -403,54 +457,7 @@
     "fields": {},
     "children": {
       "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "float",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "operator",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "path",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "macro",
-          "named": true
-        },
-        {
-          "type": "nbt_compound",
-          "named": true
-        },
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "position",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "float",
@@ -459,9 +466,66 @@
         {
           "type": "integer",
           "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "number_with_unit",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
         },
         {
+          "type": "unit_symbol",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "plain_string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
           "type": "macro",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "property_identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "resource",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -493,101 +557,9 @@
         {
           "type": "macro",
           "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "return_statement",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "backslash",
-          "named": true
         },
         {
-          "type": "command",
-          "named": true
-        },
-        {
-          "type": "execute_statement",
-          "named": true
-        },
-        {
-          "type": "return_statement",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "rotation",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "integer",
-          "named": true
-        },
-        {
-          "type": "macro",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "scoreboard_criteria",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "macro",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "selector",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "compound_identifier",
-          "named": true
-        },
-        {
-          "type": "compound_value",
-          "named": true
-        },
-        {
-          "type": "macro",
-          "named": true
-        },
-        {
-          "type": "number",
+          "type": "resource_identifier",
           "named": true
         },
         {
@@ -598,9 +570,42 @@
     }
   },
   {
-    "type": "slot",
+    "type": "resource_identifier",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "selector_identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "plain_string",
+          "named": true
+        },
+        {
+          "type": "resource_identifier",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "source_file",
@@ -612,31 +617,15 @@
       "required": false,
       "types": [
         {
-          "type": "command",
+          "type": "block_comment_statement",
           "named": true
         },
         {
-          "type": "comment",
+          "type": "command_statement",
           "named": true
         },
         {
-          "type": "execute_statement",
-          "named": true
-        },
-        {
-          "type": "macro",
-          "named": true
-        },
-        {
-          "type": "macro_indicator",
-          "named": true
-        },
-        {
-          "type": "return_statement",
-          "named": true
-        },
-        {
-          "type": "vintage_comment",
+          "type": "comment_statement",
           "named": true
         }
       ]
@@ -651,6 +640,10 @@
       "required": false,
       "types": [
         {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
           "type": "macro",
           "named": true
         }
@@ -658,109 +651,39 @@
     }
   },
   {
-    "type": "subcommand_identifier",
+    "type": "subcommand_keyword",
     "named": true,
     "fields": {}
   },
   {
-    "type": "vintage_comment",
+    "type": "vector_caret",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": true,
+      "multiple": false,
+      "required": false,
       "types": [
         {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "heightmap",
-          "named": true
-        },
-        {
-          "type": "integer",
-          "named": true
-        },
-        {
-          "type": "macro",
-          "named": true
-        },
-        {
-          "type": "nbt_compound",
-          "named": true
-        },
-        {
-          "type": "nbt_list",
-          "named": true
-        },
-        {
-          "type": "nbt_typed_array",
-          "named": true
-        },
-        {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "path",
-          "named": true
-        },
-        {
-          "type": "position",
-          "named": true
-        },
-        {
-          "type": "range",
-          "named": true
-        },
-        {
-          "type": "resource",
-          "named": true
-        },
-        {
-          "type": "rotation",
-          "named": true
-        },
-        {
-          "type": "scoreboard_criteria",
-          "named": true
-        },
-        {
-          "type": "selector",
-          "named": true
-        },
-        {
-          "type": "simple_identifier",
-          "named": true
-        },
-        {
-          "type": "slot",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "type",
+          "type": "number",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "word",
+    "type": "vector_tilde",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "!",
@@ -775,11 +698,11 @@
     "named": false
   },
   {
-    "type": "#~>",
+    "type": "#>",
     "named": false
   },
   {
-    "type": "%=",
+    "type": "$",
     "named": false
   },
   {
@@ -787,23 +710,7 @@
     "named": false
   },
   {
-    "type": "*",
-    "named": false
-  },
-  {
-    "type": "*=",
-    "named": false
-  },
-  {
-    "type": "+=",
-    "named": false
-  },
-  {
     "type": ",",
-    "named": false
-  },
-  {
-    "type": "-=",
     "named": false
   },
   {
@@ -815,19 +722,11 @@
     "named": false
   },
   {
-    "type": "../",
-    "named": false
-  },
-  {
     "type": "./",
     "named": false
   },
   {
     "type": "/",
-    "named": false
-  },
-  {
-    "type": "/=",
     "named": false
   },
   {
@@ -839,59 +738,15 @@
     "named": false
   },
   {
-    "type": "<",
-    "named": false
-  },
-  {
     "type": "=",
     "named": false
   },
   {
-    "type": ">",
-    "named": false
-  },
-  {
-    "type": "><",
-    "named": false
-  },
-  {
-    "type": "@a",
-    "named": false
-  },
-  {
-    "type": "@e",
-    "named": false
-  },
-  {
-    "type": "@n",
-    "named": false
-  },
-  {
-    "type": "@p",
-    "named": false
-  },
-  {
-    "type": "@r",
-    "named": false
-  },
-  {
-    "type": "@s",
-    "named": false
-  },
-  {
-    "type": "B",
-    "named": false
-  },
-  {
-    "type": "I",
-    "named": false
-  },
-  {
-    "type": "L",
-    "named": false
-  },
-  {
     "type": "[",
+    "named": false
+  },
+  {
+    "type": "\\",
     "named": false
   },
   {
@@ -923,14 +778,6 @@
     "named": false
   },
   {
-    "type": "advancement",
-    "named": false
-  },
-  {
-    "type": "air",
-    "named": false
-  },
-  {
     "type": "align",
     "named": false
   },
@@ -955,8 +802,8 @@
     "named": false
   },
   {
-    "type": "armor",
-    "named": false
+    "type": "array_type_identifier",
+    "named": true
   },
   {
     "type": "as",
@@ -971,24 +818,8 @@
     "named": false
   },
   {
-    "type": "attribute",
-    "named": false
-  },
-  {
     "type": "backslash",
     "named": true
-  },
-  {
-    "type": "ban",
-    "named": false
-  },
-  {
-    "type": "ban-ip",
-    "named": false
-  },
-  {
-    "type": "banlist",
-    "named": false
   },
   {
     "type": "base",
@@ -1023,10 +854,6 @@
     "named": false
   },
   {
-    "type": "byte_indicator",
-    "named": true
-  },
-  {
     "type": "center",
     "named": false
   },
@@ -1035,12 +862,12 @@
     "named": false
   },
   {
-    "type": "clone",
+    "type": "color",
     "named": false
   },
   {
-    "type": "color",
-    "named": false
+    "type": "command_identifier",
+    "named": true
   },
   {
     "type": "controller",
@@ -1059,10 +886,6 @@
     "named": false
   },
   {
-    "type": "datapack",
-    "named": false
-  },
-  {
     "type": "day",
     "named": false
   },
@@ -1071,31 +894,7 @@
     "named": false
   },
   {
-    "type": "deathCount",
-    "named": false
-  },
-  {
-    "type": "debug",
-    "named": false
-  },
-  {
-    "type": "defaultgamemode",
-    "named": false
-  },
-  {
-    "type": "deop",
-    "named": false
-  },
-  {
     "type": "destroy",
-    "named": false
-  },
-  {
-    "type": "dialog",
-    "named": false
-  },
-  {
-    "type": "difficulty",
     "named": false
   },
   {
@@ -1115,19 +914,7 @@
     "named": false
   },
   {
-    "type": "dummy",
-    "named": false
-  },
-  {
-    "type": "effect",
-    "named": false
-  },
-  {
     "type": "enable",
-    "named": false
-  },
-  {
-    "type": "enchant",
     "named": false
   },
   {
@@ -1140,10 +927,6 @@
   },
   {
     "type": "execute",
-    "named": false
-  },
-  {
-    "type": "experience",
     "named": false
   },
   {
@@ -1183,18 +966,6 @@
     "named": false
   },
   {
-    "type": "fetchprofile",
-    "named": false
-  },
-  {
-    "type": "fill",
-    "named": false
-  },
-  {
-    "type": "fillbiome",
-    "named": false
-  },
-  {
     "type": "fish",
     "named": false
   },
@@ -1207,15 +978,7 @@
     "named": false
   },
   {
-    "type": "food",
-    "named": false
-  },
-  {
     "type": "force",
-    "named": false
-  },
-  {
-    "type": "forceload",
     "named": false
   },
   {
@@ -1224,14 +987,6 @@
   },
   {
     "type": "function",
-    "named": false
-  },
-  {
-    "type": "gamemode",
-    "named": false
-  },
-  {
-    "type": "gamerule",
     "named": false
   },
   {
@@ -1251,12 +1006,8 @@
     "named": false
   },
   {
-    "type": "health",
-    "named": false
-  },
-  {
-    "type": "help",
-    "named": false
+    "type": "hexadecimal",
+    "named": true
   },
   {
     "type": "hollow",
@@ -1283,19 +1034,15 @@
     "named": false
   },
   {
+    "type": "integer",
+    "named": true
+  },
+  {
     "type": "ips",
     "named": false
   },
   {
-    "type": "item",
-    "named": false
-  },
-  {
     "type": "items",
-    "named": false
-  },
-  {
-    "type": "jfr",
     "named": false
   },
   {
@@ -1311,15 +1058,7 @@
     "named": false
   },
   {
-    "type": "kick",
-    "named": false
-  },
-  {
     "type": "kill",
-    "named": false
-  },
-  {
-    "type": "killedByTeam.",
     "named": false
   },
   {
@@ -1331,16 +1070,8 @@
     "named": false
   },
   {
-    "type": "level",
-    "named": false
-  },
-  {
     "type": "levels",
     "named": false
-  },
-  {
-    "type": "line_contents",
-    "named": true
   },
   {
     "type": "list",
@@ -1355,19 +1086,11 @@
     "named": false
   },
   {
-    "type": "long_indicator",
-    "named": true
-  },
-  {
     "type": "loot",
     "named": false
   },
   {
     "type": "macro",
-    "named": true
-  },
-  {
-    "type": "macro_indicator",
     "named": true
   },
   {
@@ -1391,10 +1114,6 @@
     "named": false
   },
   {
-    "type": "me",
-    "named": false
-  },
-  {
     "type": "merge",
     "named": false
   },
@@ -1407,10 +1126,6 @@
     "named": false
   },
   {
-    "type": "minecraft:",
-    "named": false
-  },
-  {
     "type": "modifier",
     "named": false
   },
@@ -1419,23 +1134,11 @@
     "named": false
   },
   {
-    "type": "motion_blocking",
-    "named": false
-  },
-  {
-    "type": "motion_blocking_no_leaves",
-    "named": false
-  },
-  {
     "type": "mount",
     "named": false
   },
   {
     "type": "move",
-    "named": false
-  },
-  {
-    "type": "msg",
     "named": false
   },
   {
@@ -1467,10 +1170,6 @@
     "named": false
   },
   {
-    "type": "ocean_floor",
-    "named": false
-  },
-  {
     "type": "off",
     "named": false
   },
@@ -1487,8 +1186,8 @@
     "named": false
   },
   {
-    "type": "op",
-    "named": false
+    "type": "operation",
+    "named": true
   },
   {
     "type": "operation",
@@ -1511,27 +1210,7 @@
     "named": false
   },
   {
-    "type": "pardon",
-    "named": false
-  },
-  {
-    "type": "pardon-ip",
-    "named": false
-  },
-  {
-    "type": "particle",
-    "named": false
-  },
-  {
     "type": "passengers",
-    "named": false
-  },
-  {
-    "type": "perf",
-    "named": false
-  },
-  {
-    "type": "place",
     "named": false
   },
   {
@@ -1539,15 +1218,7 @@
     "named": false
   },
   {
-    "type": "playerKillCount",
-    "named": false
-  },
-  {
     "type": "players",
-    "named": false
-  },
-  {
-    "type": "playsound",
     "named": false
   },
   {
@@ -1575,23 +1246,11 @@
     "named": false
   },
   {
-    "type": "publish",
-    "named": false
-  },
-  {
     "type": "query",
     "named": false
   },
   {
     "type": "rain",
-    "named": false
-  },
-  {
-    "type": "random",
-    "named": false
-  },
-  {
-    "type": "recipe",
     "named": false
   },
   {
@@ -1631,10 +1290,6 @@
     "named": false
   },
   {
-    "type": "return",
-    "named": false
-  },
-  {
     "type": "return run",
     "named": false
   },
@@ -1643,15 +1298,7 @@
     "named": false
   },
   {
-    "type": "ride",
-    "named": false
-  },
-  {
     "type": "roll",
-    "named": false
-  },
-  {
-    "type": "rotate",
     "named": false
   },
   {
@@ -1679,23 +1326,7 @@
     "named": false
   },
   {
-    "type": "save-all",
-    "named": false
-  },
-  {
-    "type": "save-off",
-    "named": false
-  },
-  {
-    "type": "save-on",
-    "named": false
-  },
-  {
     "type": "say",
-    "named": false
-  },
-  {
-    "type": "schedule",
     "named": false
   },
   {
@@ -1703,19 +1334,7 @@
     "named": false
   },
   {
-    "type": "scoreboard",
-    "named": false
-  },
-  {
-    "type": "seed",
-    "named": false
-  },
-  {
     "type": "set",
-    "named": false
-  },
-  {
-    "type": "setblock",
     "named": false
   },
   {
@@ -1723,39 +1342,11 @@
     "named": false
   },
   {
-    "type": "setidletimeout",
-    "named": false
-  },
-  {
-    "type": "setworldspawn",
-    "named": false
-  },
-  {
-    "type": "short_indicator",
-    "named": true
-  },
-  {
     "type": "show",
     "named": false
   },
   {
-    "type": "simple_identifier",
-    "named": true
-  },
-  {
     "type": "spawn",
-    "named": false
-  },
-  {
-    "type": "spawnpoint",
-    "named": false
-  },
-  {
-    "type": "spectate",
-    "named": false
-  },
-  {
-    "type": "spreadplayers",
     "named": false
   },
   {
@@ -1764,10 +1355,6 @@
   },
   {
     "type": "stop",
-    "named": false
-  },
-  {
-    "type": "stopsound",
     "named": false
   },
   {
@@ -1807,14 +1394,6 @@
     "named": false
   },
   {
-    "type": "swing",
-    "named": false
-  },
-  {
-    "type": "tag",
-    "named": false
-  },
-  {
     "type": "take",
     "named": false
   },
@@ -1823,35 +1402,11 @@
     "named": false
   },
   {
-    "type": "team",
-    "named": false
-  },
-  {
-    "type": "teamkill.",
-    "named": false
-  },
-  {
-    "type": "teammsg",
-    "named": false
-  },
-  {
-    "type": "teleport",
-    "named": false
-  },
-  {
-    "type": "tell",
-    "named": false
-  },
-  {
-    "type": "tellraw",
-    "named": false
+    "type": "target_identifier",
+    "named": true
   },
   {
     "type": "template",
-    "named": false
-  },
-  {
-    "type": "test",
     "named": false
   },
   {
@@ -1875,32 +1430,8 @@
     "named": false
   },
   {
-    "type": "tm",
-    "named": false
-  },
-  {
     "type": "to",
     "named": false
-  },
-  {
-    "type": "totalKillCount",
-    "named": false
-  },
-  {
-    "type": "tp",
-    "named": false
-  },
-  {
-    "type": "transfer",
-    "named": false
-  },
-  {
-    "type": "trigger",
-    "named": false
-  },
-  {
-    "type": "type",
-    "named": true
   },
   {
     "type": "ui",
@@ -1911,12 +1442,20 @@
     "named": false
   },
   {
+    "type": "unit_symbol",
+    "named": true
+  },
+  {
     "type": "unless",
     "named": false
   },
   {
     "type": "until",
     "named": false
+  },
+  {
+    "type": "uuid",
+    "named": true
   },
   {
     "type": "uuids",
@@ -1935,10 +1474,6 @@
     "named": false
   },
   {
-    "type": "version",
-    "named": false
-  },
-  {
     "type": "visible",
     "named": false
   },
@@ -1947,15 +1482,7 @@
     "named": false
   },
   {
-    "type": "w",
-    "named": false
-  },
-  {
     "type": "warning",
-    "named": false
-  },
-  {
-    "type": "waypoint",
     "named": false
   },
   {
@@ -1963,24 +1490,12 @@
     "named": false
   },
   {
-    "type": "whitelist",
-    "named": false
-  },
-  {
     "type": "with",
     "named": false
   },
   {
-    "type": "world_surface",
-    "named": false
-  },
-  {
-    "type": "worldborder",
-    "named": false
-  },
-  {
-    "type": "xp",
-    "named": false
+    "type": "word",
+    "named": true
   },
   {
     "type": "{",

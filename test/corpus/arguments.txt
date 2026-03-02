@@ -1,0 +1,1119 @@
+==================
+Coordinates
+==================
+
+tp ~ ~ ~
+tp ^ ^ ^
+tp ^1 ^ ^-5
+tp ~0.5 ~1 ~-5
+tp ^.1 ^0.5 ^-.8
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde))
+  (command_statement
+    (command_identifier)
+    (vector_caret)
+    (vector_caret)
+    (vector_caret))
+  (command_statement
+    (command_identifier)
+    (vector_caret
+      (number
+        (integer)))
+    (vector_caret)
+    (vector_caret
+      (number
+        (integer))))
+  (command_statement
+    (command_identifier)
+    (vector_tilde
+      (number
+        (float)))
+    (vector_tilde
+      (number
+        (integer)))
+    (vector_tilde
+      (number
+        (integer))))
+  (command_statement
+    (command_identifier)
+    (vector_caret
+      (number
+        (float)))
+    (vector_caret
+      (number
+        (float)))
+    (vector_caret
+      (number
+        (float)))))
+
+==================
+Block Selectors
+==================
+
+setblock stone
+setblock minecraft:stone
+setblock stone[foo=bar]
+setblock #stone
+setblock #stone[foo=bar]{baz:nbt}
+setblock food{bar:baz}
+execute if block ~ ~ ~ minecraft:oak_log[axis=x]
+execute if block ~ ~ ~ minecraft:oak_leaves[distance=5]
+execute if block ~ ~ ~ minecraft:oak_leaves[persistent=true]
+execute if block ~ ~ ~ minecraft:oak_leaves[persistent=false]
+execute if block ~ ~ ~ minecraft:oak_leaves[distance=5,persistent=true]
+execute if block ~ ~ ~ #minecraft:leaves[distance=5]
+execute if block ~ ~ ~ #minecraft:leaves[distance=5,persistent=true]
+setblock ~ ~ ~ mypack:foo{foo:bar} destroy
+setblock ~ ~ ~ mypack:foo{foo: bar} destroy
+setblock ~ ~ ~ mypack:foo[facing=up]{foo: bar} destroy
+setblock ~ ~ ~ mypack:foo[facing = up]{foo: bar} destroy
+setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", Count: 1}]}
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (plain_string
+      (word)))
+  (command_statement
+    (command_identifier)
+    (resource
+      (resource_identifier
+        (word)
+        (word))))
+  (command_statement
+    (command_identifier)
+    (item_selector
+      (selector_identifier
+        (plain_string
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))))
+  (command_statement
+    (command_identifier)
+    (plain_string
+      (word)))
+  (command_statement
+    (command_identifier)
+    (block_selector
+      (selector_identifier
+        (plain_string
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))
+      (data_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))))
+  (command_statement
+    (command_identifier)
+    (block_selector
+      (selector_identifier
+        (plain_string
+          (word)))
+      (data_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))))
+  (command_statement
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (item_selector
+      (selector_identifier
+        (resource_identifier
+          (word)
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))))
+  (command_statement
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (item_selector
+      (selector_identifier
+        (resource_identifier
+          (word)
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (integer)))))
+  (command_statement
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (item_selector
+      (selector_identifier
+        (resource_identifier
+          (word)
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (boolean)))))
+  (command_statement
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (item_selector
+      (selector_identifier
+        (resource_identifier
+          (word)
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (boolean)))))
+  (command_statement
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (item_selector
+      (selector_identifier
+        (resource_identifier
+          (word)
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (integer))
+        (property_identifier
+          (word))
+        (compound_value
+          (boolean)))))
+  (command_statement
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (item_selector
+      (selector_identifier
+        (resource_identifier
+          (word)
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (integer)))))
+  (command_statement
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (item_selector
+      (selector_identifier
+        (resource_identifier
+          (word)
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (integer))
+        (property_identifier
+          (word))
+        (compound_value
+          (boolean)))))
+  (command_statement
+    (command_identifier)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (block_selector
+      (selector_identifier
+        (resource_identifier
+          (word)
+          (word)))
+      (data_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word)))))
+    (command_keyword))
+  (command_statement
+    (command_identifier)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (block_selector
+      (selector_identifier
+        (resource_identifier
+          (word)
+          (word)))
+      (data_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word)))))
+    (command_keyword))
+  (command_statement
+    (command_identifier)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (block_selector
+      (selector_identifier
+        (resource_identifier
+          (word)
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))
+      (data_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word)))))
+    (command_keyword))
+  (command_statement
+    (command_identifier)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (block_selector
+      (selector_identifier
+        (resource_identifier
+          (word)
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))
+      (data_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word)))))
+    (command_keyword))
+  (command_statement
+    (command_identifier)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (block_selector
+      (selector_identifier
+        (resource_identifier
+          (word)
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))
+      (data_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (data_array
+            (compound_value
+              (data_compound
+                (property_identifier
+                  (word))
+                (compound_value
+                  (string))
+                (property_identifier
+                  (word))
+                (compound_value
+                  (integer))))))))))
+
+==================
+Item Selectors
+==================
+
+item stone
+item minecraft:stone
+item stone[foo=bar]
+item #stone
+item #stone[foo=bar]
+give armor_stand[entity_data={id:"minecraft:armor_stand", Tags:[taco_sauce]}]
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (plain_string
+      (word)))
+  (command_statement
+    (command_identifier)
+    (resource
+      (resource_identifier
+        (word)
+        (word))))
+  (command_statement
+    (command_identifier)
+    (item_selector
+      (selector_identifier
+        (plain_string
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))))
+  (command_statement
+    (command_identifier)
+    (plain_string
+      (word)))
+  (command_statement
+    (command_identifier)
+    (item_selector
+      (selector_identifier
+        (plain_string
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))))
+  (command_statement
+    (command_identifier)
+    (item_selector
+      (selector_identifier
+        (plain_string
+          (word)))
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (data_compound
+            (property_identifier
+              (word))
+            (compound_value
+              (string))
+            (property_identifier
+              (word))
+            (compound_value
+              (data_array
+                (compound_value
+                  (plain_string
+                    (word)))))))))))
+
+==================
+Target Selectors
+==================
+
+kill @e[type=foo]
+kill @e[distance=..5,type = #minecraft:skeleton,nbt=!{item:{"minecraft:property":false, another_value : $(macro)}}]
+say $(macro)[distance=..5]
+return run say @s[tag=--my.example]
+execute as @a[gamemode=!creative]
+execute as @a[tag=foo,tag=bar,tag=!baz]
+
+execute as @a[name="hello world"] as @s
+execute as @a[name="escape \" me"] as @s
+execute as @a[name="how, about, commas ?"] as @s
+execute as @a[name="and [braces] ?"] as @s
+
+execute as @e[nbt={ PortalCooldown: 0 }]
+execute as @e[nbt={ Item: {id: "minecraft:diamond", Count: 64 } }]
+
+execute as @a[scores={myscore=10}]
+execute as @a[scores={myscore=10..12}]
+execute as @a[scores={foo=10, bar=1..5, baz=..0}]
+
+execute as @a[advancements={minecraft:story/form_obsidian=true}]
+execute as @a[advancements={minecraft:story/obtain_armor={iron_helmet=true}}]
+execute as @a[advancements={minecraft:story/obtain_armor={iron_helmet=true, gold_helmet=false}}]
+execute as @a[advancements={minecraft:story/form_obsidian=true, minecraft:story/follow_ender_eye=true}]
+execute as @a[advancements={minecraft:story/form_obsidian={foo=true, bar=false},minecraft:story/follow_ender_eye={foo=false, bar=true}}]
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))))
+  (command_statement
+    (command_identifier)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (range
+            (number
+              (integer))))
+        (property_identifier
+          (word))
+        (compound_value
+          (resource
+            (resource_identifier
+              (word)
+              (word))))
+        (property_identifier
+          (word))
+        (compound_value
+          (data_compound
+            (property_identifier
+              (word))
+            (compound_value
+              (data_compound
+                (property_identifier
+                  (string))
+                (compound_value
+                  (boolean))
+                (property_identifier
+                  (word))
+                (compound_value
+                  (macro)))))))))
+  (command_statement
+    (greedy_string
+      (macro)))
+  (command_statement
+    (command_statement
+      (greedy_string)))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word)))
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word)))
+        (property_identifier
+          (word))
+        (compound_value
+          (plain_string
+            (word))))))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (string))))
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (string
+            (escape_sequence)))))
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (string))))
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (string))))
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (data_compound
+            (property_identifier
+              (word))
+            (compound_value
+              (integer)))))))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (data_compound
+            (property_identifier
+              (word))
+            (compound_value
+              (data_compound
+                (property_identifier
+                  (word))
+                (compound_value
+                  (string))
+                (property_identifier
+                  (word))
+                (compound_value
+                  (integer)))))))))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (data_compound
+            (property_identifier
+              (word))
+            (compound_value
+              (integer)))))))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (data_compound
+            (property_identifier
+              (word))
+            (compound_value
+              (range
+                (number
+                  (integer))
+                (number
+                  (integer)))))))))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (data_compound
+            (property_identifier
+              (word))
+            (compound_value
+              (integer))
+            (property_identifier
+              (word))
+            (compound_value
+              (range
+                (number
+                  (integer))
+                (number
+                  (integer))))
+            (property_identifier
+              (word))
+            (compound_value
+              (range
+                (number
+                  (integer)))))))))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (data_compound
+            (property_identifier
+              (resource
+                (resource_identifier
+                  (word)
+                  (word))
+                (word)))
+            (compound_value
+              (boolean)))))))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (data_compound
+            (property_identifier
+              (resource
+                (resource_identifier
+                  (word)
+                  (word))
+                (word)))
+            (compound_value
+              (data_compound
+                (property_identifier
+                  (word))
+                (compound_value
+                  (boolean)))))))))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (data_compound
+            (property_identifier
+              (resource
+                (resource_identifier
+                  (word)
+                  (word))
+                (word)))
+            (compound_value
+              (data_compound
+                (property_identifier
+                  (word))
+                (compound_value
+                  (boolean))
+                (property_identifier
+                  (word))
+                (compound_value
+                  (boolean)))))))))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (data_compound
+            (property_identifier
+              (resource
+                (resource_identifier
+                  (word)
+                  (word))
+                (word)))
+            (compound_value
+              (boolean))
+            (property_identifier
+              (resource
+                (resource_identifier
+                  (word)
+                  (word))
+                (word)))
+            (compound_value
+              (boolean)))))))
+  (command_statement
+    (subcommand_keyword)
+    (entity_selector
+      (target_identifier)
+      (component_compound
+        (property_identifier
+          (word))
+        (compound_value
+          (data_compound
+            (property_identifier
+              (resource
+                (resource_identifier
+                  (word)
+                  (word))
+                (word)))
+            (compound_value
+              (data_compound
+                (property_identifier
+                  (word))
+                (compound_value
+                  (boolean))
+                (property_identifier
+                  (word))
+                (compound_value
+                  (boolean))))
+            (property_identifier
+              (resource
+                (resource_identifier
+                  (word)
+                  (word))
+                (word)))
+            (compound_value
+              (data_compound
+                (property_identifier
+                  (word))
+                (compound_value
+                  (boolean))
+                (property_identifier
+                  (word))
+                (compound_value
+                  (boolean))))))))))
+
+==================
+Components
+==================
+
+data {"text":"hello world"}
+data [""]
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (data_compound
+      (property_identifier
+        (string))
+      (compound_value
+        (string))))
+  (command_statement
+    (command_identifier)
+    (data_array
+      (compound_value
+        (string)))))
+
+==================
+Resource Locations
+==================
+
+execute in minecraft:overworld
+execute in minecraft:the_nether
+function #foo
+function custom:folder/*_test_?
+function #minecraft:load
+function ./_my_local_function_01/and/subfunction
+function #example:$(macro)/path/%[sub]/to
+
+------------------
+
+(source_file
+  (command_statement
+    (subcommand_keyword)
+    (resource
+      (resource_identifier
+        (word)
+        (word))))
+  (command_statement
+    (subcommand_keyword)
+    (resource
+      (resource_identifier
+        (word)
+        (word))))
+  (command_statement
+    (command_identifier)
+    (plain_string
+      (word)))
+  (command_statement
+    (command_identifier)
+    (resource
+      (resource_identifier
+        (word)
+        (word))
+      (word)))
+  (command_statement
+    (command_identifier)
+    (resource
+      (resource_identifier
+        (word)
+        (word))))
+  (command_statement
+    (command_identifier)
+    (resource
+      (word)
+      (word)
+      (word)))
+  (command_statement
+    (command_identifier)
+    (resource
+      (resource_identifier
+        (word)
+        (macro))
+      (word)
+      (macro)
+      (word))))
+
+==================
+Operations
+==================
+
+scoreboard = += -= *= /= %= >< < >
+scoreboard players operation #%[example] example /= 15
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (operation)
+    (operation)
+    (operation)
+    (operation)
+    (operation)
+    (operation)
+    (operation)
+    (operation)
+    (operation))
+  (command_statement
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (plain_string
+      (macro))
+    (plain_string
+      (word))
+    (operation)
+    (integer)))
+
+==================
+NBT Paths
+==================
+
+data foo.bar[0]."A [crazy name]".baz.$(hello).{foo:bar}
+data get entity @s item.components."minecraft:custom_data".item[5]
+data get entity @s Pos[0]
+data get entity @s entity.path
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (nbt_path
+      (nbt_path_identifier
+        (word))
+      (nbt_path_slice
+        (word)
+        (compound_value
+          (integer)))
+      (nbt_path_identifier
+        (string))
+      (nbt_path_identifier
+        (word))
+      (nbt_path_identifier
+        (macro))
+      (nbt_path_identifier
+        (data_compound
+          (property_identifier
+            (word))
+          (compound_value
+            (plain_string
+              (word)))))))
+  (command_statement
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (entity_selector
+      (target_identifier))
+    (nbt_path
+      (nbt_path_identifier
+        (word))
+      (nbt_path_identifier
+        (word))
+      (nbt_path_identifier
+        (string))
+      (nbt_path_slice
+        (word)
+        (compound_value
+          (integer)))))
+  (command_statement
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (entity_selector
+      (target_identifier))
+    (item_selector
+      (selector_identifier
+        (plain_string
+          (word)))
+      (component_compound
+        (number
+          (integer)))))
+  (command_statement
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (entity_selector
+      (target_identifier))
+    (nbt_path
+      (nbt_path_identifier
+        (command_keyword))
+      (nbt_path_identifier
+        (word)))))
+
+==================
+String NBTs
+==================
+
+data {foo:bar}
+data {\
+	a: [I; 1, 2, 3], \
+	abc: {value: false} \
+}
+data [I; 15, 61, 52]
+data modify block ~ ~ ~ RecordItem.tag set value { messages: [hi, bye] }
+data modify block ~ ~ ~ RecordItem.tag.messages append value [ { message: "hello world" } ]
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (data_compound
+      (property_identifier
+        (word))
+      (compound_value
+        (plain_string
+          (word)))))
+  (command_statement
+    (command_identifier)
+    (data_compound
+      (backslash)
+      (property_identifier
+        (word))
+      (compound_value
+        (data_array
+          (array_type_identifier)
+          (integer)
+          (integer)
+          (integer)))
+      (backslash)
+      (property_identifier
+        (word))
+      (compound_value
+        (data_compound
+          (property_identifier
+            (word))
+          (compound_value
+            (boolean))))
+      (backslash)))
+  (command_statement
+    (command_identifier)
+    (data_array
+      (array_type_identifier)
+      (integer)
+      (integer)
+      (integer)))
+  (command_statement
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (nbt_path
+      (nbt_path_identifier
+        (word))
+      (nbt_path_identifier
+        (word)))
+    (command_keyword)
+    (command_keyword)
+    (data_compound
+      (property_identifier
+        (word))
+      (compound_value
+        (data_array
+          (compound_value
+            (plain_string
+              (word)))
+          (compound_value
+            (plain_string
+              (word)))))))
+  (command_statement
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (vector_tilde)
+    (vector_tilde)
+    (vector_tilde)
+    (nbt_path
+      (nbt_path_identifier
+        (word))
+      (nbt_path_identifier
+        (word))
+      (nbt_path_identifier
+        (word)))
+    (command_keyword)
+    (command_keyword)
+    (data_array
+      (compound_value
+        (data_compound
+          (property_identifier
+            (word))
+          (compound_value
+            (string)))))))

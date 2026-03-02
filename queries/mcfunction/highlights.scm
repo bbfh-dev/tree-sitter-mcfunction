@@ -1,104 +1,109 @@
-(ERROR) @error
+; Comments
+(block_comment_statement) @title
 
 [
- (comment)
- (backslash)
+  (comment_statement)
+  (backslash)
 ] @comment
 
-[
- "#~>"
-] @keyword.operator
-
-(vintage_comment
-   (simple_identifier) @keyword)
-
-(integer
-  (byte_indicator) @keyword)
-
-(integer
-  (short_indicator) @keyword)
-
-(integer
-  (long_indicator) @keyword)
+; Commands
 
 [
- "execute"
- "run"
- "return run"
- (command_identifier)
- (subcommand_identifier)
- (command_keyword)
- "B"
- "I"
- "L"
+  "execute"
+  "return run"
+  "say"
+  (command_identifier)
+] @keyword.function
+
+; Keywords
+[
+  (command_keyword)
+  (subcommand_keyword)
+  (unit_symbol)
 ] @keyword
 
-[
- (compound_identifier)
-] @field
+(nbt_path_identifier
+  (command_keyword) @variable)
+
+; Literals
+(boolean) @boolean
 
 [
- (position)
- (rotation)
-  ".."
+  (integer)
+  (float)
+  (hexadecimal)
+] @number
+
+[
+(string)
+(uuid)
+ ] @string
+
+(escape_sequence) @string.escape
+
+(greedy_string) @string.special
+
+; Resources
+
+(resource) @uri
+
+(property_identifier
+  (resource) @field)
+
+(nbt_path_identifier
+  (word) @variable)
+
+; Variables & Fields
+(plain_string) @variable
+
+(property_identifier) @field
+
+(target_identifier) @method
+
+; Punctuation
+[
+  "~"
+  "^"
 ] @punctuation.special
 
 [
 "!"
+(operation)
  ] @keyword.operator
 
+(array_type_identifier) @keyword
+
 [
-   ","
-   ":"
+  ".."
+  ","
+  ";"
 ] @punctuation.delimiter
 
-(selector
-    "=" @punctuation.delimiter)
-
-(selector
-    "~" @punctuation.delimiter)
+(data_compound
+  "=" @punctuation.delimiter)
+(data_compound
+  ":" @punctuation.delimiter)
+(data_compound
+  "~" @punctuation.delimiter)
+(component_compound
+  "=" @punctuation.delimiter)
+(component_compound
+  ":" @punctuation.delimiter)
+(component_compound
+  "~" @punctuation.delimiter)
 
 [
- "["
- "]"
- "}"
- "{"
+  "["
+  "]"
+  "{"
+  "}"
 ] @punctuation.bracket
 
+; Macros
 [
-  (operator)
-] @operator
-
-[
-  (path)
-  (selector)
-] @variable
-
-[
- (boolean)
-] @boolean
-
-[
-  (type)
-] @type
-
-[
-  (number)
-  (integer)
-  (float)
-] @number
-
-[
- (slot)
- (heightmap)
- (scoreboard_criteria)
-] @constant.builtin
-
-(resource) @uri
-
-(string) @string
-
-[
- (macro_indicator)
- (macro)
+  "$"
+  (macro)
 ] @label
+
+; Errors
+(ERROR) @error

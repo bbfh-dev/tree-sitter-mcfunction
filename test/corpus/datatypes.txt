@@ -1,0 +1,335 @@
+==================
+Booleans
+==================
+
+effect true false
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (boolean)
+    (boolean)))
+
+==================
+Floats
+==================
+
+effect 1.2 .5 -.5 -1234.56
+effect 0.0 21.47483647 -21474836.48 \
+	.0 .47483647 -.48 \
+	3.2767f .2767F -3.2767f -.2767F \
+	3.2767d .2767D -3.2767d -.2767D
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (float)
+    (float)
+    (float)
+    (float))
+  (command_statement
+    (command_identifier)
+    (float)
+    (float)
+    (float)
+    (backslash)
+    (float)
+    (float)
+    (float)
+    (backslash)
+    (number_with_unit
+      (number
+        (float))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (float))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (float))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (float))
+      (unit_symbol))
+    (backslash)
+    (number_with_unit
+      (number
+        (float))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (float))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (float))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (float))
+      (unit_symbol))))
+
+==================
+Integers
+==================
+
+effect 0 123 -123 \
+	0b 123L -123s \
+	0xFF
+effect 0 2147483647 -2147483648 \
+	127b 127B -128b -128B \
+	32767s 32767S -32768s -32768S \
+	32767l 32767L -32768l -32768L
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (integer)
+    (integer)
+    (integer)
+    (backslash)
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (backslash)
+    (hexadecimal))
+  (command_statement
+    (command_identifier)
+    (integer)
+    (integer)
+    (integer)
+    (backslash)
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (backslash)
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (backslash)
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))
+    (number_with_unit
+      (number
+        (integer))
+      (unit_symbol))))
+
+==================
+Ranges
+==================
+
+execute if 10.. ..20 10..20
+execute if 1.2.. ..2.3 1.2..2.3
+execute if .2.. ...3 .2...3
+
+------------------
+
+(source_file
+  (command_statement
+    (subcommand_keyword)
+    (range
+      (number
+        (integer)))
+    (range
+      (number
+        (integer)))
+    (range
+      (number
+        (integer))
+      (number
+        (integer))))
+  (command_statement
+    (subcommand_keyword)
+    (range
+      (number
+        (float)))
+    (range
+      (number
+        (float)))
+    (range
+      (number
+        (float))
+      (number
+        (float))))
+  (command_statement
+    (subcommand_keyword)
+    (range
+      (number
+        (float)))
+    (range
+      (number
+        (float)))
+    (range
+      (number
+        (float))
+      (number
+        (float)))))
+
+==================
+Strings
+==================
+
+kill -+._A-Za-z0-9word word_with_underscores "quoted phrase" ""
+say Hello @p :)
+$datapack enable '"Hello $(world)!"'
+datapack enable "hello world"
+datapack enable "escape \" me"
+datapack enable 'hello $(uninterpreted) world'
+datapack enable 'escape \' me'
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (nbt_path
+      (nbt_path_identifier
+        (word))
+      (nbt_path_identifier
+        (word)))
+    (plain_string
+      (word))
+    (string)
+    (string))
+  (command_statement
+    (greedy_string))
+  (command_statement
+    (command_identifier)
+    (command_keyword)
+    (string
+      (macro)))
+  (command_statement
+    (command_identifier)
+    (command_keyword)
+    (string))
+  (command_statement
+    (command_identifier)
+    (command_keyword)
+    (string
+      (escape_sequence)))
+  (command_statement
+    (command_identifier)
+    (command_keyword)
+    (string
+      (macro)))
+  (command_statement
+    (command_identifier)
+    (command_keyword)
+    (string
+      (escape_sequence))))
+
+==================
+UUIDs
+==================
+
+kill dd12be42-52a9-4a91-a8a1-11c01849e498
+kill 0-0-0-0-0
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (uuid))
+  (command_statement
+    (command_identifier)
+    (uuid)))
+
+==================
+Built-in Colors
+==================
+
+tellraw black dark_blue dark_green dark_aqua dark_red dark_purple dark_purple gold gray dark_gray blue green aqua red light_purple yellow white
+
+------------------
+
+(source_file
+  (command_statement
+    (command_identifier)
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))
+    (plain_string
+      (word))))

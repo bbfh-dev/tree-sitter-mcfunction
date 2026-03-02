@@ -2,364 +2,54 @@
 Comments
 ==================
 
-# Hello World!
-#! test
+#> Example of base game commands
+#
+# Casts a ray from starting position along a configurable number
+# of blocks with a confugrable accuracy, counting the number of
+# entities hit by the ray along the way.
+#
+# @params
+#   $mypack.raycast.distance param
+#       The number of blocks to cast forward.
+#   $mypack.raycast.precision param
+#       The ratio of block precision to a full block.
+#
+# @returns
+#   $mypack.raycast.result return
+#       The number of entities hit by the ray.
+#       Caching handled by storage:location/over/here
+
+# this is a comment
+say hello world
+
+    # indented comment
+    say hello indent
+	$$(command)
 
 ------------------
 
 (source_file
-  (comment
-    (line_contents))
-  (comment
-    (line_contents)))
-
-==================
-Vintage Comments
-==================
-
-#~>for #x my.scoreboard ..2
-
-------------------
-
-(source_file
-  (vintage_comment
-    (simple_identifier)
-    (selector
-      (word))
-    (path)
-    (range
-      (number))))
-
-==================
-Primitive data types
-==================
-
-say 1 .51 98.401 false true 0b 17s 48581237L
-
-------------------
-
-(source_file
-  (command
-    (command_identifier)
-    (integer)
-    (float)
-    (float)
-    (boolean)
-    (boolean)
-    (integer
-      (byte_indicator))
-    (integer
-      (short_indicator))
-    (integer
-      (long_indicator))))
-
-==================
-Coordinates
-==================
-
-tp ~.25 ~ ~5 ^0.98 ^
-
-------------------
-
-(source_file
-  (command
-    (command_identifier)
-    (position
-      (float))
-    (position)
-    (position
-      (integer))
-    (rotation
-      (float))
-    (rotation)))
-
-==================
-Strings
-==================
-
-say "Hello World!" '"Something $(with) a macro"'
-
-------------------
-
-(source_file
-  (command
-    (command_identifier)
-    (string)
-    (string
-      (macro))))
-
-==================
-Resources
-==================
-
-function #minecraft:load
-function ./_my_local_function_01/and/subfunction
-function #example:$(macro)/path/%[sub]/to
-
-------------------
-
-(source_file
-  (command
-    (command_identifier)
-    (resource))
-  (command
-    (command_identifier)
-    (resource))
-  (command
-    (command_identifier)
-    (resource
-      (macro)
-      (macro))))
-
-==================
-Selectors
-==================
-
-kill @s
-kill @e[distance=..5,type = #minecraft:skeleton,nbt=!{item:{"minecraft:property":false, another_value : $(macro)}}]
-say $(macro)[distance=..5]
-return run say @s[tag=--my.example]
-
-------------------
-
-(source_file
-  (command
-    (command_identifier)
-    (selector))
-  (command
-    (command_identifier)
-    (selector
-      (compound_identifier)
-      (compound_value
-        (range
-          (number)))
-      (compound_identifier)
-      (compound_value
-        (resource))
-      (compound_identifier)
-      (compound_value
-        (nbt_compound
-          (compound_identifier)
-          (compound_value
-            (nbt_compound
-              (compound_identifier
-                (string))
-              (compound_value
-                (boolean))
-              (compound_identifier)
-              (compound_value
-                (macro))))))))
-  (command
-    (command_identifier)
-    (selector
-      (macro)
-      (compound_identifier)
-      (compound_value
-        (range
-          (number)))))
-  (return_statement
-    (command
-      (command_identifier)
-      (selector
-        (compound_identifier)
-        (compound_value
-          (word))))))
-
-==================
-Paths
-==================
-
-data get entity @s item.components."minecraft:custom_data".item[5]
-data get entity @s Pos[0]
-
-------------------
-
-(source_file
-  (command
-    (command_identifier)
-    (command_keyword)
-    (command_keyword)
-    (selector)
-    (path
-      (string)
-      (number)))
-  (command
-    (command_identifier)
-    (command_keyword)
-    (command_keyword)
-    (selector)
-    (selector
-      (word)
-      (number))))
-
-==================
-Operators
-==================
-
-scoreboard players operation a example = 15
-scoreboard players operation a example += 15
-scoreboard players operation a example /= 15
-scoreboard players operation #%[example] example /= 15
-
-------------------
-
-(source_file
-  (command
-    (command_identifier)
-    (command_keyword)
-    (command_keyword)
-    (selector
-      (word))
-    (selector
-      (word))
-    (operator)
-    (integer))
-  (command
-    (command_identifier)
-    (command_keyword)
-    (command_keyword)
-    (selector
-      (word))
-    (selector
-      (word))
-    (operator)
-    (integer))
-  (command
-    (command_identifier)
-    (command_keyword)
-    (command_keyword)
-    (selector
-      (word))
-    (selector
-      (word))
-    (operator)
-    (integer))
-  (command
-    (command_identifier)
-    (command_keyword)
-    (command_keyword)
-    (selector
-      (macro))
-    (selector
-      (word))
-    (operator)
-    (integer)))
-
-==================
-Built-in words
-==================
-
-say inventory.15
-say weapon.mainhand
-say motion_blocking_no_leaves
-say motion_blocking_no_leaves
-scoreboard objectives add test dummy
-scoreboard objectives add test minecraft:stat.custom
-scoreboard objectives add test killedByTeam.red
-
-------------------
-
-(source_file
-  (command
-    (command_identifier)
-    (slot))
-  (command
-    (command_identifier)
-    (slot))
-  (command
-    (command_identifier)
-    (heightmap))
-  (command
-    (command_identifier)
-    (heightmap))
-  (command
-    (command_identifier)
-    (command_keyword)
-    (command_keyword)
-    (selector
-      (word))
-    (scoreboard_criteria))
-  (command
-    (command_identifier)
-    (command_keyword)
-    (command_keyword)
-    (selector
-      (word))
-    (resource))
-  (command
-    (command_identifier)
-    (command_keyword)
-    (command_keyword)
-    (selector
-      (word))
-    (scoreboard_criteria)))
-
-==================
-NBT Compounds
-==================
-
-data {\
-	a: [I; 1, 2, 3], \
-	abc: {value: false} \
-}
-
-------------------
-
-(source_file
-  (command
-    (command_identifier)
-    (nbt_compound
-      (backslash)
-      (compound_identifier)
-      (compound_value
-        (nbt_typed_array
-          (integer)
-          (integer)
-          (integer)))
-      (backslash)
-      (compound_identifier)
-      (compound_value
-        (nbt_compound
-          (compound_identifier)
-          (compound_value
-            (boolean))))
-      (backslash))))
-
-==================
-Execute statements
-==================
-
-execute run return fail
-execute as @e[type=zombie] at @s run execute run return fail
-return run execute if score #a m.ytmp = #b my.tmp
-
-------------------
-
-(source_file
-  (execute_statement
-    (command
-      (command_identifier)
-      (command_keyword)))
-  (execute_statement
-    (subcommand_identifier)
-    (selector
-      (compound_identifier)
-      (compound_value
-        (word)))
-    (subcommand_identifier)
-    (selector)
-    (execute_statement
-      (command
-        (command_identifier)
-        (command_keyword))))
-  (return_statement
-    (execute_statement
-      (subcommand_identifier)
-      (subcommand_identifier)
-      (selector
-        (word))
-      (path)
-      (operator)
-      (selector
-        (word))
-      (path))))
+  (block_comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (comment_statement)
+  (command_statement
+    (greedy_string))
+  (comment_statement)
+  (command_statement
+    (greedy_string))
+  (command_statement
+    (macro)))

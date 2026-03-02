@@ -53,7 +53,6 @@ module.exports = [
 	"save-all",
 	"save-off",
 	"save-on",
-	"say",
 	"schedule",
 	"scoreboard",
 	"seed",
