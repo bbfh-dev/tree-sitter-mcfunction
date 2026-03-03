@@ -1,6 +1,14 @@
 # Tree-sitter for MCFunction
 
-Tree-sitter grammar for Minecraft 1.21.11 data pack function language
+Tree-sitter grammar for Minecraft 1.21.11+ data pack function language
+
+## Roadmap before v1
+
+- [ ] Support for keywords (scoreboard objectives, colors, etc.).
+- [ ] There are multiple workarounds that I had to do, remove all of them.
+    - That includes `highlight.scm`, that has some duplicates.
+    - Many edge cases were fixed with a tape, rather than using clean rules.
+- [ ] Add more precise tests to capture all edge-cases without unnecessary verbosity.
 
 ## Neovim installation
 
