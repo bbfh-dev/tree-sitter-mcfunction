@@ -479,7 +479,7 @@
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
-        "value": "\\.?[-+_a-zA-Z_][-+_a-zA-Z_0-9]*"
+        "value": "\\$?\\.?[-+_a-zA-Z_][-+_a-zA-Z_0-9]*"
       }
     },
     "plain_string": {
@@ -704,8 +704,33 @@
               "name": "macro"
             },
             {
-              "type": "SYMBOL",
-              "name": "word"
+              "type": "PREC",
+              "value": 1,
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "word"
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
+                      "type": "SEQ",
+                      "members": [
+                        {
+                          "type": "STRING",
+                          "value": "."
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "word"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
             }
           ]
         },
@@ -869,6 +894,19 @@
         }
       ]
     },
+    "nbt_path_compound": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "word"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "data_compound"
+        }
+      ]
+    },
     "nbt_path_identifier": {
       "type": "PREC",
       "value": 1,
@@ -927,6 +965,10 @@
                     {
                       "type": "SYMBOL",
                       "name": "nbt_path_slice"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "nbt_path_compound"
                     }
                   ]
                 }
@@ -1288,21 +1330,71 @@
       ]
     },
     "property_identifier": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "resource"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "word"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "string"
-        }
-      ]
+      "type": "PREC",
+      "value": 1,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "hexadecimal"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "resource"
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "word"
+              },
+              {
+                "type": "REPEAT",
+                "content": {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": "."
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "word"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "SYMBOL",
+            "name": "string"
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "integer"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "word"
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     "_key_value_pair": {
       "type": "SEQ",
@@ -2665,7 +2757,7 @@
   "conflicts": [
     [
       "third_party_resource_identifier",
-      "property_identifier"
+      "nbt_path_identifier"
     ]
   ],
   "precedences": [],

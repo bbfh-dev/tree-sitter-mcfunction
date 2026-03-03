@@ -16,7 +16,7 @@ module.exports = grammar({
 	name: "mcfunction",
 
 	conflicts: ($) => [
-		[$.third_party_resource_identifier, $.property_identifier],
+		[$.third_party_resource_identifier, $.nbt_path_identifier],
 	],
 
 	extras: (_) => [],

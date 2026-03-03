@@ -40,7 +40,17 @@ module.exports = {
 
 	// — — — — Keys & Values:
 
-	property_identifier: ($) => choice($.resource, $.word, $.string),
+	property_identifier: ($) =>
+		prec(
+			1,
+			choice(
+				$.hexadecimal,
+				$.resource,
+				seq($.word, repeat(seq(".", $.word))),
+				$.string,
+				seq($.integer, optional($.word)),
+			),
+		),
 
 	_key_value_pair: ($) =>
 		seq(

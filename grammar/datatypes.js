@@ -44,7 +44,7 @@ module.exports = {
 
 	string: ($) => choice($._double_quoted_string, $._single_quoted_string),
 
-	word: (_) => token(/\.?[-+_a-zA-Z_][-+_a-zA-Z_0-9]*/),
+	word: (_) => token(/\$?\.?[-+_a-zA-Z_][-+_a-zA-Z_0-9]*/),
 
 	plain_string: ($) =>
 		prec(0, choice(seq(optional("#"), $.word), seq("#", $.macro))),
@@ -84,7 +84,7 @@ module.exports = {
 	third_party_resource_identifier: ($) =>
 		seq(
 			optional("#"),
-			choice($.macro, $.word),
+			choice($.macro, prec(1, seq($.word, repeat(seq(".", $.word))))),
 			":",
 			choice($.word, $.macro),
 		),
@@ -108,6 +108,8 @@ module.exports = {
 
 	nbt_path_slice: ($) => seq($.word, "[", optional($.compound_value), "]"),
 
+	nbt_path_compound: ($) => seq($.word, $.data_compound),
+
 	nbt_path_identifier: ($) =>
 		prec(
 			1,
@@ -126,7 +128,14 @@ module.exports = {
 			seq(
 				$.nbt_path_identifier,
 				repeat1(
-					seq(".", choice($.nbt_path_identifier, $.nbt_path_slice)),
+					seq(
+						".",
+						choice(
+							$.nbt_path_identifier,
+							$.nbt_path_slice,
+							$.nbt_path_compound,
+						),
+					),
 				),
 			),
 		),

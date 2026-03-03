@@ -391,11 +391,34 @@
       "required": true,
       "types": [
         {
+          "type": "nbt_path_compound",
+          "named": true
+        },
+        {
           "type": "nbt_path_identifier",
           "named": true
         },
         {
           "type": "nbt_path_slice",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "nbt_path_compound",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "data_compound",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -513,9 +536,17 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "hexadecimal",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
         {
           "type": "resource",
           "named": true

@@ -10,6 +10,7 @@
 
 [
   "execute"
+  "run"
   "return run"
   "say"
   (command_identifier)
@@ -54,9 +55,20 @@
 (property_identifier
   (resource) @field)
 
+; (property_identifier
+;   (nbt_path
+;     (nbt_path_identifier
+;       (word) @field)))
+
+(property_identifier
+    (integer) @field)
+
 (nbt_path_identifier) @variable
 
 (nbt_path_slice
+  (word) @variable)
+
+(nbt_path_compound
   (word) @variable)
 
 ; Variables & Fields

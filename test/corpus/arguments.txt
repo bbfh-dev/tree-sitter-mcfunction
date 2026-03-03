@@ -86,9 +86,9 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
   (command_statement
     (command_identifier)
     (resource
-      (resource_identifier
-        (word)
-        (word))))
+      (vanilla_resource
+        (vanilla_resource_identifier
+          (word)))))
   (command_statement
     (command_identifier)
     (item_selector
@@ -144,8 +144,8 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (item_selector
       (selector_identifier
         (resource_identifier
-          (word)
-          (word)))
+          (vanilla_resource_identifier
+            (word))))
       (component_compound
         (property_identifier
           (word))
@@ -161,8 +161,8 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (item_selector
       (selector_identifier
         (resource_identifier
-          (word)
-          (word)))
+          (vanilla_resource_identifier
+            (word))))
       (component_compound
         (property_identifier
           (word))
@@ -177,8 +177,8 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (item_selector
       (selector_identifier
         (resource_identifier
-          (word)
-          (word)))
+          (vanilla_resource_identifier
+            (word))))
       (component_compound
         (property_identifier
           (word))
@@ -193,8 +193,8 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (item_selector
       (selector_identifier
         (resource_identifier
-          (word)
-          (word)))
+          (vanilla_resource_identifier
+            (word))))
       (component_compound
         (property_identifier
           (word))
@@ -209,8 +209,8 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (item_selector
       (selector_identifier
         (resource_identifier
-          (word)
-          (word)))
+          (vanilla_resource_identifier
+            (word))))
       (component_compound
         (property_identifier
           (word))
@@ -229,8 +229,9 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (item_selector
       (selector_identifier
         (resource_identifier
-          (word)
-          (word)))
+          (third_party_resource_identifier
+            (word)
+            (word))))
       (component_compound
         (property_identifier
           (word))
@@ -245,8 +246,9 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (item_selector
       (selector_identifier
         (resource_identifier
-          (word)
-          (word)))
+          (third_party_resource_identifier
+            (word)
+            (word))))
       (component_compound
         (property_identifier
           (word))
@@ -264,8 +266,9 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (block_selector
       (selector_identifier
         (resource_identifier
-          (word)
-          (word)))
+          (third_party_resource_identifier
+            (word)
+            (word))))
       (data_compound
         (property_identifier
           (word))
@@ -281,8 +284,9 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (block_selector
       (selector_identifier
         (resource_identifier
-          (word)
-          (word)))
+          (third_party_resource_identifier
+            (word)
+            (word))))
       (data_compound
         (property_identifier
           (word))
@@ -298,8 +302,9 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (block_selector
       (selector_identifier
         (resource_identifier
-          (word)
-          (word)))
+          (third_party_resource_identifier
+            (word)
+            (word))))
       (component_compound
         (property_identifier
           (word))
@@ -321,8 +326,9 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (block_selector
       (selector_identifier
         (resource_identifier
-          (word)
-          (word)))
+          (third_party_resource_identifier
+            (word)
+            (word))))
       (component_compound
         (property_identifier
           (word))
@@ -344,8 +350,8 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (block_selector
       (selector_identifier
         (resource_identifier
-          (word)
-          (word)))
+          (vanilla_resource_identifier
+            (word))))
       (component_compound
         (property_identifier
           (word))
@@ -389,9 +395,9 @@ give armor_stand[entity_data={id:"minecraft:armor_stand", Tags:[taco_sauce]}]
   (command_statement
     (command_identifier)
     (resource
-      (resource_identifier
-        (word)
-        (word))))
+      (vanilla_resource
+        (vanilla_resource_identifier
+          (word)))))
   (command_statement
     (command_identifier)
     (item_selector
@@ -500,9 +506,10 @@ execute as @a[advancements={minecraft:story/form_obsidian={foo=true, bar=false},
           (word))
         (compound_value
           (resource
-            (resource_identifier
-              (word)
-              (word))))
+            (third_party_resource
+              (third_party_resource_identifier
+                (word)
+                (word)))))
         (property_identifier
           (word))
         (compound_value
@@ -706,10 +713,10 @@ execute as @a[advancements={minecraft:story/form_obsidian={foo=true, bar=false},
           (data_compound
             (property_identifier
               (resource
-                (resource_identifier
-                  (word)
-                  (word))
-                (word)))
+                (vanilla_resource
+                  (vanilla_resource_identifier
+                    (word))
+                  (word))))
             (compound_value
               (boolean)))))))
   (command_statement
@@ -723,10 +730,10 @@ execute as @a[advancements={minecraft:story/form_obsidian={foo=true, bar=false},
           (data_compound
             (property_identifier
               (resource
-                (resource_identifier
-                  (word)
-                  (word))
-                (word)))
+                (vanilla_resource
+                  (vanilla_resource_identifier
+                    (word))
+                  (word))))
             (compound_value
               (data_compound
                 (property_identifier
@@ -744,10 +751,10 @@ execute as @a[advancements={minecraft:story/form_obsidian={foo=true, bar=false},
           (data_compound
             (property_identifier
               (resource
-                (resource_identifier
-                  (word)
-                  (word))
-                (word)))
+                (vanilla_resource
+                  (vanilla_resource_identifier
+                    (word))
+                  (word))))
             (compound_value
               (data_compound
                 (property_identifier
@@ -769,18 +776,18 @@ execute as @a[advancements={minecraft:story/form_obsidian={foo=true, bar=false},
           (data_compound
             (property_identifier
               (resource
-                (resource_identifier
-                  (word)
-                  (word))
-                (word)))
+                (vanilla_resource
+                  (vanilla_resource_identifier
+                    (word))
+                  (word))))
             (compound_value
               (boolean))
             (property_identifier
               (resource
-                (resource_identifier
-                  (word)
-                  (word))
-                (word)))
+                (vanilla_resource
+                  (vanilla_resource_identifier
+                    (word))
+                  (word))))
             (compound_value
               (boolean)))))))
   (command_statement
@@ -794,10 +801,10 @@ execute as @a[advancements={minecraft:story/form_obsidian={foo=true, bar=false},
           (data_compound
             (property_identifier
               (resource
-                (resource_identifier
-                  (word)
-                  (word))
-                (word)))
+                (vanilla_resource
+                  (vanilla_resource_identifier
+                    (word))
+                  (word))))
             (compound_value
               (data_compound
                 (property_identifier
@@ -810,10 +817,10 @@ execute as @a[advancements={minecraft:story/form_obsidian={foo=true, bar=false},
                   (boolean))))
             (property_identifier
               (resource
-                (resource_identifier
-                  (word)
-                  (word))
-                (word)))
+                (vanilla_resource
+                  (vanilla_resource_identifier
+                    (word))
+                  (word))))
             (compound_value
               (data_compound
                 (property_identifier
@@ -866,15 +873,15 @@ function #example:$(macro)/path/%[sub]/to
   (command_statement
     (subcommand_keyword)
     (resource
-      (resource_identifier
-        (word)
-        (word))))
+      (vanilla_resource
+        (vanilla_resource_identifier
+          (word)))))
   (command_statement
     (subcommand_keyword)
     (resource
-      (resource_identifier
-        (word)
-        (word))))
+      (vanilla_resource
+        (vanilla_resource_identifier
+          (word)))))
   (command_statement
     (command_identifier)
     (plain_string
@@ -882,31 +889,35 @@ function #example:$(macro)/path/%[sub]/to
   (command_statement
     (command_identifier)
     (resource
-      (resource_identifier
-        (word)
-        (word))
-      (word)))
+      (third_party_resource
+        (third_party_resource_identifier
+          (word)
+          (word))
+        (word))))
   (command_statement
     (command_identifier)
     (resource
-      (resource_identifier
+      (third_party_resource
+        (third_party_resource_identifier
+          (word)
+          (word)))))
+  (command_statement
+    (command_identifier)
+    (resource
+      (third_party_resource
+        (word)
         (word)
         (word))))
   (command_statement
     (command_identifier)
     (resource
-      (word)
-      (word)
-      (word)))
-  (command_statement
-    (command_identifier)
-    (resource
-      (resource_identifier
+      (third_party_resource
+        (third_party_resource_identifier
+          (word)
+          (macro))
         (word)
-        (macro))
-      (word)
-      (macro)
-      (word))))
+        (macro)
+        (word)))))
 
 ==================
 Operations
