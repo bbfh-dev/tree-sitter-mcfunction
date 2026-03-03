@@ -38,11 +38,10 @@
 [
 (string)
 (uuid)
+(greedy_string)
  ] @string
 
 (escape_sequence) @string.escape
-
-(greedy_string) @string.special
 
 ; Resources
 
