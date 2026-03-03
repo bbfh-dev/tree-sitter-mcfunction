@@ -445,6 +445,10 @@
           "named": true
         },
         {
+          "type": "number",
+          "named": true
+        },
+        {
           "type": "string",
           "named": true
         },
@@ -463,6 +467,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "command_keyword",
+          "named": true
+        },
         {
           "type": "compound_value",
           "named": true

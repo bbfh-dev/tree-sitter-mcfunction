@@ -44,7 +44,7 @@ module.exports = {
 
 	string: ($) => choice($._double_quoted_string, $._single_quoted_string),
 
-	word: (_) => token(/\$?\.?[-+_a-zA-Z_][-+_a-zA-Z_0-9]*/),
+	word: (_) => token(/\$?\.?[\*\-\+_a-zA-Z_][\*\-\+_a-zA-Z_0-9]*/),
 
 	plain_string: ($) =>
 		prec(0, choice(seq(optional("#"), $.word), seq("#", $.macro))),
@@ -106,7 +106,13 @@ module.exports = {
 	operation: (_) =>
 		token(choice("=", "+=", "-=", "*=", "/=", "%=", "><", "<", ">")),
 
-	nbt_path_slice: ($) => seq($.word, "[", optional($.compound_value), "]"),
+	nbt_path_slice: ($) =>
+		seq(
+			choice($.word, $.command_keyword),
+			"[",
+			optional($.compound_value),
+			"]",
+		),
 
 	nbt_path_compound: ($) => seq($.word, $.data_compound),
 
@@ -114,11 +120,12 @@ module.exports = {
 		prec(
 			1,
 			choice(
-				$.word,
+				seq(optional(choice("$", "#")), $.word),
 				$.macro,
 				$.string,
 				$.data_compound,
 				$.command_keyword,
+				$.number,
 			),
 		),
 

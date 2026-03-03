@@ -479,7 +479,7 @@
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
-        "value": "\\$?\\.?[-+_a-zA-Z_][-+_a-zA-Z_0-9]*"
+        "value": "\\$?\\.?[\\*\\-\\+_a-zA-Z_][\\*\\-\\+_a-zA-Z_0-9]*"
       }
     },
     "plain_string": {
@@ -869,8 +869,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "word"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "word"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "command_keyword"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -914,8 +923,34 @@
         "type": "CHOICE",
         "members": [
           {
-            "type": "SYMBOL",
-            "name": "word"
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": "$"
+                      },
+                      {
+                        "type": "STRING",
+                        "value": "#"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "SYMBOL",
+                "name": "word"
+              }
+            ]
           },
           {
             "type": "SYMBOL",
@@ -932,6 +967,10 @@
           {
             "type": "SYMBOL",
             "name": "command_keyword"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "number"
           }
         ]
       }
