@@ -618,7 +618,70 @@
         }
       }
     },
-    "resource_identifier": {
+    "vanilla_resource_identifier": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "minecraft"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "word"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "macro"
+            }
+          ]
+        }
+      ]
+    },
+    "vanilla_resource": {
+      "type": "PREC",
+      "value": 1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "vanilla_resource_identifier"
+          },
+          {
+            "type": "REPEAT",
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "/"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "macro"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "word"
+                },
+                {
+                  "type": "PATTERN",
+                  "value": "[*?]"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "third_party_resource_identifier": {
       "type": "SEQ",
       "members": [
         {
@@ -638,11 +701,11 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "word"
+              "name": "macro"
             },
             {
               "type": "SYMBOL",
-              "name": "macro"
+              "name": "word"
             }
           ]
         },
@@ -665,7 +728,7 @@
         }
       ]
     },
-    "resource": {
+    "third_party_resource": {
       "type": "SEQ",
       "members": [
         {
@@ -673,7 +736,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "resource_identifier"
+              "name": "third_party_resource_identifier"
             },
             {
               "type": "STRING",
@@ -704,6 +767,32 @@
               }
             ]
           }
+        }
+      ]
+    },
+    "resource_identifier": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "vanilla_resource_identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "third_party_resource_identifier"
+        }
+      ]
+    },
+    "resource": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "vanilla_resource"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "third_party_resource"
         }
       ]
     },
@@ -2575,7 +2664,7 @@
   "extras": [],
   "conflicts": [
     [
-      "resource_identifier",
+      "third_party_resource_identifier",
       "property_identifier"
     ]
   ],

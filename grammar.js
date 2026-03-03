@@ -15,7 +15,9 @@ const top_level = require("./grammar/top_level.js");
 module.exports = grammar({
 	name: "mcfunction",
 
-	conflicts: ($) => [[$.resource_identifier, $.property_identifier]],
+	conflicts: ($) => [
+		[$.third_party_resource_identifier, $.property_identifier],
+	],
 
 	extras: (_) => [],
 

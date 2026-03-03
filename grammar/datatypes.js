@@ -69,19 +69,39 @@ module.exports = {
 
 	// — — — — Command specific:
 
-	resource_identifier: ($) =>
+	vanilla_resource_identifier: ($) =>
+		seq("minecraft", ":", choice($.word, $.macro)),
+
+	vanilla_resource: ($) =>
+		prec(
+			1,
+			seq(
+				$.vanilla_resource_identifier,
+				repeat(choice("/", $.macro, $.word, /[*?]/)),
+			),
+		),
+
+	third_party_resource_identifier: ($) =>
 		seq(
 			optional("#"),
-			choice($.word, $.macro),
+			choice($.macro, $.word),
 			":",
 			choice($.word, $.macro),
 		),
 
-	resource: ($) =>
+	third_party_resource: ($) =>
 		seq(
-			choice($.resource_identifier, "./"),
+			choice($.third_party_resource_identifier, "./"),
 			repeat(choice("/", $.macro, $.word, /[*?]/)),
 		),
+
+	resource_identifier: ($) =>
+		choice(
+			$.vanilla_resource_identifier,
+			$.third_party_resource_identifier,
+		),
+
+	resource: ($) => choice($.vanilla_resource, $.third_party_resource),
 
 	operation: (_) =>
 		token(choice("=", "+=", "-=", "*=", "/=", "%=", "><", "<", ">")),

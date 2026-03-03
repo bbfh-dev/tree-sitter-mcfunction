@@ -45,12 +45,18 @@
 
 ; Resources
 
-(resource) @uri
+(resource) @variable
+
+(selector_identifier) @variable
+
+(third_party_resource) @uri
 
 (property_identifier
   (resource) @field)
 
-(nbt_path_identifier
+(nbt_path_identifier) @variable
+
+(nbt_path_slice
   (word) @variable)
 
 ; Variables & Fields
