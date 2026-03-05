@@ -30,7 +30,7 @@ module.exports = grammar({
 				$._newline,
 			),
 
-		backslash: (_) => /\s*\\\s*/,
+		backslash: (_) => /\s*\\\s+/,
 
 		_indentation: (_) => /[ \t]+/,
 		_space: ($) => choice(/ +/, $.backslash),
