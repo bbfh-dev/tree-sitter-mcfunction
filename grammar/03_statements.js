@@ -50,7 +50,14 @@ module.exports = {
 			repeat(choice($._command_argument, $.command_keyword)),
 		),
 
-	_command_argument: ($) => choice($._value, $.path),
+	_command_argument: ($) =>
+		choice(
+			$.uuid,
+			$._value,
+			$.path,
+			$.score_holder,
+			$.scoreboard_operation,
+		),
 
 	// — — — — — — — —
 };

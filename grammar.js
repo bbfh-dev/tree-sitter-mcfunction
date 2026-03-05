@@ -39,16 +39,21 @@ module.exports = grammar({
 		// Used as part of other tokens.
 		identifier: (_) => /[_A-Za-z0-9]+/,
 
-		word: ($) =>
-			token(choice(seq("$", /[-+_A-Za-z0-9]+/), /[-+_A-Za-z0-9]+/)),
+		word: ($) => token(choice(seq(/[-+_A-Za-z0-9]+/), /[-+_A-Za-z0-9]+/)),
 
 		line: ($) => repeat1(choice(/[^$%\r\n]*/, /[$%]/, $.macro)),
 
 		scoreboard_operation: (_) =>
-			token(choice("=", "+=", "-=", "*=", "/=", "%=", "><", "<", ">")),
+			token(
+				prec(
+					4,
+					choice("=", "+=", "-=", "*=", "/=", "%=", "><", "<", ">"),
+				),
+			),
 
-		command_keyword: (_) => token(choice(...COMMAND_KEYWORDS)),
-		subcommand_keyword: (_) => token(choice(...SUBCOMMAND_KEYWORDS)),
+		command_keyword: (_) => token(prec(4, choice(...COMMAND_KEYWORDS))),
+		subcommand_keyword: (_) =>
+			token(prec(4, choice(...SUBCOMMAND_KEYWORDS))),
 
 		macro: (_) =>
 			token(

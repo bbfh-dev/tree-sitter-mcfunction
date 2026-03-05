@@ -56,6 +56,18 @@
           "named": true
         },
         {
+          "type": "score_holder",
+          "named": true
+        },
+        {
+          "type": "scoreboard_operation",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
           "type": "subcommand_keyword",
           "named": true
         },
@@ -122,6 +134,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "escape_sequence",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "hexadecimal",
@@ -194,7 +211,7 @@
           "named": true
         },
         {
-          "type": "uuid",
+          "type": "string",
           "named": true
         },
         {
@@ -245,7 +262,7 @@
           "named": true
         },
         {
-          "type": "uuid",
+          "type": "string",
           "named": true
         },
         {
@@ -302,6 +319,10 @@
       "required": true,
       "types": [
         {
+          "type": "score_holder",
+          "named": true
+        },
+        {
           "type": "word",
           "named": true
         }
@@ -323,6 +344,25 @@
         },
         {
           "type": "comment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "macro",
           "named": true
         }
       ]
@@ -360,6 +400,10 @@
     "named": false
   },
   {
+    "type": "\"",
+    "named": false
+  },
+  {
     "type": "#",
     "named": false
   },
@@ -377,6 +421,10 @@
   },
   {
     "type": "$",
+    "named": false
+  },
+  {
+    "type": "'",
     "named": false
   },
   {
@@ -412,6 +460,10 @@
     "named": false
   },
   {
+    "type": "\\",
+    "named": false
+  },
+  {
     "type": "]",
     "named": false
   },
@@ -441,6 +493,14 @@
   },
   {
     "type": "measurement_unit",
+    "named": true
+  },
+  {
+    "type": "score_holder",
+    "named": true
+  },
+  {
+    "type": "scoreboard_operation",
     "named": true
   },
   {

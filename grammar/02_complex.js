@@ -1,9 +1,15 @@
 module.exports = {
+	// — — — — Literals:
+
+	score_holder: ($) =>
+		token(prec(2, choice("*", /[-+.#$%^]?-?[._A-Za-z0-9]+/))),
+
 	// — — — — sNBT:
 
-	path: ($) => seq($._path_segment, repeat1(seq(".", $._path_segment))),
+	path: ($) =>
+		prec(2, seq($._path_segment, repeat1(seq(".", $._path_segment)))),
 
-	_path_segment: ($) => choice($.word),
+	_path_segment: ($) => prec(2, choice($.word, $.score_holder)),
 
 	nbt_array: ($) =>
 		seq(
@@ -27,14 +33,14 @@ module.exports = {
 
 	_value: ($) =>
 		choice(
-			$.uuid,
 			$.macro,
 			$.nbt_compound,
 			$.nbt_array,
 			$.boolean,
 			$.number,
-			$.number_with_unit,
+			$.string,
 			$.hexadecimal,
+			$.number_with_unit,
 			$.word,
 		),
 
