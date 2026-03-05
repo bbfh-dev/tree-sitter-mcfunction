@@ -14,26 +14,31 @@ module.exports = {
 
 	// — — — — Commands:
 
+	command_identifier: ($) => $.identifier,
+
 	command: ($) =>
-		choice(
-			$._say_command,
-			$._return_command,
-			$._execute_command,
-			$._regular_command,
+		seq(
+			optional("$"),
+			choice(
+				$._say_command,
+				$._return_command,
+				$._execute_command,
+				$._regular_command,
+			),
 		),
 
-	_say_command: ($) => seq(alias("say", $.identifier), $.line),
+	_say_command: ($) => seq(alias("say", $.command_identifier), $.line),
 
 	_return_command: ($) =>
 		seq(
-			alias("return", $.identifier),
+			alias("return", $.command_identifier),
 			alias("run", $.command_keyword),
 			$.command,
 		),
 
 	_execute_command: ($) =>
 		seq(
-			alias("execute", $.identifier),
+			alias("execute", $.command_identifier),
 			repeat(choice($._command_argument, $.subcommand_keyword)),
 			alias("run", $.command_keyword),
 			$.command,
@@ -41,11 +46,11 @@ module.exports = {
 
 	_regular_command: ($) =>
 		seq(
-			$.identifier,
+			$.command_identifier,
 			repeat(choice($._command_argument, $.command_keyword)),
 		),
 
-	_command_argument: ($) => choice(),
+	_command_argument: ($) => choice($._value, $.path),
 
 	// — — — — — — — —
 };

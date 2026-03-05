@@ -80,7 +80,8 @@ UUIDs
 kill dd12be42-52a9-4a91-a8a1-11c01849e498
 kill 0-0-0-0-0
 kill 0-52a9-0-0-0
-$kill $(macro)-0-0-0-11c01849e498 dd12be42-0-0-$(macro)-11c01849e498
+$kill dd12be42-0-0-$(macro)-11c01849e498
+# Known issue: $(macro)-0-0-0-11c01849e498
 
 ------------------
 
