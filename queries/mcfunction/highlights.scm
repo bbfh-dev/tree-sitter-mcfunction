@@ -1,124 +1,71 @@
-; Comments
-(block_comment_statement) @title
-
-[
-  (comment_statement)
-  (backslash)
-] @comment
-
-; Commands
-
-[
-  "execute"
-  "run"
-  "return run"
-  "say"
-  (command_identifier)
-] @keyword.function
-
 ; Keywords
 [
-  (command_keyword)
-  (subcommand_keyword)
-  (unit_symbol)
+ (command_identifier)
+ "say"
+ "execute"
+ "run"
+ "return run"
+] @keyword.function
+
+[
+ "#~>"
+ "#:"
+ (measurement_unit)
+ (command_keyword)
+ (subcommand_keyword)
 ] @keyword
 
-(nbt_path_identifier
-  (command_keyword) @variable)
+(operation) @keyword.operator
 
-; Literals
-(boolean) @boolean
-
+; Comments
 [
-  (integer)
-  (float)
-  (hexadecimal)
-] @number
+ (backslash)
+ (comment)
+] @comment
 
+(comment_header) @markup.heading
+
+; Primitive types
 [
-(string)
-(uuid)
-(greedy_string)
- ] @string
+ (boolean)
+ (integer)
+ (float)
+ (number
+   "-")
+ (number
+   ".")
+ (hexadecimal)
+] @constant.builtin
+
+; Strings
+[
+  (greedy_string)
+  (plain_string)
+  ; (vanilla_resource)
+] @variable.parameter
 
 (escape_sequence) @string.escape
 
-; Resources
-
-(resource) @variable
-
-(selector_identifier) @variable
-
-(third_party_resource) @uri
-
-(property_identifier
-  (resource) @field)
-
-(property_identifier
-    (integer) @field)
-
-(nbt_path_identifier) @variable
-
-(nbt_path_slice
-  (word) @variable)
-
-(nbt_path_slice
-  (command_keyword) @variable)
-
-(nbt_path_compound
-  (word) @variable)
-
-; Variables & Fields
-(plain_string) @variable
-
-(property_identifier) @field
-
-(target_identifier) @method
-
-; Punctuation
 [
-  "~"
-  "^"
+ (string)
+ (uuid)
+] @string
+
+; Complex types
+
+[
+ "~"
+ "^"
+ ".."
 ] @punctuation.special
 
-[
-"!"
-(operation)
- ] @keyword.operator
-
-(array_type_identifier) @keyword
-
-[
-  ".."
-  ","
-  ";"
-] @punctuation.delimiter
-
-(data_compound
-  "=" @punctuation.delimiter)
-(data_compound
-  ":" @punctuation.delimiter)
-(data_compound
-  "~" @punctuation.delimiter)
-(component_compound
-  "=" @punctuation.delimiter)
-(component_compound
-  ":" @punctuation.delimiter)
-(component_compound
-  "~" @punctuation.delimiter)
-
-[
-  "["
-  "]"
-  "{"
-  "}"
-] @punctuation.bracket
+; (third_party_resource) @markup.link.url
 
 ; Macros
 [
-  "$"
   (macro)
-] @label
+  "$"
+] @tag
 
 ; Errors
 (ERROR) @error

@@ -1,11 +1,6 @@
 [
   {
-    "type": "block_comment_statement",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "block_selector",
+    "type": "command",
     "named": true,
     "fields": {},
     "children": {
@@ -13,39 +8,7 @@
       "required": true,
       "types": [
         {
-          "type": "component_compound",
-          "named": true
-        },
-        {
-          "type": "data_compound",
-          "named": true
-        },
-        {
-          "type": "selector_identifier",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "command_keyword",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "command_statement",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
           "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "block_selector",
           "named": true
         },
         {
@@ -61,47 +24,11 @@
           "named": true
         },
         {
-          "type": "command_statement",
-          "named": true
-        },
-        {
-          "type": "data_array",
-          "named": true
-        },
-        {
-          "type": "data_compound",
-          "named": true
-        },
-        {
-          "type": "entity_selector",
-          "named": true
-        },
-        {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "greedy_string",
-          "named": true
-        },
-        {
           "type": "hexadecimal",
           "named": true
         },
         {
-          "type": "integer",
-          "named": true
-        },
-        {
-          "type": "item_selector",
-          "named": true
-        },
-        {
-          "type": "macro",
-          "named": true
-        },
-        {
-          "type": "nbt_path",
+          "type": "number",
           "named": true
         },
         {
@@ -121,7 +48,159 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "uuid",
+          "named": true
+        },
+        {
+          "type": "vector_caret",
+          "named": true
+        },
+        {
+          "type": "vector_tilde",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "command_identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "command_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "comment_call",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "greedy_string",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment_header",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "comment_preprocessor",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "greedy_string",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "escape_sequence",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "execute_command",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "execute_command",
+          "named": true
+        },
+        {
+          "type": "hexadecimal",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "number_with_unit",
+          "named": true
+        },
+        {
+          "type": "operation",
+          "named": true
+        },
+        {
+          "type": "plain_string",
+          "named": true
+        },
+        {
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "return_command",
+          "named": true
+        },
+        {
+          "type": "say_command",
           "named": true
         },
         {
@@ -148,207 +227,6 @@
     }
   },
   {
-    "type": "comment_statement",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "component_compound",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "compound_value",
-          "named": true
-        },
-        {
-          "type": "data_compound",
-          "named": true
-        },
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "property_identifier",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "compound_value",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "block_selector",
-          "named": true
-        },
-        {
-          "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "data_array",
-          "named": true
-        },
-        {
-          "type": "data_compound",
-          "named": true
-        },
-        {
-          "type": "entity_selector",
-          "named": true
-        },
-        {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "hexadecimal",
-          "named": true
-        },
-        {
-          "type": "integer",
-          "named": true
-        },
-        {
-          "type": "item_selector",
-          "named": true
-        },
-        {
-          "type": "macro",
-          "named": true
-        },
-        {
-          "type": "nbt_path",
-          "named": true
-        },
-        {
-          "type": "number_with_unit",
-          "named": true
-        },
-        {
-          "type": "operation",
-          "named": true
-        },
-        {
-          "type": "plain_string",
-          "named": true
-        },
-        {
-          "type": "range",
-          "named": true
-        },
-        {
-          "type": "resource",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "uuid",
-          "named": true
-        },
-        {
-          "type": "vector_caret",
-          "named": true
-        },
-        {
-          "type": "vector_tilde",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "data_array",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "array_type_identifier",
-          "named": true
-        },
-        {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "compound_value",
-          "named": true
-        },
-        {
-          "type": "integer",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "data_compound",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "compound_value",
-          "named": true
-        },
-        {
-          "type": "property_identifier",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "entity_selector",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "component_compound",
-          "named": true
-        },
-        {
-          "type": "target_identifier",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "escape_sequence",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "greedy_string",
     "named": true,
     "fields": {},
@@ -364,130 +242,31 @@
     }
   },
   {
-    "type": "item_selector",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "component_compound",
-          "named": true
-        },
-        {
-          "type": "selector_identifier",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "nbt_path",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "nbt_path_compound",
-          "named": true
-        },
-        {
-          "type": "nbt_path_identifier",
-          "named": true
-        },
-        {
-          "type": "nbt_path_slice",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "nbt_path_compound",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "data_compound",
-          "named": true
-        },
-        {
-          "type": "word",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "nbt_path_identifier",
+    "type": "hexadecimal",
     "named": true,
     "fields": {},
     "children": {
       "multiple": false,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "command_keyword",
-          "named": true
-        },
-        {
-          "type": "data_compound",
-          "named": true
-        },
-        {
           "type": "macro",
-          "named": true
-        },
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "word",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "nbt_path_slice",
+    "type": "measurement_unit",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "command_keyword",
-          "named": true
-        },
-        {
-          "type": "compound_value",
-          "named": true
-        },
-        {
-          "type": "word",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "number",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
@@ -496,6 +275,10 @@
         },
         {
           "type": "integer",
+          "named": true
+        },
+        {
+          "type": "macro",
           "named": true
         }
       ]
@@ -510,11 +293,11 @@
       "required": true,
       "types": [
         {
-          "type": "number",
+          "type": "measurement_unit",
           "named": true
         },
         {
-          "type": "unit_symbol",
+          "type": "number",
           "named": true
         }
       ]
@@ -523,52 +306,7 @@
   {
     "type": "plain_string",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "macro",
-          "named": true
-        },
-        {
-          "type": "word",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "property_identifier",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "hexadecimal",
-          "named": true
-        },
-        {
-          "type": "integer",
-          "named": true
-        },
-        {
-          "type": "resource",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "word",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "range",
@@ -579,6 +317,10 @@
       "required": true,
       "types": [
         {
+          "type": "macro",
+          "named": true
+        },
+        {
           "type": "number",
           "named": true
         }
@@ -586,57 +328,50 @@
     }
   },
   {
-    "type": "resource",
+    "type": "return_command",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "third_party_resource",
+          "type": "backslash",
           "named": true
         },
         {
-          "type": "vanilla_resource",
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "execute_command",
+          "named": true
+        },
+        {
+          "type": "return_command",
+          "named": true
+        },
+        {
+          "type": "say_command",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "resource_identifier",
+    "type": "say_command",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "third_party_resource_identifier",
+          "type": "backslash",
           "named": true
         },
         {
-          "type": "vanilla_resource_identifier",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "selector_identifier",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "plain_string",
-          "named": true
-        },
-        {
-          "type": "resource_identifier",
+          "type": "greedy_string",
           "named": true
         }
       ]
@@ -652,15 +387,35 @@
       "required": false,
       "types": [
         {
-          "type": "block_comment_statement",
+          "type": "command",
           "named": true
         },
         {
-          "type": "command_statement",
+          "type": "comment",
           "named": true
         },
         {
-          "type": "comment_statement",
+          "type": "comment_call",
+          "named": true
+        },
+        {
+          "type": "comment_header",
+          "named": true
+        },
+        {
+          "type": "comment_preprocessor",
+          "named": true
+        },
+        {
+          "type": "execute_command",
+          "named": true
+        },
+        {
+          "type": "return_command",
+          "named": true
+        },
+        {
+          "type": "say_command",
           "named": true
         }
       ]
@@ -691,7 +446,7 @@
     "fields": {}
   },
   {
-    "type": "third_party_resource",
+    "type": "uuid",
     "named": true,
     "fields": {},
     "children": {
@@ -700,75 +455,6 @@
       "types": [
         {
           "type": "macro",
-          "named": true
-        },
-        {
-          "type": "third_party_resource_identifier",
-          "named": true
-        },
-        {
-          "type": "word",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "third_party_resource_identifier",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "macro",
-          "named": true
-        },
-        {
-          "type": "word",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "vanilla_resource",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "macro",
-          "named": true
-        },
-        {
-          "type": "vanilla_resource_identifier",
-          "named": true
-        },
-        {
-          "type": "word",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "vanilla_resource_identifier",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "macro",
-          "named": true
-        },
-        {
-          "type": "word",
           "named": true
         }
       ]
@@ -805,10 +491,6 @@
     }
   },
   {
-    "type": "!",
-    "named": false
-  },
-  {
     "type": "\"",
     "named": false
   },
@@ -817,7 +499,15 @@
     "named": false
   },
   {
+    "type": "#:",
+    "named": false
+  },
+  {
     "type": "#>",
+    "named": false
+  },
+  {
+    "type": "#~>",
     "named": false
   },
   {
@@ -829,7 +519,11 @@
     "named": false
   },
   {
-    "type": ",",
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "-",
     "named": false
   },
   {
@@ -841,35 +535,11 @@
     "named": false
   },
   {
-    "type": "./",
-    "named": false
-  },
-  {
-    "type": "/",
-    "named": false
-  },
-  {
-    "type": ":",
-    "named": false
-  },
-  {
-    "type": ";",
-    "named": false
-  },
-  {
-    "type": "=",
-    "named": false
-  },
-  {
-    "type": "[",
+    "type": "0x",
     "named": false
   },
   {
     "type": "\\",
-    "named": false
-  },
-  {
-    "type": "]",
     "named": false
   },
   {
@@ -919,10 +589,6 @@
   {
     "type": "append",
     "named": false
-  },
-  {
-    "type": "array_type_identifier",
-    "named": true
   },
   {
     "type": "as",
@@ -983,10 +649,6 @@
   {
     "type": "color",
     "named": false
-  },
-  {
-    "type": "command_identifier",
-    "named": true
   },
   {
     "type": "controller",
@@ -1125,10 +787,6 @@
     "named": false
   },
   {
-    "type": "hexadecimal",
-    "named": true
-  },
-  {
     "type": "hollow",
     "named": false
   },
@@ -1139,6 +797,10 @@
   {
     "type": "id",
     "named": false
+  },
+  {
+    "type": "identifier",
+    "named": true
   },
   {
     "type": "if",
@@ -1245,10 +907,6 @@
     "named": false
   },
   {
-    "type": "minecraft",
-    "named": false
-  },
-  {
     "type": "modifier",
     "named": false
   },
@@ -1310,11 +968,11 @@
   },
   {
     "type": "operation",
-    "named": false
+    "named": true
   },
   {
     "type": "operation",
-    "named": true
+    "named": false
   },
   {
     "type": "origin",
@@ -1525,10 +1183,6 @@
     "named": false
   },
   {
-    "type": "target_identifier",
-    "named": true
-  },
-  {
     "type": "template",
     "named": false
   },
@@ -1565,20 +1219,12 @@
     "named": false
   },
   {
-    "type": "unit_symbol",
-    "named": true
-  },
-  {
     "type": "unless",
     "named": false
   },
   {
     "type": "until",
     "named": false
-  },
-  {
-    "type": "uuid",
-    "named": true
   },
   {
     "type": "uuids",
@@ -1614,18 +1260,6 @@
   },
   {
     "type": "with",
-    "named": false
-  },
-  {
-    "type": "word",
-    "named": true
-  },
-  {
-    "type": "{",
-    "named": false
-  },
-  {
-    "type": "}",
     "named": false
   },
   {

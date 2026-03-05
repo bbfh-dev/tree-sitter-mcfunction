@@ -1,0 +1,173 @@
+==================
+Coordinates
+==================
+
+tp ~ ~ ~
+tp ^ ^ ^
+tp ^1 ^ ^-5
+tp ~0.5 ~1 ~-5
+tp ^.1 ^0.5 ^-.8
+$tp ~$(macro) ^ ^-1.$(macro)
+
+------------------
+
+(source_file)
+
+==================
+Ranges
+==================
+
+execute if 10.. ..20 10..20
+execute if 1.2.. ..2.3 1.2..2.3
+execute if .2.. ...3 .2...3 run return run say Hi
+$execute if $(macro).. ..$(macro) $(macro)..$(macro)
+$execute if 1.$(macro).. ..-$(macro) 1.$(macro)..3
+
+------------------
+
+(source_file)
+
+==================
+Resources
+==================
+
+execute in minecraft:overworld
+execute in minecraft:the_nether
+function #foo
+function custom:folder/*_test_?
+function #minecraft:load
+function ./_my_local_function_01/and/subfunction
+function #example:$(macro)/path/%[sub]/to
+function #ns.with.dots:function
+function bs.dump:interpret/any
+
+------------------
+
+(source_file)
+
+==================
+NBT Paths
+==================
+
+data foo.bar[0]."A [crazy name]".baz.$(hello).{foo:bar}
+data get entity @s item.components."minecraft:custom_data".item[5]
+data get entity @s Pos[0]
+data get entity @s entity.path
+$data modify storage bs:ctx _.v set from storage bs:ctx _.g[{n:"$(name)"}].o[0]
+$data modify storage bs:ctx _.v set from storage bs:ctx _.g[{n:"$(name)"}].o[{v:"$(v)"}]
+execute if data storage bs:ctx _.i[-1].by store result score #n bs.ctx run data get storage bs:ctx _.i[-1].by
+$execute store result storage bs:out color.hex_to_rgb[0] int 1 store result score $color.hex_to_rgb.r bs.out run data get storage bs:const color.hex_values.$(x)
+data modify storage bs:out string.upper set from storage bs:ctx _.1
+execute store result storage bs:data vector.distance[0] float 1 run scoreboard players get $vector.length.0 bs.in
+$execute store result score $vector.normalize.0 bs.out run data get storage bs:ctx _[0] $(scale)
+execute if data storage bs:data dump.stack[-1].var{} run return run function bs.dump:interpret/compound/compound
+
+------------------
+
+(source_file)
+
+==================
+NBT Compounds
+==================
+
+data {"text":"hello world"}
+data {foo:bar}
+data {\
+	a: [I; 1, 2, 3], \
+	abc: {value: false} \
+}
+data modify block ~ ~ ~ RecordItem.tag set value { messages: [hi, bye] }
+data modify storage bs:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5d:93,5e:94,5f:95}
+
+------------------
+
+(source_file)
+
+==================
+NBT Arrays
+==================
+
+data [""]
+data [I; 15, 61, 52]
+data modify block ~ ~ ~ RecordItem.tag.messages append value [ { message: "hello world" } ]
+
+------------------
+
+(source_file)
+
+==================
+Item Selectors
+==================
+
+item stone
+item minecraft:stone
+item stone[foo=bar]
+item #stone
+item #stone[foo=bar]
+give armor_stand[entity_data={id:"minecraft:armor_stand", Tags:[taco_sauce]}]
+
+------------------
+
+(source_file)
+
+==================
+Block Selectors
+==================
+
+setblock stone
+setblock minecraft:stone
+setblock stone[foo=bar]
+setblock #stone
+setblock #stone[foo=bar]{baz:nbt}
+setblock food{bar:baz}
+execute if block ~ ~ ~ minecraft:oak_log[axis=x]
+execute if block ~ ~ ~ minecraft:oak_leaves[distance=5]
+execute if block ~ ~ ~ minecraft:oak_leaves[persistent=true]
+execute if block ~ ~ ~ minecraft:oak_leaves[persistent=false]
+execute if block ~ ~ ~ minecraft:oak_leaves[distance=5,persistent=true]
+execute if block ~ ~ ~ #minecraft:leaves[distance=5]
+execute if block ~ ~ ~ #minecraft:leaves[distance=5,persistent=true]
+setblock ~ ~ ~ mypack:foo{foo:bar} destroy
+setblock ~ ~ ~ mypack:foo{foo: bar} destroy
+setblock ~ ~ ~ mypack:foo[facing=up]{foo: bar} destroy
+setblock ~ ~ ~ mypack:foo[facing = up]{foo: bar} destroy
+setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", Count: 1}]}
+
+------------------
+
+(source_file)
+
+==================
+Entity Selectors
+==================
+
+kill @e[type=foo]
+kill @e[distance=..5,type = #minecraft:skeleton,nbt=!{item:{"minecraft:property":false, another_value : $(macro)}}]
+say $(macro)[distance=..5]
+return run say @s[tag=--my.example]
+execute as @a[gamemode=!creative]
+execute as @a[tag=foo,tag=bar,tag=!baz]
+
+execute as @a[name="hello world"] as @s
+execute as @a[name="escape \" me"] as @s
+execute as @a[name="how, about, commas ?"] as @s
+execute as @a[name="and [braces] ?"] as @s
+
+execute as @e[nbt={ PortalCooldown: 0 }]
+execute as @e[nbt={ Item: {id: "minecraft:diamond", Count: 64 } }]
+
+execute as @a[scores={myscore=10}]
+execute as @a[scores={myscore=10..12}]
+execute as @a[scores={foo=10, bar=1..5, baz=..0}]
+
+execute as @a[advancements={minecraft:story/form_obsidian=true}]
+execute as @a[advancements={minecraft:story/obtain_armor={iron_helmet=true}}]
+execute as @a[advancements={minecraft:story/obtain_armor={iron_helmet=true, gold_helmet=false}}]
+execute as @a[advancements={minecraft:story/form_obsidian=true, minecraft:story/follow_ender_eye=true}]
+execute as @a[advancements={minecraft:story/form_obsidian={foo=true, bar=false},minecraft:story/follow_ender_eye={foo=false, bar=true}}]
+
+execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run return run function bs.hitbox:get_entity/get_custom
+
+------------------
+
+(source_file)

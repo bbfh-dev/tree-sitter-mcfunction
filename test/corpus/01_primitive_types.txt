@@ -1,0 +1,87 @@
+==================
+Boolean literals
+==================
+
+effect true false
+
+------------------
+
+(source_file)
+
+==================
+Integer literals
+==================
+
+effect 0 123 -123 \
+	0b 123L -123s
+effect 0 2147483647 -2147483648 \
+	127b 127B -128b -128B \
+	32767s 32767S -32768s -32768S \
+	32767l 32767L -32768l -32768L
+$effect $(macro) $(macro)b -$(macro)l
+
+------------------
+
+(source_file)
+
+==================
+Hexadecimal literals
+==================
+
+effect 0xFF
+$effect 0x$(macro)
+
+------------------
+
+(source_file)
+
+==================
+Float literals
+==================
+
+effect 1.2 .5 -.5 -1234.56
+effect 0.0 21.47483647 -21474836.48 \
+	.0 .47483647 -.48 \
+	3.2767f .2767F -3.2767f -.2767F \
+	3.2767d .2767D -3.2767d -.2767D
+$effect 3.$(macro) -.$(macro)f -$(macro)D $(macro)f
+
+------------------
+
+(source_file)
+
+==================
+String literals
+==================
+
+kill -+._A-Za-z0-9word word_with_underscores "quoted phrase" ""
+scoreboard $input.rgb.r example.id.out _.i #name.target_entity
+scoreboard players operation #t bs.ctx = $vector.cross_product.u.2 bs.in
+scoreboard players operation $vector.cross_product.0 bs.out -= #t bs.ctx
+scoreboard players reset * load.status
+scoreboard players set #view.looked_entity bs.data 0
+
+say Hello @p[tag=test] :)
+
+$datapack enable '"Hello $(world)!"'
+datapack enable "hello world"
+datapack enable "escape \" me"
+datapack enable 'hello $(uninterpreted) world'
+datapack enable 'escape \' me'
+
+------------------
+
+(source_file)
+
+==================
+UUIDs
+==================
+
+kill dd12be42-52a9-4a91-a8a1-11c01849e498
+kill 0-0-0-0-0
+kill 0-52a9-0-0-0
+$kill $(macro)-0-0-0-11c01849e498 dd12be42-0-0-$(macro)-11c01849e498
+
+------------------
+
+(source_file)

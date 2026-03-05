@@ -1,0 +1,35 @@
+==================
+Comment docs
+==================
+
+#> Example of a comment title
+#
+# Basic contents (https://example.com/docs).
+#
+# @params
+#   $example.key param
+#       The description
+#   $example2.key.path.to param
+#       The description 2
+#
+# @returns
+#   $example.pack.result return
+#       The result value
+#       Located inside of storage:location/over/here
+
+------------------
+
+(source_file)
+
+==================
+Vintage comments
+==================
+
+#~>call my_arg1 @e[type=player]
+#:if debug == true
+say Hello World!
+#:endif
+
+------------------
+
+(source_file)

@@ -7,40 +7,33 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
-const datatypes = require("./grammar/datatypes.js");
-const snbt = require("./grammar/snbt.js");
-const selectors = require("./grammar/selectors.js");
-const top_level = require("./grammar/top_level.js");
+const symbols = require("./grammar/symbols.js");
+const primitive_types = require("./grammar/primitive_types.js");
+const complex_types = require("./grammar/complex_types.js");
+const keywords = require("./grammar/keywords.js");
+const statements = require("./grammar/statements.js");
 
 module.exports = grammar({
 	name: "mcfunction",
 
-	conflicts: ($) => [
-		[$.third_party_resource_identifier, $.nbt_path_identifier],
-	],
+	conflicts: ($) => [],
 
 	extras: (_) => [],
 
 	rules: {
-		source_file: ($) => repeat(choice($._statement, $._empty_line)),
-
-		backslash: (_) => /\s*\\\r?\n\s*/,
-
-		_indentation: (_) => /[\t ]+/,
-
-		_newline: (_) => /\r?\n/,
-
-		_empty_line: ($) => seq(optional($._indentation), $._newline),
-
-		_space: ($) => choice(/ /, $.backslash),
+		source_file: ($) => repeat($._statement),
 
 		_statement: ($) =>
 			seq(
 				optional($._indentation),
-				choice(
-					$.block_comment_statement,
-					$.comment_statement,
-					$.command_statement,
+				optional(
+					choice(
+						$.comment_header,
+						$.comment_call,
+						$.comment_preprocessor,
+						$.comment,
+						seq(optional("$"), $._command_statement),
+					),
 				),
 				$._newline,
 			),
@@ -48,15 +41,16 @@ module.exports = grammar({
 		macro: (_) =>
 			token(
 				choice(
-					seq("$(", /[a-z_0-9]+/, ")"),
+					seq("$(", /[_a-z0-9]+/, ")"),
 					// from Vintage preprocessor
-					seq("%[", /[a-z_0-9\.:]+/, "]"),
+					seq("%[", /[_\.:a-z0-9]+/, "]"),
 				),
 			),
 
-		...datatypes,
-		...snbt,
-		...selectors,
-		...top_level,
+		...symbols,
+		...primitive_types,
+		...complex_types,
+		...keywords,
+		...statements,
 	},
 });
