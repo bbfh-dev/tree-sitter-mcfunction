@@ -14,7 +14,7 @@ module.exports = grammar({
 
 	conflicts: ($) => [],
 
-	extras: ($) => [],
+	extras: ($) => [$._space],
 
 	word: ($) => $.identifier,
 
@@ -24,7 +24,7 @@ module.exports = grammar({
 		_statement: ($) =>
 			seq(
 				optional($._indentation),
-				optional(choice($.comment)),
+				optional(choice($.comment, $.command)),
 				$._newline,
 			),
 
