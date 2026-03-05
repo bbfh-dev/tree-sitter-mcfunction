@@ -44,7 +44,7 @@ effect 0.0 21.47483647 -21474836.48 \
 	.0 .47483647 -.48 \
 	3.2767f .2767F -3.2767f -.2767F \
 	3.2767d .2767D -3.2767d -.2767D
-$effect 3.$(macro) -.$(macro)f -$(macro)D $(macro)f
+$effect 3.$(macro) -.$(macro)f -$(macro)D $(macro).15f
 
 ------------------
 

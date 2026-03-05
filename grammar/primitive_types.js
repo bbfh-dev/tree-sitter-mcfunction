@@ -1,26 +1,30 @@
 module.exports = {
 	// — — — — Literals:
 
-	boolean: (_) => token(prec(3, choice("true", "false"))),
+	boolean: (_) => token(prec(4, choice("true", "false"))),
 
-	integer: (_) => token(prec(3, /-?\d+/)),
-	float: (_) => token(prec(3, choice(/-?\d+\.\d+/, /-?\.\d+/))),
+	integer: (_) => token(prec(4, /-?\d+/)),
+	float: (_) => token(prec(4, choice(/-?\d+\.\d+/, /-?\.\d+/))),
 
-	_hexadecimal: (_) => token(prec(3, /0x[A-Fa-f0-9]+/)),
+	_hexadecimal: (_) => token(prec(4, /0x[A-Fa-f0-9]+/)),
 	hexadecimal: ($) => choice($._hexadecimal, seq("0x", $.macro)),
 
 	number: ($) =>
 		choice(
 			$.float,
 			$.integer,
-			seq(optional("-"), optional($.integer), optional("."), $.macro),
+			seq("-", optional("."), $.macro),
+			seq($.integer, ".", $.macro),
+			seq($.macro, ".", $.integer),
 		),
+
 	measurement_unit: (_) => prec(4, /[tmhBbSsLlFfDd]/),
-	number_with_unit: ($) => prec(2, seq($.number, $.measurement_unit)),
+	number_with_unit: ($) =>
+		prec(3, seq(choice($.number, $.macro), $.measurement_unit)),
 
 	// — — — — Strings:
 
-	greedy_string: ($) => repeat1(choice($.macro, /[^\r\n]/)),
+	greedy_string: ($) => repeat1(choice($.macro, /[^\r\n]+/)),
 
 	escape_sequence: (_) =>
 		seq("\\", token.immediate(choice("r", "n", "t", "0", "'", '"', "\\"))),
@@ -41,47 +45,21 @@ module.exports = {
 
 	string: ($) => choice($._double_quoted_string, $._single_quoted_string),
 
-	_basic_uuid: (_) =>
-		token(
-			prec(
-				3,
-				seq(
-					choice(/0/, /[A-Fa-f0-9]{8}/),
-					"-",
-					choice(/0/, /[A-Fa-f0-9]{4}/),
-					"-",
-					choice(/0/, /[A-Fa-f0-9]{4}/),
-					"-",
-					choice(/0/, /[A-Fa-f0-9]{4}/),
-					"-",
-					choice(/0/, /[A-Fa-f0-9]{12}/),
-				),
-			),
-		),
+	// uuid: ($) =>
+	// 	seq(
+	// 		choice(/[A-Fa-f0-9]{1,8}/, $.macro),
+	// 		token.immediate("-"),
+	// 		choice(/[A-Fa-f0-9]{1,4}/, $.macro),
+	// 		token.immediate("-"),
+	// 		choice(/[A-Fa-f0-9]{1,4}/, $.macro),
+	// 		token.immediate("-"),
+	// 		choice(/[A-Fa-f0-9]{1,4}/, $.macro),
+	// 		token.immediate("-"),
+	// 		choice(/[A-Fa-f0-9]{1,12}/, $.macro),
+	// 	),
 
-	_macro_uuid: ($) =>
-		seq(
-			choice(/0/, /[A-Fa-f0-9]{8}/, $.macro),
-			"-",
-			choice(/0/, /[A-Fa-f0-9]{4}/, $.macro),
-			"-",
-			choice(/0/, /[A-Fa-f0-9]{4}/, $.macro),
-			"-",
-			choice(/0/, /[A-Fa-f0-9]{4}/, $.macro),
-			"-",
-			choice(/0/, /[A-Fa-f0-9]{12}/, $.macro),
-		),
-
-	uuid: ($) => prec(3, choice($._basic_uuid, $._macro_uuid)),
-
-	// TODO: this is the hardest token to make
-	// because it breaks everything else
 	plain_string: ($) =>
-		choice(
-			"*",
-			// seq("$", $.identifier, repeat(seq(".", $.identifier))),
-			// seq(optional("$"), $.identifier, repeat1(seq(".", $.identifier))),
-		),
+		token(choice("*", /[#\$%\^]?[\-\+\._A-Za-z][\-\+_A-Za-z0-9]*/)),
 
 	// — — — — — — — —
 };

@@ -3,11 +3,10 @@ module.exports = {
 
 	comment_header: ($) => seq("#>", $._comment_contents),
 
-	comment_call: ($) =>
-		seq("#~>", $.identifier, optional(seq($._space, $.greedy_string))),
+	comment_call: ($) => seq("#~>", $.identifier, optional($.greedy_string)),
 
 	comment_preprocessor: ($) =>
-		seq("#:", $.identifier, optional(seq($._space, $.greedy_string))),
+		seq("#:", $.identifier, optional($.greedy_string)),
 
 	comment: ($) => seq("#", $._comment_contents),
 
@@ -17,28 +16,21 @@ module.exports = {
 
 	// — — — — Commands:
 
-	say_command: ($) => seq("say", $._space, $.greedy_string),
+	say_command: ($) => seq("say", $.greedy_string),
 
-	return_command: ($) => seq("return run", $._space, $._command_statement),
+	return_command: ($) => seq("return run", $._command_statement),
 
 	execute_command: ($) =>
 		seq(
 			"execute",
-			repeat(
-				seq(
-					$._space,
-					choice($._command_argument, $.subcommand_keyword),
-				),
-			),
-			optional(seq($._space, "run", $._space, $._command_statement)),
+			repeat(choice($._command_argument, $.subcommand_keyword)),
+			optional(seq("run", $._command_statement)),
 		),
 
 	command: ($) =>
 		seq(
 			$.command_identifier,
-			repeat(
-				seq($._space, choice($._command_argument, $.command_keyword)),
-			),
+			repeat(choice($._command_argument, $.command_keyword)),
 		),
 
 	command_identifier: ($) => $.identifier,
@@ -51,7 +43,7 @@ module.exports = {
 	_command_argument: ($) =>
 		choice(
 			$.boolean,
-			$.uuid,
+			// $.uuid,
 			$.number_with_unit,
 			$.number,
 			$.hexadecimal,
