@@ -27,7 +27,8 @@ module.exports = {
 			),
 		),
 
-	_say_command: ($) => seq(alias("say", $.command_identifier), $.line),
+	_say_command: ($) =>
+		seq(alias("say", $.command_identifier), alias($.line, $.string)),
 
 	_return_command: ($) =>
 		seq(
@@ -40,8 +41,7 @@ module.exports = {
 		seq(
 			alias("execute", $.command_identifier),
 			repeat(choice($._command_argument, $.subcommand_keyword)),
-			alias("run", $.command_keyword),
-			$.command,
+			optional(seq(alias("run", $.command_keyword), $.command)),
 		),
 
 	_regular_command: ($) =>

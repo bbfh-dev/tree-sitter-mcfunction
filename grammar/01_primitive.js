@@ -9,7 +9,9 @@ module.exports = {
 			choice(
 				$._float,
 				$._integer,
-				seq("-", optional("."), $.macro),
+				seq(/-/, $.macro),
+				seq(/-?\d+\./, $.macro),
+				seq(/-\./, $.macro),
 				seq($._integer, ".", $.macro),
 				seq($.macro, ".", $._integer),
 			),
@@ -18,8 +20,7 @@ module.exports = {
 	_integer: (_) => token(prec(3, /-?\d+/)),
 	_float: (_) => token(prec(3, choice(/-?\d+\.\d+/, /-?\.\d+/))),
 
-	hexadecimal: ($) =>
-		choice(token(prec(3, /0x[A-Fa-f0-9]+/)), seq("0x", $.macro)),
+	hexadecimal: (_) => token(prec(3, /0x[A-Fa-f0-9]+/)),
 
 	measurement_unit: (_) => token(prec(3, /[tmhBbSsLlFfDd]/)),
 	number_with_unit: ($) =>
