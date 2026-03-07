@@ -868,6 +868,10 @@
         {
           "type": "SYMBOL",
           "name": "integer"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "hexadecimal"
         }
       ]
     },
@@ -991,6 +995,39 @@
               {
                 "type": "PATTERN",
                 "value": "\\.\\d+"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "hexadecimal": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "PREC",
+            "value": 4,
+            "content": {
+              "type": "PATTERN",
+              "value": "0x[0-9a-fA-F]+"
+            }
+          }
+        },
+        {
+          "type": "PREC",
+          "value": 4,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "0x"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "macro"
               }
             ]
           }
