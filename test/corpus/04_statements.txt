@@ -33,3 +33,16 @@ say Hello World!
 ------------------
 
 (source_file)
+
+==================
+Special commands
+==================
+
+say Hello World! :)
+execute run \
+	return run \
+	say Hi!
+
+------------------
+
+(source_file)

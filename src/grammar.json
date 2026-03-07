@@ -854,6 +854,35 @@
         ]
       }
     },
+    "_primitive_type": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "boolean"
+        }
+      ]
+    },
+    "boolean": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 4,
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "true"
+            },
+            {
+              "type": "STRING",
+              "value": "false"
+            }
+          ]
+        }
+      }
+    },
     "greedy_string": {
       "type": "PATTERN",
       "value": "[^\\r\\n]+"
@@ -957,14 +986,14 @@
               "type": "ALIAS",
               "content": {
                 "type": "STRING",
-                "value": "say"
+                "value": "return run"
               },
               "named": true,
               "value": "command_identifier"
             },
             {
               "type": "SYMBOL",
-              "name": "greedy_string"
+              "name": "command"
             }
           ]
         },
@@ -975,14 +1004,14 @@
               "type": "ALIAS",
               "content": {
                 "type": "STRING",
-                "value": "return run"
+                "value": "say"
               },
               "named": true,
               "value": "command_identifier"
             },
             {
               "type": "SYMBOL",
-              "name": "command"
+              "name": "greedy_string"
             }
           ]
         },
@@ -1083,7 +1112,12 @@
     },
     "_command_argument": {
       "type": "CHOICE",
-      "members": []
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_primitive_type"
+        }
+      ]
     }
   },
   "extras": [

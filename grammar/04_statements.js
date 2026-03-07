@@ -9,8 +9,8 @@ module.exports = {
 
 	command: ($) =>
 		choice(
-			seq(alias("say", $.command_identifier), $.greedy_string),
 			seq(alias("return run", $.command_identifier), $.command),
+			seq(alias("say", $.command_identifier), $.greedy_string),
 			$._execute_command,
 			$._generic_command,
 		),
@@ -30,5 +30,5 @@ module.exports = {
 
 	command_identifier: ($) => $.identifier,
 
-	_command_argument: ($) => choice(),
+	_command_argument: ($) => choice($._primitive_type),
 };

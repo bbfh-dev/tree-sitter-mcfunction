@@ -8,6 +8,10 @@
       "required": true,
       "types": [
         {
+          "type": "boolean",
+          "named": true
+        },
+        {
           "type": "command",
           "named": true
         },
@@ -100,6 +104,10 @@
     "type": "backslash",
     "named": true,
     "extra": true
+  },
+  {
+    "type": "boolean",
+    "named": true
   },
   {
     "type": "command_keyword",
