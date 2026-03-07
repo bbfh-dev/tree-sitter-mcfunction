@@ -7,8 +7,6 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
-const COMMAND_KEYWORDS = require("./data/command_keywords.js");
-const SUBCOMMAND_KEYWORDS = require("./data/execute_subcommands.js");
 const grammar_rules = require("./grammar/99_all.js");
 
 module.exports = grammar({
@@ -16,12 +14,17 @@ module.exports = grammar({
 
 	conflicts: ($) => [],
 
-	extras: ($) => [$._space],
+	extras: ($) => [/ +/, $.backslash],
 
 	word: ($) => $.identifier,
 
 	rules: {
 		source_file: ($) => repeat($._statement),
+
+		backslash: (_) => /\s*\\\r?\n\s*/,
+
+		// FIXME: is this really necessary?
+		identifier: (_) => /[a-z_]+/,
 
 		_statement: ($) =>
 			seq(
@@ -30,36 +33,18 @@ module.exports = grammar({
 				$._newline,
 			),
 
-		backslash: (_) => /\s*\\\s+/,
-
+		// third-party: 'github.com/bbfh-dev/vintage' & 'github.com/mcbeet/mecha'
 		_indentation: (_) => /[ \t]+/,
-		_space: ($) => choice(/ +/, $.backslash),
-		_newline: (_) => /\r?\n/,
 
-		// Used as part of other tokens.
-		identifier: (_) => /[_A-Za-z0-9]+/,
-
-		word: ($) => token(choice(seq(/[-+_A-Za-z0-9]+/), /[-+_A-Za-z0-9]+/)),
-
-		line: ($) => repeat1(choice(/[^$%\r\n]*/, /[$%]/, $.macro)),
-
-		scoreboard_operation: (_) =>
-			token(
-				prec(
-					4,
-					choice("=", "+=", "-=", "*=", "/=", "%=", "><", "<", ">"),
-				),
-			),
-
-		command_keyword: (_) => token(prec(4, choice(...COMMAND_KEYWORDS))),
-		subcommand_keyword: (_) =>
-			token(prec(4, choice(...SUBCOMMAND_KEYWORDS))),
+		// third-party: Allows for ":" from Python 'github.com/mcbeet/mecha'
+		_newline: (_) => /:?\r?\n/,
 
 		macro: (_) =>
 			token(
 				choice(
-					seq("$(", /[-:.?!_A-Za-z0-9]+/, ")"),
-					seq("%[", /[-:.?!_A-Za-z0-9]+/, "]"),
+					seq("$(", /[0-9a-zA-Z._-]+/, ")"),
+					// third-party: Formatting verb from 'github.com/bbfh-dev/vintage'
+					seq("%[", /[0-9a-zA-Z._-]+/, "]"),
 				),
 			),
 
