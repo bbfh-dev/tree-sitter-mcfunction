@@ -30,5 +30,5 @@ module.exports = {
 
 	command_identifier: ($) => $.identifier,
 
-	_command_argument: ($) => choice($._primitive_type),
+	_command_argument: ($) => choice($.macro, $._primitive_type),
 };
