@@ -50,6 +50,10 @@
         {
           "type": "subcommand_keyword",
           "named": true
+        },
+        {
+          "type": "uuid",
+          "named": true
         }
       ]
     }
@@ -169,6 +173,33 @@
     }
   },
   {
+    "type": "uuid",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "uuid_12_segment",
+          "named": true
+        },
+        {
+          "type": "uuid_4_segment",
+          "named": true
+        },
+        {
+          "type": "uuid_8_segment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "\"",
     "named": false
   },
@@ -194,6 +225,14 @@
   },
   {
     "type": "-",
+    "named": false
+  },
+  {
+    "type": "0",
+    "named": false
+  },
+  {
+    "type": "0-",
     "named": false
   },
   {
@@ -227,6 +266,18 @@
   },
   {
     "type": "subcommand_keyword",
+    "named": true
+  },
+  {
+    "type": "uuid_12_segment",
+    "named": true
+  },
+  {
+    "type": "uuid_4_segment",
+    "named": true
+  },
+  {
+    "type": "uuid_8_segment",
     "named": true
   }
 ]
