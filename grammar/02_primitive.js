@@ -35,17 +35,23 @@ module.exports = {
 		),
 
 	_double_quoted_string: ($) =>
-		seq(
-			'"',
-			repeat(choice($.escape_sequence, /[^\\"]/, $.macro)),
-			token.immediate('"'),
+		prec(
+			PREC_BUILTIN,
+			seq(
+				'"',
+				repeat(choice($.escape_sequence, /[^\\"]/, $.macro)),
+				token.immediate('"'),
+			),
 		),
 
 	_single_quoted_string: ($) =>
-		seq(
-			"'",
-			repeat(choice($.escape_sequence, /[^\\']/, $.macro)),
-			token.immediate("'"),
+		prec(
+			PREC_BUILTIN,
+			seq(
+				"'",
+				repeat(choice($.escape_sequence, /[^\\']/, $.macro)),
+				token.immediate("'"),
+			),
 		),
 
 	string: ($) => choice($._double_quoted_string, $._single_quoted_string),
