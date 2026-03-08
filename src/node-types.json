@@ -54,6 +54,10 @@
         {
           "type": "uuid",
           "named": true
+        },
+        {
+          "type": "word",
+          "named": true
         }
       ]
     }
@@ -278,6 +282,10 @@
   },
   {
     "type": "uuid_8_segment",
+    "named": true
+  },
+  {
+    "type": "word",
     "named": true
   }
 ]
