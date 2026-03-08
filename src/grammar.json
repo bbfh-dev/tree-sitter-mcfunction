@@ -1043,53 +1043,56 @@
       "value": "[^\\r\\n]+"
     },
     "escape_sequence": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "\\"
-        },
-        {
-          "type": "IMMEDIATE_TOKEN",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "r"
-              },
-              {
-                "type": "STRING",
-                "value": "n"
-              },
-              {
-                "type": "STRING",
-                "value": "t"
-              },
-              {
-                "type": "STRING",
-                "value": "v"
-              },
-              {
-                "type": "STRING",
-                "value": "0"
-              },
-              {
-                "type": "STRING",
-                "value": "'"
-              },
-              {
-                "type": "STRING",
-                "value": "\""
-              },
-              {
-                "type": "STRING",
-                "value": "\\"
-              }
-            ]
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "\\"
+          },
+          {
+            "type": "IMMEDIATE_TOKEN",
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "r"
+                },
+                {
+                  "type": "STRING",
+                  "value": "n"
+                },
+                {
+                  "type": "STRING",
+                  "value": "t"
+                },
+                {
+                  "type": "STRING",
+                  "value": "v"
+                },
+                {
+                  "type": "STRING",
+                  "value": "0"
+                },
+                {
+                  "type": "STRING",
+                  "value": "'"
+                },
+                {
+                  "type": "STRING",
+                  "value": "\""
+                },
+                {
+                  "type": "STRING",
+                  "value": "\\"
+                }
+              ]
+            }
           }
-        }
-      ]
+        ]
+      }
     },
     "_double_quoted_string": {
       "type": "PREC",

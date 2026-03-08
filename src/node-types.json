@@ -85,11 +85,6 @@
     }
   },
   {
-    "type": "escape_sequence",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "float",
     "named": true,
     "fields": {},
@@ -202,10 +197,6 @@
     "named": false
   },
   {
-    "type": "\\",
-    "named": false
-  },
-  {
     "type": "backslash",
     "named": true,
     "extra": true
@@ -216,6 +207,10 @@
   },
   {
     "type": "command_keyword",
+    "named": true
+  },
+  {
+    "type": "escape_sequence",
     "named": true
   },
   {

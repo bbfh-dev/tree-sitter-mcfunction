@@ -29,9 +29,13 @@ module.exports = {
 	greedy_string: (_) => /[^\r\n]+/,
 
 	escape_sequence: (_) =>
-		seq(
-			"\\",
-			token.immediate(choice("r", "n", "t", "v", "0", "'", '"', "\\")),
+		token(
+			seq(
+				"\\",
+				token.immediate(
+					choice("r", "n", "t", "v", "0", "'", '"', "\\"),
+				),
+			),
 		),
 
 	_double_quoted_string: ($) =>
