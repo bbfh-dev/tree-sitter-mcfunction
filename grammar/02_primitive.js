@@ -2,7 +2,7 @@ const PREC_BUILTIN = 4;
 
 module.exports = {
 	_primitive_type: ($) =>
-		choice($.boolean, $.float, $.integer, $.hexadecimal),
+		choice($.boolean, $.float, $.integer, $.hexadecimal, $.string),
 
 	boolean: (_) => token(prec(PREC_BUILTIN, choice("true", "false"))),
 
@@ -27,4 +27,26 @@ module.exports = {
 		),
 
 	greedy_string: (_) => /[^\r\n]+/,
+
+	escape_sequence: (_) =>
+		seq(
+			"\\",
+			token.immediate(choice("r", "n", "t", "v", "0", "'", '"', "\\")),
+		),
+
+	_double_quoted_string: ($) =>
+		seq(
+			'"',
+			repeat(choice($.escape_sequence, /[^\\"]/, $.macro)),
+			token.immediate('"'),
+		),
+
+	_single_quoted_string: ($) =>
+		seq(
+			"'",
+			repeat(choice($.escape_sequence, /[^\\']/, $.macro)),
+			token.immediate("'"),
+		),
+
+	string: ($) => choice($._double_quoted_string, $._single_quoted_string),
 };
