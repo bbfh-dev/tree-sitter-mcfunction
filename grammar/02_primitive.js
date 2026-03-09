@@ -1,4 +1,4 @@
-const PREC_BUILTIN = 4;
+const PREC_BUILTIN = 3;
 
 module.exports = {
 	_primitive_type: ($) =>

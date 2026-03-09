@@ -44,6 +44,10 @@
           "named": true
         },
         {
+          "type": "range",
+          "named": true
+        },
+        {
           "type": "string",
           "named": true
         },
@@ -132,6 +136,25 @@
       "types": [
         {
           "type": "macro",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "range",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "integer",
           "named": true
         }
       ]
@@ -229,6 +252,10 @@
   },
   {
     "type": "-",
+    "named": false
+  },
+  {
+    "type": "..",
     "named": false
   },
   {
