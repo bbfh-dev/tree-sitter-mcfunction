@@ -37,7 +37,6 @@ module.exports = {
 	uuid_12_segment: (_) => token(prec(PREC_BUILTIN, /[0-9a-fA-F]{12}/)),
 	uuid_8_segment: (_) => token(prec(PREC_BUILTIN, /[0-9a-fA-F]{8}/)),
 	uuid_4_segment: (_) => token(prec(PREC_BUILTIN, /[0-9a-fA-F]{4}/)),
-
 	uuid: ($) =>
 		prec(
 			PREC_BUILTIN,
@@ -68,7 +67,6 @@ module.exports = {
 				),
 			),
 		),
-
 	_double_quoted_string: ($) =>
 		prec(
 			PREC_BUILTIN,
@@ -78,7 +76,6 @@ module.exports = {
 				token.immediate('"'),
 			),
 		),
-
 	_single_quoted_string: ($) =>
 		prec(
 			PREC_BUILTIN,
@@ -88,7 +85,6 @@ module.exports = {
 				token.immediate("'"),
 			),
 		),
-
 	string: ($) => choice($._double_quoted_string, $._single_quoted_string),
 
 	greedy_string: (_) => /[^\r\n]+/,
