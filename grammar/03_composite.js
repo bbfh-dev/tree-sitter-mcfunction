@@ -1,7 +1,7 @@
 const PREC_COMPOSITE = 4;
 
 module.exports = {
-	_composite_type: ($) => choice($.range, $.typed_number),
+	_composite_type: ($) => choice($.range, $.typed_number, $.path),
 
 	range: ($) =>
 		choice(
@@ -20,4 +20,8 @@ module.exports = {
 		),
 
 	_number: ($) => prec(PREC_COMPOSITE, choice($.integer, $.float)),
+
+	path: ($) => seq($._path_segment, repeat1(seq(".", $._path_segment))),
+
+	_path_segment: ($) => choice($.word),
 };
