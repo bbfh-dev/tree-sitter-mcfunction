@@ -1,17 +1,20 @@
 const PREC_COMPOSITE = 4;
 
 module.exports = {
-	_composite_type: ($) => choice($.range),
+	_composite_type: ($) => choice($.range, $.typed_number),
 
 	range: ($) =>
 		choice(
-			seq($._range_token, token.immediate("..")),
-			seq(token.immediate(".."), $._range_token),
+			seq($._number, token.immediate("..")),
+			seq(token.immediate(".."), $._number),
 			prec(
 				PREC_COMPOSITE,
-				seq($._range_token, token.immediate(".."), $._range_token),
+				seq($._number, token.immediate(".."), $._number),
 			),
 		),
 
-	_range_token: ($) => prec(PREC_COMPOSITE, choice($.integer, $.float)),
+	typed_number: ($) =>
+		prec(PREC_COMPOSITE, seq($._number, token.immediate(/[thBbSsDdFf]/))),
+
+	_number: ($) => prec(PREC_COMPOSITE, choice($.integer, $.float)),
 };

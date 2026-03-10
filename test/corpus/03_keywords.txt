@@ -6,7 +6,18 @@ execute as at in positioned align run say Hi
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (command_keyword)
+    (command
+      (command_identifier)
+      (greedy_string))))
 
 ==================
 Colors

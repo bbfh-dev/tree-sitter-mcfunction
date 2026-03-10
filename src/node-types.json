@@ -56,6 +56,10 @@
           "named": true
         },
         {
+          "type": "typed_number",
+          "named": true
+        },
+        {
           "type": "uuid",
           "named": true
         },
@@ -179,6 +183,25 @@
         },
         {
           "type": "macro",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typed_number",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "integer",
           "named": true
         }
       ]

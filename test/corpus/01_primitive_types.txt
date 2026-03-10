@@ -6,7 +6,12 @@ effect true false
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier
+      (identifier))
+    (boolean)
+    (boolean)))
 
 ==================
 Integer literals
