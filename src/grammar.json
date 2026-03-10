@@ -44,8 +44,30 @@
                   "name": "comment"
                 },
                 {
-                  "type": "SYMBOL",
-                  "name": "command"
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "ALIAS",
+                          "content": {
+                            "type": "STRING",
+                            "value": "$"
+                          },
+                          "named": true,
+                          "value": "command_macro_identifier"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "command"
+                    }
+                  ]
                 }
               ]
             },

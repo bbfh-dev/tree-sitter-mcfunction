@@ -29,7 +29,15 @@ module.exports = grammar({
 		_statement: ($) =>
 			seq(
 				optional($._indentation),
-				optional(choice($.comment, $.command)),
+				optional(
+					choice(
+						$.comment,
+						seq(
+							optional(alias("$", $.command_macro_identifier)),
+							$.command,
+						),
+					),
+				),
 				$._newline,
 			),
 

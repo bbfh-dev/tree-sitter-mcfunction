@@ -163,6 +163,10 @@
           "named": true
         },
         {
+          "type": "command_macro_identifier",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         }
@@ -285,6 +289,10 @@
   },
   {
     "type": "command_keyword",
+    "named": true
+  },
+  {
+    "type": "command_macro_identifier",
     "named": true
   },
   {
