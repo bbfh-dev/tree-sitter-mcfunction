@@ -246,6 +246,10 @@
         {
           "type": "compound_value",
           "named": true
+        },
+        {
+          "type": "nbt_array_type",
+          "named": true
         }
       ]
     }
@@ -297,7 +301,11 @@
       "required": true,
       "types": [
         {
-          "type": "word",
+          "type": "path_word",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -472,6 +480,10 @@
     "named": false
   },
   {
+    "type": ";",
+    "named": false
+  },
+  {
     "type": "=",
     "named": false
   },
@@ -518,6 +530,10 @@
   },
   {
     "type": "macro",
+    "named": true
+  },
+  {
+    "type": "nbt_array_type",
     "named": true
   },
   {

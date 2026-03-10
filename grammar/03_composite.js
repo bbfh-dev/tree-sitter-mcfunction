@@ -45,7 +45,15 @@ module.exports = {
 
 	path_word: (_) => /[0-9a-zA-Z_\-\+\.]*[0-9a-zA-Z_\-\+]/,
 
-	nbt_array: ($) => seq("[", optional(ARRAY_CONTENTS($.compound_value)), "]"),
+	nbt_array: ($) =>
+		seq(
+			"[",
+			optional(seq($.nbt_array_type, ";")),
+			optional(ARRAY_CONTENTS($.compound_value)),
+			"]",
+		),
+
+	nbt_array_type: (_) => token(prec(PREC_COMPOSITE, /[ISL]/)),
 
 	nbt_compound: ($) =>
 		seq("{", optional(ARRAY_CONTENTS($.key_value_pair)), "}"),
@@ -60,7 +68,7 @@ module.exports = {
 			$.compound_value,
 		),
 
-	property_identifier: ($) => choice($.word),
+	property_identifier: ($) => choice($.path_word, $.string),
 
 	compound_value: ($) =>
 		choice($._primitive_type, $.nbt_array, $.nbt_compound),
