@@ -1427,7 +1427,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "[#\\$%][0-9a-zA-Z_\\-\\+]+"
+            "value": "[\\$%][0-9a-zA-Z_\\-\\+]+"
           },
           {
             "type": "PATTERN",
@@ -1454,6 +1454,10 @@
         {
           "type": "SYMBOL",
           "name": "path"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "resource"
         },
         {
           "type": "SYMBOL",
@@ -1687,8 +1691,135 @@
       }
     },
     "path_word": {
-      "type": "PATTERN",
-      "value": "[0-9a-zA-Z_\\-\\+\\.]*[0-9a-zA-Z_\\-\\+]"
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "PATTERN",
+            "value": "[\\.a-zA-Z_\\-\\+\\*\\?\\$%#][\\.0-9a-zA-Z_\\-\\+\\*\\?%]*[0-9a-zA-Z_\\-\\+\\*\\?%]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[a-zA-Z_\\-\\+\\*\\?%]"
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "minecraft_resource"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "generic_resource"
+        }
+      ]
+    },
+    "minecraft_resource": {
+      "type": "PREC",
+      "value": 4,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "minecraft:"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "word"
+          }
+        ]
+      }
+    },
+    "generic_resource": {
+      "type": "PREC_RIGHT",
+      "value": 4,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": "#"
+                      },
+                      {
+                        "type": "BLANK"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "_resource_segment"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": ":"
+                  }
+                ]
+              },
+              {
+                "type": "ALIAS",
+                "content": {
+                  "type": "PATTERN",
+                  "value": "\\.+\\/"
+                },
+                "named": true,
+                "value": "path_word"
+              }
+            ]
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_resource_segment"
+          },
+          {
+            "type": "REPEAT",
+            "content": {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "/"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_resource_segment"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "_resource_segment": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "word"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "path_word"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "macro"
+        }
+      ]
     },
     "nbt_array": {
       "type": "SEQ",
@@ -1857,7 +1988,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "property_identifier"
+          "name": "compound_key"
         },
         {
           "type": "CHOICE",
@@ -1894,18 +2025,26 @@
         }
       ]
     },
-    "property_identifier": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "path_word"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "string"
-        }
-      ]
+    "compound_key": {
+      "type": "PREC",
+      "value": 4,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "path_word"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "resource"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        ]
+      }
     },
     "compound_value": {
       "type": "CHOICE",

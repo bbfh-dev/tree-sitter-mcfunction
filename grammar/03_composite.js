@@ -9,6 +9,7 @@ module.exports = {
 			$.typed_number,
 			$.vector,
 			$.path,
+			$.resource,
 			$.nbt_array,
 			$.nbt_compound,
 			$.data_compound,
@@ -52,7 +53,32 @@ module.exports = {
 	_path_segment: ($) =>
 		prec(PREC_COMPOSITE, choice($.path_word, $.nbt_array, $.nbt_compound)),
 
-	path_word: (_) => /[0-9a-zA-Z_\-\+\.]*[0-9a-zA-Z_\-\+]/,
+	path_word: (_) =>
+		token(
+			choice(
+				/[\.a-zA-Z_\-\+\*\?\$%#][\.0-9a-zA-Z_\-\+\*\?%]*[0-9a-zA-Z_\-\+\*\?%]/,
+				/[a-zA-Z_\-\+\*\?%]/,
+			),
+		),
+
+	resource: ($) => choice($.minecraft_resource, $.generic_resource),
+
+	minecraft_resource: ($) => prec(PREC_COMPOSITE, seq("minecraft:", $.word)),
+
+	generic_resource: ($) =>
+		prec.right(
+			PREC_COMPOSITE,
+			seq(
+				choice(
+					seq(optional("#"), $._resource_segment, ":"),
+					alias(/\.+\//, $.path_word),
+				),
+				$._resource_segment,
+				repeat(seq("/", $._resource_segment)),
+			),
+		),
+
+	_resource_segment: ($) => choice($.word, $.path_word, $.macro),
 
 	nbt_array: ($) =>
 		seq(
@@ -71,13 +97,14 @@ module.exports = {
 
 	key_value_pair: ($) =>
 		seq(
-			$.property_identifier,
+			$.compound_key,
 			choice("=", ":", "~"),
 			optional("!"),
 			$.compound_value,
 		),
 
-	property_identifier: ($) => choice($.path_word, $.string),
+	compound_key: ($) =>
+		prec(PREC_COMPOSITE, choice($.path_word, $.resource, $.string)),
 
 	compound_value: ($) =>
 		choice($._primitive_type, $.nbt_array, $.nbt_compound),

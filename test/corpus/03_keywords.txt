@@ -62,7 +62,30 @@ scoreboard players operation #%[example] example /= 15
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier
+      (identifier))
+    (operation)
+    (operation)
+    (operation)
+    (operation)
+    (operation)
+    (operation)
+    (operation)
+    (operation)
+    (operation))
+  (command
+    (command_identifier
+      (identifier))
+    (command_keyword)
+    (command_keyword)
+    (resource
+      (generic_resource
+        (macro)))
+    (word)
+    (operation)
+    (integer)))
 
 ==================
 Item slots
