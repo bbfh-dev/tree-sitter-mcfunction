@@ -33,7 +33,11 @@ tellraw black dark_blue dark_green dark_aqua dark_red dark_purple dark_purple go
 Scoreboard objectives
 ==================
 
-scoreboard
+scoreboard dummy trigger deathCount playerKillCount totalKillCount health xp level food air armor teamkill.blue killedByTeam.light_purple
+scoreboard minecraft.mined:minecraft.stone \
+	mined:minecraft.stone \
+	minecraft.mined:stone \
+	mined:stone
 
 ------------------
 
@@ -43,7 +47,7 @@ scoreboard
 Scoreboard display slots
 ==================
 
-item
+scoreboard players list sidebar sidebar.team.gold below_name‌
 
 ------------------
 
@@ -64,7 +68,11 @@ scoreboard players operation #%[example] example /= 15
 Item slots
 ==================
 
-item
+item contents container.50 hotbar.7 inventory.* enderchest.12 villager.5 horse.12 \
+	weapon weapon.mainhand weapon.offhand \
+	armor.head armor.chest armor.legs armor.feet armor.body \
+	horse.saddle horse.chest \
+	player.cursor player.crafting.2
 
 ------------------
 
