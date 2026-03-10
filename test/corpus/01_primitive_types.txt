@@ -38,7 +38,17 @@ $effect 0x$(macro)
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier
+      (identifier))
+    (hexadecimal))
+  (command_macro_identifier)
+  (command
+    (command_identifier
+      (identifier))
+    (hexadecimal
+      (macro))))
 
 ==================
 Float literals
@@ -90,4 +100,32 @@ $kill dd12be42-0-0-$(macro)-11c01849e498
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier
+      (identifier))
+    (uuid
+      (uuid_8_segment)
+      (uuid_4_segment)
+      (uuid_4_segment)
+      (uuid_4_segment)
+      (uuid_12_segment)))
+  (command
+    (command_identifier
+      (identifier))
+    (uuid))
+  (command
+    (command_identifier
+      (identifier))
+    (uuid
+      (uuid_4_segment)))
+  (command_macro_identifier)
+  (command
+    (command_identifier
+      (identifier))
+    (uuid
+      (uuid_8_segment)
+      (macro)
+      (uuid_12_segment)))
+  (comment
+    (greedy_string)))

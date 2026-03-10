@@ -1346,23 +1346,33 @@
         "type": "PREC",
         "value": 0,
         "content": {
-          "type": "SEQ",
+          "type": "CHOICE",
           "members": [
             {
-              "type": "CHOICE",
+              "type": "SEQ",
               "members": [
                 {
                   "type": "PATTERN",
                   "value": "[#\\$%\\.]"
                 },
                 {
-                  "type": "BLANK"
+                  "type": "PATTERN",
+                  "value": "[0-9a-zA-Z_-]+"
                 }
               ]
             },
             {
-              "type": "PATTERN",
-              "value": "[0-9a-zA-Z_-]+"
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "PATTERN",
+                  "value": "[a-zA-Z_-]"
+                },
+                {
+                  "type": "PATTERN",
+                  "value": "[0-9a-zA-Z_-]*"
+                }
+              ]
             }
           ]
         }
@@ -1449,14 +1459,23 @@
         "type": "SEQ",
         "members": [
           {
-            "type": "SYMBOL",
-            "name": "_number"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_number"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "macro"
+              }
+            ]
           },
           {
             "type": "IMMEDIATE_TOKEN",
             "content": {
               "type": "PATTERN",
-              "value": "[thBbSsDdFf]"
+              "value": "[thBbSsLlDdFf]"
             }
           }
         ]

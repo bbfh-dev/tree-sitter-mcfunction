@@ -14,7 +14,10 @@ module.exports = {
 		),
 
 	typed_number: ($) =>
-		prec(PREC_COMPOSITE, seq($._number, token.immediate(/[thBbSsDdFf]/))),
+		prec(
+			PREC_COMPOSITE,
+			seq(choice($._number, $.macro), token.immediate(/[thBbSsLlDdFf]/)),
+		),
 
 	_number: ($) => prec(PREC_COMPOSITE, choice($.integer, $.float)),
 };

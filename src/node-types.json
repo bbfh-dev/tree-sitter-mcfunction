@@ -207,6 +207,10 @@
         {
           "type": "integer",
           "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
         }
       ]
     }

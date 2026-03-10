@@ -83,5 +83,14 @@ module.exports = {
 
 	greedy_string: (_) => /[^\r\n]+/,
 
-	word: (_) => token(prec(0, seq(optional(/[#\$%\.]/), /[0-9a-zA-Z_-]+/))),
+	word: (_) =>
+		token(
+			prec(
+				0,
+				choice(
+					seq(/[#\$%\.]/, /[0-9a-zA-Z_-]+/),
+					seq(/[a-zA-Z_-]/, /[0-9a-zA-Z_-]*/),
+				),
+			),
+		),
 };
