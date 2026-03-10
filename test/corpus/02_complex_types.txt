@@ -17,11 +17,20 @@ $tp ~$(macro) ^ ^-1.$(macro)
 Ranges
 ==================
 
-execute if 10.. ..20 10..20
-execute if 1.2.. ..2.3 1.2..2.3
-execute if .2.. ...3 .2...3 run return run say Hi
-$execute if $(macro).. ..$(macro) $(macro)..$(macro)
-$execute if 1.$(macro).. ..-$(macro) 1.$(macro)..3
+execute if 10.. \
+	..20 \
+	10..20
+execute if 1.2.. \
+	..2.3 \
+	1.2..2.3
+execute if .2.. \
+	...3 \
+	.2...3 run return run say Hi
+$execute if $(macro).. \
+	..$(macro) \
+	$(macro)..$(macro)
+$execute if ..-$(macro) \
+	$(macro)..3
 
 ------------------
 
