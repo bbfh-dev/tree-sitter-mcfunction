@@ -7,6 +7,7 @@ module.exports = {
 		choice(
 			$.range,
 			$.typed_number,
+			$.vector,
 			$.path,
 			$.nbt_array,
 			$.nbt_compound,
@@ -30,6 +31,14 @@ module.exports = {
 		),
 
 	_number: ($) => prec(PREC_COMPOSITE, choice($.integer, $.float)),
+
+	vector: ($) =>
+		prec.right(
+			choice(
+				seq("~", optional($._number)),
+				seq("^", optional($._number)),
+			),
+		),
 
 	path: ($) =>
 		prec(

@@ -84,6 +84,10 @@
           "named": true
         },
         {
+          "type": "vector",
+          "named": true
+        },
+        {
           "type": "word",
           "named": true
         }
@@ -424,6 +428,25 @@
     }
   },
   {
+    "type": "vector",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "!",
     "named": false
   },
@@ -493,6 +516,10 @@
   },
   {
     "type": "]",
+    "named": false
+  },
+  {
+    "type": "^",
     "named": false
   },
   {
