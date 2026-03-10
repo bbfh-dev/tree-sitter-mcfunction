@@ -1,8 +1,8 @@
 module.exports = {
 	comment: ($) =>
 		choice(
-			seq("#~>", optional($.greedy_string)),
-			seq("#:", optional($.greedy_string)),
+			seq("#~>", $.command_identifier, optional($.greedy_string)),
+			seq("#:", $.command_identifier, optional($.greedy_string)),
 			seq("#>", optional($.greedy_string)),
 			seq("#", optional($.greedy_string)),
 		),
@@ -31,5 +31,5 @@ module.exports = {
 	command_identifier: ($) => $.identifier,
 
 	_command_argument: ($) =>
-		choice($.macro, $._composite_type, $._primitive_type),
+		choice($.macro, $.operation, $._composite_type, $._primitive_type),
 };
