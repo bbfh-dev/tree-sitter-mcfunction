@@ -27,7 +27,63 @@ $effect $(macro) $(macro)b -$(macro)l
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier
+      (identifier))
+    (integer)
+    (integer)
+    (integer)
+    (backslash)
+    (typed_number
+      (integer))
+    (typed_number
+      (integer))
+    (typed_number
+      (integer)))
+  (command
+    (command_identifier
+      (identifier))
+    (integer)
+    (integer)
+    (integer)
+    (backslash)
+    (typed_number
+      (integer))
+    (typed_number
+      (integer))
+    (typed_number
+      (integer))
+    (typed_number
+      (integer))
+    (backslash)
+    (typed_number
+      (integer))
+    (typed_number
+      (integer))
+    (typed_number
+      (integer))
+    (typed_number
+      (integer))
+    (backslash)
+    (typed_number
+      (integer))
+    (typed_number
+      (integer))
+    (typed_number
+      (integer))
+    (typed_number
+      (integer)))
+  (command_macro_identifier)
+  (command
+    (command_identifier
+      (identifier))
+    (macro)
+    (typed_number
+      (macro))
+    (typed_number
+      (integer
+        (macro)))))
 
 ==================
 Hexadecimal literals
@@ -59,11 +115,53 @@ effect 0.0 21.47483647 -21474836.48 \
 	.0 .47483647 -.48 \
 	3.2767f .2767F -3.2767f -.2767F \
 	3.2767d .2767D -3.2767d -.2767D
-$effect 3.$(macro) -.$(macro)f -$(macro)D $(macro).15f
+$effect -$(macro)f
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier
+      (identifier))
+    (float)
+    (float)
+    (float)
+    (float))
+  (command
+    (command_identifier
+      (identifier))
+    (float)
+    (float)
+    (float)
+    (backslash)
+    (float)
+    (float)
+    (float)
+    (backslash)
+    (typed_number
+      (float))
+    (typed_number
+      (float))
+    (typed_number
+      (float))
+    (typed_number
+      (float))
+    (backslash)
+    (typed_number
+      (float))
+    (typed_number
+      (float))
+    (typed_number
+      (float))
+    (typed_number
+      (float)))
+  (command_macro_identifier)
+  (command
+    (command_identifier
+      (identifier))
+    (typed_number
+      (integer
+        (macro)))))
 
 ==================
 String literals
@@ -86,7 +184,122 @@ datapack enable 'escape \' me'
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier
+      (identifier))
+    (path
+      (word)
+      (word))
+    (word)
+    (string)
+    (string))
+  (command
+    (command_identifier
+      (identifier))
+    (path
+      (word)
+      (word)
+      (word))
+    (path
+      (word)
+      (word)
+      (word))
+    (path
+      (word)
+      (word))
+    (path
+      (word)
+      (word)))
+  (command
+    (command_identifier
+      (identifier))
+    (command_keyword)
+    (command_keyword)
+    (word)
+    (path
+      (word)
+      (word))
+    (operation)
+    (path
+      (word)
+      (word)
+      (word))
+    (float)
+    (path
+      (word)
+      (word)))
+  (command
+    (command_identifier
+      (identifier))
+    (command_keyword)
+    (command_keyword)
+    (path
+      (word)
+      (word))
+    (float)
+    (path
+      (word)
+      (word))
+    (operation)
+    (word)
+    (path
+      (word)
+      (word)))
+  (command
+    (command_identifier
+      (identifier))
+    (command_keyword)
+    (command_keyword)
+    (word)
+    (path
+      (word)
+      (word)))
+  (command
+    (command_identifier
+      (identifier))
+    (command_keyword)
+    (command_keyword)
+    (path
+      (word)
+      (word))
+    (path
+      (word)
+      (word))
+    (integer))
+  (command
+    (command_identifier)
+    (greedy_string))
+  (command_macro_identifier)
+  (command
+    (command_identifier
+      (identifier))
+    (command_keyword)
+    (string
+      (macro)))
+  (command
+    (command_identifier
+      (identifier))
+    (command_keyword)
+    (string))
+  (command
+    (command_identifier
+      (identifier))
+    (command_keyword)
+    (string
+      (escape_sequence)))
+  (command
+    (command_identifier
+      (identifier))
+    (command_keyword)
+    (string
+      (macro)))
+  (command
+    (command_identifier
+      (identifier))
+    (command_keyword)
+    (string
+      (escape_sequence))))
 
 ==================
 UUIDs

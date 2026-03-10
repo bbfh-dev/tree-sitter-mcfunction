@@ -44,6 +44,14 @@
           "named": true
         },
         {
+          "type": "operation",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "range",
           "named": true
         },
@@ -90,9 +98,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "command_identifier",
+          "named": true
+        },
         {
           "type": "greedy_string",
           "named": true
@@ -125,6 +137,21 @@
       "types": [
         {
           "type": "macro",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "path",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -271,6 +298,10 @@
     "named": false
   },
   {
+    "type": ".",
+    "named": false
+  },
+  {
     "type": "..",
     "named": false
   },
@@ -317,6 +348,10 @@
   },
   {
     "type": "macro",
+    "named": true
+  },
+  {
+    "type": "operation",
     "named": true
   },
   {

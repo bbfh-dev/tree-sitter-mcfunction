@@ -19,7 +19,32 @@ Comment docs
 
 ------------------
 
-(source_file)
+(source_file
+  (comment
+    (greedy_string))
+  (comment)
+  (comment
+    (greedy_string))
+  (comment)
+  (comment
+    (greedy_string))
+  (comment
+    (greedy_string))
+  (comment
+    (greedy_string))
+  (comment
+    (greedy_string))
+  (comment
+    (greedy_string))
+  (comment)
+  (comment
+    (greedy_string))
+  (comment
+    (greedy_string))
+  (comment
+    (greedy_string))
+  (comment
+    (greedy_string)))
 
 ==================
 Vintage comments
@@ -32,7 +57,21 @@ say Hello World!
 
 ------------------
 
-(source_file)
+(source_file
+  (comment
+    (command_identifier
+      (identifier))
+    (greedy_string))
+  (comment
+    (command_identifier
+      (identifier))
+    (greedy_string))
+  (command
+    (command_identifier)
+    (greedy_string))
+  (comment
+    (command_identifier
+      (identifier))))
 
 ==================
 Special commands
@@ -45,4 +84,17 @@ execute run \
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier)
+    (greedy_string))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (backslash)
+    (command
+      (command_identifier)
+      (backslash)
+      (command
+        (command_identifier)
+        (greedy_string)))))
