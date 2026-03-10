@@ -23,7 +23,6 @@ module.exports = grammar({
 
 		backslash: (_) => /\s*\\\r?\n\s*/,
 
-		// FIXME: is this really necessary?
 		identifier: (_) => /[a-z_]+/,
 
 		_statement: ($) =>
