@@ -97,21 +97,6 @@
     }
   },
   {
-    "type": "float",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "macro",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "hexadecimal",
     "named": true,
     "fields": {},
@@ -281,6 +266,10 @@
   },
   {
     "type": "escape_sequence",
+    "named": true
+  },
+  {
+    "type": "float",
     "named": true
   },
   {

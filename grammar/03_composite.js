@@ -5,9 +5,12 @@ module.exports = {
 
 	range: ($) =>
 		choice(
-			seq($._range_token, ".."),
-			seq("..", $._range_token),
-			prec(PREC_COMPOSITE, seq($._range_token, "..", $._range_token)),
+			seq($._range_token, token.immediate("..")),
+			seq(token.immediate(".."), $._range_token),
+			prec(
+				PREC_COMPOSITE,
+				seq($._range_token, token.immediate(".."), $._range_token),
+			),
 		),
 
 	_range_token: ($) => prec(PREC_COMPOSITE, choice($.integer, $.float)),

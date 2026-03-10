@@ -20,13 +20,7 @@ module.exports = {
 			prec(PREC_BUILTIN, seq("-", $.macro)),
 		),
 
-	float: ($) =>
-		choice(
-			token(prec(PREC_BUILTIN, /-?\d+\.\d+/)),
-			token(prec(PREC_BUILTIN, /-?\.\d+/)),
-			prec(PREC_BUILTIN, seq(/-?\d+\./, $.macro)),
-			prec(PREC_BUILTIN, seq(optional("-"), $.macro, /\.\d+/)),
-		),
+	float: (_) => token(prec(PREC_BUILTIN, choice(/-?\d+\.\d+/, /-?\.\d+/))),
 
 	hexadecimal: ($) =>
 		choice(
