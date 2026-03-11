@@ -11,7 +11,55 @@ $tp ~$(macro) ^ ^-$(macro)
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier
+      (identifier))
+    (vector)
+    (vector)
+    (vector))
+  (command
+    (command_identifier
+      (identifier))
+    (vector)
+    (vector)
+    (vector))
+  (command
+    (command_identifier
+      (identifier))
+    (vector
+      (integer))
+    (vector)
+    (vector
+      (integer)))
+  (command
+    (command_identifier
+      (identifier))
+    (vector
+      (float))
+    (vector
+      (integer))
+    (vector
+      (integer)))
+  (command
+    (command_identifier
+      (identifier))
+    (vector
+      (float))
+    (vector
+      (float))
+    (vector
+      (float)))
+  (command_macro_identifier)
+  (command
+    (command_identifier
+      (identifier))
+    (vector)
+    (macro)
+    (vector)
+    (vector
+      (integer
+        (macro)))))
 
 ==================
 Ranges
@@ -52,7 +100,73 @@ function bs.dump:interpret/any
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (resource
+      (minecraft_resource
+        (word))))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (resource
+      (minecraft_resource
+        (word))))
+  (command
+    (command_identifier
+      (identifier))
+    (path
+      (path_word)))
+  (command
+    (command_identifier
+      (identifier))
+    (resource
+      (generic_resource
+        (word)
+        (word)
+        (path_word))))
+  (command
+    (command_identifier
+      (identifier))
+    (resource
+      (generic_resource
+        (path_word)
+        (word))))
+  (command
+    (command_identifier
+      (identifier))
+    (resource
+      (generic_resource
+        (path_word)
+        (word)
+        (word)
+        (word))))
+  (command
+    (command_identifier
+      (identifier))
+    (resource
+      (generic_resource
+        (path_word)
+        (macro)
+        (word)
+        (macro)
+        (word))))
+  (command
+    (command_identifier
+      (identifier))
+    (resource
+      (generic_resource
+        (path_word)
+        (word))))
+  (command
+    (command_identifier
+      (identifier))
+    (resource
+      (generic_resource
+        (path_word)
+        (word)
+        (word)))))
 
 ==================
 NBT Paths

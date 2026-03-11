@@ -196,28 +196,10 @@ datapack enable 'escape \' me'
   (command
     (command_identifier
       (identifier))
-    (word)
     (path
       (path_word))
     (path
       (path_word))
-    (path
-      (path_word))
-    (resource
-      (generic_resource
-        (path_word))))
-  (command
-    (command_identifier
-      (identifier))
-    (command_keyword)
-    (command_keyword)
-    (resource
-      (generic_resource
-        (path_word)))
-    (path
-      (path_word))
-    (operation)
-    (word)
     (path
       (path_word))
     (path
@@ -227,15 +209,27 @@ datapack enable 'escape \' me'
       (identifier))
     (command_keyword)
     (command_keyword)
-    (word)
     (path
       (path_word))
     (path
       (path_word))
     (operation)
-    (resource
-      (generic_resource
-        (path_word)))
+    (path
+      (path_word))
+    (path
+      (path_word)))
+  (command
+    (command_identifier
+      (identifier))
+    (command_keyword)
+    (command_keyword)
+    (path
+      (path_word))
+    (path
+      (path_word))
+    (operation)
+    (path
+      (path_word))
     (path
       (path_word)))
   (command
@@ -251,9 +245,8 @@ datapack enable 'escape \' me'
       (identifier))
     (command_keyword)
     (command_keyword)
-    (resource
-      (generic_resource
-        (path_word)))
+    (path
+      (path_word))
     (path
       (path_word))
     (integer))
