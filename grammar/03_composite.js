@@ -17,11 +17,15 @@ module.exports = {
 
 	range: ($) =>
 		choice(
-			seq($._range_segment, token.immediate("..")),
-			seq("..", $._range_segment),
+			seq($._range_segment, token.immediate(prec(5, ".."))),
+			seq(token(prec(5, "..")), $._range_segment),
 			prec(
 				PREC_COMPOSITE,
-				seq($._range_segment, token.immediate(".."), $._range_segment),
+				seq(
+					$._range_segment,
+					token.immediate(prec(5, "..")),
+					$._range_segment,
+				),
 			),
 		),
 
@@ -30,7 +34,10 @@ module.exports = {
 	typed_number: ($) =>
 		prec(
 			PREC_COMPOSITE,
-			seq(choice($._number, $.macro), token.immediate(/[thBbSsLlDdFf]/)),
+			seq(
+				choice($._number, $.macro),
+				token.immediate(prec(4, /[thBbSsLlDdFf]/)),
+			),
 		),
 
 	_number: ($) => prec(PREC_COMPOSITE, choice($.integer, $.float)),
@@ -46,20 +53,33 @@ module.exports = {
 	path: ($) =>
 		prec(
 			PREC_COMPOSITE,
-			choice(
-				$.path_word,
-				seq($._path_segment, repeat1(seq(".", $._path_segment))),
+			seq(
+				optional("#"),
+				choice(
+					$.word,
+					$.path_word,
+					seq(
+						$._path_segment,
+						repeat1(seq(token(prec(4, ".")), $._path_segment)),
+					),
+				),
 			),
 		),
 
 	_path_segment: ($) =>
-		prec(PREC_COMPOSITE, choice($.path_word, $.nbt_array, $.nbt_compound)),
+		prec(
+			PREC_COMPOSITE,
+			choice($.path_word, $.nbt_array, $.nbt_compound, $.integer),
+		),
 
 	path_word: (_) =>
 		token(
-			choice(
-				/[a-zA-Z_\-\+\*\?\$%#][0-9a-zA-Z_\-\+\*\?%]*[0-9a-zA-Z_\-\+\*\?%]/,
-				/[a-zA-Z_\-\+\*\?%]/,
+			prec(
+				1,
+				choice(
+					/[a-zA-Z_\-\+\*\?\$%][0-9a-zA-Z_\-\+\*\?%]*/,
+					/[a-zA-Z_\-\+\*\?%]/,
+				),
 			),
 		),
 
@@ -72,7 +92,7 @@ module.exports = {
 			PREC_COMPOSITE,
 			seq(
 				choice(
-					seq(optional("#"), $._resource_segment, ":"),
+					seq(optional("#"), $.namespace, ":"),
 					alias(/\.+\//, $.path_word),
 				),
 				$._resource_segment,
@@ -82,11 +102,17 @@ module.exports = {
 
 	_resource_segment: ($) => choice($.word, $.path_word, $.macro),
 
+	namespace: ($) =>
+		seq(
+			$._resource_segment,
+			repeat(seq(token(prec(5, ".")), $._resource_segment)),
+		),
+
 	nbt_array: ($) =>
 		seq(
 			"[",
 			optional(seq($.nbt_array_type, ";")),
-			optional(ARRAY_CONTENTS($.compound_value)),
+			optional(ARRAY_CONTENTS($._compound_value)),
 			"]",
 		),
 
@@ -102,12 +128,12 @@ module.exports = {
 			$.compound_key,
 			choice("=", ":", "~"),
 			optional("!"),
-			$.compound_value,
+			$._compound_value,
 		),
 
 	compound_key: ($) =>
 		prec(PREC_COMPOSITE, choice($.path_word, $.resource, $.string)),
 
-	compound_value: ($) =>
+	_compound_value: ($) =>
 		choice($._primitive_type, $.nbt_array, $.nbt_compound),
 };

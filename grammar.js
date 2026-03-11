@@ -48,10 +48,13 @@ module.exports = grammar({
 
 		macro: (_) =>
 			token(
-				choice(
-					seq("$(", /[0-9a-zA-Z._-]+/, ")"),
-					// third-party: Formatting verb from 'github.com/bbfh-dev/vintage'
-					seq("%[", /[0-9a-zA-Z._-]+/, "]"),
+				prec(
+					5,
+					choice(
+						seq("$(", /[0-9a-zA-Z._-]+/, ")"),
+						// third-party: Formatting verb from 'github.com/bbfh-dev/vintage'
+						seq("%[", /[0-9a-zA-Z._-]+/, "]"),
+					),
 				),
 			),
 

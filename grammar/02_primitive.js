@@ -17,7 +17,7 @@ module.exports = {
 	integer: ($) =>
 		choice(
 			token(prec(PREC_BUILTIN, /-?\d+/)),
-			prec(PREC_BUILTIN, seq("-", $.macro)),
+			prec(PREC_BUILTIN, seq(token(prec(1, "-")), $.macro)),
 		),
 
 	float: (_) => token(prec(PREC_BUILTIN, choice(/-?\d+\.\d+/, /-?\.\d+/))),

@@ -189,20 +189,28 @@ datapack enable 'escape \' me'
     (command_identifier
       (identifier))
     (path
+      (path_word)
       (path_word))
-    (word)
+    (path
+      (path_word))
     (string)
     (string))
   (command
     (command_identifier
       (identifier))
     (path
+      (path_word)
+      (path_word)
       (path_word))
     (path
+      (path_word)
+      (path_word)
       (path_word))
     (path
+      (path_word)
       (path_word))
     (path
+      (path_word)
       (path_word)))
   (command
     (command_identifier
@@ -212,11 +220,34 @@ datapack enable 'escape \' me'
     (path
       (path_word))
     (path
+      (path_word)
+      (path_word))
+    (operation)
+    (path
+      (path_word)
+      (path_word)
+      (path_word)
+      (integer))
+    (path
+      (path_word)
+      (path_word)))
+  (command
+    (command_identifier
+      (identifier))
+    (command_keyword)
+    (command_keyword)
+    (path
+      (path_word)
+      (path_word)
+      (integer))
+    (path
+      (path_word)
       (path_word))
     (operation)
     (path
       (path_word))
     (path
+      (path_word)
       (path_word)))
   (command
     (command_identifier
@@ -226,19 +257,7 @@ datapack enable 'escape \' me'
     (path
       (path_word))
     (path
-      (path_word))
-    (operation)
-    (path
-      (path_word))
-    (path
-      (path_word)))
-  (command
-    (command_identifier
-      (identifier))
-    (command_keyword)
-    (command_keyword)
-    (word)
-    (path
+      (path_word)
       (path_word)))
   (command
     (command_identifier
@@ -246,8 +265,10 @@ datapack enable 'escape \' me'
     (command_keyword)
     (command_keyword)
     (path
+      (path_word)
       (path_word))
     (path
+      (path_word)
       (path_word))
     (integer))
   (command
