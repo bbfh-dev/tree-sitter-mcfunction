@@ -1481,7 +1481,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "_number"
+              "name": "_range_segment"
             },
             {
               "type": "IMMEDIATE_TOKEN",
@@ -1496,15 +1496,12 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "IMMEDIATE_TOKEN",
-              "content": {
-                "type": "STRING",
-                "value": ".."
-              }
+              "type": "STRING",
+              "value": ".."
             },
             {
               "type": "SYMBOL",
-              "name": "_number"
+              "name": "_range_segment"
             }
           ]
         },
@@ -1516,7 +1513,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "_number"
+                "name": "_range_segment"
               },
               {
                 "type": "IMMEDIATE_TOKEN",
@@ -1527,12 +1524,29 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_number"
+                "name": "_range_segment"
               }
             ]
           }
         }
       ]
+    },
+    "_range_segment": {
+      "type": "PREC",
+      "value": 4,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_number"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "macro"
+          }
+        ]
+      }
     },
     "typed_number": {
       "type": "PREC",
@@ -1697,7 +1711,7 @@
         "members": [
           {
             "type": "PATTERN",
-            "value": "[\\.a-zA-Z_\\-\\+\\*\\?\\$%#][\\.0-9a-zA-Z_\\-\\+\\*\\?%]*[0-9a-zA-Z_\\-\\+\\*\\?%]"
+            "value": "[a-zA-Z_\\-\\+\\*\\?\\$%#][0-9a-zA-Z_\\-\\+\\*\\?%]*[0-9a-zA-Z_\\-\\+\\*\\?%]"
           },
           {
             "type": "PATTERN",

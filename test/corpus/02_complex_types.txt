@@ -82,7 +82,73 @@ $execute if ..-$(macro) \
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (range
+      (integer))
+    (backslash)
+    (range
+      (integer))
+    (backslash)
+    (range
+      (integer)
+      (integer)))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (range
+      (float))
+    (backslash)
+    (range
+      (float))
+    (backslash)
+    (range
+      (float)
+      (float)))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (range
+      (float))
+    (backslash)
+    (range
+      (float))
+    (backslash)
+    (range
+      (float)
+      (float))
+    (command_keyword)
+    (command
+      (command_identifier)
+      (command
+        (command_identifier)
+        (greedy_string))))
+  (command_macro_identifier)
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (range
+      (macro))
+    (backslash)
+    (range
+      (macro))
+    (backslash)
+    (range
+      (macro)
+      (macro)))
+  (command_macro_identifier)
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (range
+      (integer
+        (macro)))
+    (backslash)
+    (range
+      (macro)
+      (integer))))
 
 ==================
 Resources

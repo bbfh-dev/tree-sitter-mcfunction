@@ -17,13 +17,15 @@ module.exports = {
 
 	range: ($) =>
 		choice(
-			seq($._number, token.immediate("..")),
-			seq(token.immediate(".."), $._number),
+			seq($._range_segment, token.immediate("..")),
+			seq("..", $._range_segment),
 			prec(
 				PREC_COMPOSITE,
-				seq($._number, token.immediate(".."), $._number),
+				seq($._range_segment, token.immediate(".."), $._range_segment),
 			),
 		),
+
+	_range_segment: ($) => prec(PREC_COMPOSITE, choice($._number, $.macro)),
 
 	typed_number: ($) =>
 		prec(
@@ -56,7 +58,7 @@ module.exports = {
 	path_word: (_) =>
 		token(
 			choice(
-				/[\.a-zA-Z_\-\+\*\?\$%#][\.0-9a-zA-Z_\-\+\*\?%]*[0-9a-zA-Z_\-\+\*\?%]/,
+				/[a-zA-Z_\-\+\*\?\$%#][0-9a-zA-Z_\-\+\*\?%]*[0-9a-zA-Z_\-\+\*\?%]/,
 				/[a-zA-Z_\-\+\*\?%]/,
 			),
 		),
