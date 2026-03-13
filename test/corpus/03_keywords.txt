@@ -27,7 +27,26 @@ tellraw black dark_blue dark_green dark_aqua dark_red dark_purple dark_purple go
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)
+    (word)))
 
 ==================
 Scoreboard objectives

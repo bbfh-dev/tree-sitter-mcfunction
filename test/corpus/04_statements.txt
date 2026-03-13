@@ -59,19 +59,16 @@ say Hello World!
 
 (source_file
   (comment
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (greedy_string))
   (comment
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (greedy_string))
   (command
     (command_identifier)
     (greedy_string))
   (comment
-    (command_identifier
-      (identifier))))
+    (command_identifier)))
 
 ==================
 Special commands

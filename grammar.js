@@ -16,43 +16,35 @@ module.exports = grammar({
 
 	extras: ($) => [/ +/, $.backslash],
 
-	word: ($) => $.identifier,
+	word: ($) => $._identifier,
 
 	rules: {
 		source_file: ($) => repeat($._statement),
 
 		backslash: (_) => /\s*\\\r?\n\s*/,
 
-		identifier: (_) => /[a-z_]+/,
+		_identifier: (_) => /[a-z_]+/,
 
 		_statement: ($) =>
 			seq(
 				optional($._indentation),
-				optional(
-					choice(
-						$.comment,
-						seq(
-							optional(alias("$", $.command_macro_identifier)),
-							$.command,
-						),
-					),
-				),
+				optional(choice($.comment, $.command)),
 				$._newline,
 			),
 
-		// third-party: 'github.com/bbfh-dev/vintage' & 'github.com/mcbeet/mecha'
+		// NOTE: 'github.com/bbfh-dev/vintage' & 'github.com/mcbeet/mecha'
 		_indentation: (_) => /[ \t]+/,
 
-		// third-party: Allows for ":" from Python 'github.com/mcbeet/mecha'
+		// NOTE: Allows for ":" from Python 'github.com/mcbeet/mecha'
 		_newline: (_) => /:?\r?\n/,
 
 		macro: (_) =>
 			token(
 				prec(
-					5,
+					2,
 					choice(
 						seq("$(", /[0-9a-zA-Z._-]+/, ")"),
-						// third-party: Formatting verb from 'github.com/bbfh-dev/vintage'
+						// NOTE: Comptime macros from 'github.com/bbfh-dev/vintage'
 						seq("%[", /[0-9a-zA-Z._-]+/, "]"),
 					),
 				),

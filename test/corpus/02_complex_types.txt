@@ -13,28 +13,24 @@ $tp ~$(macro) ^ ^-$(macro)
 
 (source_file
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (vector)
     (vector)
     (vector))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (vector)
     (vector)
     (vector))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (vector
       (integer))
     (vector)
     (vector
       (integer)))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (vector
       (float))
     (vector
@@ -42,20 +38,18 @@ $tp ~$(macro) ^ ^-$(macro)
     (vector
       (integer)))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (vector
       (float))
     (vector
       (float))
     (vector
       (float)))
-  (command_macro_identifier)
   (command
-    (command_identifier
-      (identifier))
-    (vector)
-    (macro)
+    (macro_sign)
+    (command_identifier)
+    (vector
+      (macro))
     (vector)
     (vector
       (integer
@@ -119,18 +113,14 @@ $execute if ..-$(macro) \
     (range
       (float)
       (float))
-    (path
-      (path_word))
-    (path
-      (path_word))
-    (path
-      (path_word))
-    (path
-      (path_word))
-    (path
-      (path_word)))
-  (command_macro_identifier)
+    (command_keyword)
+    (command
+      (command_identifier)
+      (command
+        (command_identifier)
+        (greedy_string))))
   (command
+    (macro_sign)
     (command_identifier)
     (subcommand_keyword)
     (range
@@ -142,8 +132,8 @@ $execute if ..-$(macro) \
     (range
       (macro)
       (macro)))
-  (command_macro_identifier)
   (command
+    (macro_sign)
     (command_identifier)
     (subcommand_keyword)
     (range

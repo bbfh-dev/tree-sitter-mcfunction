@@ -8,11 +8,14 @@ module.exports = {
 		),
 
 	command: ($) =>
-		choice(
-			seq(alias("return run", $.command_identifier), $.command),
-			seq(alias("say", $.command_identifier), $.greedy_string),
-			$._execute_command,
-			$._generic_command,
+		seq(
+			optional(alias("$", $.macro_sign)),
+			choice(
+				seq(alias("return run", $.command_identifier), $.command),
+				seq(alias("say", $.command_identifier), $.greedy_string),
+				$._execute_command,
+				$._generic_command,
+			),
 		),
 
 	_execute_command: ($) =>
@@ -28,7 +31,7 @@ module.exports = {
 			repeat(choice($._command_argument, $.command_keyword)),
 		),
 
-	command_identifier: ($) => $.identifier,
+	command_identifier: ($) => $._identifier,
 
 	_command_argument: ($) =>
 		choice($.macro, $.operation, $._composite_type, $._primitive_type),

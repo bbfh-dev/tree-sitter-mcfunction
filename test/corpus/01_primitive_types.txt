@@ -8,8 +8,7 @@ effect true false
 
 (source_file
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (boolean)
     (boolean)))
 
@@ -20,70 +19,53 @@ Integer literals
 effect 0 123 -123 \
 	0b 123L -123s
 effect 0 2147483647 -2147483648 \
-	127b 127B -128b -128B \
-	32767s 32767S -32768s -32768S \
-	32767l 32767L -32768l -32768L
+	-0b 32767s 32767L
 $effect $(macro) $(macro)b -$(macro)l
 
 ------------------
 
 (source_file
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (integer)
     (integer)
     (integer)
     (backslash)
     (typed_number
-      (integer))
+      (integer)
+      (measurement_unit))
     (typed_number
-      (integer))
+      (integer)
+      (measurement_unit))
     (typed_number
-      (integer)))
+      (integer)
+      (measurement_unit)))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (integer)
     (integer)
     (integer)
     (backslash)
     (typed_number
-      (integer))
+      (integer)
+      (measurement_unit))
     (typed_number
-      (integer))
+      (integer)
+      (measurement_unit))
     (typed_number
-      (integer))
-    (typed_number
-      (integer))
-    (backslash)
-    (typed_number
-      (integer))
-    (typed_number
-      (integer))
-    (typed_number
-      (integer))
-    (typed_number
-      (integer))
-    (backslash)
-    (typed_number
-      (integer))
-    (typed_number
-      (integer))
-    (typed_number
-      (integer))
-    (typed_number
-      (integer)))
-  (command_macro_identifier)
+      (integer)
+      (measurement_unit)))
   (command
-    (command_identifier
-      (identifier))
+    (macro_sign)
+    (command_identifier)
     (macro)
     (typed_number
-      (macro))
+      (macro)
+      (measurement_unit))
     (typed_number
       (integer
-        (macro)))))
+        (macro))
+      (measurement_unit))))
 
 ==================
 Hexadecimal literals
@@ -96,13 +78,11 @@ $effect 0x$(macro)
 
 (source_file
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (hexadecimal))
-  (command_macro_identifier)
   (command
-    (command_identifier
-      (identifier))
+    (macro_sign)
+    (command_identifier)
     (hexadecimal
       (macro))))
 
@@ -113,23 +93,19 @@ Float literals
 effect 1.2 .5 -.5 -1234.56
 effect 0.0 21.47483647 -21474836.48 \
 	.0 .47483647 -.48 \
-	3.2767f .2767F -3.2767f -.2767F \
-	3.2767d .2767D -3.2767d -.2767D
-$effect -$(macro)f
+	3.2767f .2767F -3.2767f -.2767F
 
 ------------------
 
 (source_file
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (float)
     (float)
     (float)
     (float))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (float)
     (float)
     (float)
@@ -139,29 +115,17 @@ $effect -$(macro)f
     (float)
     (backslash)
     (typed_number
-      (float))
+      (float)
+      (measurement_unit))
     (typed_number
-      (float))
+      (float)
+      (measurement_unit))
     (typed_number
-      (float))
+      (float)
+      (measurement_unit))
     (typed_number
-      (float))
-    (backslash)
-    (typed_number
-      (float))
-    (typed_number
-      (float))
-    (typed_number
-      (float))
-    (typed_number
-      (float)))
-  (command_macro_identifier)
-  (command
-    (command_identifier
-      (identifier))
-    (typed_number
-      (integer
-        (macro)))))
+      (float)
+      (measurement_unit))))
 
 ==================
 String literals
@@ -186,121 +150,90 @@ datapack enable 'escape \' me'
 
 (source_file
   (command
-    (command_identifier
-      (identifier))
-    (path
-      (path_word)
-      (path_word))
-    (path
-      (path_word))
+    (command_identifier)
+    (score_holder)
+    (word)
     (string)
     (string))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
+    (score_holder)
     (path
-      (path_word)
-      (path_word)
-      (path_word))
+      (word)
+      (word)
+      (word))
     (path
-      (path_word)
-      (path_word)
-      (path_word))
-    (path
-      (path_word)
-      (path_word))
-    (path
-      (path_word)
-      (path_word)))
+      (word)
+      (word))
+    (score_holder))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (command_keyword)
     (command_keyword)
+    (score_holder)
     (path
-      (path_word))
-    (path
-      (path_word)
-      (path_word))
+      (word)
+      (word))
     (operation)
+    (score_holder)
     (path
-      (path_word)
-      (path_word)
-      (path_word)
-      (integer))
-    (path
-      (path_word)
-      (path_word)))
+      (word)
+      (word)))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (command_keyword)
     (command_keyword)
+    (score_holder)
     (path
-      (path_word)
-      (path_word)
-      (integer))
-    (path
-      (path_word)
-      (path_word))
+      (word)
+      (word))
     (operation)
+    (score_holder)
     (path
-      (path_word))
-    (path
-      (path_word)
-      (path_word)))
+      (word)
+      (word)))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (command_keyword)
     (command_keyword)
+    (word)
     (path
-      (path_word))
-    (path
-      (path_word)
-      (path_word)))
+      (word)
+      (word)))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (command_keyword)
     (command_keyword)
+    (score_holder)
     (path
-      (path_word)
-      (path_word))
-    (path
-      (path_word)
-      (path_word))
+      (word)
+      (word))
     (integer))
   (command
     (command_identifier)
     (greedy_string))
-  (command_macro_identifier)
   (command
-    (command_identifier
-      (identifier))
+    (macro_sign)
+    (command_identifier)
     (command_keyword)
     (string
       (macro)))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (command_keyword)
     (string))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (command_keyword)
     (string
       (escape_sequence)))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (command_keyword)
     (string
       (macro)))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (command_keyword)
     (string
       (escape_sequence))))
@@ -319,8 +252,7 @@ $kill dd12be42-0-0-$(macro)-11c01849e498
 
 (source_file
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (uuid
       (uuid_8_segment)
       (uuid_4_segment)
@@ -328,18 +260,15 @@ $kill dd12be42-0-0-$(macro)-11c01849e498
       (uuid_4_segment)
       (uuid_12_segment)))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (uuid))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (uuid
       (uuid_4_segment)))
-  (command_macro_identifier)
   (command
-    (command_identifier
-      (identifier))
+    (macro_sign)
+    (command_identifier)
     (uuid
       (uuid_8_segment)
       (macro)
