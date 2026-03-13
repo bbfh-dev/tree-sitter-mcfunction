@@ -164,69 +164,54 @@ function bs.dump:interpret/any
   (command
     (command_identifier)
     (subcommand_keyword)
-    (resource
-      (minecraft_resource
-        (word))))
+    (minecraft_resource
+      (word)))
   (command
     (command_identifier)
     (subcommand_keyword)
-    (resource
-      (minecraft_resource
-        (word))))
+    (minecraft_resource
+      (word)))
   (command
-    (command_identifier
-      (identifier))
-    (path
-      (path_word)))
+    (command_identifier)
+    (score_holder))
   (command
-    (command_identifier
-      (identifier))
-    (resource
-      (generic_resource
+    (command_identifier)
+    (generic_resource
+      (namespace)
+      (word)
+      (word)))
+  (command
+    (command_identifier)
+    (generic_resource
+      (namespace)
+      (word)))
+  (command
+    (command_identifier)
+    (generic_resource
+      (word)
+      (word)
+      (word)))
+  (command
+    (command_identifier)
+    (generic_resource
+      (namespace)
+      (macro)
+      (word)
+      (macro)
+      (word)))
+  (command
+    (command_identifier)
+    (generic_resource
+      (namespace)
+      (word)))
+  (command
+    (command_identifier)
+    (generic_resource
+      (namespace
         (word)
-        (word)
-        (path_word))))
-  (command
-    (command_identifier
-      (identifier))
-    (resource
-      (generic_resource
-        (path_word)
-        (word))))
-  (command
-    (command_identifier
-      (identifier))
-    (resource
-      (generic_resource
-        (path_word)
-        (word)
-        (word)
-        (word))))
-  (command
-    (command_identifier
-      (identifier))
-    (resource
-      (generic_resource
-        (path_word)
-        (macro)
-        (word)
-        (macro)
-        (word))))
-  (command
-    (command_identifier
-      (identifier))
-    (resource
-      (generic_resource
-        (path_word)
-        (word))))
-  (command
-    (command_identifier
-      (identifier))
-    (resource
-      (generic_resource
-        (path_word)
-        (word)
-        (word)))))
+        (word))
+      (word)
+      (word))))
 
 ==================
 NBT Paths

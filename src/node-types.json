@@ -32,6 +32,10 @@
           "named": true
         },
         {
+          "type": "generic_resource",
+          "named": true
+        },
+        {
           "type": "greedy_string",
           "named": true
         },
@@ -53,6 +57,10 @@
         },
         {
           "type": "macro_sign",
+          "named": true
+        },
+        {
+          "type": "minecraft_resource",
           "named": true
         },
         {
@@ -131,6 +139,29 @@
     }
   },
   {
+    "type": "generic_resource",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "namespace",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "hexadecimal",
     "named": true,
     "fields": {},
@@ -174,6 +205,44 @@
         },
         {
           "type": "macro",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "minecraft_resource",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "namespace",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -435,11 +504,23 @@
     "named": false
   },
   {
+    "type": "./",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
     "type": "0",
     "named": false
   },
   {
     "type": "0-",
+    "named": false
+  },
+  {
+    "type": ":",
     "named": false
   },
   {
@@ -510,6 +591,10 @@
   {
     "type": "measurement_unit",
     "named": true
+  },
+  {
+    "type": "minecraft:",
+    "named": false
   },
   {
     "type": "operation",

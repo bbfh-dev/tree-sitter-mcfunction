@@ -60,7 +60,45 @@ scoreboard minecraft.mined:minecraft.stone \
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier)
+    (scoreboard_objective)
+    (scoreboard_objective)
+    (scoreboard_objective)
+    (scoreboard_objective)
+    (scoreboard_objective)
+    (scoreboard_objective)
+    (scoreboard_objective)
+    (scoreboard_objective)
+    (scoreboard_objective)
+    (scoreboard_objective)
+    (scoreboard_objective)
+    (scoreboard_objective
+      (color))
+    (scoreboard_objective
+      (color)))
+  (command
+    (command_identifier)
+    (generic_resource
+      (namespace
+        (word)
+        (word))
+      (word))
+    (backslash)
+    (generic_resource
+      (namespace)
+      (word))
+    (backslash)
+    (generic_resource
+      (namespace
+        (word)
+        (word))
+      (word))
+    (backslash)
+    (generic_resource
+      (namespace)
+      (word))))
 
 ==================
 Scoreboard display slots
@@ -74,7 +112,7 @@ scoreboard players list sidebar sidebar.team.gold below_name
   (command
     (command_identifier)
     (command_keyword)
-    (command_keyword)
+    (scoreboard_display_slot)
     (scoreboard_display_slot)
     (scoreboard_display_slot
       (color))
