@@ -12,6 +12,7 @@ module.exports = {
 			$.scoreboard_objective,
 			$.scoreboard_display_slot,
 			$.item_slot,
+			$.entity_selector,
 		),
 
 	operation: (_) =>
@@ -106,4 +107,6 @@ module.exports = {
 		),
 
 	_item_slot_value: ($) => choice("*", $.integer, $.macro),
+
+	entity_selector: (_) => /@[a-z]/,
 };

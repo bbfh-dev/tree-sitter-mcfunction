@@ -28,6 +28,10 @@
           "named": true
         },
         {
+          "type": "entity_selector",
+          "named": true
+        },
+        {
           "type": "float",
           "named": true
         },
@@ -752,6 +756,10 @@
   {
     "type": "enderchest.",
     "named": false
+  },
+  {
+    "type": "entity_selector",
+    "named": true
   },
   {
     "type": "escape_sequence",

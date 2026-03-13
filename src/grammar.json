@@ -916,6 +916,10 @@
         {
           "type": "SYMBOL",
           "name": "item_slot"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "entity_selector"
         }
       ]
     },
@@ -1418,6 +1422,10 @@
           "name": "macro"
         }
       ]
+    },
+    "entity_selector": {
+      "type": "PATTERN",
+      "value": "@[a-z]"
     },
     "_primitive_type": {
       "type": "CHOICE",
