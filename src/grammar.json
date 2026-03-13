@@ -898,6 +898,19 @@
         }
       }
     },
+    "_keywords": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "operation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "color"
+        }
+      ]
+    },
     "operation": {
       "type": "TOKEN",
       "content": {
@@ -941,6 +954,86 @@
             {
               "type": "STRING",
               "value": ">"
+            }
+          ]
+        }
+      }
+    },
+    "color": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 1,
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "black"
+            },
+            {
+              "type": "STRING",
+              "value": "dark_blue"
+            },
+            {
+              "type": "STRING",
+              "value": "dark_green"
+            },
+            {
+              "type": "STRING",
+              "value": "dark_aqua"
+            },
+            {
+              "type": "STRING",
+              "value": "dark_red"
+            },
+            {
+              "type": "STRING",
+              "value": "dark_purple"
+            },
+            {
+              "type": "STRING",
+              "value": "dark_purple"
+            },
+            {
+              "type": "STRING",
+              "value": "gold"
+            },
+            {
+              "type": "STRING",
+              "value": "gray"
+            },
+            {
+              "type": "STRING",
+              "value": "dark_gray"
+            },
+            {
+              "type": "STRING",
+              "value": "blue"
+            },
+            {
+              "type": "STRING",
+              "value": "green"
+            },
+            {
+              "type": "STRING",
+              "value": "aqua"
+            },
+            {
+              "type": "STRING",
+              "value": "red"
+            },
+            {
+              "type": "STRING",
+              "value": "light_purple"
+            },
+            {
+              "type": "STRING",
+              "value": "yellow"
+            },
+            {
+              "type": "STRING",
+              "value": "white"
             }
           ]
         }
@@ -2001,7 +2094,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "operation"
+          "name": "_keywords"
         },
         {
           "type": "SYMBOL",

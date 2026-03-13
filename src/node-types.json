@@ -12,6 +12,10 @@
           "named": true
         },
         {
+          "type": "color",
+          "named": true
+        },
+        {
           "type": "command",
           "named": true
         },
@@ -374,6 +378,10 @@
   },
   {
     "type": "boolean",
+    "named": true
+  },
+  {
+    "type": "color",
     "named": true
   },
   {

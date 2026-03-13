@@ -34,5 +34,5 @@ module.exports = {
 	command_identifier: ($) => $._identifier,
 
 	_command_argument: ($) =>
-		choice($.macro, $.operation, $._composite_type, $._primitive_type),
+		choice($.macro, $._keywords, $._composite_type, $._primitive_type),
 };
