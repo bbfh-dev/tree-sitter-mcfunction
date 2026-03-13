@@ -8,9 +8,8 @@ module.exports = {
 			$.range,
 			$.path,
 			$._resource,
-			// $.resource,
-			// $.nbt_array,
-			// $.nbt_compound,
+			$.snbt_array,
+			$.snbt_compound,
 			// $.data_compound,
 		),
 
@@ -40,7 +39,7 @@ module.exports = {
 
 	path: ($) =>
 		choice(
-			// $.data_path_node,
+			$._data_path_node,
 			seq(
 				$._path_node,
 				repeat1(seq(token.immediate(prec(1, ".")), $._path_node)),
@@ -49,16 +48,20 @@ module.exports = {
 
 	_path_node: ($) =>
 		prec(
-			1,
+			2,
 			choice(
-				// $._data_path_node,
+				$._data_path_node,
+				$.snbt_array,
+				$.snbt_compound,
 				$.macro,
 				$.word,
 				$.string,
+				$.command_keyword,
 			),
 		),
 
-	// _data_path_node: ($) => choice(),
+	_data_path_node: ($) =>
+		prec(1, seq($.word, repeat1(choice($.snbt_compound, $.snbt_array)))),
 
 	_resource: ($) => choice($.minecraft_resource, $.generic_resource),
 
@@ -90,4 +93,37 @@ module.exports = {
 
 	_resource_segment: ($) =>
 		choice($.macro, alias(/[0-9a-zA-Z\-\+\.\*\?_]+/, $.word)),
+
+	snbt_array: ($) =>
+		seq(
+			"[",
+			optional(seq(alias(token(prec(1, /[A-Z]/)), $.array_type), ";")),
+			optional(seq($._value, repeat(seq(",", $._value)))),
+			"]",
+		),
+
+	snbt_compound: ($) =>
+		seq(
+			"{",
+			optional(
+				seq(
+					$.key,
+					":",
+					$._value,
+					repeat(seq(",", $.key, ":", $._value)),
+				),
+			),
+			"}",
+		),
+
+	key: ($) =>
+		choice(
+			$.macro,
+			alias(token(prec(1, /[0-9a-zA-Z\-\+\.\*\?_]+/)), $.word),
+			$.string,
+			$._resource,
+		),
+
+	_value: ($) =>
+		choice($.macro, $._primitive_type, $.snbt_array, $.snbt_compound),
 };

@@ -88,6 +88,14 @@
           "named": true
         },
         {
+          "type": "snbt_array",
+          "named": true
+        },
+        {
+          "type": "snbt_compound",
+          "named": true
+        },
+        {
           "type": "string",
           "named": true
         },
@@ -211,6 +219,37 @@
     }
   },
   {
+    "type": "key",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "generic_resource",
+          "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "minecraft_resource",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "minecraft_resource",
     "named": true,
     "fields": {},
@@ -234,7 +273,19 @@
       "required": false,
       "types": [
         {
+          "type": "command_keyword",
+          "named": true
+        },
+        {
           "type": "macro",
+          "named": true
+        },
+        {
+          "type": "snbt_array",
+          "named": true
+        },
+        {
+          "type": "snbt_compound",
           "named": true
         },
         {
@@ -257,7 +308,19 @@
       "required": true,
       "types": [
         {
+          "type": "command_keyword",
+          "named": true
+        },
+        {
           "type": "macro",
+          "named": true
+        },
+        {
+          "type": "snbt_array",
+          "named": true
+        },
+        {
+          "type": "snbt_compound",
           "named": true
         },
         {
@@ -334,6 +397,124 @@
       "types": [
         {
           "type": "color",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "snbt_array",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_type",
+          "named": true
+        },
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "hexadecimal",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "score_holder",
+          "named": true
+        },
+        {
+          "type": "snbt_array",
+          "named": true
+        },
+        {
+          "type": "snbt_compound",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "uuid",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "snbt_compound",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "hexadecimal",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "score_holder",
+          "named": true
+        },
+        {
+          "type": "snbt_array",
+          "named": true
+        },
+        {
+          "type": "snbt_compound",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "uuid",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -492,6 +673,10 @@
     "named": false
   },
   {
+    "type": ",",
+    "named": false
+  },
+  {
     "type": "-",
     "named": false
   },
@@ -524,8 +709,24 @@
     "named": false
   },
   {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
     "type": "^",
     "named": false
+  },
+  {
+    "type": "array_type",
+    "named": true
   },
   {
     "type": "backslash",
@@ -635,6 +836,14 @@
   {
     "type": "word",
     "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
   },
   {
     "type": "~",

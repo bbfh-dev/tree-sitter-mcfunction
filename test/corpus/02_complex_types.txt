@@ -214,7 +214,7 @@ function bs.dump:interpret/any
       (word))))
 
 ==================
-NBT Paths
+sNBT Paths
 ==================
 
 data foo.bar[0]."A [crazy name]".baz.$(hello).{foo:bar}
@@ -235,7 +235,7 @@ execute if data storage bs:data dump.stack[-1].var{} run return run function bs.
 (source_file)
 
 ==================
-NBT Compounds
+sNBT Compounds
 ==================
 
 data {"text":"hello world"}
@@ -249,10 +249,93 @@ data modify storage bs:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier)
+    (snbt_compound
+      (key
+        (string))
+      (string)))
+  (command
+    (command_identifier)
+    (snbt_compound
+      (key
+        (word))
+      (word)))
+  (command
+    (command_identifier)
+    (snbt_compound
+      (backslash)
+      (key
+        (word))
+      (snbt_array
+        (array_type)
+        (integer)
+        (integer)
+        (integer))
+      (backslash)
+      (key
+        (word))
+      (snbt_compound
+        (key
+          (word))
+        (boolean))
+      (backslash)))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (vector)
+    (vector)
+    (vector)
+    (path
+      (word)
+      (word))
+    (command_keyword)
+    (command_keyword)
+    (snbt_compound
+      (key
+        (word))
+      (snbt_array
+        (word)
+        (word))))
+  (command
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (generic_resource
+      (namespace)
+      (word))
+    (path
+      (command_keyword)
+      (word))
+    (command_keyword)
+    (command_keyword)
+    (snbt_compound
+      (key
+        (word))
+      (integer)
+      (key
+        (word))
+      (integer)
+      (key
+        (word))
+      (integer)
+      (key
+        (word))
+      (integer)
+      (key
+        (word))
+      (integer)
+      (key
+        (word))
+      (integer)
+      (key
+        (word))
+      (integer))))
 
 ==================
-NBT Arrays
+sNBT Arrays
 ==================
 
 data [""]
@@ -263,38 +346,34 @@ data modify block ~ ~ ~ RecordItem.tag.messages append value [ { message: "hello
 
 (source_file
   (command
-    (command_identifier
-      (identifier))
-    (nbt_array
+    (command_identifier)
+    (snbt_array
       (string)))
   (command
-    (command_identifier
-      (identifier))
-    (nbt_array
-      (nbt_array_type)
+    (command_identifier)
+    (snbt_array
+      (array_type)
       (integer)
       (integer)
       (integer)))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (command_keyword)
     (command_keyword)
     (vector)
     (vector)
     (vector)
     (path
-      (path_word)
-      (path_word)
-      (path_word))
+      (word)
+      (word)
+      (word))
     (command_keyword)
     (command_keyword)
-    (nbt_array
-      (nbt_compound
-        (key_value_pair
-          (compound_key
-            (path_word))
-          (string))))))
+    (snbt_array
+      (snbt_compound
+        (key
+          (word))
+        (string)))))
 
 ==================
 Item Selectors

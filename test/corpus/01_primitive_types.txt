@@ -160,7 +160,7 @@ datapack enable 'escape \' me'
     (score_holder)
     (path
       (word)
-      (word)
+      (command_keyword)
       (word))
     (path
       (word)
