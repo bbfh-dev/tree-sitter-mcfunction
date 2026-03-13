@@ -80,12 +80,12 @@ module.exports = {
 
 	word: (_) => token(choice("*", /[a-zA-Z_\-\+][0-9a-zA-Z_\-\+]*/)),
 
-	score_holder: (_) =>
+	score_holder: ($) =>
 		choice(
 			seq(
 				repeat1(token(prec(1, "-"))),
 				/[\._\+a-zA-Z][\._\-\+0-9a-zA-Z]*/,
 			),
-			seq(choice("#", "$", "%"), /[\._\-\+0-9a-zA-Z]+/),
+			seq(choice("#", "$", "%"), choice(/[\._\-\+0-9a-zA-Z]+/, $.macro)),
 		),
 };

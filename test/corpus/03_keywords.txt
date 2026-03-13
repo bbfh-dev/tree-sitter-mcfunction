@@ -66,11 +66,19 @@ scoreboard minecraft.mined:minecraft.stone \
 Scoreboard display slots
 ==================
 
-scoreboard players list sidebar sidebar.team.gold below_name‌
+scoreboard players list sidebar sidebar.team.gold below_name
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier)
+    (command_keyword)
+    (command_keyword)
+    (scoreboard_display_slot)
+    (scoreboard_display_slot
+      (color))
+    (scoreboard_display_slot)))
 
 ==================
 Scoreboard operations
@@ -83,8 +91,7 @@ scoreboard players operation #%[example] example /= 15
 
 (source_file
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (operation)
     (operation)
     (operation)
@@ -95,13 +102,11 @@ scoreboard players operation #%[example] example /= 15
     (operation)
     (operation))
   (command
-    (command_identifier
-      (identifier))
+    (command_identifier)
     (command_keyword)
     (command_keyword)
-    (resource
-      (generic_resource
-        (macro)))
+    (score_holder
+      (macro))
     (word)
     (operation)
     (integer)))
@@ -118,4 +123,35 @@ item contents container.50 hotbar.7 inventory.* enderchest.12 villager.5 horse.1
 
 ------------------
 
-(source_file)
+(source_file
+  (command
+    (command_identifier)
+    (item_slot)
+    (item_slot
+      (integer))
+    (item_slot
+      (integer))
+    (item_slot)
+    (item_slot
+      (integer))
+    (item_slot
+      (integer))
+    (item_slot
+      (integer))
+    (backslash)
+    (item_slot)
+    (item_slot)
+    (item_slot)
+    (backslash)
+    (item_slot)
+    (item_slot)
+    (item_slot)
+    (item_slot)
+    (item_slot)
+    (backslash)
+    (item_slot)
+    (item_slot)
+    (backslash)
+    (item_slot)
+    (item_slot
+      (integer))))

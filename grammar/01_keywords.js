@@ -5,7 +5,14 @@ module.exports = {
 	command_keyword: (_) => token(prec(1, choice(...COMMAND_KEYWORDS))),
 	subcommand_keyword: (_) => token(prec(1, choice(...SUBCOMMAND_KEYWORDS))),
 
-	_keywords: ($) => choice($.operation, $.color),
+	_keywords: ($) =>
+		choice(
+			$.operation,
+			$.color,
+			$.scoreboard_objective,
+			$.scoreboard_display_slot,
+			$.item_slot,
+		),
 
 	operation: (_) =>
 		token(
@@ -37,4 +44,66 @@ module.exports = {
 				),
 			),
 		),
+
+	scoreboard_objective: ($) =>
+		choice(
+			token(
+				prec(
+					1,
+					choice(
+						"dummy",
+						"trigger",
+						"deathCount",
+						"playerKillCount",
+						"totalKillCount",
+						"health",
+						"xp",
+						"level",
+						"food",
+						"air",
+						"armor",
+					),
+				),
+			),
+			seq(token(prec(1, "teamkill.")), $.color),
+			seq(token(prec(1, "killedByTeam.")), $.color),
+		),
+
+	scoreboard_display_slot: ($) =>
+		choice(
+			token(prec(1, choice("list", "sidebar", "below_name"))),
+			seq(token(prec(1, "sidebar.team.")), $.color),
+		),
+
+	item_slot: ($) =>
+		choice(
+			token(
+				prec(
+					1,
+					choice(
+						"contents",
+						"weapon",
+						"weapon.offhand",
+						"weapon.mainhand",
+						"armor.head",
+						"armor.chest",
+						"armor.legs",
+						"armor.feet",
+						"armor.body",
+						"horse.saddle",
+						"horse.chest",
+						"player.cursor",
+					),
+				),
+			),
+			seq(token(prec(1, "container.")), $._item_slot_value),
+			seq(token(prec(1, "hotbar.")), $._item_slot_value),
+			seq(token(prec(1, "inventory.")), $._item_slot_value),
+			seq(token(prec(1, "enderchest.")), $._item_slot_value),
+			seq(token(prec(1, "villager.")), $._item_slot_value),
+			seq(token(prec(1, "horse.")), $._item_slot_value),
+			seq(token(prec(1, "player.crafting.")), $._item_slot_value),
+		),
+
+	_item_slot_value: ($) => choice("*", $.integer, $.macro),
 };

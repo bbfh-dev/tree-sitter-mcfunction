@@ -908,6 +908,18 @@
         {
           "type": "SYMBOL",
           "name": "color"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "scoreboard_objective"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "scoreboard_display_slot"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "item_slot"
         }
       ]
     },
@@ -1038,6 +1050,378 @@
           ]
         }
       }
+    },
+    "scoreboard_objective": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "PREC",
+            "value": 1,
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "dummy"
+                },
+                {
+                  "type": "STRING",
+                  "value": "trigger"
+                },
+                {
+                  "type": "STRING",
+                  "value": "deathCount"
+                },
+                {
+                  "type": "STRING",
+                  "value": "playerKillCount"
+                },
+                {
+                  "type": "STRING",
+                  "value": "totalKillCount"
+                },
+                {
+                  "type": "STRING",
+                  "value": "health"
+                },
+                {
+                  "type": "STRING",
+                  "value": "xp"
+                },
+                {
+                  "type": "STRING",
+                  "value": "level"
+                },
+                {
+                  "type": "STRING",
+                  "value": "food"
+                },
+                {
+                  "type": "STRING",
+                  "value": "air"
+                },
+                {
+                  "type": "STRING",
+                  "value": "armor"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "TOKEN",
+              "content": {
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "STRING",
+                  "value": "teamkill."
+                }
+              }
+            },
+            {
+              "type": "SYMBOL",
+              "name": "color"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "TOKEN",
+              "content": {
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "STRING",
+                  "value": "killedByTeam."
+                }
+              }
+            },
+            {
+              "type": "SYMBOL",
+              "name": "color"
+            }
+          ]
+        }
+      ]
+    },
+    "scoreboard_display_slot": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "PREC",
+            "value": 1,
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "list"
+                },
+                {
+                  "type": "STRING",
+                  "value": "sidebar"
+                },
+                {
+                  "type": "STRING",
+                  "value": "below_name"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "TOKEN",
+              "content": {
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "STRING",
+                  "value": "sidebar.team."
+                }
+              }
+            },
+            {
+              "type": "SYMBOL",
+              "name": "color"
+            }
+          ]
+        }
+      ]
+    },
+    "item_slot": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "PREC",
+            "value": 1,
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "contents"
+                },
+                {
+                  "type": "STRING",
+                  "value": "weapon"
+                },
+                {
+                  "type": "STRING",
+                  "value": "weapon.offhand"
+                },
+                {
+                  "type": "STRING",
+                  "value": "weapon.mainhand"
+                },
+                {
+                  "type": "STRING",
+                  "value": "armor.head"
+                },
+                {
+                  "type": "STRING",
+                  "value": "armor.chest"
+                },
+                {
+                  "type": "STRING",
+                  "value": "armor.legs"
+                },
+                {
+                  "type": "STRING",
+                  "value": "armor.feet"
+                },
+                {
+                  "type": "STRING",
+                  "value": "armor.body"
+                },
+                {
+                  "type": "STRING",
+                  "value": "horse.saddle"
+                },
+                {
+                  "type": "STRING",
+                  "value": "horse.chest"
+                },
+                {
+                  "type": "STRING",
+                  "value": "player.cursor"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "TOKEN",
+              "content": {
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "STRING",
+                  "value": "container."
+                }
+              }
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_item_slot_value"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "TOKEN",
+              "content": {
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "STRING",
+                  "value": "hotbar."
+                }
+              }
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_item_slot_value"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "TOKEN",
+              "content": {
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "STRING",
+                  "value": "inventory."
+                }
+              }
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_item_slot_value"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "TOKEN",
+              "content": {
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "STRING",
+                  "value": "enderchest."
+                }
+              }
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_item_slot_value"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "TOKEN",
+              "content": {
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "STRING",
+                  "value": "villager."
+                }
+              }
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_item_slot_value"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "TOKEN",
+              "content": {
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "STRING",
+                  "value": "horse."
+                }
+              }
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_item_slot_value"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "TOKEN",
+              "content": {
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "STRING",
+                  "value": "player.crafting."
+                }
+              }
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_item_slot_value"
+            }
+          ]
+        }
+      ]
+    },
+    "_item_slot_value": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "integer"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "macro"
+        }
+      ]
     },
     "_primitive_type": {
       "type": "CHOICE",
@@ -1593,8 +1977,17 @@
               ]
             },
             {
-              "type": "PATTERN",
-              "value": "[\\._\\-\\+0-9a-zA-Z]+"
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "PATTERN",
+                  "value": "[\\._\\-\\+0-9a-zA-Z]+"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "macro"
+                }
+              ]
             }
           ]
         }
