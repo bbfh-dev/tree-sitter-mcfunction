@@ -112,7 +112,7 @@ scoreboard players list sidebar sidebar.team.gold below_name
   (command
     (command_identifier)
     (command_keyword)
-    (scoreboard_display_slot)
+    (command_keyword)
     (scoreboard_display_slot)
     (scoreboard_display_slot
       (color))

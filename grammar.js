@@ -12,7 +12,7 @@ const grammar_rules = require("./grammar/99_all.js");
 module.exports = grammar({
 	name: "mcfunction",
 
-	conflicts: ($) => [],
+	conflicts: (_) => [],
 
 	extras: ($) => [/ +/, $.backslash],
 

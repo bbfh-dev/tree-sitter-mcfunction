@@ -974,81 +974,77 @@
     "color": {
       "type": "TOKEN",
       "content": {
-        "type": "PREC",
-        "value": 1,
-        "content": {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "black"
-            },
-            {
-              "type": "STRING",
-              "value": "dark_blue"
-            },
-            {
-              "type": "STRING",
-              "value": "dark_green"
-            },
-            {
-              "type": "STRING",
-              "value": "dark_aqua"
-            },
-            {
-              "type": "STRING",
-              "value": "dark_red"
-            },
-            {
-              "type": "STRING",
-              "value": "dark_purple"
-            },
-            {
-              "type": "STRING",
-              "value": "dark_purple"
-            },
-            {
-              "type": "STRING",
-              "value": "gold"
-            },
-            {
-              "type": "STRING",
-              "value": "gray"
-            },
-            {
-              "type": "STRING",
-              "value": "dark_gray"
-            },
-            {
-              "type": "STRING",
-              "value": "blue"
-            },
-            {
-              "type": "STRING",
-              "value": "green"
-            },
-            {
-              "type": "STRING",
-              "value": "aqua"
-            },
-            {
-              "type": "STRING",
-              "value": "red"
-            },
-            {
-              "type": "STRING",
-              "value": "light_purple"
-            },
-            {
-              "type": "STRING",
-              "value": "yellow"
-            },
-            {
-              "type": "STRING",
-              "value": "white"
-            }
-          ]
-        }
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "black"
+          },
+          {
+            "type": "STRING",
+            "value": "dark_blue"
+          },
+          {
+            "type": "STRING",
+            "value": "dark_green"
+          },
+          {
+            "type": "STRING",
+            "value": "dark_aqua"
+          },
+          {
+            "type": "STRING",
+            "value": "dark_red"
+          },
+          {
+            "type": "STRING",
+            "value": "dark_purple"
+          },
+          {
+            "type": "STRING",
+            "value": "dark_purple"
+          },
+          {
+            "type": "STRING",
+            "value": "gold"
+          },
+          {
+            "type": "STRING",
+            "value": "gray"
+          },
+          {
+            "type": "STRING",
+            "value": "dark_gray"
+          },
+          {
+            "type": "STRING",
+            "value": "blue"
+          },
+          {
+            "type": "STRING",
+            "value": "green"
+          },
+          {
+            "type": "STRING",
+            "value": "aqua"
+          },
+          {
+            "type": "STRING",
+            "value": "red"
+          },
+          {
+            "type": "STRING",
+            "value": "light_purple"
+          },
+          {
+            "type": "STRING",
+            "value": "yellow"
+          },
+          {
+            "type": "STRING",
+            "value": "white"
+          }
+        ]
       }
     },
     "scoreboard_objective": {
@@ -1057,57 +1053,53 @@
         {
           "type": "TOKEN",
           "content": {
-            "type": "PREC",
-            "value": 1,
-            "content": {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "dummy"
-                },
-                {
-                  "type": "STRING",
-                  "value": "trigger"
-                },
-                {
-                  "type": "STRING",
-                  "value": "deathCount"
-                },
-                {
-                  "type": "STRING",
-                  "value": "playerKillCount"
-                },
-                {
-                  "type": "STRING",
-                  "value": "totalKillCount"
-                },
-                {
-                  "type": "STRING",
-                  "value": "health"
-                },
-                {
-                  "type": "STRING",
-                  "value": "xp"
-                },
-                {
-                  "type": "STRING",
-                  "value": "level"
-                },
-                {
-                  "type": "STRING",
-                  "value": "food"
-                },
-                {
-                  "type": "STRING",
-                  "value": "air"
-                },
-                {
-                  "type": "STRING",
-                  "value": "armor"
-                }
-              ]
-            }
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "dummy"
+              },
+              {
+                "type": "STRING",
+                "value": "trigger"
+              },
+              {
+                "type": "STRING",
+                "value": "deathCount"
+              },
+              {
+                "type": "STRING",
+                "value": "playerKillCount"
+              },
+              {
+                "type": "STRING",
+                "value": "totalKillCount"
+              },
+              {
+                "type": "STRING",
+                "value": "health"
+              },
+              {
+                "type": "STRING",
+                "value": "xp"
+              },
+              {
+                "type": "STRING",
+                "value": "level"
+              },
+              {
+                "type": "STRING",
+                "value": "food"
+              },
+              {
+                "type": "STRING",
+                "value": "air"
+              },
+              {
+                "type": "STRING",
+                "value": "armor"
+              }
+            ]
           }
         },
         {
@@ -1158,25 +1150,21 @@
         {
           "type": "TOKEN",
           "content": {
-            "type": "PREC",
-            "value": 1,
-            "content": {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "list"
-                },
-                {
-                  "type": "STRING",
-                  "value": "sidebar"
-                },
-                {
-                  "type": "STRING",
-                  "value": "below_name"
-                }
-              ]
-            }
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "list"
+              },
+              {
+                "type": "STRING",
+                "value": "sidebar"
+              },
+              {
+                "type": "STRING",
+                "value": "below_name"
+              }
+            ]
           }
         },
         {
@@ -1207,61 +1195,57 @@
         {
           "type": "TOKEN",
           "content": {
-            "type": "PREC",
-            "value": 1,
-            "content": {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "contents"
-                },
-                {
-                  "type": "STRING",
-                  "value": "weapon"
-                },
-                {
-                  "type": "STRING",
-                  "value": "weapon.offhand"
-                },
-                {
-                  "type": "STRING",
-                  "value": "weapon.mainhand"
-                },
-                {
-                  "type": "STRING",
-                  "value": "armor.head"
-                },
-                {
-                  "type": "STRING",
-                  "value": "armor.chest"
-                },
-                {
-                  "type": "STRING",
-                  "value": "armor.legs"
-                },
-                {
-                  "type": "STRING",
-                  "value": "armor.feet"
-                },
-                {
-                  "type": "STRING",
-                  "value": "armor.body"
-                },
-                {
-                  "type": "STRING",
-                  "value": "horse.saddle"
-                },
-                {
-                  "type": "STRING",
-                  "value": "horse.chest"
-                },
-                {
-                  "type": "STRING",
-                  "value": "player.cursor"
-                }
-              ]
-            }
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "contents"
+              },
+              {
+                "type": "STRING",
+                "value": "weapon"
+              },
+              {
+                "type": "STRING",
+                "value": "weapon.offhand"
+              },
+              {
+                "type": "STRING",
+                "value": "weapon.mainhand"
+              },
+              {
+                "type": "STRING",
+                "value": "armor.head"
+              },
+              {
+                "type": "STRING",
+                "value": "armor.chest"
+              },
+              {
+                "type": "STRING",
+                "value": "armor.legs"
+              },
+              {
+                "type": "STRING",
+                "value": "armor.feet"
+              },
+              {
+                "type": "STRING",
+                "value": "armor.body"
+              },
+              {
+                "type": "STRING",
+                "value": "horse.saddle"
+              },
+              {
+                "type": "STRING",
+                "value": "horse.chest"
+              },
+              {
+                "type": "STRING",
+                "value": "player.cursor"
+              }
+            ]
           }
         },
         {
@@ -1270,12 +1254,8 @@
             {
               "type": "TOKEN",
               "content": {
-                "type": "PREC",
-                "value": 1,
-                "content": {
-                  "type": "STRING",
-                  "value": "container."
-                }
+                "type": "STRING",
+                "value": "container."
               }
             },
             {
@@ -1290,12 +1270,8 @@
             {
               "type": "TOKEN",
               "content": {
-                "type": "PREC",
-                "value": 1,
-                "content": {
-                  "type": "STRING",
-                  "value": "hotbar."
-                }
+                "type": "STRING",
+                "value": "hotbar."
               }
             },
             {
@@ -1310,12 +1286,8 @@
             {
               "type": "TOKEN",
               "content": {
-                "type": "PREC",
-                "value": 1,
-                "content": {
-                  "type": "STRING",
-                  "value": "inventory."
-                }
+                "type": "STRING",
+                "value": "inventory."
               }
             },
             {
@@ -1330,12 +1302,8 @@
             {
               "type": "TOKEN",
               "content": {
-                "type": "PREC",
-                "value": 1,
-                "content": {
-                  "type": "STRING",
-                  "value": "enderchest."
-                }
+                "type": "STRING",
+                "value": "enderchest."
               }
             },
             {
@@ -1350,12 +1318,8 @@
             {
               "type": "TOKEN",
               "content": {
-                "type": "PREC",
-                "value": 1,
-                "content": {
-                  "type": "STRING",
-                  "value": "villager."
-                }
+                "type": "STRING",
+                "value": "villager."
               }
             },
             {
@@ -1370,12 +1334,8 @@
             {
               "type": "TOKEN",
               "content": {
-                "type": "PREC",
-                "value": 1,
-                "content": {
-                  "type": "STRING",
-                  "value": "horse."
-                }
+                "type": "STRING",
+                "value": "horse."
               }
             },
             {
@@ -1390,12 +1350,8 @@
             {
               "type": "TOKEN",
               "content": {
-                "type": "PREC",
-                "value": 1,
-                "content": {
-                  "type": "STRING",
-                  "value": "player.crafting."
-                }
+                "type": "STRING",
+                "value": "player.crafting."
               }
             },
             {
@@ -1847,7 +1803,7 @@
               },
               {
                 "type": "PATTERN",
-                "value": "[^\\\\\"]"
+                "value": "[^\\\\\"\\$%]+"
               },
               {
                 "type": "SYMBOL",
@@ -1883,7 +1839,7 @@
               },
               {
                 "type": "PATTERN",
-                "value": "[^\\\\']"
+                "value": "[^\\\\'\\$%]+"
               },
               {
                 "type": "SYMBOL",
@@ -2022,6 +1978,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "data_compound"
+        },
+        {
+          "type": "SYMBOL",
           "name": "snbt_array"
         },
         {
@@ -2120,7 +2080,7 @@
               "type": "IMMEDIATE_TOKEN",
               "content": {
                 "type": "PREC",
-                "value": 1,
+                "value": 2,
                 "content": {
                   "type": "STRING",
                   "value": ".."
@@ -2136,7 +2096,7 @@
               "type": "TOKEN",
               "content": {
                 "type": "PREC",
-                "value": 1,
+                "value": 2,
                 "content": {
                   "type": "STRING",
                   "value": ".."
@@ -2163,7 +2123,7 @@
                 "type": "IMMEDIATE_TOKEN",
                 "content": {
                   "type": "PREC",
-                  "value": 1,
+                  "value": 2,
                   "content": {
                     "type": "STRING",
                     "value": ".."
@@ -2274,6 +2234,10 @@
               "members": [
                 {
                   "type": "SYMBOL",
+                  "name": "data_compound"
+                },
+                {
+                  "type": "SYMBOL",
                   "name": "snbt_compound"
                 },
                 {
@@ -2303,12 +2267,35 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "minecraft:"
+          "type": "TOKEN",
+          "content": {
+            "type": "PREC",
+            "value": 1,
+            "content": {
+              "type": "STRING",
+              "value": "minecraft:"
+            }
+          }
         },
         {
           "type": "SYMBOL",
           "name": "word"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "/"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "word"
+              }
+            ]
+          }
         }
       ]
     },
@@ -2453,6 +2440,156 @@
           "value": "word"
         }
       ]
+    },
+    "data_compound": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "["
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "key"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_data_compound_assign"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_data_value"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": ","
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "key"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "_data_compound_assign"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "_data_value"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "STRING",
+              "value": "]"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "{"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "key"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_data_compound_assign"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_data_value"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": ","
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "key"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "_data_compound_assign"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "_data_value"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "STRING",
+              "value": "}"
+            }
+          ]
+        }
+      ]
+    },
+    "_data_compound_assign": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 1,
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "="
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": "!"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "STRING",
+              "value": "~"
+            }
+          ]
+        }
+      }
     },
     "snbt_array": {
       "type": "SEQ",
@@ -2603,6 +2740,10 @@
           "name": "macro"
         },
         {
+          "type": "SYMBOL",
+          "name": "_resource"
+        },
+        {
           "type": "ALIAS",
           "content": {
             "type": "TOKEN",
@@ -2611,7 +2752,7 @@
               "value": 1,
               "content": {
                 "type": "PATTERN",
-                "value": "[0-9a-zA-Z\\-\\+\\.\\*\\?_]+"
+                "value": "[0-9a-zA-Z\\-\\+\\.\\*\\?_\\/]+"
               }
             }
           },
@@ -2621,10 +2762,43 @@
         {
           "type": "SYMBOL",
           "name": "string"
+        }
+      ]
+    },
+    "_data_value": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "macro"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "data_compound"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_primitive_type"
         },
         {
           "type": "SYMBOL",
           "name": "_resource"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "range"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "path"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "snbt_array"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "snbt_compound"
         }
       ]
     },
@@ -2638,6 +2812,10 @@
         {
           "type": "SYMBOL",
           "name": "_primitive_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "path"
         },
         {
           "type": "SYMBOL",
