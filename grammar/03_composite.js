@@ -72,7 +72,20 @@ module.exports = {
 		prec(1, seq($.word, repeat1(choice($.snbt_compound, $.snbt_array)))),
 
 	entity_selector: ($) =>
-		prec.right(seq(/@[a-z]/, optional($.data_compound))),
+		prec.right(
+			seq(
+				/@[a-z]/,
+				optional(
+					choice(
+						$.data_compound,
+						// NOTE: This is added as a workaround.
+						// For @s [...] that can be read as @s[...]
+						// (the grammar leaves whitespace up to interpretation in $.extras)
+						$.snbt_array,
+					),
+				),
+			),
+		),
 
 	_resource: ($) =>
 		prec.right(

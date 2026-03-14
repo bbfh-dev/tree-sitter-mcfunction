@@ -2309,8 +2309,17 @@
             "type": "CHOICE",
             "members": [
               {
-                "type": "SYMBOL",
-                "name": "data_compound"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "data_compound"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "snbt_array"
+                  }
+                ]
               },
               {
                 "type": "BLANK"

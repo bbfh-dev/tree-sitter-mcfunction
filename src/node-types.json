@@ -275,6 +275,10 @@
         {
           "type": "data_compound",
           "named": true
+        },
+        {
+          "type": "snbt_array",
+          "named": true
         }
       ]
     }

@@ -993,6 +993,7 @@ execute as @a[advancements={minecraft:story/form_obsidian=true, minecraft:story/
 execute as @a[advancements={minecraft:story/form_obsidian={foo=true, bar=false},minecraft:story/follow_ender_eye={foo=false, bar=true}}]
 
 execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run return run function bs.hitbox:get_entity/get_custom
+tellraw @s [{"text": "Hi!"}]
 
 ------------------
 
@@ -1299,4 +1300,12 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
             (word)
             (word))
           (word)
-          (word))))))
+          (word)))))
+  (command
+    (command_identifier)
+    (entity_selector
+      (snbt_array
+        (snbt_compound
+          (key
+            (string))
+          (string))))))
