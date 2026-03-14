@@ -117,6 +117,7 @@ module.exports = {
 						seq(",", $.key, $._data_compound_assign, $._data_value),
 					),
 				),
+				optional(","),
 				"]",
 			),
 			seq(
@@ -129,6 +130,7 @@ module.exports = {
 						seq(",", $.key, $._data_compound_assign, $._data_value),
 					),
 				),
+				optional(","),
 				"}",
 			),
 		),
@@ -141,6 +143,7 @@ module.exports = {
 			"[",
 			optional(seq(alias(token(prec(1, /[A-Z]/)), $.array_type), ";")),
 			optional(seq($._value, repeat(seq(",", $._value)))),
+			optional(","),
 			"]",
 		),
 
@@ -155,6 +158,7 @@ module.exports = {
 					repeat(seq(",", $.key, ":", $._value)),
 				),
 			),
+			optional(","),
 			"}",
 		),
 
