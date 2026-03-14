@@ -8,16 +8,25 @@ module.exports = {
 			$.range,
 			$.path,
 			$._resource,
-			$.data_compound,
 			$.snbt_array,
 			$.snbt_compound,
+			$.data_selector,
+		),
+
+	data_selector: ($) =>
+		prec(
+			1,
+			seq(
+				choice($.score_holder, $.word, $.entity_selector),
+				$.data_compound,
+			),
 		),
 
 	typed_number: ($) =>
 		seq(
 			$._number,
 			alias(
-				token.immediate(prec(1, /[thBbSsLlDdFf]/)),
+				token.immediate(prec(2, /[thBbSsLlDdFf]/)),
 				$.measurement_unit,
 			),
 		),
@@ -65,15 +74,15 @@ module.exports = {
 		),
 
 	_data_path_node: ($) =>
-		prec(
-			1,
+		prec(1, seq($.word, repeat1(choice($.snbt_compound, $.snbt_array)))),
+
+	_resource: ($) =>
+		prec.right(
 			seq(
-				$.word,
-				repeat1(choice($.data_compound, $.snbt_compound, $.snbt_array)),
+				choice($.minecraft_resource, $.generic_resource),
+				optional(choice($.data_compound, $.snbt_compound)),
 			),
 		),
-
-	_resource: ($) => choice($.minecraft_resource, $.generic_resource),
 
 	minecraft_resource: ($) =>
 		seq(token(prec(1, "minecraft:")), $.word, repeat(seq("/", $.word))),
@@ -173,19 +182,21 @@ module.exports = {
 	_data_value: ($) =>
 		choice(
 			$.macro,
-			$.data_compound,
 			$._primitive_type,
+			$.typed_number,
 			$._resource,
 			$.range,
 			$.path,
 			$.snbt_array,
 			$.snbt_compound,
+			$.data_compound,
 		),
 
 	_value: ($) =>
 		choice(
 			$.macro,
 			$._primitive_type,
+			$.typed_number,
 			$.path,
 			$.snbt_array,
 			$.snbt_compound,

@@ -615,6 +615,7 @@ sNBT Arrays
 data [""]
 data [I; 15, 61, 52]
 data modify block ~ ~ ~ RecordItem.tag.messages append value [ { message: "hello world" } ]
+data [0f,0f,1f]
 
 ------------------
 
@@ -647,7 +648,19 @@ data modify block ~ ~ ~ RecordItem.tag.messages append value [ { message: "hello
       (snbt_compound
         (key
           (word))
-        (string)))))
+        (string))))
+  (command
+    (command_identifier)
+    (snbt_array
+      (typed_number
+        (integer)
+        (measurement_unit))
+      (typed_number
+        (integer)
+        (measurement_unit))
+      (typed_number
+        (integer)
+        (measurement_unit)))))
 
 ==================
 Item Selectors
@@ -672,7 +685,7 @@ give armor_stand[entity_data={id:"minecraft:armor_stand", Tags:[taco_sauce]}]
       (word)))
   (command
     (command_identifier)
-    (path
+    (data_selector
       (word)
       (data_compound
         (key
@@ -683,14 +696,15 @@ give armor_stand[entity_data={id:"minecraft:armor_stand", Tags:[taco_sauce]}]
     (score_holder))
   (command
     (command_identifier)
-    (score_holder)
-    (data_compound
-      (key
-        (word))
-      (word)))
+    (data_selector
+      (score_holder)
+      (data_compound
+        (key
+          (word))
+        (word))))
   (command
     (command_identifier)
-    (path
+    (data_selector
       (word)
       (data_compound
         (key
@@ -739,7 +753,7 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
       (word)))
   (command
     (command_identifier)
-    (path
+    (data_selector
       (word)
       (data_compound
         (key
@@ -750,11 +764,12 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (score_holder))
   (command
     (command_identifier)
-    (score_holder)
-    (data_compound
-      (key
-        (word))
-      (word))
+    (data_selector
+      (score_holder)
+      (data_compound
+        (key
+          (word))
+        (word)))
     (snbt_compound
       (key
         (word))
@@ -984,36 +999,38 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
 (source_file
   (command
     (command_identifier)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (word)))
+    (data_selector
+      (entity_selector)
+      (data_compound
+        (key
+          (word))
+        (word))))
   (command
     (command_identifier)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (range
-        (integer))
-      (key
-        (word))
-      (generic_resource
-        (namespace)
-        (word))
-      (key
-        (word))
-      (snbt_compound
+    (data_selector
+      (entity_selector)
+      (data_compound
+        (key
+          (word))
+        (range
+          (integer))
+        (key
+          (word))
+        (generic_resource
+          (namespace)
+          (word))
         (key
           (word))
         (snbt_compound
           (key
-            (string))
-          (boolean)
-          (key
             (word))
-          (macro)))))
+          (snbt_compound
+            (key
+              (string))
+            (boolean)
+            (key
+              (word))
+            (macro))))))
   (command
     (command_identifier)
     (greedy_string))
@@ -1025,255 +1042,272 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (word)))
-  (command
-    (command_identifier)
-    (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (word)
-      (key
-        (word))
-      (word)
-      (key
-        (word))
-      (word)))
-  (command
-    (command_identifier)
-    (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (string))
-    (subcommand_keyword)
-    (entity_selector))
-  (command
-    (command_identifier)
-    (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (string
-        (escape_sequence)))
-    (subcommand_keyword)
-    (entity_selector))
-  (command
-    (command_identifier)
-    (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (string))
-    (subcommand_keyword)
-    (entity_selector))
-  (command
-    (command_identifier)
-    (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (string))
-    (subcommand_keyword)
-    (entity_selector))
-  (command
-    (command_identifier)
-    (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (snbt_compound
+    (data_selector
+      (entity_selector)
+      (data_compound
         (key
           (word))
-        (integer))))
+        (word))))
   (command
     (command_identifier)
     (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (snbt_compound
+    (data_selector
+      (entity_selector)
+      (data_compound
+        (key
+          (word))
+        (word)
+        (key
+          (word))
+        (word)
+        (key
+          (word))
+        (word))))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (data_selector
+      (entity_selector)
+      (data_compound
+        (key
+          (word))
+        (string)))
+    (subcommand_keyword)
+    (entity_selector))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (data_selector
+      (entity_selector)
+      (data_compound
+        (key
+          (word))
+        (string
+          (escape_sequence))))
+    (subcommand_keyword)
+    (entity_selector))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (data_selector
+      (entity_selector)
+      (data_compound
+        (key
+          (word))
+        (string)))
+    (subcommand_keyword)
+    (entity_selector))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (data_selector
+      (entity_selector)
+      (data_compound
+        (key
+          (word))
+        (string)))
+    (subcommand_keyword)
+    (entity_selector))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (data_selector
+      (entity_selector)
+      (data_compound
         (key
           (word))
         (snbt_compound
           (key
             (word))
-          (string)
+          (integer)))))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (data_selector
+      (entity_selector)
+      (data_compound
+        (key
+          (word))
+        (snbt_compound
+          (key
+            (word))
+          (snbt_compound
+            (key
+              (word))
+            (string)
+            (key
+              (word))
+            (integer))))))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (data_selector
+      (entity_selector)
+      (data_compound
+        (key
+          (word))
+        (data_compound
           (key
             (word))
           (integer)))))
   (command
     (command_identifier)
     (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
+    (data_selector
+      (entity_selector)
       (data_compound
         (key
           (word))
-        (integer))))
+        (data_compound
+          (key
+            (word))
+          (range
+            (integer)
+            (integer))))))
   (command
     (command_identifier)
     (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
+    (data_selector
+      (entity_selector)
       (data_compound
         (key
           (word))
-        (range
+        (data_compound
+          (key
+            (word))
           (integer)
-          (integer)))))
-  (command
-    (command_identifier)
-    (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (data_compound
-        (key
-          (word))
-        (integer)
-        (key
-          (word))
-        (range
-          (integer)
-          (integer))
-        (key
-          (word))
-        (range
-          (integer)))))
-  (command
-    (command_identifier)
-    (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (data_compound
-        (key
-          (minecraft_resource
-            (word)
-            (word)))
-        (boolean))))
-  (command
-    (command_identifier)
-    (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (data_compound
-        (key
-          (minecraft_resource
-            (word)
-            (word)))
-        (data_compound
           (key
             (word))
+          (range
+            (integer)
+            (integer))
+          (key
+            (word))
+          (range
+            (integer))))))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (data_selector
+      (entity_selector)
+      (data_compound
+        (key
+          (word))
+        (data_compound
+          (key
+            (minecraft_resource
+              (word)
+              (word)))
           (boolean)))))
   (command
     (command_identifier)
     (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
+    (data_selector
+      (entity_selector)
       (data_compound
         (key
-          (minecraft_resource
-            (word)
-            (word)))
+          (word))
         (data_compound
           (key
-            (word))
+            (minecraft_resource
+              (word)
+              (word)))
+          (data_compound
+            (key
+              (word))
+            (boolean))))))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (data_selector
+      (entity_selector)
+      (data_compound
+        (key
+          (word))
+        (data_compound
+          (key
+            (minecraft_resource
+              (word)
+              (word)))
+          (data_compound
+            (key
+              (word))
+            (boolean)
+            (key
+              (word))
+            (boolean))))))
+  (command
+    (command_identifier)
+    (subcommand_keyword)
+    (data_selector
+      (entity_selector)
+      (data_compound
+        (key
+          (word))
+        (data_compound
+          (key
+            (minecraft_resource
+              (word)
+              (word)))
           (boolean)
           (key
-            (word))
+            (minecraft_resource
+              (word)
+              (word)))
           (boolean)))))
   (command
     (command_identifier)
     (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
+    (data_selector
+      (entity_selector)
       (data_compound
         (key
-          (minecraft_resource
-            (word)
-            (word)))
-        (boolean)
-        (key
-          (minecraft_resource
-            (word)
-            (word)))
-        (boolean))))
-  (command
-    (command_identifier)
-    (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
-      (data_compound
-        (key
-          (minecraft_resource
-            (word)
-            (word)))
+          (word))
         (data_compound
           (key
-            (word))
-          (boolean)
+            (minecraft_resource
+              (word)
+              (word)))
+          (data_compound
+            (key
+              (word))
+            (boolean)
+            (key
+              (word))
+            (boolean))
           (key
-            (word))
-          (boolean))
-        (key
-          (minecraft_resource
-            (word)
-            (word)))
-        (data_compound
-          (key
-            (word))
-          (boolean)
-          (key
-            (word))
-          (boolean)))))
+            (minecraft_resource
+              (word)
+              (word)))
+          (data_compound
+            (key
+              (word))
+            (boolean)
+            (key
+              (word))
+            (boolean))))))
   (command
     (command_identifier)
     (subcommand_keyword)
     (subcommand_keyword)
-    (entity_selector)
-    (data_compound
-      (key
-        (word))
+    (data_selector
+      (entity_selector)
       (data_compound
         (key
           (word))
-        (range
-          (integer))
-        (key
-          (word))
-        (range
-          (integer))
-        (key
-          (word))
-        (range
-          (integer))))
+        (data_compound
+          (key
+            (word))
+          (range
+            (integer))
+          (key
+            (word))
+          (range
+            (integer))
+          (key
+            (word))
+          (range
+            (integer)))))
     (command_keyword)
     (command
       (command_identifier)

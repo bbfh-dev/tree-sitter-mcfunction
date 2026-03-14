@@ -32,6 +32,10 @@
           "named": true
         },
         {
+          "type": "data_selector",
+          "named": true
+        },
+        {
           "type": "entity_selector",
           "named": true
         },
@@ -223,7 +227,38 @@
           "named": true
         },
         {
+          "type": "typed_number",
+          "named": true
+        },
+        {
           "type": "uuid",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_selector",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "data_compound",
+          "named": true
+        },
+        {
+          "type": "entity_selector",
+          "named": true
+        },
+        {
+          "type": "score_holder",
           "named": true
         },
         {
@@ -310,9 +345,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "data_compound",
+          "named": true
+        },
         {
           "type": "generic_resource",
           "named": true
@@ -323,6 +362,10 @@
         },
         {
           "type": "minecraft_resource",
+          "named": true
+        },
+        {
+          "type": "snbt_compound",
           "named": true
         },
         {
@@ -364,10 +407,6 @@
           "named": true
         },
         {
-          "type": "data_compound",
-          "named": true
-        },
-        {
           "type": "macro",
           "named": true
         },
@@ -400,10 +439,6 @@
       "types": [
         {
           "type": "command_keyword",
-          "named": true
-        },
-        {
-          "type": "data_compound",
           "named": true
         },
         {
@@ -550,6 +585,10 @@
           "named": true
         },
         {
+          "type": "typed_number",
+          "named": true
+        },
+        {
           "type": "uuid",
           "named": true
         },
@@ -610,6 +649,10 @@
         },
         {
           "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_number",
           "named": true
         },
         {

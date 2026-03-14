@@ -1978,17 +1978,47 @@
         },
         {
           "type": "SYMBOL",
-          "name": "data_compound"
-        },
-        {
-          "type": "SYMBOL",
           "name": "snbt_array"
         },
         {
           "type": "SYMBOL",
           "name": "snbt_compound"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "data_selector"
         }
       ]
+    },
+    "data_selector": {
+      "type": "PREC",
+      "value": 1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "score_holder"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "word"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "entity_selector"
+              }
+            ]
+          },
+          {
+            "type": "SYMBOL",
+            "name": "data_compound"
+          }
+        ]
+      }
     },
     "typed_number": {
       "type": "SEQ",
@@ -2003,7 +2033,7 @@
             "type": "IMMEDIATE_TOKEN",
             "content": {
               "type": "PREC",
-              "value": 1,
+              "value": 2,
               "content": {
                 "type": "PATTERN",
                 "value": "[thBbSsLlDdFf]"
@@ -2261,10 +2291,6 @@
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "data_compound"
-                },
-                {
-                  "type": "SYMBOL",
                   "name": "snbt_compound"
                 },
                 {
@@ -2278,17 +2304,47 @@
       }
     },
     "_resource": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "minecraft_resource"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "generic_resource"
-        }
-      ]
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "minecraft_resource"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "generic_resource"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "data_compound"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "snbt_compound"
+                  }
+                ]
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
     },
     "minecraft_resource": {
       "type": "SEQ",
@@ -2849,11 +2905,11 @@
         },
         {
           "type": "SYMBOL",
-          "name": "data_compound"
+          "name": "_primitive_type"
         },
         {
           "type": "SYMBOL",
-          "name": "_primitive_type"
+          "name": "typed_number"
         },
         {
           "type": "SYMBOL",
@@ -2874,6 +2930,10 @@
         {
           "type": "SYMBOL",
           "name": "snbt_compound"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "data_compound"
         }
       ]
     },
@@ -2887,6 +2947,10 @@
         {
           "type": "SYMBOL",
           "name": "_primitive_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "typed_number"
         },
         {
           "type": "SYMBOL",
