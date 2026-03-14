@@ -57,6 +57,10 @@ module.exports = {
 				$.word,
 				$.string,
 				$.command_keyword,
+				// Keywords:
+				alias($.color, $.word),
+				alias($.scoreboard_objective, $.word),
+				alias($.scoreboard_display_slot, $.word),
 			),
 		),
 

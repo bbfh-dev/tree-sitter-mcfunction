@@ -228,7 +228,7 @@ $execute store result storage bs:out color.hex_to_rgb[0] int 1 store result scor
 data modify storage bs:out string.upper set from storage bs:ctx _.1
 execute store result storage bs:data vector.distance[0] float 1 run scoreboard players get $vector.length.0 bs.in
 $execute store result score $vector.normalize.0 bs.out run data get storage bs:ctx _[0] $(scale)
-execute if data storage bs:data dump.stack[-1].var{} run return run function bs.dump:interpret/compound/compound
+execute if data storage bs:data xp.stack[-1].var{} run return run function bs.dump:interpret/compound/compound
 
 ------------------
 

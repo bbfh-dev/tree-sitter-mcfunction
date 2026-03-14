@@ -740,6 +740,21 @@
     }
   },
   {
+    "type": "word",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "color",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "\"",
     "named": false
   },
@@ -939,10 +954,6 @@
   {
     "type": "villager.",
     "named": false
-  },
-  {
-    "type": "word",
-    "named": true
   },
   {
     "type": "{",

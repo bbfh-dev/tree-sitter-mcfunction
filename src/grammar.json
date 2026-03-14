@@ -2213,6 +2213,33 @@
           {
             "type": "SYMBOL",
             "name": "command_keyword"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "color"
+            },
+            "named": true,
+            "value": "word"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "scoreboard_objective"
+            },
+            "named": true,
+            "value": "word"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "scoreboard_display_slot"
+            },
+            "named": true,
+            "value": "word"
           }
         ]
       }
