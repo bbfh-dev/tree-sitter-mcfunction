@@ -999,16 +999,14 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
 (source_file
   (command
     (command_identifier)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
         (word))))
   (command
     (command_identifier)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1042,8 +1040,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1051,8 +1048,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1066,8 +1062,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1077,8 +1072,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1089,8 +1083,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1100,8 +1093,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1111,8 +1103,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1123,8 +1114,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1141,8 +1131,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1153,8 +1142,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1167,8 +1155,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1188,8 +1175,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1202,8 +1188,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1219,8 +1204,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1239,8 +1223,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1258,8 +1241,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
   (command
     (command_identifier)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))
@@ -1290,8 +1272,7 @@ execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run retur
     (command_identifier)
     (subcommand_keyword)
     (subcommand_keyword)
-    (data_selector
-      (entity_selector)
+    (entity_selector
       (data_compound
         (key
           (word))

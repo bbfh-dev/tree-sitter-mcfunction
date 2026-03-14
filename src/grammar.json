@@ -916,10 +916,6 @@
         {
           "type": "SYMBOL",
           "name": "item_slot"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "entity_selector"
         }
       ]
     },
@@ -1378,10 +1374,6 @@
           "name": "macro"
         }
       ]
-    },
-    "entity_selector": {
-      "type": "PATTERN",
-      "value": "@[a-z]"
     },
     "_primitive_type": {
       "type": "CHOICE",
@@ -1986,6 +1978,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "entity_selector"
+        },
+        {
+          "type": "SYMBOL",
           "name": "data_selector"
         }
       ]
@@ -2006,10 +2002,6 @@
               {
                 "type": "SYMBOL",
                 "name": "word"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "entity_selector"
               }
             ]
           },
@@ -2299,6 +2291,31 @@
                 }
               ]
             }
+          }
+        ]
+      }
+    },
+    "entity_selector": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "PATTERN",
+            "value": "@[a-z]"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "data_compound"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
           }
         ]
       }

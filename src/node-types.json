@@ -254,15 +254,26 @@
           "named": true
         },
         {
-          "type": "entity_selector",
-          "named": true
-        },
-        {
           "type": "score_holder",
           "named": true
         },
         {
           "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "entity_selector",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "data_compound",
           "named": true
         }
       ]
@@ -913,10 +924,6 @@
   {
     "type": "enderchest.",
     "named": false
-  },
-  {
-    "type": "entity_selector",
-    "named": true
   },
   {
     "type": "escape_sequence",

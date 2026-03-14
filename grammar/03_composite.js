@@ -10,17 +10,12 @@ module.exports = {
 			$._resource,
 			$.snbt_array,
 			$.snbt_compound,
+			$.entity_selector,
 			$.data_selector,
 		),
 
 	data_selector: ($) =>
-		prec(
-			1,
-			seq(
-				choice($.score_holder, $.word, $.entity_selector),
-				$.data_compound,
-			),
-		),
+		prec(1, seq(choice($.score_holder, $.word), $.data_compound)),
 
 	typed_number: ($) =>
 		seq(
@@ -75,6 +70,9 @@ module.exports = {
 
 	_data_path_node: ($) =>
 		prec(1, seq($.word, repeat1(choice($.snbt_compound, $.snbt_array)))),
+
+	entity_selector: ($) =>
+		prec.right(seq(/@[a-z]/, optional($.data_compound))),
 
 	_resource: ($) =>
 		prec.right(
