@@ -14,7 +14,7 @@ execute as at in positioned align run say Hi
     (subcommand_keyword)
     (subcommand_keyword)
     (subcommand_keyword)
-    (command_keyword)
+    (argument_keyword)
     (command
       (command_identifier)
       (greedy_string))))
@@ -111,8 +111,8 @@ scoreboard players list sidebar sidebar.team.gold below_name
 (source_file
   (command
     (command_identifier)
-    (command_keyword)
-    (command_keyword)
+    (argument_keyword)
+    (argument_keyword)
     (scoreboard_display_slot)
     (scoreboard_display_slot
       (color))
@@ -141,8 +141,8 @@ scoreboard players operation #%[example] example /= 15
     (operation))
   (command
     (command_identifier)
-    (command_keyword)
-    (command_keyword)
+    (argument_keyword)
+    (argument_keyword)
     (score_holder
       (macro))
     (word)

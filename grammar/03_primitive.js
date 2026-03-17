@@ -2,13 +2,13 @@ module.exports = {
 	_primitive_type: ($) =>
 		choice(
 			$.boolean,
-			$.float,
 			$.integer,
+			$.float,
 			$.hexadecimal,
 			$.uuid,
 			$.string,
-			$.word,
 			$.score_holder,
+			alias($.identifier, $.word),
 		),
 
 	boolean: (_) => token(prec(1, choice("true", "false"))),
@@ -19,7 +19,19 @@ module.exports = {
 			prec(1, seq(token(prec(1, "-")), $.macro)),
 		),
 
-	float: (_) => token(prec(1, choice(/-?\d+\.\d+/, /-?\.\d+/))),
+	float: ($) =>
+		choice(
+			token(prec(1, choice(/-?\d+\.\d+/, /-?\.\d+/))),
+			prec(1, seq(token(prec(1, /-?\d+/)), ".", $.macro)),
+			prec(
+				1,
+				seq(
+					optional(token(prec(1, "-"))),
+					$.macro,
+					token(prec(1, /\.\d+/)),
+				),
+			),
+		),
 
 	_number: ($) => choice($.integer, $.float, $.macro),
 
@@ -78,14 +90,10 @@ module.exports = {
 
 	greedy_string: (_) => /[^\r\n]+/,
 
-	word: (_) => token(choice("*", /[a-zA-Z_\-\+][0-9a-zA-Z_\-\+]*/)),
-
 	score_holder: ($) =>
 		choice(
-			seq(
-				repeat1(token(prec(1, "-"))),
-				/[\._\+a-zA-Z][\._\-\+0-9a-zA-Z]*/,
-			),
-			seq(choice("#", "$", "%"), choice(/[\._\-\+0-9a-zA-Z]+/, $.macro)),
+			"*",
+			seq(token(prec(1, "-")), /[_\.\+a-zA-Z][_\.\-\+0-9a-zA-Z]*/),
+			seq(choice("#", "$", "%"), choice(/[_\.\-\+0-9a-zA-Z]+/, $.macro)),
 		),
 };

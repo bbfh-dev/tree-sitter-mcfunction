@@ -1,13 +1,21 @@
-const COMMAND_KEYWORDS = require("../data/command_keywords.js");
-const SUBCOMMAND_KEYWORDS = require("../data/execute_subcommands.js");
+const KEYWORDS = {
+	arguments: require("../data/keywords/arguments.js"),
+	// commands: require("../data/keywords/commands.js"),
+	subcommands: require("../data/keywords/subcommands.js"),
+};
+
+const keyword = (verb) => token(prec(1, verb));
 
 module.exports = {
-	command_keyword: (_) => token(choice(...COMMAND_KEYWORDS)),
-	subcommand_keyword: (_) => token(prec(1, choice(...SUBCOMMAND_KEYWORDS))),
+	argument_keyword: (_) => keyword(choice(...KEYWORDS.arguments)),
+
+	// ———— This isn't necessary.
+	// command_keyword: (_) => keyword(choice(...KEYWORDS.commands)),
+
+	subcommand_keyword: (_) => keyword(choice(...KEYWORDS.subcommands)),
 
 	_keywords: ($) =>
 		choice(
-			$.operation,
 			$.color,
 			$.scoreboard_objective,
 			$.scoreboard_display_slot,
@@ -15,12 +23,10 @@ module.exports = {
 		),
 
 	operation: (_) =>
-		token(
-			prec(1, choice("=", "+=", "-=", "*=", "/=", "%=", "><", "<", ">")),
-		),
+		keyword(choice("=", "+=", "-=", "*=", "/=", "%=", "><", "<", ">")),
 
 	color: (_) =>
-		token(
+		keyword(
 			choice(
 				"black",
 				"dark_blue",
@@ -44,7 +50,7 @@ module.exports = {
 
 	scoreboard_objective: ($) =>
 		choice(
-			token(
+			keyword(
 				choice(
 					"dummy",
 					"trigger",
@@ -59,19 +65,19 @@ module.exports = {
 					"armor",
 				),
 			),
-			seq(token(prec(1, "teamkill.")), $.color),
-			seq(token(prec(1, "killedByTeam.")), $.color),
+			seq(keyword("teamkill."), $.color),
+			seq(keyword("killedByTeam."), $.color),
 		),
 
 	scoreboard_display_slot: ($) =>
 		choice(
-			token(choice("list", "sidebar", "below_name")),
-			seq(token(prec(1, "sidebar.team.")), $.color),
+			keyword(choice("list", "sidebar", "below_name")),
+			seq(keyword("sidebar.team."), $.color),
 		),
 
 	item_slot: ($) =>
 		choice(
-			token(
+			keyword(
 				choice(
 					"contents",
 					"weapon",
@@ -87,14 +93,14 @@ module.exports = {
 					"player.cursor",
 				),
 			),
-			seq(token("container."), $._item_slot_value),
-			seq(token("hotbar."), $._item_slot_value),
-			seq(token("inventory."), $._item_slot_value),
-			seq(token("enderchest."), $._item_slot_value),
-			seq(token("villager."), $._item_slot_value),
-			seq(token("horse."), $._item_slot_value),
-			seq(token("player.crafting."), $._item_slot_value),
+			seq(keyword("container."), $._item_slot_value),
+			seq(keyword("hotbar."), $._item_slot_value),
+			seq(keyword("inventory."), $._item_slot_value),
+			seq(keyword("enderchest."), $._item_slot_value),
+			seq(keyword("villager."), $._item_slot_value),
+			seq(keyword("horse."), $._item_slot_value),
+			seq(keyword("player.crafting."), $._item_slot_value),
 		),
 
-	_item_slot_value: ($) => choice("*", $.integer, $.macro),
+	_item_slot_value: ($) => choice(keyword("*"), $.integer, $.macro),
 };

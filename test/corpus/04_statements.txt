@@ -87,7 +87,7 @@ execute run \
     (greedy_string))
   (command
     (command_identifier)
-    (command_keyword)
+    (argument_keyword)
     (backslash)
     (command
       (command_identifier)

@@ -113,7 +113,7 @@ $execute if ..-$(macro) \
     (range
       (float)
       (float))
-    (command_keyword)
+    (argument_keyword)
     (command
       (command_identifier)
       (command
@@ -165,53 +165,58 @@ function bs.dump:interpret/any
     (command_identifier)
     (subcommand_keyword)
     (minecraft_resource
-      (word)))
+      (identifier)))
   (command
     (command_identifier)
     (subcommand_keyword)
     (minecraft_resource
-      (word)))
+      (identifier)))
   (command
     (command_identifier)
     (score_holder))
   (command
     (command_identifier)
     (generic_resource
-      (namespace)
-      (word)
-      (word)))
-  (command
-    (command_identifier)
-    (generic_resource
-      (namespace)
-      (word)))
-  (command
-    (command_identifier)
-    (generic_resource
-      (word)
-      (word)
-      (word)))
-  (command
-    (command_identifier)
-    (generic_resource
-      (namespace)
-      (macro)
-      (word)
-      (macro)
-      (word)))
-  (command
-    (command_identifier)
-    (generic_resource
-      (namespace)
-      (word)))
+      (namespace
+        (identifier))
+      (identifier)
+      (identifier)))
   (command
     (command_identifier)
     (generic_resource
       (namespace
-        (word)
-        (word))
-      (word)
-      (word))))
+        (score_holder))
+      (identifier)))
+  (command
+    (command_identifier)
+    (generic_resource
+      (identifier)
+      (identifier)
+      (identifier)))
+  (command
+    (command_identifier)
+    (generic_resource
+      (namespace
+        (score_holder))
+      (macro)
+      (identifier)
+      (macro)
+      (identifier)))
+  (command
+    (command_identifier)
+    (generic_resource
+      (namespace
+        (score_holder))
+      (identifier)))
+  (command
+    (command_identifier)
+    (generic_resource
+      (namespace
+        (path
+          (identifier)
+          (identifier)))
+      (identifier)
+      (identifier))))
 
 ==================
 sNBT Paths
@@ -250,8 +255,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
         (word))))
   (command
     (command_identifier)
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
     (entity_selector)
     (path
       (word)
@@ -262,8 +267,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
       (integer)))
   (command
     (command_identifier)
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
     (entity_selector)
     (path
       (word)
@@ -271,26 +276,26 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
         (integer))))
   (command
     (command_identifier)
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
     (entity_selector)
     (path
-      (command_keyword)
+      (command_identifier)
       (word)))
   (command
     (macro_sign)
     (command_identifier)
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
     (generic_resource
       (namespace)
       (word))
     (path
       (word)
       (word))
-    (command_keyword)
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
+    (command_identifier)
     (generic_resource
       (namespace)
       (word))
@@ -310,17 +315,17 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
   (command
     (macro_sign)
     (command_identifier)
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
     (generic_resource
       (namespace)
       (word))
     (path
       (word)
       (word))
-    (command_keyword)
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
+    (command_identifier)
     (generic_resource
       (namespace)
       (word))
@@ -355,7 +360,7 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
     (path
       (snbt_array
         (integer))
-      (command_keyword))
+      (command_identifier))
     (subcommand_keyword)
     (subcommand_keyword)
     (subcommand_keyword)
@@ -363,11 +368,11 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
     (path
       (word)
       (word))
-    (command_keyword)
+    (command_identifier)
     (command
       (command_identifier)
-      (command_keyword)
-      (command_keyword)
+      (command_identifier)
+      (command_identifier)
       (generic_resource
         (namespace)
         (word))
@@ -377,7 +382,7 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
       (path
         (snbt_array
           (integer))
-        (command_keyword))))
+        (command_identifier))))
   (command
     (macro_sign)
     (command_identifier)
@@ -388,7 +393,7 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
       (namespace)
       (word))
     (path
-      (command_keyword)
+      (command_identifier)
       (word))
     (snbt_array
       (integer))
@@ -402,31 +407,31 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
     (path
       (word)
       (word))
-    (command_keyword)
+    (command_identifier)
     (command
       (command_identifier)
-      (command_keyword)
-      (command_keyword)
+      (command_identifier)
+      (command_identifier)
       (generic_resource
         (namespace)
         (word))
       (path
-        (command_keyword)
+        (command_identifier)
         (word)
         (macro))))
   (command
     (command_identifier)
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
     (generic_resource
       (namespace)
       (word))
     (path
-      (command_keyword)
+      (command_identifier)
       (word))
-    (command_keyword)
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
+    (command_identifier)
     (generic_resource
       (namespace)
       (word))
@@ -442,16 +447,16 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
       (word))
     (path
       (word)
-      (command_keyword))
+      (command_identifier))
     (snbt_array
       (integer))
     (word)
     (integer)
-    (command_keyword)
+    (command_identifier)
     (command
       (command_identifier)
-      (command_keyword)
-      (command_keyword)
+      (command_identifier)
+      (command_identifier)
       (score_holder)
       (path
         (word)
@@ -466,11 +471,11 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
     (path
       (word)
       (word))
-    (command_keyword)
+    (command_identifier)
     (command
       (command_identifier)
-      (command_keyword)
-      (command_keyword)
+      (command_identifier)
+      (command_identifier)
       (generic_resource
         (namespace)
         (word))
@@ -495,7 +500,7 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
         (integer))
       (word))
     (snbt_compound)
-    (command_keyword)
+    (command_identifier)
     (command
       (command_identifier)
       (command
@@ -557,16 +562,16 @@ data modify storage bs:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5
       (backslash)))
   (command
     (command_identifier)
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
     (vector)
     (vector)
     (vector)
     (path
       (word)
       (word))
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
     (snbt_compound
       (key
         (word))
@@ -575,16 +580,16 @@ data modify storage bs:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5
         (word))))
   (command
     (command_identifier)
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
     (generic_resource
       (namespace)
       (word))
     (path
-      (command_keyword)
+      (command_identifier)
       (word))
-    (command_keyword)
-    (command_keyword)
+    (command_identifier)
+    (command_identifier)
     (snbt_compound
       (key
         (word))
@@ -633,22 +638,22 @@ data [0f,0f,1f]
       (integer)))
   (command
     (command_identifier)
-    (command_keyword)
-    (command_keyword)
+    (argument_keyword)
+    (argument_keyword)
     (vector)
     (vector)
     (vector)
     (path
-      (word)
-      (word)
-      (word))
-    (command_keyword)
-    (command_keyword)
+      (identifier)
+      (identifier)
+      (identifier))
+    (argument_keyword)
+    (argument_keyword)
     (snbt_array
       (snbt_compound
-        (key
-          (word))
-        (string))))
+        (snbt_key_value_pair
+          (key)
+          (string)))))
   (command
     (command_identifier)
     (snbt_array
@@ -892,7 +897,7 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
       (key
         (word))
       (word))
-    (command_keyword))
+    (command_identifier))
   (command
     (command_identifier)
     (vector)
@@ -905,24 +910,7 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
       (key
         (word))
       (word))
-    (command_keyword))
-  (command
-    (command_identifier)
-    (vector)
-    (vector)
-    (vector)
-    (generic_resource
-      (namespace)
-      (word))
-    (data_compound
-      (key
-        (word))
-      (word))
-    (snbt_compound
-      (key
-        (word))
-      (word))
-    (command_keyword))
+    (command_identifier))
   (command
     (command_identifier)
     (vector)
@@ -939,7 +927,24 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
       (key
         (word))
       (word))
-    (command_keyword))
+    (command_identifier))
+  (command
+    (command_identifier)
+    (vector)
+    (vector)
+    (vector)
+    (generic_resource
+      (namespace)
+      (word))
+    (data_compound
+      (key
+        (word))
+      (word))
+    (snbt_compound
+      (key
+        (word))
+      (word))
+    (command_identifier))
   (command
     (command_identifier)
     (vector)
@@ -1290,7 +1295,7 @@ tellraw @s [{"text": "Hi!"}]
             (word))
           (range
             (integer)))))
-    (command_keyword)
+    (command_identifier)
     (command
       (command_identifier)
       (command

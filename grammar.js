@@ -12,18 +12,21 @@ const grammar_rules = require("./grammar/99_all.js");
 module.exports = grammar({
 	name: "mcfunction",
 
-	conflicts: (_) => [],
+	conflicts: ($) => [[$.namespace, $.key]],
 
-	extras: ($) => [/ +/, $.backslash],
+	// Handle whitespace manually.
+	extras: (_) => [],
 
-	word: ($) => $._identifier,
+	word: ($) => $.identifier,
 
 	rules: {
 		source_file: ($) => repeat($._statement),
 
+		identifier: (_) => /[a-zA-Z][0-9a-zA-Z_\-\+]*/,
+
 		backslash: (_) => /\s*\\\r?\n\s*/,
 
-		_identifier: (_) => /[a-z_]+/,
+		_whitespace: ($) => choice(/ +/, $.backslash),
 
 		_statement: ($) =>
 			seq(
@@ -32,10 +35,10 @@ module.exports = grammar({
 				$._newline,
 			),
 
-		// NOTE: 'github.com/bbfh-dev/vintage' & 'github.com/mcbeet/mecha'
+		// 'github.com/bbfh-dev/vintage' & 'github.com/mcbeet/mecha'
 		_indentation: (_) => /[ \t]+/,
 
-		// NOTE: Allows for ":" from Python 'github.com/mcbeet/mecha'
+		// Allows for ":" from Python 'github.com/mcbeet/mecha'
 		_newline: (_) => /:?\r?\n/,
 
 		macro: (_) =>
@@ -44,7 +47,7 @@ module.exports = grammar({
 					2,
 					choice(
 						seq("$(", /[0-9a-zA-Z._-]+/, ")"),
-						// NOTE: Comptime macros from 'github.com/bbfh-dev/vintage'
+						// Comptime macros from 'github.com/bbfh-dev/vintage'
 						seq("%[", /[0-9a-zA-Z._-]+/, "]"),
 					),
 				),
