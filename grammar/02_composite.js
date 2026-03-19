@@ -20,8 +20,9 @@ module.exports = {
 			$.path,
 			$.snbt_array,
 			$.snbt_compound,
-			// $.entity_selector,
-			// $.data_selector,
+			$.entity_selector,
+			$.item_selector,
+			$.block_selector,
 		),
 
 	typed_number: ($) =>
@@ -44,7 +45,7 @@ module.exports = {
 
 	minecraft_resource: ($) =>
 		seq(
-			token(prec(1, "minecraft:")),
+			token(prec(2, "minecraft:")),
 			$.identifier,
 			repeat(seq("/", $.identifier)),
 		),
@@ -64,15 +65,24 @@ module.exports = {
 		),
 
 	namespace: ($) =>
-		seq(choice($.macro, $.identifier, $.score_holder, $.path), ":"),
+		seq(
+			choice($.macro, $.identifier, $.score_holder, $.path),
+			token(prec(2, ":")),
+		),
 
 	_resource_segment: ($) =>
 		choice($.macro, alias(/[0-9a-zA-Z_\-\+\.\*\?]+/, $.identifier)),
 
-	path: ($) =>
-		seq($._path_node, repeat1(seq(token(prec(1, ".")), $._path_node))),
+	path: ($) => seq($._path_node, repeat1(seq(".", $._path_node))),
 
-	_path_node: ($) => choice($.identifier, $.macro, $.string),
+	_path_node: ($) =>
+		choice(
+			$.identifier,
+			$.macro,
+			$.string,
+			alias($.argument_keyword, $.identifier),
+			alias($.subcommand_keyword, $.identifier),
+		),
 
 	snbt_array: ($) =>
 		seq(
@@ -86,9 +96,10 @@ module.exports = {
 
 	snbt_key_value_pair: ($) =>
 		seq(
-			$.key,
-			optional($._whitespace),
-			":",
+			choice(
+				seq($.key, optional($._whitespace), ":"),
+				seq($.key, optional($._whitespace), seq("=", optional("!"))),
+			),
 			optional($._whitespace),
 			$._snbt_value,
 		),
@@ -96,7 +107,7 @@ module.exports = {
 	key: ($) =>
 		choice(
 			$.macro,
-			token(prec(2, /[0-9a-zA-Z\-\+\.\*\?_\/]+/)),
+			token(prec(2, /[0-9a-zA-Z\-\+\.\*\?_]+/)),
 			$._resource,
 			$.string,
 		),
@@ -105,150 +116,34 @@ module.exports = {
 		choice(
 			$.macro,
 			$._primitive_type,
+			$.range,
 			$.typed_number,
 			$.snbt_array,
 			$.snbt_compound,
 		),
 
-	// --------------------------------------------------------------
+	data_compound: ($) => seq("[", list($, $.data_key_value_pair), "]"),
 
-	// data_selector: ($) =>
-	// 	prec(1, seq(choice($.score_holder, $.word), $.data_compound)),
-	//
-	//
-	// path: ($) =>
-	// 	choice(
-	// 		$._data_path_node,
-	// 		seq(
-	// 			$._path_node,
-	// 			repeat1(seq(token.immediate(prec(1, ".")), $._path_node)),
-	// 		),
-	// 	),
-	//
-	// _path_node: ($) =>
-	// 	prec(
-	// 		2,
-	// 		choice(
-	// 			alias(token(prec(2, /[0-9a-zA-Z\-\+_]+/)), $.word),
-	// 			$._data_path_node,
-	// 			$.snbt_array,
-	// 			$.snbt_compound,
-	// 			$.macro,
-	// 			$.word,
-	// 			$.string,
-	// 			// Keywords:
-	// 			alias($.command_keyword, $.word),
-	// 			alias($.subcommand_keyword, $.word),
-	// 			alias($.color, $.word),
-	// 			alias($.scoreboard_objective, $.word),
-	// 			alias($.scoreboard_display_slot, $.word),
-	// 		),
-	// 	),
-	//
-	// _data_path_node: ($) =>
-	// 	prec(1, seq($.word, repeat1(choice($.snbt_compound, $.snbt_array)))),
-	//
-	// entity_selector: ($) =>
-	// 	prec.right(
-	// 		seq(
-	// 			/@[a-z]/,
-	// 			optional(
-	// 				choice(
-	// 					$.data_compound,
-	// 					// NOTE: This is added as a workaround.
-	// 					// For @s [...] that can be read as @s[...]
-	// 					// (the grammar leaves whitespace up to interpretation in $.extras)
-	// 					$.snbt_array,
-	// 				),
-	// 			),
-	// 		),
-	// 	),
-	//
-	// data_compound: ($) =>
-	// 	choice(
-	// 		seq(
-	// 			"[",
-	// 			seq(
-	// 				$.key,
-	// 				$._data_compound_assign,
-	// 				$._data_value,
-	// 				repeat(
-	// 					seq(",", $.key, $._data_compound_assign, $._data_value),
-	// 				),
-	// 			),
-	// 			optional(","),
-	// 			"]",
-	// 		),
-	// 		seq(
-	// 			"{",
-	// 			seq(
-	// 				$.key,
-	// 				$._data_compound_assign,
-	// 				$._data_value,
-	// 				repeat(
-	// 					seq(",", $.key, $._data_compound_assign, $._data_value),
-	// 				),
-	// 			),
-	// 			optional(","),
-	// 			"}",
-	// 		),
-	// 	),
-	//
-	// _data_compound_assign: (_) =>
-	// 	token(prec(1, choice(seq("=", optional("!")), "~"))),
-	//
-	// snbt_array: ($) =>
-	// 	seq(
-	// 		"[",
-	// 		optional(seq(alias(token(prec(1, /[A-Z]/)), $.array_type), ";")),
-	// 		optional(seq($._value, repeat(seq(",", $._value)))),
-	// 		optional(","),
-	// 		"]",
-	// 	),
-	//
-	// snbt_compound: ($) =>
-	// 	seq(
-	// 		"{",
-	// 		optional(
-	// 			seq(
-	// 				$.key,
-	// 				":",
-	// 				$._value,
-	// 				repeat(seq(",", $.key, ":", $._value)),
-	// 			),
-	// 		),
-	// 		optional(","),
-	// 		"}",
-	// 	),
-	//
-	// key: ($) =>
-	// 	choice(
-	// 		$.macro,
-	// 		$._resource,
-	// 		alias(token(prec(1, /[0-9a-zA-Z\-\+\.\*\?_\/]+/)), $.word),
-	// 		$.string,
-	// 	),
-	//
-	// _data_value: ($) =>
-	// 	choice(
-	// 		$.macro,
-	// 		$._primitive_type,
-	// 		$.typed_number,
-	// 		$._resource,
-	// 		$.range,
-	// 		$.path,
-	// 		$.snbt_array,
-	// 		$.snbt_compound,
-	// 		$.data_compound,
-	// 	),
-	//
-	// _value: ($) =>
-	// 	choice(
-	// 		$.macro,
-	// 		$._primitive_type,
-	// 		$.typed_number,
-	// 		$.path,
-	// 		$.snbt_array,
-	// 		$.snbt_compound,
-	// 	),
+	data_key_value_pair: ($) =>
+		seq(
+			$.key,
+			optional($._whitespace),
+			"=",
+			optional("!"),
+			optional($._whitespace),
+			$._data_value,
+		),
+
+	_data_value: ($) => choice($._snbt_value, $._resource),
+
+	entity_selector: ($) =>
+		seq(alias(/@[a-z]/, $.identifier), optional($.data_compound)),
+
+	item_selector: ($) => seq($.selector_identifier, $.data_compound),
+
+	block_selector: ($) =>
+		seq($.selector_identifier, optional($.data_compound), $.snbt_compound),
+
+	selector_identifier: ($) =>
+		choice($._resource, $.score_holder, $.identifier),
 };

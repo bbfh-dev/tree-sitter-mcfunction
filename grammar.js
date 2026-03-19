@@ -12,17 +12,18 @@ const grammar_rules = require("./grammar/99_all.js");
 module.exports = grammar({
 	name: "mcfunction",
 
-	conflicts: ($) => [[$.namespace, $.key]],
+	conflicts: ($) => [],
 
 	// Handle whitespace manually.
 	extras: (_) => [],
 
+	// WARN: Adding this breaks the grammar :[
 	word: ($) => $.identifier,
 
 	rules: {
 		source_file: ($) => repeat($._statement),
 
-		identifier: (_) => /[a-zA-Z][0-9a-zA-Z_\-\+]*/,
+		identifier: (_) => /[a-zA-Z_][0-9a-zA-Z_\-\+]*/,
 
 		backslash: (_) => /\s*\\\r?\n\s*/,
 

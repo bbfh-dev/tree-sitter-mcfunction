@@ -166,55 +166,55 @@ datapack enable 'escape \' me'
     (command_identifier)
     (score_holder)
     (path
-      (word)
-      (word)
-      (word))
+      (identifier)
+      (identifier)
+      (identifier))
     (path
-      (word)
-      (word))
+      (identifier)
+      (identifier))
     (score_holder))
   (command
     (command_identifier)
-    (command_identifier)
-    (command_identifier)
+    (argument_keyword)
+    (argument_keyword)
     (score_holder)
     (path
-      (word)
-      (word))
+      (identifier)
+      (identifier))
     (operation)
     (score_holder)
     (path
-      (word)
-      (word)))
+      (identifier)
+      (identifier)))
   (command
     (command_identifier)
-    (command_identifier)
-    (command_identifier)
+    (argument_keyword)
+    (argument_keyword)
     (score_holder)
     (path
-      (word)
-      (word))
+      (identifier)
+      (identifier))
     (operation)
     (score_holder)
     (path
-      (word)
-      (word)))
+      (identifier)
+      (identifier)))
   (command
     (command_identifier)
-    (command_identifier)
-    (command_identifier)
-    (word)
-    (path
-      (word)
-      (word)))
-  (command
-    (command_identifier)
-    (command_identifier)
-    (command_identifier)
+    (argument_keyword)
+    (argument_keyword)
     (score_holder)
     (path
-      (word)
-      (word))
+      (identifier)
+      (identifier)))
+  (command
+    (command_identifier)
+    (argument_keyword)
+    (argument_keyword)
+    (score_holder)
+    (path
+      (identifier)
+      (identifier))
     (integer))
   (command
     (command_identifier)
@@ -222,26 +222,26 @@ datapack enable 'escape \' me'
   (command
     (macro_sign)
     (command_identifier)
-    (command_identifier)
+    (argument_keyword)
     (string
       (macro)))
   (command
     (command_identifier)
-    (command_identifier)
+    (argument_keyword)
     (string))
   (command
     (command_identifier)
-    (command_identifier)
+    (argument_keyword)
     (string
       (escape_sequence)))
   (command
     (command_identifier)
-    (command_identifier)
+    (argument_keyword)
     (string
       (macro)))
   (command
     (command_identifier)
-    (command_identifier)
+    (argument_keyword)
     (string
       (escape_sequence))))
 
