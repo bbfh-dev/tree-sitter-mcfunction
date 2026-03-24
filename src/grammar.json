@@ -2784,6 +2784,18 @@
                       "type": "CHOICE",
                       "members": [
                         {
+                          "type": "SYMBOL",
+                          "name": "_whitespace"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
                           "type": "STRING",
                           "value": "!"
                         },

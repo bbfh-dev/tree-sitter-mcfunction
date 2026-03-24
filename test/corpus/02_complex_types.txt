@@ -1238,7 +1238,7 @@ Entity Selectors
 ==================
 
 kill @e[type=foo]
-kill @e[distance=..5,type = #minecraft:skeleton,nbt=!{item:{"minecraft:property":false, another_value : $(macro)}}]
+kill @e[distance=..5,type = #minecraft:skeleton,nbt= !{item:{"minecraft:property":false, another_value : $(macro)}}]
 say $(macro)[distance=..5]
 return run say @s[tag=--my.example]
 execute as @a[gamemode=!creative]
