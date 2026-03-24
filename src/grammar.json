@@ -2024,22 +2024,9 @@
         }
       ]
     },
-    "_word": {
+    "_word_overlap": {
       "type": "CHOICE",
       "members": [
-        {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "integer"
-          },
-          "named": true,
-          "value": "word"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "word"
-        },
         {
           "type": "SYMBOL",
           "name": "argument_keyword"
@@ -2063,6 +2050,28 @@
         {
           "type": "SYMBOL",
           "name": "item_slot"
+        }
+      ]
+    },
+    "_word": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "integer"
+          },
+          "named": true,
+          "value": "word"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "word"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_word_overlap"
         }
       ]
     },
@@ -2459,7 +2468,15 @@
         },
         {
           "type": "SYMBOL",
+          "name": "_word_overlap"
+        },
+        {
+          "type": "SYMBOL",
           "name": "_primitive_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "path"
         },
         {
           "type": "SYMBOL",

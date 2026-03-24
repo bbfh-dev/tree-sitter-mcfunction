@@ -98,10 +98,8 @@ module.exports = {
 			$._word,
 		),
 
-	_word: ($) =>
+	_word_overlap: ($) =>
 		choice(
-			alias($.integer, $.word),
-			$.word,
 			$.argument_keyword,
 			$.subcommand_keyword,
 			$.color,
@@ -109,6 +107,8 @@ module.exports = {
 			$.scoreboard_display_slot,
 			$.item_slot,
 		),
+
+	_word: ($) => choice(alias($.integer, $.word), $.word, $._word_overlap),
 
 	snbt_array: ($) =>
 		seq(
@@ -142,7 +142,9 @@ module.exports = {
 	_snbt_value: ($) =>
 		choice(
 			$.macro,
+			$._word_overlap,
 			$._primitive_type,
+			$.path,
 			$.range,
 			$.typed_number,
 			$.snbt_array,

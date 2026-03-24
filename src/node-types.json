@@ -227,11 +227,19 @@
       "required": true,
       "types": [
         {
+          "type": "argument_keyword",
+          "named": true
+        },
+        {
           "type": "backslash",
           "named": true
         },
         {
           "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "color",
           "named": true
         },
         {
@@ -251,6 +259,10 @@
           "named": true
         },
         {
+          "type": "item_slot",
+          "named": true
+        },
+        {
           "type": "key",
           "named": true
         },
@@ -263,11 +275,23 @@
           "named": true
         },
         {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "range",
           "named": true
         },
         {
           "type": "score_holder",
+          "named": true
+        },
+        {
+          "type": "scoreboard_display_slot",
+          "named": true
+        },
+        {
+          "type": "scoreboard_objective",
           "named": true
         },
         {
@@ -280,6 +304,10 @@
         },
         {
           "type": "string",
+          "named": true
+        },
+        {
+          "type": "subcommand_keyword",
           "named": true
         },
         {
@@ -631,6 +659,10 @@
       "required": false,
       "types": [
         {
+          "type": "argument_keyword",
+          "named": true
+        },
+        {
           "type": "array_type",
           "named": true
         },
@@ -640,6 +672,10 @@
         },
         {
           "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "color",
           "named": true
         },
         {
@@ -655,7 +691,15 @@
           "named": true
         },
         {
+          "type": "item_slot",
+          "named": true
+        },
+        {
           "type": "macro",
+          "named": true
+        },
+        {
+          "type": "path",
           "named": true
         },
         {
@@ -664,6 +708,14 @@
         },
         {
           "type": "score_holder",
+          "named": true
+        },
+        {
+          "type": "scoreboard_display_slot",
+          "named": true
+        },
+        {
+          "type": "scoreboard_objective",
           "named": true
         },
         {
@@ -676,6 +728,10 @@
         },
         {
           "type": "string",
+          "named": true
+        },
+        {
+          "type": "subcommand_keyword",
           "named": true
         },
         {
@@ -721,11 +777,19 @@
       "required": true,
       "types": [
         {
+          "type": "argument_keyword",
+          "named": true
+        },
+        {
           "type": "backslash",
           "named": true
         },
         {
           "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "color",
           "named": true
         },
         {
@@ -741,6 +805,10 @@
           "named": true
         },
         {
+          "type": "item_slot",
+          "named": true
+        },
+        {
           "type": "key",
           "named": true
         },
@@ -749,11 +817,23 @@
           "named": true
         },
         {
+          "type": "path",
+          "named": true
+        },
+        {
           "type": "range",
           "named": true
         },
         {
           "type": "score_holder",
+          "named": true
+        },
+        {
+          "type": "scoreboard_display_slot",
+          "named": true
+        },
+        {
+          "type": "scoreboard_objective",
           "named": true
         },
         {
@@ -766,6 +846,10 @@
         },
         {
           "type": "string",
+          "named": true
+        },
+        {
+          "type": "subcommand_keyword",
           "named": true
         },
         {

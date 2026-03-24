@@ -223,6 +223,7 @@ data get entity @s Pos[0]
 data get entity @s entity.path
 $data modify storage bs:ctx _.v set from storage bs:ctx _.g[{n:"$(name)"}].o[0]
 $data modify storage bs:ctx _.v set from storage bs:ctx _.g[{n:"$(name)"}].o[{v:"$(v)"}]
+data get entity @s entity.path[][]
 execute if data storage bs:ctx _.i[-1].by store result score #n bs.ctx run data get storage bs:ctx _.i[-1].by
 $execute store result storage bs:out color.hex_to_rgb[0] int 1 store result score $color.hex_to_rgb.r bs.out run data get storage bs:const color.hex_values.$(x)
 data modify storage bs:out string.upper set from storage bs:ctx _.1
@@ -367,6 +368,18 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
             (key)
             (string
               (macro)))))))
+  (command
+    (identifier)
+    (argument_keyword)
+    (argument_keyword)
+    (entity_selector
+      (word))
+    (path
+      (subcommand_keyword)
+      (word
+        (identifier))
+      (snbt_array)
+      (snbt_array)))
   (command
     (subcommand_keyword)
     (subcommand_keyword)
@@ -1106,6 +1119,7 @@ execute as @a[name="escape \" me"] as @s
 execute as @a[name="how, about, commas ?"] as @s
 execute as @a[name="and [braces] ?"] as @s
 
+execute if entity @s[tag=my.other.value]
 execute as @e[nbt={ PortalCooldown: 0 }]
 execute as @e[nbt={ Item: {id: "minecraft:diamond", Count: 64 } }]
 
@@ -1238,6 +1252,20 @@ tellraw @s [{"text": "Hi!"}]
     (subcommand_keyword)
     (entity_selector
       (word)))
+  (command
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (entity_selector
+      (word)
+      (data_compound
+        (data_key_value_pair
+          (key)
+          (path
+            (word
+              (identifier))
+            (word
+              (identifier))
+            (argument_keyword))))))
   (command
     (subcommand_keyword)
     (entity_selector
