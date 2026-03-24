@@ -3451,6 +3451,10 @@
             {
               "type": "SYMBOL",
               "name": "_generic_command"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "macro"
             }
           ]
         }

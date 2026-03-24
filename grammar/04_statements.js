@@ -26,6 +26,7 @@ module.exports = {
 				seq("say", $._whitespace, $.greedy_string),
 				$._execute_command,
 				$._generic_command,
+				$.macro,
 			),
 		),
 

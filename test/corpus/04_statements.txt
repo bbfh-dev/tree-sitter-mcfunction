@@ -73,6 +73,7 @@ say Hello World!
 Special commands
 ==================
 
+$$(macro)
 say Hello World! :)
 execute run \
 	return run function ./call:
@@ -81,6 +82,9 @@ execute run \
 ------------------
 
 (source_file
+  (command
+    (macro_sign)
+    (macro))
   (command
     (greedy_string))
   (command
