@@ -68,7 +68,20 @@ module.exports = {
 
 	escape_sequence: (_) =>
 		token(
-			seq("\\", choice("r", "n", "t", "v", "0", "'", '"', "\\", /u\d+/)),
+			seq(
+				"\\",
+				choice(
+					"r",
+					"n",
+					"t",
+					"v",
+					"0",
+					"'",
+					'"',
+					"\\",
+					/u[0-9a-zA-Z]+/,
+				),
+			),
 		),
 
 	_double_quoted_string: ($) =>

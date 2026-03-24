@@ -27,7 +27,14 @@ module.exports = grammar({
 	},
 
 	rules: {
-		source_file: ($) => repeat($._statement),
+		source_file: ($) =>
+			choice(
+				repeat($._statement),
+				seq(
+					optional($._indentation),
+					optional(choice($.comment, $.command)),
+				),
+			),
 
 		identifier: (_) => /[a-z_]+/,
 
