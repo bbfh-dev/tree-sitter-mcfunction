@@ -95,6 +95,7 @@ effect 0.0 21.47483647 -21474836.48 \
 	.0 .47483647 -.48 \
 	3.2767f .2767F -3.2767f -.2767F
 effect 0.$(macro) -$(macro).96
+effect 3.503246160812043E-46
 
 ------------------
 
@@ -132,7 +133,10 @@ effect 0.$(macro) -$(macro).96
     (float
       (macro))
     (float
-      (macro))))
+      (macro)))
+  (command
+    (identifier)
+    (float)))
 
 ==================
 String literals

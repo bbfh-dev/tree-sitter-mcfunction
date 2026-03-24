@@ -19,10 +19,13 @@ module.exports = {
 	integer: ($) => choice("0", /-?\d+/, prec(1, seq("-", $.macro))),
 
 	float: ($) =>
-		choice(
-			choice(/-?\d+\.\d+/, /-?\.\d+/),
-			prec(1, seq(choice("0", /-?\d+/), ".", $.macro)),
-			prec(1, seq(optional("-"), $.macro, /\.\d+/)),
+		seq(
+			choice(
+				choice(/-?\d+\.\d+/, /-?\.\d+/),
+				prec(1, seq(choice("0", /-?\d+/), ".", $.macro)),
+				prec(1, seq(optional("-"), $.macro, /\.\d+/)),
+			),
+			optional(/[eE]-\d+/),
 		),
 
 	_number: ($) => choice($.integer, $.float, $.macro),
