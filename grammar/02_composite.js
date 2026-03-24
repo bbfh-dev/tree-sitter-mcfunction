@@ -181,8 +181,7 @@ module.exports = {
 		seq(
 			$.key,
 			optional($._whitespace),
-			"=",
-			optional("!"),
+			choice(seq("=", optional("!")), "~"),
 			optional($._whitespace),
 			$._data_value,
 		),
