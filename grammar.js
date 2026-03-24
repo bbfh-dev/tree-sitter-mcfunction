@@ -29,11 +29,14 @@ module.exports = grammar({
 
 	rules: {
 		source_file: ($) =>
-			choice(
-				repeat($._statement),
+			// Although this looks rather complicated,
+			// all this does is make $._newline of the LAST $._statement
+			// optional.
+			optional(
 				seq(
-					optional($._indentation),
-					optional(choice($.comment, $.command)),
+					repeat(seq(optional($._statement), $._newline)),
+					$._statement,
+					optional($._newline),
 				),
 			),
 
@@ -44,11 +47,7 @@ module.exports = grammar({
 		_whitespace: ($) => choice(/ /, $.backslash),
 
 		_statement: ($) =>
-			seq(
-				optional($._indentation),
-				optional(choice($.comment, $.command)),
-				$._newline,
-			),
+			seq(optional($._indentation), choice($.comment, $.command)),
 
 		// 'github.com/bbfh-dev/vintage' & 'github.com/mcbeet/mecha'
 		_indentation: (_) => /[ \t]+/,

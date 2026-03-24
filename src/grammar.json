@@ -7,42 +7,42 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_statement"
-          }
-        },
-        {
           "type": "SEQ",
           "members": [
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "_indentation"
-                },
-                {
-                  "type": "BLANK"
-                }
-              ]
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "_statement"
+                      },
+                      {
+                        "type": "BLANK"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "_newline"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_statement"
             },
             {
               "type": "CHOICE",
               "members": [
                 {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "comment"
-                    },
-                    {
-                      "type": "SYMBOL",
-                      "name": "command"
-                    }
-                  ]
+                  "type": "SYMBOL",
+                  "name": "_newline"
                 },
                 {
                   "type": "BLANK"
@@ -50,6 +50,9 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BLANK"
         }
       ]
     },
@@ -93,26 +96,14 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "comment"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "command"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "comment"
             },
             {
-              "type": "BLANK"
+              "type": "SYMBOL",
+              "name": "command"
             }
           ]
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_newline"
         }
       ]
     },
