@@ -1532,11 +1532,19 @@
         },
         {
           "type": "STRING",
+          "value": "weapon.*"
+        },
+        {
+          "type": "STRING",
           "value": "weapon.offhand"
         },
         {
           "type": "STRING",
           "value": "weapon.mainhand"
+        },
+        {
+          "type": "STRING",
+          "value": "armor.*"
         },
         {
           "type": "STRING",
@@ -1560,11 +1568,19 @@
         },
         {
           "type": "STRING",
+          "value": "horse.*"
+        },
+        {
+          "type": "STRING",
           "value": "horse.saddle"
         },
         {
           "type": "STRING",
           "value": "horse.chest"
+        },
+        {
+          "type": "STRING",
+          "value": "player.*"
         },
         {
           "type": "STRING",
