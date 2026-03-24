@@ -72,10 +72,18 @@ module.exports = {
 		),
 
 	_double_quoted_string: ($) =>
-		seq('"', repeat(choice($.escape_sequence, /[^\\"\$%]+/, $.macro)), '"'),
+		seq(
+			'"',
+			repeat(choice($.escape_sequence, /[^\\"\$%]+/, $.macro, "$", "%")),
+			'"',
+		),
 
 	_single_quoted_string: ($) =>
-		seq("'", repeat(choice($.escape_sequence, /[^\\'\$%]+/, $.macro)), "'"),
+		seq(
+			"'",
+			repeat(choice($.escape_sequence, /[^\\'\$%]+/, $.macro, "$", "%")),
+			"'",
+		),
 
 	string: ($) => choice($._double_quoted_string, $._single_quoted_string),
 

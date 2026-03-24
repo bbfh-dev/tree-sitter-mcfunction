@@ -157,6 +157,7 @@ datapack enable "hello world"
 datapack enable "escape \" me"
 datapack enable 'hello $(uninterpreted) world'
 datapack enable 'escape \' me'
+datapack enable 'name $$(line) $(id)'
 
 ------------------
 
@@ -274,7 +275,13 @@ datapack enable 'escape \' me'
     (identifier)
     (argument_keyword)
     (string
-      (escape_sequence))))
+      (escape_sequence)))
+  (command
+    (identifier)
+    (argument_keyword)
+    (string
+      (macro)
+      (macro))))
 
 ==================
 UUIDs
