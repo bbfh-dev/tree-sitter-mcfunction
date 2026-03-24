@@ -148,10 +148,10 @@ kill -+._A-Za-z0-9word word_with_underscores "quoted phrase \u0002 🐡" ""
 kill my.value_$(type) $(type)_for$(macro)
 kill percent.5_0
 scoreboard $input.rgb.r example.id.out _.i #name.target_entity
-scoreboard players operation #t bs.ctx = $vector.cross_product.u.2 bs.in
-scoreboard players operation $vector.cross_product.0 bs.out -= #t bs.ctx
+scoreboard players operation #t foo.ctx = $vector.cross_product.u.2 foo.in
+scoreboard players operation $vector.cross_product.0 foo.out -= #t foo.ctx
 scoreboard players reset * load.status
-scoreboard players set #view.looked_entity bs.data 0
+scoreboard players set #view.looked_entity foo.data 0
 scoreboard players get $$(module).major load.status
 
 say Hello @p[tag=test] :)

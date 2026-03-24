@@ -151,7 +151,7 @@ function #minecraft:load
 function ./_my_local_function_01/and/subfunction
 function #example:$(macro)/path/%[sub]/to
 function #ns.with.dots:function
-function bs.dump:interpret/any
+function foo.dump:interpret/any
 
 ------------------
 
@@ -243,16 +243,16 @@ data get entity @s Pos[0]
 data get entity @s $(macro){foo: bar}
 data get entity @s entity.path
 data get entity @s container.i
-$data modify storage bs:ctx _.v set from storage bs:ctx _.g[{n:"$(name)"}].o[0]
-$data modify storage bs:ctx _.v set from storage bs:ctx _.g[{n:"$(name)"}].o[{v:"$(v)"}]
+$data modify storage foo:bar _.v set from storage foo:bar _.a[{b:"$(name)"}].o[0]
+$data modify storage foo:bar _.v set from storage foo:bar _.a[{b:"$(name)"}].o[{v:"$(v)"}]
 data get entity @s entity.path[][]
-execute if data storage bs:ctx _.i[-1].by store result score #n bs.ctx run data get storage bs:ctx _.i[-1].by
-$execute store result storage bs:out color.hex_to_rgb[0] int 1 store result score $color.hex_to_rgb.r bs.out run data get storage bs:const color.hex_values.$(x)
-data modify storage bs:out string.upper set from storage bs:ctx _.1
-execute store result storage bs:data vector.distance[0] float 1 run scoreboard players get $vector.length.0 bs.in
-$execute store result score $vector.normalize.0 bs.out run data get storage bs:ctx _[0] $(scale)
-execute if data storage bs:data xp.stack[-1].var{} run return run function bs.dump:interpret/compound/compound
-execute if data entity @s Item.components."minecraft:entity_data".Item.components.minecraft:custom_data.bubblellaneous.block_data
+execute if data storage foo:bar _.i[-1].by store result score #n foo.ctx run data get storage foo:ctx _.i[-1].by
+$execute store result storage foo:out color.hex_to_rgb[0] int 1 store result score $color.hex_to_rgb.r foo.out run data get storage foo:const color.hex_values.$(x)
+data modify storage foo:out string.upper set from storage foo:ctx _.1
+execute store result storage foo:data vector.distance[0] float 1 run scoreboard players get $vector.length.0 foo.in
+$execute store result score $vector.normalize.0 foo.out run data get storage foo:ctx _[0] $(scale)
+execute if data storage foo:data xp.stack[-1].var{} run return run function foo.dump:interpret/compound/compound
+execute if data entity @s Item.components."minecraft:entity_data".Item.components.minecraft:custom_data.namespace.block_data
 
 ------------------
 
@@ -676,7 +676,7 @@ data {\
 	abc: {value: false} \
 }
 data modify block ~ ~ ~ RecordItem.tag set value { messages: [hi, bye] }
-data modify storage bs:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5d:93,5e:94,5f:95}
+data modify storage foo:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5d:93,5e:94,5f:95}
 data {frame:{$(frame):{pose:"test"}}}
 
 ------------------
@@ -875,7 +875,7 @@ item stone[foo=bar]
 item #stone
 item #stone[foo=bar]
 give armor_stand[entity_data={id:"minecraft:armor_stand", Tags:[taco_sauce]}]
-give *[!custom_data~{bubblellaneous: {is_gui: true}}]
+give *[!custom_data~{namespace: {is_gui: true}}]
 give *[minecraft:dyed_color]
 give *[minecraft:consumable|food]
 give *[!minecraft:food,!minecraft:consumable]
@@ -1302,10 +1302,10 @@ execute as @a[advancements={minecraft:story/obtain_armor={iron_helmet=true, gold
 execute as @a[advancements={minecraft:story/form_obsidian=true, minecraft:story/follow_ender_eye=true}]
 execute as @a[advancements={minecraft:story/form_obsidian={foo=true, bar=false},minecraft:story/follow_ender_eye={foo=false, bar=true}}]
 
-clear @s #bubblellaneous:gui_item[custom_data~{bubblellaneous: {is_gui: 1b}}]
+clear @s #namespace:gui_item[custom_data~{namespace: {is_gui: 1b}}]
 $particle item $(base_item)[minecraft:custom_model_data=$(custom_model_data)]
 
-execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run return run function bs.hitbox:get_entity/get_custom
+execute if entity @s[scores={foo.width=0..,foo.height=0..,foo.depth=0..}] run return run function foo.hitbox:get_entity/get_custom
 tellraw @s [{"text": "Hi!"}]
 
 ------------------
