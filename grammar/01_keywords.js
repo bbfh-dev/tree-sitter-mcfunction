@@ -43,7 +43,8 @@ module.exports = {
 			$.item_slot,
 		),
 
-	operation: (_) => choice("=", "+=", "-=", "*=", "/=", "%=", "><", "<", ">"),
+	operation: (_) =>
+		choice("=", "+=", "-=", "*=", "/=", "%=", "><", "<", ">", "<=", ">="),
 
 	color: (_) => choice(...COLORS),
 
