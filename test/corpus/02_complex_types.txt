@@ -677,6 +677,7 @@ data {\
 }
 data modify block ~ ~ ~ RecordItem.tag set value { messages: [hi, bye] }
 data modify storage bs:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5d:93,5e:94,5f:95}
+data {frame:{$(frame):{pose:"test"}}}
 
 ------------------
 
@@ -789,7 +790,20 @@ data modify storage bs:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5
         (integer))
       (snbt_key_value_pair
         (key)
-        (integer)))))
+        (integer))))
+  (command
+    (identifier)
+    (snbt_compound
+      (snbt_key_value_pair
+        (key)
+        (snbt_compound
+          (snbt_key_value_pair
+            (key
+              (macro))
+            (snbt_compound
+              (snbt_key_value_pair
+                (key)
+                (string)))))))))
 
 ==================
 sNBT Arrays

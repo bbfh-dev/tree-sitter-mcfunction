@@ -1950,45 +1950,41 @@
       ]
     },
     "namespace": {
-      "type": "PREC",
-      "value": 2,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "macro"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "word"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "score_holder"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "path"
-              }
-            ]
-          },
-          {
-            "type": "TOKEN",
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "macro"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "word"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "score_holder"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "path"
+            }
+          ]
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "PREC",
+            "value": 1,
             "content": {
-              "type": "PREC",
-              "value": 2,
-              "content": {
-                "type": "STRING",
-                "value": ":"
-              }
+              "type": "STRING",
+              "value": ":"
             }
           }
-        ]
-      }
+        }
+      ]
     },
     "_resource_segment": {
       "type": "SEQ",
@@ -2527,8 +2523,15 @@
                   ]
                 },
                 {
-                  "type": "STRING",
-                  "value": ":"
+                  "type": "TOKEN",
+                  "content": {
+                    "type": "PREC",
+                    "value": 1,
+                    "content": {
+                      "type": "STRING",
+                      "value": ":"
+                    }
+                  }
                 }
               ]
             },
@@ -2598,8 +2601,12 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "macro"
+          "type": "PREC",
+          "value": 1,
+          "content": {
+            "type": "SYMBOL",
+            "name": "macro"
+          }
         },
         {
           "type": "TOKEN",

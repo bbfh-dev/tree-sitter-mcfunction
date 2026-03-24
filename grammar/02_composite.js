@@ -69,12 +69,9 @@ module.exports = {
 		),
 
 	namespace: ($) =>
-		prec(
-			2,
-			seq(
-				choice($.macro, $.word, $.score_holder, $.path),
-				token(prec(2, ":")),
-			),
+		seq(
+			choice($.macro, $.word, $.score_holder, $.path),
+			token(prec(1, ":")),
 		),
 
 	_resource_segment: ($) =>
@@ -152,7 +149,7 @@ module.exports = {
 	snbt_key_value_pair: ($) =>
 		seq(
 			choice(
-				seq($.key, optional($._whitespace), ":"),
+				seq($.key, optional($._whitespace), token(prec(1, ":"))),
 				seq($.key, optional($._whitespace), seq("=", optional("!"))),
 			),
 			optional($._whitespace),
@@ -161,7 +158,7 @@ module.exports = {
 
 	key: ($) =>
 		choice(
-			$.macro,
+			prec(1, $.macro),
 			token(prec(2, /[0-9a-zA-Z\-\+\.\*\?_]+/)),
 			$._resource,
 			$.string,
