@@ -3627,6 +3627,17 @@
           "value": "[0-9]+_[0-9a-zA-Z_]*"
         },
         {
+          "type": "TOKEN",
+          "content": {
+            "type": "PREC",
+            "value": 1,
+            "content": {
+              "type": "PATTERN",
+              "value": "[A-Z][0-9a-zA-Z_]+"
+            }
+          }
+        },
+        {
           "type": "SYMBOL",
           "name": "identifier"
         },

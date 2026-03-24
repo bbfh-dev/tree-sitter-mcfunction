@@ -111,6 +111,7 @@ module.exports = {
 		choice(
 			/[\-\+]*[a-zA-Z_][0-9a-zA-Z_]*/,
 			/[0-9]+_[0-9a-zA-Z_]*/,
+			token(prec(1, /[A-Z][0-9a-zA-Z_]+/)),
 			$.identifier,
 			$._word_overlap,
 		),
