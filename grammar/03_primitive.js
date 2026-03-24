@@ -123,7 +123,12 @@ module.exports = {
 		),
 
 	_word_token: ($) =>
-		choice(/[\-\+]*[a-zA-Z_][0-9a-zA-Z_]*/, $.identifier, $._word_overlap),
+		choice(
+			/[\-\+]*[a-zA-Z_][0-9a-zA-Z_]*/,
+			/[0-9]+_[0-9a-zA-Z_]*/,
+			$.identifier,
+			$._word_overlap,
+		),
 
 	word: ($) =>
 		choice(
