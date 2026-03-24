@@ -25,7 +25,7 @@ module.exports = {
 				prec(1, seq(choice("0", /-?\d+/), ".", $.macro)),
 				prec(1, seq(optional("-"), $.macro, /\.\d+/)),
 			),
-			optional(/[eE]-\d+/),
+			optional(/[eE]-?\d+/),
 		),
 
 	_number: ($) => choice($.integer, $.float, $.macro),
@@ -87,10 +87,7 @@ module.exports = {
 			seq("-", /[_\.\+a-zA-Z][_\.\-\+0-9a-zA-Z]*/),
 			seq(
 				choice("#", "$", "%"),
-				choice(
-					/[_\.\-\+0-9a-zA-Z]+/,
-					seq($.macro, optional(/[_\.\-\+0-9a-zA-Z]+/)),
-				),
+				repeat1(choice(/[_\.\-\+0-9a-zA-Z]+/, $.macro)),
 			),
 		),
 

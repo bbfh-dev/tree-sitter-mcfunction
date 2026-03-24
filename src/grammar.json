@@ -2915,7 +2915,7 @@
           "members": [
             {
               "type": "PATTERN",
-              "value": "[eE]-\\d+"
+              "value": "[eE]-?\\d+"
             },
             {
               "type": "BLANK"
@@ -3341,34 +3341,20 @@
               ]
             },
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "PATTERN",
-                  "value": "[_\\.\\-\\+0-9a-zA-Z]+"
-                },
-                {
-                  "type": "SEQ",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "macro"
-                    },
-                    {
-                      "type": "CHOICE",
-                      "members": [
-                        {
-                          "type": "PATTERN",
-                          "value": "[_\\.\\-\\+0-9a-zA-Z]+"
-                        },
-                        {
-                          "type": "BLANK"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "type": "REPEAT1",
+              "content": {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "PATTERN",
+                    "value": "[_\\.\\-\\+0-9a-zA-Z]+"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "macro"
+                  }
+                ]
+              }
             }
           ]
         }
