@@ -34,7 +34,12 @@ module.exports = grammar({
 			// optional.
 			optional(
 				seq(
-					repeat(seq(optional($._statement), $._newline)),
+					repeat(
+						seq(
+							choice(optional($._statement), $._indentation),
+							$._newline,
+						),
+					),
 					$._statement,
 					optional($._newline),
 				),
