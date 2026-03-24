@@ -21,7 +21,7 @@ module.exports = {
 	float: ($) =>
 		seq(
 			choice(
-				choice(/-?\d+\.\d+/, /-?\.\d+/),
+				seq(choice(/-?\d+\.\d+/, /-?\.\d+/), optional($.macro)),
 				prec(1, seq(choice("0", /-?\d+/), ".", $.macro)),
 				prec(1, seq(optional("-"), $.macro, /\.\d+/)),
 			),
