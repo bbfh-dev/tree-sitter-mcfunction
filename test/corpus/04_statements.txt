@@ -79,7 +79,7 @@ say Hello World! :)
 execute run \
 	return run function ./call:
 	say Hi!
-summon villager
+summon villager    
 
 ------------------
 

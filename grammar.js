@@ -60,7 +60,7 @@ module.exports = grammar({
 		_indentation: (_) => /[ \t]+/,
 
 		// Allows for ":" from Python 'github.com/mcbeet/mecha'
-		_newline: (_) => seq(optional(":"), /\r?\n/),
+		_newline: (_) => seq(optional(":"), / *\r?\n/),
 
 		macro: (_) =>
 			token(
