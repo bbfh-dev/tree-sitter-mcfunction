@@ -120,6 +120,8 @@ module.exports = {
 			$.scoreboard_objective,
 			$.scoreboard_display_slot,
 			$.item_slot,
+			prec(1, "villager"),
+			prec(1, "horse"),
 		),
 
 	_word_token: ($) =>
