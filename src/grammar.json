@@ -2959,6 +2959,10 @@
                       },
                       {
                         "type": "SYMBOL",
+                        "name": "integer"
+                      },
+                      {
+                        "type": "SYMBOL",
                         "name": "macro"
                       }
                     ]
@@ -2995,24 +2999,11 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "macro"
-              }
-            ]
-          },
-          {
-            "type": "STRING",
-            "value": "-"
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "uuid_4_segment"
+                "name": "word"
               },
               {
-                "type": "STRING",
-                "value": "0"
+                "type": "SYMBOL",
+                "name": "integer"
               },
               {
                 "type": "SYMBOL",
@@ -3034,6 +3025,43 @@
               {
                 "type": "STRING",
                 "value": "0"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "word"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "integer"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "macro"
+              }
+            ]
+          },
+          {
+            "type": "STRING",
+            "value": "-"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "uuid_4_segment"
+              },
+              {
+                "type": "STRING",
+                "value": "0"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "word"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "integer"
               },
               {
                 "type": "SYMBOL",
@@ -3055,6 +3083,14 @@
               {
                 "type": "STRING",
                 "value": "0"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "word"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "integer"
               },
               {
                 "type": "SYMBOL",

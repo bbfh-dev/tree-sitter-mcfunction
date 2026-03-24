@@ -41,16 +41,25 @@ module.exports = {
 			1,
 			seq(
 				choice(
-					seq(choice($.uuid_8_segment, "0", $.word, $.macro), "-"),
+					seq(
+						choice(
+							$.uuid_8_segment,
+							"0",
+							$.word,
+							$.integer,
+							$.macro,
+						),
+						"-",
+					),
 					token(prec(1, "0-")),
 				),
-				choice($.uuid_4_segment, "0", $.macro),
+				choice($.uuid_4_segment, "0", $.word, $.integer, $.macro),
 				"-",
-				choice($.uuid_4_segment, "0", $.macro),
+				choice($.uuid_4_segment, "0", $.word, $.integer, $.macro),
 				"-",
-				choice($.uuid_4_segment, "0", $.macro),
+				choice($.uuid_4_segment, "0", $.word, $.integer, $.macro),
 				"-",
-				choice($.uuid_12_segment, "0", $.macro),
+				choice($.uuid_12_segment, "0", $.word, $.integer, $.macro),
 			),
 		),
 

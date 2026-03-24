@@ -863,6 +863,10 @@
       "required": false,
       "types": [
         {
+          "type": "integer",
+          "named": true
+        },
+        {
           "type": "macro",
           "named": true
         },
