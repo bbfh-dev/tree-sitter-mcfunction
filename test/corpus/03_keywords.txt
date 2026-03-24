@@ -177,10 +177,8 @@ item contents container.50 hotbar.7 inventory.* enderchest.$(macro) villager.5 h
     (item_slot)
     (item_slot
       (macro))
-    (item_slot
-      (integer))
-    (item_slot
-      (integer))
+    (item_slot)
+    (item_slot)
     (backslash)
     (item_slot)
     (item_slot)

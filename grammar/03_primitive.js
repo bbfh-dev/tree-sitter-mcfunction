@@ -141,7 +141,7 @@ module.exports = {
 		),
 
 	word: ($) =>
-		prec.right(
+		prec.left(
 			choice(
 				seq(
 					$._word_token,
