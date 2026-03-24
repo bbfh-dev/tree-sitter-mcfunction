@@ -505,6 +505,18 @@
       "required": true,
       "types": [
         {
+          "type": "argument_keyword",
+          "named": true
+        },
+        {
+          "type": "color",
+          "named": true
+        },
+        {
+          "type": "item_slot",
+          "named": true
+        },
+        {
           "type": "macro",
           "named": true
         },
@@ -514,6 +526,18 @@
         },
         {
           "type": "score_holder",
+          "named": true
+        },
+        {
+          "type": "scoreboard_display_slot",
+          "named": true
+        },
+        {
+          "type": "scoreboard_objective",
+          "named": true
+        },
+        {
+          "type": "subcommand_keyword",
           "named": true
         },
         {

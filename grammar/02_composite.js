@@ -69,7 +69,7 @@ module.exports = {
 
 	namespace: ($) =>
 		seq(
-			choice($.macro, $.word, $.score_holder, $.path),
+			choice($.macro, $.word, $.score_holder, $.path, $._word_overlap),
 			token(prec(2, ":")),
 		),
 

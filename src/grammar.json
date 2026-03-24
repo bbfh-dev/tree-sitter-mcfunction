@@ -1917,6 +1917,10 @@
             {
               "type": "SYMBOL",
               "name": "path"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_word_overlap"
             }
           ]
         },

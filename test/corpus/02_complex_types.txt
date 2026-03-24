@@ -144,6 +144,7 @@ execute in minecraft:overworld
 execute in minecraft:$(macro)
 execute in minecraft:the_nether
 function #foo
+function give:example/path
 function custom:folder/*_test_?
 function #minecraft:load
 function ./_my_local_function_01/and/subfunction
@@ -171,6 +172,13 @@ function bs.dump:interpret/any
   (command
     (identifier)
     (score_holder))
+  (command
+    (identifier)
+    (generic_resource
+      (namespace
+        (argument_keyword))
+      (word)
+      (word)))
   (command
     (identifier)
     (generic_resource
