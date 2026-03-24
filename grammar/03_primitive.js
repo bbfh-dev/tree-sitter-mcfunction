@@ -99,5 +99,11 @@ module.exports = {
 			),
 		),
 
-	word: ($) => choice(/[\-\+]*[a-zA-Z_][0-9a-zA-Z_]*/, $.identifier),
+	_word_token: ($) => choice(/[\-\+]*[a-zA-Z_][0-9a-zA-Z_]*/, $.identifier),
+
+	word: ($) =>
+		choice(
+			seq($._word_token, repeat(choice($.macro, $._word_token))),
+			seq($.macro, repeat1(choice($.macro, $._word_token))),
+		),
 };

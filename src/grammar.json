@@ -3376,7 +3376,7 @@
         }
       ]
     },
-    "word": {
+    "_word_token": {
       "type": "CHOICE",
       "members": [
         {
@@ -3386,6 +3386,61 @@
         {
           "type": "SYMBOL",
           "name": "identifier"
+        }
+      ]
+    },
+    "word": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_word_token"
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "macro"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "_word_token"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "macro"
+            },
+            {
+              "type": "REPEAT1",
+              "content": {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "macro"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "_word_token"
+                  }
+                ]
+              }
+            }
+          ]
         }
       ]
     },

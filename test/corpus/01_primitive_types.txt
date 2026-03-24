@@ -143,6 +143,7 @@ String literals
 ==================
 
 kill -+._A-Za-z0-9word word_with_underscores "quoted phrase \u0002 🐡" ""
+kill my.value_$(type) $(type)_for$(macro)
 scoreboard $input.rgb.r example.id.out _.i #name.target_entity
 scoreboard players operation #t bs.ctx = $vector.cross_product.u.2 bs.in
 scoreboard players operation $vector.cross_product.0 bs.out -= #t bs.ctx
@@ -170,6 +171,18 @@ datapack enable 'name $$(line) $(id)'
     (string
       (escape_sequence))
     (string))
+  (command
+    (identifier)
+    (path
+      (word
+        (identifier))
+      (word
+        (identifier)
+        (macro)))
+    (word
+      (macro)
+      (identifier)
+      (macro)))
   (command
     (identifier)
     (score_holder)
