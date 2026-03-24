@@ -1,7 +1,4 @@
 /// <reference types="tree-sitter-cli/dsl" />
-
-const { key } = require("./02_composite.js");
-
 // @ts-check
 
 const KEYWORDS = {
@@ -29,9 +26,6 @@ const COLORS = [
 	"yellow",
 	"white",
 ];
-
-// const keyword = (verb) => token(prec(1, verb));
-const keyword = (verb) => verb;
 
 module.exports = {
 	argument_keyword: (_) => choice(...KEYWORDS.arguments),
