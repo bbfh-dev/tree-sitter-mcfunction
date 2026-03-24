@@ -21,7 +21,8 @@ Comment docs
 
 (source_file
   (comment
-    (greedy_string))
+    (block_comment)
+    (block_comment))
   (comment)
   (comment
     (greedy_string))
@@ -58,15 +59,15 @@ say Hello World!
 ------------------
 
 (source_file
-  (comment
+  (special_comment
     (identifier)
     (greedy_string))
-  (comment
+  (special_comment
     (identifier)
     (greedy_string))
   (command
     (greedy_string))
-  (comment
+  (special_comment
     (identifier)))
 
 ==================
@@ -113,11 +114,13 @@ give @s[advancements={vanilla:consumed_item=true}]
       (word)
       (data_compound
         (data_key_value_pair
+          (key)
           (advancements_data_compound
             (advancements_key_value_pair
-              (generic_resource
-                (namespace
-                  (word
-                    (identifier)))
-                (word))
+              (key
+                (generic_resource
+                  (namespace
+                    (word
+                      (identifier)))
+                  (word)))
               (boolean))))))))

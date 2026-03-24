@@ -53,7 +53,10 @@ module.exports = grammar({
 		_whitespace: ($) => choice(/ +/, $.backslash),
 
 		_statement: ($) =>
-			seq(optional($._indentation), choice($.comment, $.command)),
+			seq(
+				optional($._indentation),
+				choice($.comment, $.special_comment, $.command),
+			),
 
 		// 'github.com/bbfh-dev/vintage' & 'github.com/mcbeet/mecha'
 		_indentation: (_) => /[ \t]+/,

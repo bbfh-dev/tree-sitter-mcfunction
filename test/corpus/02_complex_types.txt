@@ -1517,11 +1517,13 @@ tellraw @s [{"text": "Hi!"}]
       (word)
       (data_compound
         (data_key_value_pair
+          (key)
           (advancements_data_compound
             (advancements_key_value_pair
-              (minecraft_resource
-                (word)
-                (word))
+              (key
+                (minecraft_resource
+                  (word)
+                  (word)))
               (boolean)))))))
   (command
     (subcommand_keyword)
@@ -1529,11 +1531,13 @@ tellraw @s [{"text": "Hi!"}]
       (word)
       (data_compound
         (data_key_value_pair
+          (key)
           (advancements_data_compound
             (advancements_key_value_pair
-              (minecraft_resource
-                (word)
-                (word))
+              (key
+                (minecraft_resource
+                  (word)
+                  (word)))
               (snbt_compound
                 (snbt_key_value_pair
                   (key)
@@ -1544,11 +1548,13 @@ tellraw @s [{"text": "Hi!"}]
       (word)
       (data_compound
         (data_key_value_pair
+          (key)
           (advancements_data_compound
             (advancements_key_value_pair
-              (minecraft_resource
-                (word)
-                (word))
+              (key
+                (minecraft_resource
+                  (word)
+                  (word)))
               (snbt_compound
                 (snbt_key_value_pair
                   (key)
@@ -1562,16 +1568,19 @@ tellraw @s [{"text": "Hi!"}]
       (word)
       (data_compound
         (data_key_value_pair
+          (key)
           (advancements_data_compound
             (advancements_key_value_pair
-              (minecraft_resource
-                (word)
-                (word))
+              (key
+                (minecraft_resource
+                  (word)
+                  (word)))
               (boolean))
             (advancements_key_value_pair
-              (minecraft_resource
-                (word)
-                (word))
+              (key
+                (minecraft_resource
+                  (word)
+                  (word)))
               (boolean)))))))
   (command
     (subcommand_keyword)
@@ -1579,11 +1588,13 @@ tellraw @s [{"text": "Hi!"}]
       (word)
       (data_compound
         (data_key_value_pair
+          (key)
           (advancements_data_compound
             (advancements_key_value_pair
-              (minecraft_resource
-                (word)
-                (word))
+              (key
+                (minecraft_resource
+                  (word)
+                  (word)))
               (snbt_compound
                 (snbt_key_value_pair
                   (key)
@@ -1592,9 +1603,10 @@ tellraw @s [{"text": "Hi!"}]
                   (key)
                   (boolean))))
             (advancements_key_value_pair
-              (minecraft_resource
-                (word)
-                (word))
+              (key
+                (minecraft_resource
+                  (word)
+                  (word)))
               (snbt_compound
                 (snbt_key_value_pair
                   (key)

@@ -198,14 +198,14 @@ module.exports = {
 				repeat1(seq("|", choice(prec(1, $._resource), $.word))),
 			),
 			seq(
-				token(prec(2, /advancements *= */)),
+				alias(token(prec(2, /advancements *= */)), $.key),
 				$.advancements_data_compound,
 			),
 		),
 
 	advancements_key_value_pair: ($) =>
 		seq(
-			$._resource,
+			alias($._resource, $.key),
 			optional($._whitespace),
 			choice(seq("=", optional($._whitespace), optional("!")), "~"),
 			optional($._whitespace),

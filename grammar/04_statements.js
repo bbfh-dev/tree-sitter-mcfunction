@@ -4,6 +4,12 @@
 module.exports = {
 	comment: ($) =>
 		choice(
+			alias(seq("#>", optional($.greedy_string)), $.block_comment),
+			seq("#", optional($.greedy_string)),
+		),
+
+	special_comment: ($) =>
+		choice(
 			seq(
 				"#~>",
 				$.identifier,
@@ -14,8 +20,6 @@ module.exports = {
 				$.identifier,
 				optional(seq($._whitespace, $.greedy_string)),
 			),
-			seq("#>", optional($.greedy_string)),
-			seq("#", optional($.greedy_string)),
 		),
 
 	command: ($) =>
