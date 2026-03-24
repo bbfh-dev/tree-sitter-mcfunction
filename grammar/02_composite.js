@@ -47,7 +47,11 @@ module.exports = {
 	_resource: ($) => choice($.minecraft_resource, $.generic_resource),
 
 	minecraft_resource: ($) =>
-		seq(token(prec(2, "minecraft:")), $.word, repeat(seq("/", $.word))),
+		seq(
+			token(prec(2, "minecraft:")),
+			choice($.word, $.macro),
+			repeat(seq("/", $.word)),
+		),
 
 	generic_resource: ($) =>
 		choice(

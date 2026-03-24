@@ -1407,17 +1407,8 @@
               "value": "container."
             },
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "*"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "integer"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "_item_slot_identifier"
             }
           ]
         },
@@ -1429,17 +1420,8 @@
               "value": "hotbar."
             },
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "*"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "integer"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "_item_slot_identifier"
             }
           ]
         },
@@ -1451,17 +1433,8 @@
               "value": "inventory."
             },
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "*"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "integer"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "_item_slot_identifier"
             }
           ]
         },
@@ -1473,17 +1446,8 @@
               "value": "enderchest."
             },
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "*"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "integer"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "_item_slot_identifier"
             }
           ]
         },
@@ -1495,17 +1459,8 @@
               "value": "villager."
             },
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "*"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "integer"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "_item_slot_identifier"
             }
           ]
         },
@@ -1517,17 +1472,8 @@
               "value": "horse."
             },
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "*"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "integer"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "_item_slot_identifier"
             }
           ]
         },
@@ -1539,17 +1485,8 @@
               "value": "player.crafting."
             },
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "*"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "integer"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "_item_slot_identifier"
             }
           ]
         },
@@ -1600,6 +1537,23 @@
         {
           "type": "STRING",
           "value": "player.cursor"
+        }
+      ]
+    },
+    "_item_slot_identifier": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "integer"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "macro"
         }
       ]
     },
@@ -1821,8 +1775,17 @@
           }
         },
         {
-          "type": "SYMBOL",
-          "name": "word"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "word"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "macro"
+            }
+          ]
         },
         {
           "type": "REPEAT",

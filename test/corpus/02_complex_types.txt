@@ -141,6 +141,7 @@ Resources
 ==================
 
 execute in minecraft:overworld
+execute in minecraft:$(macro)
 execute in minecraft:the_nether
 function #foo
 function custom:folder/*_test_?
@@ -158,6 +159,10 @@ function bs.dump:interpret/any
     (minecraft_resource
       (word
         (identifier))))
+  (command
+    (subcommand_keyword)
+    (minecraft_resource
+      (macro)))
   (command
     (subcommand_keyword)
     (minecraft_resource

@@ -158,7 +158,7 @@ scoreboard players operation #%[example] example /= 15
 Item slots
 ==================
 
-item contents container.50 hotbar.7 inventory.* enderchest.12 villager.5 horse.12 \
+item contents container.50 hotbar.7 inventory.* enderchest.$(macro) villager.5 horse.12 \
 	weapon weapon.mainhand weapon.offhand \
 	armor.head armor.chest armor.legs armor.feet armor.body \
 	horse.saddle horse.chest \
@@ -176,7 +176,7 @@ item contents container.50 hotbar.7 inventory.* enderchest.12 villager.5 horse.1
       (integer))
     (item_slot)
     (item_slot
-      (integer))
+      (macro))
     (item_slot
       (integer))
     (item_slot

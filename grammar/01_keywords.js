@@ -75,13 +75,13 @@ module.exports = {
 
 	item_slot: ($) =>
 		choice(
-			seq("container.", choice("*", $.integer)),
-			seq("hotbar.", choice("*", $.integer)),
-			seq("inventory.", choice("*", $.integer)),
-			seq("enderchest.", choice("*", $.integer)),
-			seq("villager.", choice("*", $.integer)),
-			seq("horse.", choice("*", $.integer)),
-			seq("player.crafting.", choice("*", $.integer)),
+			seq("container.", $._item_slot_identifier),
+			seq("hotbar.", $._item_slot_identifier),
+			seq("inventory.", $._item_slot_identifier),
+			seq("enderchest.", $._item_slot_identifier),
+			seq("villager.", $._item_slot_identifier),
+			seq("horse.", $._item_slot_identifier),
+			seq("player.crafting.", $._item_slot_identifier),
 			"contents",
 			"weapon",
 			"weapon.offhand",
@@ -95,4 +95,6 @@ module.exports = {
 			"horse.chest",
 			"player.cursor",
 		),
+
+	_item_slot_identifier: ($) => choice("*", $.integer, $.macro),
 };
