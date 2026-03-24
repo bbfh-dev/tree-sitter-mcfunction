@@ -8,7 +8,7 @@ effect true false
 
 (source_file
   (command
-    (command_identifier)
+    (identifier)
     (boolean)
     (boolean)))
 
@@ -26,7 +26,7 @@ $effect $(macro) $(macro)b -$(macro)l
 
 (source_file
   (command
-    (command_identifier)
+    (identifier)
     (integer)
     (integer)
     (integer)
@@ -41,7 +41,7 @@ $effect $(macro) $(macro)b -$(macro)l
       (integer)
       (measurement_unit)))
   (command
-    (command_identifier)
+    (identifier)
     (integer)
     (integer)
     (integer)
@@ -57,7 +57,7 @@ $effect $(macro) $(macro)b -$(macro)l
       (measurement_unit)))
   (command
     (macro_sign)
-    (command_identifier)
+    (identifier)
     (macro)
     (typed_number
       (macro)
@@ -78,11 +78,11 @@ $effect 0x$(macro)
 
 (source_file
   (command
-    (command_identifier)
+    (identifier)
     (hexadecimal))
   (command
     (macro_sign)
-    (command_identifier)
+    (identifier)
     (hexadecimal
       (macro))))
 
@@ -100,13 +100,13 @@ effect 0.$(macro) -$(macro).96
 
 (source_file
   (command
-    (command_identifier)
+    (identifier)
     (float)
     (float)
     (float)
     (float))
   (command
-    (command_identifier)
+    (identifier)
     (float)
     (float)
     (float)
@@ -128,7 +128,7 @@ effect 0.$(macro) -$(macro).96
       (float)
       (measurement_unit)))
   (command
-    (command_identifier)
+    (identifier)
     (float
       (macro))
     (float
@@ -157,90 +157,104 @@ datapack enable 'escape \' me'
 
 (source_file
   (command
-    (command_identifier)
+    (identifier)
     (score_holder)
-    (word)
+    (word
+      (identifier))
     (string)
     (string))
   (command
-    (command_identifier)
+    (identifier)
     (score_holder)
     (path
-      (identifier)
-      (identifier)
-      (identifier))
+      (word
+        (identifier))
+      (argument_keyword)
+      (word
+        (identifier)))
     (path
-      (identifier)
-      (identifier))
+      (word
+        (identifier))
+      (word
+        (identifier)))
     (score_holder))
   (command
-    (command_identifier)
+    (identifier)
     (argument_keyword)
     (argument_keyword)
     (score_holder)
     (path
-      (identifier)
-      (identifier))
+      (word
+        (identifier))
+      (word
+        (identifier)))
     (operation)
     (score_holder)
     (path
-      (identifier)
-      (identifier)))
+      (word
+        (identifier))
+      (subcommand_keyword)))
   (command
-    (command_identifier)
+    (identifier)
     (argument_keyword)
     (argument_keyword)
     (score_holder)
     (path
-      (identifier)
-      (identifier))
+      (word
+        (identifier))
+      (word
+        (identifier)))
     (operation)
     (score_holder)
     (path
-      (identifier)
-      (identifier)))
+      (word
+        (identifier))
+      (word
+        (identifier))))
   (command
-    (command_identifier)
+    (identifier)
     (argument_keyword)
     (argument_keyword)
     (score_holder)
     (path
-      (identifier)
-      (identifier)))
+      (word
+        (identifier))
+      (word
+        (identifier))))
   (command
-    (command_identifier)
+    (identifier)
     (argument_keyword)
     (argument_keyword)
     (score_holder)
     (path
-      (identifier)
-      (identifier))
+      (word
+        (identifier))
+      (subcommand_keyword))
     (integer))
   (command
-    (command_identifier)
     (greedy_string))
   (command
     (macro_sign)
-    (command_identifier)
+    (identifier)
     (argument_keyword)
     (string
       (macro)))
   (command
-    (command_identifier)
+    (identifier)
     (argument_keyword)
     (string))
   (command
-    (command_identifier)
+    (identifier)
     (argument_keyword)
     (string
       (escape_sequence)))
   (command
-    (command_identifier)
+    (identifier)
     (argument_keyword)
     (string
       (macro)))
   (command
-    (command_identifier)
+    (identifier)
     (argument_keyword)
     (string
       (escape_sequence))))
@@ -259,7 +273,7 @@ $kill dd12be42-0-0-$(macro)-11c01849e498
 
 (source_file
   (command
-    (command_identifier)
+    (identifier)
     (uuid
       (uuid_8_segment)
       (uuid_4_segment)
@@ -267,15 +281,15 @@ $kill dd12be42-0-0-$(macro)-11c01849e498
       (uuid_4_segment)
       (uuid_12_segment)))
   (command
-    (command_identifier)
+    (identifier)
     (uuid))
   (command
-    (command_identifier)
+    (identifier)
     (uuid
       (uuid_4_segment)))
   (command
     (macro_sign)
-    (command_identifier)
+    (identifier)
     (uuid
       (uuid_8_segment)
       (macro)

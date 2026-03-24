@@ -105,7 +105,7 @@ module.exports = [
 	"resetthese",
 	"revoke",
 	"roll",
-	"run",
+	// "run",
 	"runclosest",
 	"runfailed",
 	"runthat",

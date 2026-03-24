@@ -1,3 +1,6 @@
+/// <reference types="tree-sitter-cli/dsl" />
+// @ts-check
+
 module.exports = {
 	_primitive_type: ($) =>
 		choice(
@@ -8,29 +11,18 @@ module.exports = {
 			$.uuid,
 			$.string,
 			$.score_holder,
-			alias($.identifier, $.word),
+			$.word,
 		),
 
-	boolean: (_) => token(prec(1, choice("true", "false"))),
+	boolean: (_) => choice("true", "false"),
 
-	integer: ($) =>
-		choice(
-			token(prec(1, /-?\d+/)),
-			prec(1, seq(token(prec(1, "-")), $.macro)),
-		),
+	integer: ($) => choice("0", /-?\d+/, prec(1, seq("-", $.macro))),
 
 	float: ($) =>
 		choice(
-			token(prec(1, choice(/-?\d+\.\d+/, /-?\.\d+/))),
-			prec(1, seq(token(prec(1, /-?\d+/)), ".", $.macro)),
-			prec(
-				1,
-				seq(
-					optional(token(prec(1, "-"))),
-					$.macro,
-					token(prec(1, /\.\d+/)),
-				),
-			),
+			choice(/-?\d+\.\d+/, /-?\.\d+/),
+			prec(1, seq(choice("0", /-?\d+/), ".", $.macro)),
+			prec(1, seq(optional("-"), $.macro, /\.\d+/)),
 		),
 
 	_number: ($) => choice($.integer, $.float, $.macro),
@@ -41,26 +33,23 @@ module.exports = {
 			prec(1, seq(token(prec(1, /0x/)), $.macro)),
 		),
 
-	uuid_12_segment: (_) => token(prec(1, /[0-9a-fA-F]{12}/)),
-	uuid_8_segment: (_) => token(prec(1, /[0-9a-fA-F]{8}/)),
-	uuid_4_segment: (_) => token(prec(1, /[0-9a-fA-F]{4}/)),
+	uuid_12_segment: (_) => /[0-9a-fA-F]{12}/,
+	uuid_8_segment: (_) => /[0-9a-fA-F]{8}/,
+	uuid_4_segment: (_) => /[0-9a-fA-F]{4}/,
 	uuid: ($) =>
 		prec(
 			1,
 			seq(
 				choice(
-					seq(
-						choice($.uuid_8_segment, "0", $.macro),
-						token.immediate("-"),
-					),
+					seq(choice($.uuid_8_segment, "0", $.macro), "-"),
 					token(prec(1, "0-")),
 				),
 				choice($.uuid_4_segment, "0", $.macro),
-				token.immediate("-"),
+				"-",
 				choice($.uuid_4_segment, "0", $.macro),
-				token.immediate("-"),
+				"-",
 				choice($.uuid_4_segment, "0", $.macro),
-				token.immediate("-"),
+				"-",
 				choice($.uuid_12_segment, "0", $.macro),
 			),
 		),
@@ -93,7 +82,9 @@ module.exports = {
 	score_holder: ($) =>
 		choice(
 			"*",
-			seq(token(prec(1, "-")), /[_\.\+a-zA-Z][_\.\-\+0-9a-zA-Z]*/),
+			seq("-", /[_\.\+a-zA-Z][_\.\-\+0-9a-zA-Z]*/),
 			seq(choice("#", "$", "%"), choice(/[_\.\-\+0-9a-zA-Z]+/, $.macro)),
 		),
+
+	word: ($) => choice(/[\-\+]*[a-zA-Z_][0-9a-zA-Z_]*/, $.identifier),
 };

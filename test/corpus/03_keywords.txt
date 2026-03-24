@@ -8,15 +8,12 @@ execute as at in positioned align run say Hi
 
 (source_file
   (command
-    (command_identifier)
     (subcommand_keyword)
     (subcommand_keyword)
     (subcommand_keyword)
     (subcommand_keyword)
     (subcommand_keyword)
-    (argument_keyword)
     (command
-      (command_identifier)
       (greedy_string))))
 
 ==================
@@ -29,7 +26,7 @@ tellraw black dark_blue dark_green dark_aqua dark_red dark_purple dark_purple go
 
 (source_file
   (command
-    (command_identifier)
+    (identifier)
     (color)
     (color)
     (color)
@@ -62,7 +59,7 @@ scoreboard minecraft.mined:minecraft.stone \
 
 (source_file
   (command
-    (command_identifier)
+    (identifier)
     (scoreboard_objective)
     (scoreboard_objective)
     (scoreboard_objective)
@@ -74,30 +71,38 @@ scoreboard minecraft.mined:minecraft.stone \
     (scoreboard_objective)
     (scoreboard_objective)
     (scoreboard_objective)
-    (scoreboard_objective
-      (color))
-    (scoreboard_objective
-      (color)))
+    (scoreboard_objective)
+    (scoreboard_objective))
   (command
-    (command_identifier)
+    (identifier)
     (generic_resource
       (namespace
-        (word)
-        (word))
-      (word))
-    (backslash)
-    (generic_resource
-      (namespace)
+        (path
+          (word
+            (identifier))
+          (word
+            (identifier))))
       (word))
     (backslash)
     (generic_resource
       (namespace
-        (word)
-        (word))
+        (word
+          (identifier)))
       (word))
     (backslash)
     (generic_resource
-      (namespace)
+      (namespace
+        (path
+          (word
+            (identifier))
+          (word
+            (identifier))))
+      (word))
+    (backslash)
+    (generic_resource
+      (namespace
+        (word
+          (identifier)))
       (word))))
 
 ==================
@@ -110,12 +115,11 @@ scoreboard players list sidebar sidebar.team.gold below_name
 
 (source_file
   (command
-    (command_identifier)
+    (identifier)
     (argument_keyword)
     (argument_keyword)
     (scoreboard_display_slot)
-    (scoreboard_display_slot
-      (color))
+    (scoreboard_display_slot)
     (scoreboard_display_slot)))
 
 ==================
@@ -129,7 +133,7 @@ scoreboard players operation #%[example] example /= 15
 
 (source_file
   (command
-    (command_identifier)
+    (identifier)
     (operation)
     (operation)
     (operation)
@@ -140,12 +144,13 @@ scoreboard players operation #%[example] example /= 15
     (operation)
     (operation))
   (command
-    (command_identifier)
+    (identifier)
     (argument_keyword)
     (argument_keyword)
     (score_holder
       (macro))
-    (word)
+    (word
+      (identifier))
     (operation)
     (integer)))
 
@@ -163,19 +168,14 @@ item contents container.50 hotbar.7 inventory.* enderchest.12 villager.5 horse.1
 
 (source_file
   (command
-    (command_identifier)
+    (identifier)
     (item_slot)
-    (item_slot
-      (integer))
-    (item_slot
-      (integer))
     (item_slot)
-    (item_slot
-      (integer))
-    (item_slot
-      (integer))
-    (item_slot
-      (integer))
+    (item_slot)
+    (item_slot)
+    (item_slot)
+    (item_slot)
+    (item_slot)
     (backslash)
     (item_slot)
     (item_slot)
@@ -191,5 +191,4 @@ item contents container.50 hotbar.7 inventory.* enderchest.12 villager.5 horse.1
     (item_slot)
     (backslash)
     (item_slot)
-    (item_slot
-      (integer))))
+    (item_slot)))

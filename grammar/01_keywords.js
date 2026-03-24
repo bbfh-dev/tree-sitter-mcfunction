@@ -1,18 +1,45 @@
+/// <reference types="tree-sitter-cli/dsl" />
+
+const { key } = require("./02_composite.js");
+
+// @ts-check
+
 const KEYWORDS = {
 	arguments: require("../data/keywords/arguments.js"),
 	// commands: require("../data/keywords/commands.js"),
 	subcommands: require("../data/keywords/subcommands.js"),
 };
 
-const keyword = (verb) => token(prec(1, verb));
+const COLORS = [
+	"black",
+	"dark_blue",
+	"dark_green",
+	"dark_aqua",
+	"dark_red",
+	"dark_purple",
+	"dark_purple",
+	"gold",
+	"gray",
+	"dark_gray",
+	"blue",
+	"green",
+	"aqua",
+	"red",
+	"light_purple",
+	"yellow",
+	"white",
+];
+
+// const keyword = (verb) => token(prec(1, verb));
+const keyword = (verb) => verb;
 
 module.exports = {
-	argument_keyword: (_) => keyword(choice(...KEYWORDS.arguments)),
+	argument_keyword: (_) => choice(...KEYWORDS.arguments),
 
 	// ———— This isn't necessary.
 	// command_keyword: (_) => keyword(choice(...KEYWORDS.commands)),
 
-	subcommand_keyword: (_) => keyword(choice(...KEYWORDS.subcommands)),
+	subcommand_keyword: (_) => choice(...KEYWORDS.subcommands),
 
 	_keywords: ($) =>
 		choice(
@@ -22,85 +49,55 @@ module.exports = {
 			$.item_slot,
 		),
 
-	operation: (_) =>
-		keyword(choice("=", "+=", "-=", "*=", "/=", "%=", "><", "<", ">")),
+	operation: (_) => choice("=", "+=", "-=", "*=", "/=", "%=", "><", "<", ">"),
 
-	color: (_) =>
-		keyword(
-			choice(
-				"black",
-				"dark_blue",
-				"dark_green",
-				"dark_aqua",
-				"dark_red",
-				"dark_purple",
-				"dark_purple",
-				"gold",
-				"gray",
-				"dark_gray",
-				"blue",
-				"green",
-				"aqua",
-				"red",
-				"light_purple",
-				"yellow",
-				"white",
-			),
-		),
+	color: (_) => choice(...COLORS),
 
-	scoreboard_objective: ($) =>
+	scoreboard_objective: (_) =>
 		choice(
-			keyword(
-				choice(
-					"dummy",
-					"trigger",
-					"deathCount",
-					"playerKillCount",
-					"totalKillCount",
-					"health",
-					"xp",
-					"level",
-					"food",
-					"air",
-					"armor",
-				),
-			),
-			seq(keyword("teamkill."), $.color),
-			seq(keyword("killedByTeam."), $.color),
+			seq("teamkill.", choice(...COLORS)),
+			seq("killedByTeam.", choice(...COLORS)),
+			"dummy",
+			"trigger",
+			"deathCount",
+			"playerKillCount",
+			"totalKillCount",
+			"health",
+			"xp",
+			"level",
+			"food",
+			"air",
+			"armor",
 		),
 
-	scoreboard_display_slot: ($) =>
+	scoreboard_display_slot: (_) =>
 		choice(
-			keyword(choice("list", "sidebar", "below_name")),
-			seq(keyword("sidebar.team."), $.color),
+			seq("sidebar.team.", choice(...COLORS)),
+			// "list",  ——— This conflicts with keyword, and I would rather it be a keyword.
+			"sidebar",
+			"below_name",
 		),
 
-	item_slot: ($) =>
+	item_slot: (_) =>
 		choice(
-			keyword(
-				choice(
-					"contents",
-					"weapon",
-					"weapon.offhand",
-					"weapon.mainhand",
-					"armor.head",
-					"armor.chest",
-					"armor.legs",
-					"armor.feet",
-					"armor.body",
-					"horse.saddle",
-					"horse.chest",
-					"player.cursor",
-				),
-			),
-			seq(keyword("container."), $._item_slot_value),
-			seq(keyword("hotbar."), $._item_slot_value),
-			seq(keyword("inventory."), $._item_slot_value),
-			seq(keyword("enderchest."), $._item_slot_value),
-			seq(keyword("villager."), $._item_slot_value),
-			seq(keyword("horse."), $._item_slot_value),
-			seq(keyword("player.crafting."), $._item_slot_value),
+			seq("container.", choice("*", /\d+/)),
+			seq("hotbar.", choice("*", /\d+/)),
+			seq("inventory.", choice("*", /\d+/)),
+			seq("enderchest.", choice("*", /\d+/)),
+			seq("villager.", choice("*", /\d+/)),
+			seq("horse.", choice("*", /\d+/)),
+			seq("player.crafting.", choice("*", /\d+/)),
+			"contents",
+			"weapon",
+			"weapon.offhand",
+			"weapon.mainhand",
+			"armor.head",
+			"armor.chest",
+			"armor.legs",
+			"armor.feet",
+			"armor.body",
+			"horse.saddle",
+			"horse.chest",
+			"player.cursor",
 		),
-
-	_item_slot_value: ($) => choice(keyword("*"), $.integer, $.macro),
 };

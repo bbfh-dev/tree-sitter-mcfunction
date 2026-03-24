@@ -1,3 +1,6 @@
+/// <reference types="tree-sitter-cli/dsl" />
+// @ts-check
+
 module.exports = {
 	...require("./01_keywords.js"),
 	...require("./02_composite.js"),

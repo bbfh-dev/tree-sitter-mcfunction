@@ -1,5 +1,10 @@
 [
   {
+    "type": "argument_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "block_selector",
     "named": true,
     "fields": {},
@@ -23,12 +28,22 @@
     }
   },
   {
+    "type": "boolean",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "color",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "command",
     "named": true,
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "argument_keyword",
@@ -55,10 +70,6 @@
           "named": true
         },
         {
-          "type": "command_identifier",
-          "named": true
-        },
-        {
           "type": "entity_selector",
           "named": true
         },
@@ -76,6 +87,10 @@
         },
         {
           "type": "hexadecimal",
+          "named": true
+        },
+        {
+          "type": "identifier",
           "named": true
         },
         {
@@ -174,11 +189,11 @@
           "named": true
         },
         {
-          "type": "command_identifier",
+          "type": "greedy_string",
           "named": true
         },
         {
-          "type": "greedy_string",
+          "type": "identifier",
           "named": true
         }
       ]
@@ -295,7 +310,7 @@
           "named": true
         },
         {
-          "type": "identifier",
+          "type": "word",
           "named": true
         }
       ]
@@ -325,15 +340,15 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
-          "named": true
-        },
-        {
           "type": "macro",
           "named": true
         },
         {
           "type": "namespace",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -391,21 +406,7 @@
   {
     "type": "item_slot",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "integer",
-          "named": true
-        },
-        {
-          "type": "macro",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "key",
@@ -443,7 +444,7 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "word",
           "named": true
         }
       ]
@@ -458,10 +459,6 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
-          "named": true
-        },
-        {
           "type": "macro",
           "named": true
         },
@@ -472,9 +469,18 @@
         {
           "type": "score_holder",
           "named": true
+        },
+        {
+          "type": "word",
+          "named": true
         }
       ]
     }
+  },
+  {
+    "type": "operation",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "path",
@@ -485,7 +491,15 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "argument_keyword",
+          "named": true
+        },
+        {
+          "type": "color",
+          "named": true
+        },
+        {
+          "type": "item_slot",
           "named": true
         },
         {
@@ -493,7 +507,31 @@
           "named": true
         },
         {
+          "type": "scoreboard_display_slot",
+          "named": true
+        },
+        {
+          "type": "scoreboard_objective",
+          "named": true
+        },
+        {
+          "type": "snbt_array",
+          "named": true
+        },
+        {
+          "type": "snbt_compound",
+          "named": true
+        },
+        {
           "type": "string",
+          "named": true
+        },
+        {
+          "type": "subcommand_keyword",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -540,32 +578,12 @@
   {
     "type": "scoreboard_display_slot",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "color",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "scoreboard_objective",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "color",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "selector_identifier",
@@ -580,15 +598,15 @@
           "named": true
         },
         {
-          "type": "identifier",
-          "named": true
-        },
-        {
           "type": "minecraft_resource",
           "named": true
         },
         {
           "type": "score_holder",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -671,7 +689,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "backslash",
@@ -795,6 +813,11 @@
     }
   },
   {
+    "type": "subcommand_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "typed_number",
     "named": true,
     "fields": {},
@@ -872,6 +895,25 @@
     }
   },
   {
+    "type": "word",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "!",
     "named": false
   },
@@ -904,6 +946,10 @@
     "named": false
   },
   {
+    "type": "%=",
+    "named": false
+  },
+  {
     "type": "'",
     "named": false
   },
@@ -912,11 +958,23 @@
     "named": false
   },
   {
+    "type": "*=",
+    "named": false
+  },
+  {
+    "type": "+=",
+    "named": false
+  },
+  {
     "type": ",",
     "named": false
   },
   {
     "type": "-",
+    "named": false
+  },
+  {
+    "type": "-=",
     "named": false
   },
   {
@@ -936,6 +994,10 @@
     "named": false
   },
   {
+    "type": "/=",
+    "named": false
+  },
+  {
     "type": "0",
     "named": false
   },
@@ -952,7 +1014,19 @@
     "named": false
   },
   {
+    "type": "<",
+    "named": false
+  },
+  {
     "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "><",
     "named": false
   },
   {
@@ -968,31 +1042,251 @@
     "named": false
   },
   {
-    "type": "argument_keyword",
-    "named": true
+    "type": "actionbar",
+    "named": false
+  },
+  {
+    "type": "add",
+    "named": false
+  },
+  {
+    "type": "add_multiplied_base",
+    "named": false
+  },
+  {
+    "type": "add_multiplied_total",
+    "named": false
+  },
+  {
+    "type": "add_value",
+    "named": false
+  },
+  {
+    "type": "air",
+    "named": false
+  },
+  {
+    "type": "align",
+    "named": false
+  },
+  {
+    "type": "all",
+    "named": false
+  },
+  {
+    "type": "ambient",
+    "named": false
+  },
+  {
+    "type": "amount",
+    "named": false
+  },
+  {
+    "type": "anchored",
+    "named": false
+  },
+  {
+    "type": "append",
+    "named": false
+  },
+  {
+    "type": "aqua",
+    "named": false
+  },
+  {
+    "type": "armor",
+    "named": false
+  },
+  {
+    "type": "armor.body",
+    "named": false
+  },
+  {
+    "type": "armor.chest",
+    "named": false
+  },
+  {
+    "type": "armor.feet",
+    "named": false
+  },
+  {
+    "type": "armor.head",
+    "named": false
+  },
+  {
+    "type": "armor.legs",
+    "named": false
   },
   {
     "type": "array_type",
     "named": true
   },
   {
+    "type": "as",
+    "named": false
+  },
+  {
+    "type": "at",
+    "named": false
+  },
+  {
+    "type": "attacker",
+    "named": false
+  },
+  {
     "type": "backslash",
     "named": true
   },
   {
-    "type": "boolean",
-    "named": true
+    "type": "base",
+    "named": false
+  },
+  {
+    "type": "below_name",
+    "named": false
+  },
+  {
+    "type": "biome",
+    "named": false
+  },
+  {
+    "type": "black",
+    "named": false
+  },
+  {
+    "type": "block",
+    "named": false
+  },
+  {
+    "type": "blocks",
+    "named": false
+  },
+  {
+    "type": "blue",
+    "named": false
+  },
+  {
+    "type": "bossbar",
+    "named": false
+  },
+  {
+    "type": "buffer",
+    "named": false
+  },
+  {
+    "type": "by",
+    "named": false
+  },
+  {
+    "type": "center",
+    "named": false
+  },
+  {
+    "type": "clear",
+    "named": false
+  },
+  {
+    "type": "collisionRule",
+    "named": false
   },
   {
     "type": "color",
-    "named": true
-  },
-  {
-    "type": "command_identifier",
-    "named": true
+    "named": false
   },
   {
     "type": "container.",
+    "named": false
+  },
+  {
+    "type": "contents",
+    "named": false
+  },
+  {
+    "type": "controller",
+    "named": false
+  },
+  {
+    "type": "create",
+    "named": false
+  },
+  {
+    "type": "damage",
+    "named": false
+  },
+  {
+    "type": "dark_aqua",
+    "named": false
+  },
+  {
+    "type": "dark_blue",
+    "named": false
+  },
+  {
+    "type": "dark_gray",
+    "named": false
+  },
+  {
+    "type": "dark_green",
+    "named": false
+  },
+  {
+    "type": "dark_purple",
+    "named": false
+  },
+  {
+    "type": "dark_red",
+    "named": false
+  },
+  {
+    "type": "data",
+    "named": false
+  },
+  {
+    "type": "day",
+    "named": false
+  },
+  {
+    "type": "daytime",
+    "named": false
+  },
+  {
+    "type": "deathCount",
+    "named": false
+  },
+  {
+    "type": "deathMessageVisibility",
+    "named": false
+  },
+  {
+    "type": "destroy",
+    "named": false
+  },
+  {
+    "type": "dimension",
+    "named": false
+  },
+  {
+    "type": "disable",
+    "named": false
+  },
+  {
+    "type": "dismount",
+    "named": false
+  },
+  {
+    "type": "displayName",
+    "named": false
+  },
+  {
+    "type": "distance",
+    "named": false
+  },
+  {
+    "type": "dummy",
+    "named": false
+  },
+  {
+    "type": "enable",
     "named": false
   },
   {
@@ -1000,15 +1294,143 @@
     "named": false
   },
   {
+    "type": "entity",
+    "named": false
+  },
+  {
     "type": "escape_sequence",
     "named": true
+  },
+  {
+    "type": "everything",
+    "named": false
+  },
+  {
+    "type": "execute",
+    "named": false
+  },
+  {
+    "type": "export",
+    "named": false
+  },
+  {
+    "type": "exportclosest",
+    "named": false
+  },
+  {
+    "type": "exportthat",
+    "named": false
+  },
+  {
+    "type": "exportthese",
+    "named": false
+  },
+  {
+    "type": "eyes",
+    "named": false
+  },
+  {
+    "type": "facing",
+    "named": false
+  },
+  {
+    "type": "fail",
+    "named": false
+  },
+  {
+    "type": "false",
+    "named": false
+  },
+  {
+    "type": "feature",
+    "named": false
+  },
+  {
+    "type": "feet",
+    "named": false
+  },
+  {
+    "type": "fish",
+    "named": false
+  },
+  {
+    "type": "flush",
+    "named": false
+  },
+  {
+    "type": "food",
+    "named": false
+  },
+  {
+    "type": "force",
+    "named": false
+  },
+  {
+    "type": "friendlyFire",
+    "named": false
+  },
+  {
+    "type": "from",
+    "named": false
+  },
+  {
+    "type": "function",
+    "named": false
+  },
+  {
+    "type": "gametime",
+    "named": false
+  },
+  {
+    "type": "get",
+    "named": false
+  },
+  {
+    "type": "give",
+    "named": false
+  },
+  {
+    "type": "gold",
+    "named": false
+  },
+  {
+    "type": "grant",
+    "named": false
+  },
+  {
+    "type": "gray",
+    "named": false
   },
   {
     "type": "greedy_string",
     "named": true
   },
   {
+    "type": "green",
+    "named": false
+  },
+  {
+    "type": "health",
+    "named": false
+  },
+  {
+    "type": "hollow",
+    "named": false
+  },
+  {
     "type": "horse.",
+    "named": false
+  },
+  {
+    "type": "horse.chest",
+    "named": false
+  },
+  {
+    "type": "horse.saddle",
+    "named": false
+  },
+  {
+    "type": "hostile",
     "named": false
   },
   {
@@ -1016,15 +1438,91 @@
     "named": false
   },
   {
+    "type": "id",
+    "named": false
+  },
+  {
     "type": "identifier",
     "named": true
+  },
+  {
+    "type": "if",
+    "named": false
+  },
+  {
+    "type": "in",
+    "named": false
+  },
+  {
+    "type": "insert",
+    "named": false
   },
   {
     "type": "inventory.",
     "named": false
   },
   {
+    "type": "ips",
+    "named": false
+  },
+  {
+    "type": "items",
+    "named": false
+  },
+  {
+    "type": "jigsaw",
+    "named": false
+  },
+  {
+    "type": "join",
+    "named": false
+  },
+  {
+    "type": "keep",
+    "named": false
+  },
+  {
+    "type": "kill",
+    "named": false
+  },
+  {
     "type": "killedByTeam.",
+    "named": false
+  },
+  {
+    "type": "leasher",
+    "named": false
+  },
+  {
+    "type": "leave",
+    "named": false
+  },
+  {
+    "type": "level",
+    "named": false
+  },
+  {
+    "type": "levels",
+    "named": false
+  },
+  {
+    "type": "light_purple",
+    "named": false
+  },
+  {
+    "type": "list",
+    "named": false
+  },
+  {
+    "type": "loaded",
+    "named": false
+  },
+  {
+    "type": "locate",
+    "named": false
+  },
+  {
+    "type": "loot",
     "named": false
   },
   {
@@ -1036,19 +1534,291 @@
     "named": true
   },
   {
+    "type": "mainhand",
+    "named": false
+  },
+  {
+    "type": "masked",
+    "named": false
+  },
+  {
+    "type": "master",
+    "named": false
+  },
+  {
+    "type": "matches",
+    "named": false
+  },
+  {
+    "type": "max",
+    "named": false
+  },
+  {
     "type": "measurement_unit",
     "named": true
+  },
+  {
+    "type": "merge",
+    "named": false
+  },
+  {
+    "type": "midnight",
+    "named": false
+  },
+  {
+    "type": "mine",
+    "named": false
   },
   {
     "type": "minecraft:",
     "named": false
   },
   {
+    "type": "modifier",
+    "named": false
+  },
+  {
+    "type": "modify",
+    "named": false
+  },
+  {
+    "type": "mount",
+    "named": false
+  },
+  {
+    "type": "move",
+    "named": false
+  },
+  {
+    "type": "music",
+    "named": false
+  },
+  {
+    "type": "name",
+    "named": false
+  },
+  {
+    "type": "nametagVisibility",
+    "named": false
+  },
+  {
+    "type": "neutral",
+    "named": false
+  },
+  {
+    "type": "night",
+    "named": false
+  },
+  {
+    "type": "noon",
+    "named": false
+  },
+  {
+    "type": "normal",
+    "named": false
+  },
+  {
+    "type": "objectives",
+    "named": false
+  },
+  {
+    "type": "off",
+    "named": false
+  },
+  {
+    "type": "offhand",
+    "named": false
+  },
+  {
+    "type": "on",
+    "named": false
+  },
+  {
+    "type": "only",
+    "named": false
+  },
+  {
     "type": "operation",
-    "named": true
+    "named": false
+  },
+  {
+    "type": "origin",
+    "named": false
+  },
+  {
+    "type": "outline",
+    "named": false
+  },
+  {
+    "type": "over",
+    "named": false
+  },
+  {
+    "type": "owner",
+    "named": false
+  },
+  {
+    "type": "passengers",
+    "named": false
+  },
+  {
+    "type": "player",
+    "named": false
   },
   {
     "type": "player.crafting.",
+    "named": false
+  },
+  {
+    "type": "player.cursor",
+    "named": false
+  },
+  {
+    "type": "playerKillCount",
+    "named": false
+  },
+  {
+    "type": "players",
+    "named": false
+  },
+  {
+    "type": "poi",
+    "named": false
+  },
+  {
+    "type": "points",
+    "named": false
+  },
+  {
+    "type": "pos",
+    "named": false
+  },
+  {
+    "type": "positioned",
+    "named": false
+  },
+  {
+    "type": "predicate",
+    "named": false
+  },
+  {
+    "type": "prefix",
+    "named": false
+  },
+  {
+    "type": "prepend",
+    "named": false
+  },
+  {
+    "type": "query",
+    "named": false
+  },
+  {
+    "type": "rain",
+    "named": false
+  },
+  {
+    "type": "record",
+    "named": false
+  },
+  {
+    "type": "red",
+    "named": false
+  },
+  {
+    "type": "reload",
+    "named": false
+  },
+  {
+    "type": "remove",
+    "named": false
+  },
+  {
+    "type": "replace",
+    "named": false
+  },
+  {
+    "type": "reset",
+    "named": false
+  },
+  {
+    "type": "resetclosest",
+    "named": false
+  },
+  {
+    "type": "resetthat",
+    "named": false
+  },
+  {
+    "type": "resetthese",
+    "named": false
+  },
+  {
+    "type": "result",
+    "named": false
+  },
+  {
+    "type": "return run",
+    "named": false
+  },
+  {
+    "type": "revoke",
+    "named": false
+  },
+  {
+    "type": "roll",
+    "named": false
+  },
+  {
+    "type": "rotated",
+    "named": false
+  },
+  {
+    "type": "run",
+    "named": false
+  },
+  {
+    "type": "runclosest",
+    "named": false
+  },
+  {
+    "type": "runfailed",
+    "named": false
+  },
+  {
+    "type": "runthat",
+    "named": false
+  },
+  {
+    "type": "runthese",
+    "named": false
+  },
+  {
+    "type": "say",
+    "named": false
+  },
+  {
+    "type": "score",
+    "named": false
+  },
+  {
+    "type": "seeFriendlyInvisibles",
+    "named": false
+  },
+  {
+    "type": "set",
+    "named": false
+  },
+  {
+    "type": "setdisplay",
+    "named": false
+  },
+  {
+    "type": "show",
+    "named": false
+  },
+  {
+    "type": "sidebar",
     "named": false
   },
   {
@@ -1056,11 +1826,123 @@
     "named": false
   },
   {
-    "type": "subcommand_keyword",
-    "named": true
+    "type": "spawn",
+    "named": false
+  },
+  {
+    "type": "start",
+    "named": false
+  },
+  {
+    "type": "stop",
+    "named": false
+  },
+  {
+    "type": "storage",
+    "named": false
+  },
+  {
+    "type": "store",
+    "named": false
+  },
+  {
+    "type": "strict",
+    "named": false
+  },
+  {
+    "type": "string",
+    "named": false
+  },
+  {
+    "type": "structure",
+    "named": false
+  },
+  {
+    "type": "style",
+    "named": false
+  },
+  {
+    "type": "subtitle",
+    "named": false
+  },
+  {
+    "type": "success",
+    "named": false
+  },
+  {
+    "type": "suffix",
+    "named": false
+  },
+  {
+    "type": "summon",
+    "named": false
+  },
+  {
+    "type": "take",
+    "named": false
+  },
+  {
+    "type": "target",
+    "named": false
   },
   {
     "type": "teamkill.",
+    "named": false
+  },
+  {
+    "type": "template",
+    "named": false
+  },
+  {
+    "type": "through",
+    "named": false
+  },
+  {
+    "type": "thunder",
+    "named": false
+  },
+  {
+    "type": "time",
+    "named": false
+  },
+  {
+    "type": "times",
+    "named": false
+  },
+  {
+    "type": "title",
+    "named": false
+  },
+  {
+    "type": "to",
+    "named": false
+  },
+  {
+    "type": "totalKillCount",
+    "named": false
+  },
+  {
+    "type": "trigger",
+    "named": false
+  },
+  {
+    "type": "true",
+    "named": false
+  },
+  {
+    "type": "ui",
+    "named": false
+  },
+  {
+    "type": "under",
+    "named": false
+  },
+  {
+    "type": "unless",
+    "named": false
+  },
+  {
+    "type": "until",
     "named": false
   },
   {
@@ -1076,12 +1958,68 @@
     "named": true
   },
   {
+    "type": "uuids",
+    "named": false
+  },
+  {
+    "type": "value",
+    "named": false
+  },
+  {
+    "type": "vehicle",
+    "named": false
+  },
+  {
+    "type": "verify",
+    "named": false
+  },
+  {
     "type": "villager.",
     "named": false
   },
   {
-    "type": "word",
-    "named": true
+    "type": "visible",
+    "named": false
+  },
+  {
+    "type": "voice",
+    "named": false
+  },
+  {
+    "type": "warning",
+    "named": false
+  },
+  {
+    "type": "weapon",
+    "named": false
+  },
+  {
+    "type": "weapon.mainhand",
+    "named": false
+  },
+  {
+    "type": "weapon.offhand",
+    "named": false
+  },
+  {
+    "type": "weather",
+    "named": false
+  },
+  {
+    "type": "white",
+    "named": false
+  },
+  {
+    "type": "with",
+    "named": false
+  },
+  {
+    "type": "xp",
+    "named": false
+  },
+  {
+    "type": "yellow",
+    "named": false
   },
   {
     "type": "{",

@@ -1,3 +1,6 @@
+/// <reference types="tree-sitter-cli/dsl" />
+// @ts-check
+
 function list($, item) {
 	return seq(
 		optional($._whitespace),
@@ -44,11 +47,7 @@ module.exports = {
 	_resource: ($) => choice($.minecraft_resource, $.generic_resource),
 
 	minecraft_resource: ($) =>
-		seq(
-			token(prec(2, "minecraft:")),
-			$.identifier,
-			repeat(seq("/", $.identifier)),
-		),
+		seq(token(prec(2, "minecraft:")), $.word, repeat(seq("/", $.word))),
 
 	generic_resource: ($) =>
 		choice(
@@ -66,22 +65,42 @@ module.exports = {
 
 	namespace: ($) =>
 		seq(
-			choice($.macro, $.identifier, $.score_holder, $.path),
+			choice($.macro, $.word, $.score_holder, $.path),
 			token(prec(2, ":")),
 		),
 
 	_resource_segment: ($) =>
-		choice($.macro, alias(/[0-9a-zA-Z_\-\+\.\*\?]+/, $.identifier)),
+		choice($.macro, alias(/[0-9a-zA-Z_\-\+\.\*\?]+/, $.word)),
 
-	path: ($) => seq($._path_node, repeat1(seq(".", $._path_node))),
+	path: ($) =>
+		choice(
+			seq($._path_node, repeat1(seq(".", $._path_node))),
+			$._data_path_node,
+		),
+
+	_data_path_node: ($) =>
+		choice(seq($._word, $.snbt_array), seq($._word, $.snbt_compound)),
 
 	_path_node: ($) =>
 		choice(
-			$.identifier,
 			$.macro,
 			$.string,
-			alias($.argument_keyword, $.identifier),
-			alias($.subcommand_keyword, $.identifier),
+			$._data_path_node,
+			$.snbt_array,
+			$.snbt_compound,
+			$._word,
+		),
+
+	_word: ($) =>
+		choice(
+			alias($.integer, $.word),
+			$.word,
+			$.argument_keyword,
+			$.subcommand_keyword,
+			$.color,
+			$.scoreboard_objective,
+			$.scoreboard_display_slot,
+			$.item_slot,
 		),
 
 	snbt_array: ($) =>
@@ -92,7 +111,8 @@ module.exports = {
 			"]",
 		),
 
-	snbt_compound: ($) => seq("{", list($, $.snbt_key_value_pair), "}"),
+	snbt_compound: ($) =>
+		seq("{", optional(list($, $.snbt_key_value_pair)), "}"),
 
 	snbt_key_value_pair: ($) =>
 		seq(
@@ -137,13 +157,12 @@ module.exports = {
 	_data_value: ($) => choice($._snbt_value, $._resource),
 
 	entity_selector: ($) =>
-		seq(alias(/@[a-z]/, $.identifier), optional($.data_compound)),
+		seq(alias(/@[a-z]/, $.word), optional($.data_compound)),
 
 	item_selector: ($) => seq($.selector_identifier, $.data_compound),
 
 	block_selector: ($) =>
 		seq($.selector_identifier, optional($.data_compound), $.snbt_compound),
 
-	selector_identifier: ($) =>
-		choice($._resource, $.score_holder, $.identifier),
+	selector_identifier: ($) => choice($._resource, $.score_holder, $.word),
 };

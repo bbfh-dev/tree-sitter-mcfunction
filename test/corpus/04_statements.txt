@@ -59,16 +59,15 @@ say Hello World!
 
 (source_file
   (comment
-    (command_identifier)
+    (identifier)
     (greedy_string))
   (comment
-    (command_identifier)
+    (identifier)
     (greedy_string))
   (command
-    (command_identifier)
     (greedy_string))
   (comment
-    (command_identifier)))
+    (identifier)))
 
 ==================
 Special commands
@@ -76,22 +75,20 @@ Special commands
 
 say Hello World! :)
 execute run \
-	return run \
+	return run function ./call:
 	say Hi!
 
 ------------------
 
 (source_file
   (command
-    (command_identifier)
     (greedy_string))
   (command
-    (command_identifier)
-    (argument_keyword)
     (backslash)
     (command
-      (command_identifier)
-      (backslash)
       (command
-        (command_identifier)
-        (greedy_string)))))
+        (identifier)
+        (generic_resource
+          (word)))))
+  (command
+    (greedy_string)))
