@@ -74,6 +74,7 @@ Special commands
 ==================
 
 $$(macro)
+execute $(macro)run say Hi
 say Hello World! :)
 execute run \
 	return run function ./call:
@@ -85,6 +86,10 @@ execute run \
   (command
     (macro_sign)
     (macro))
+  (command
+    (macro)
+    (command
+      (greedy_string)))
   (command
     (greedy_string))
   (command

@@ -31,15 +31,25 @@ module.exports = {
 		),
 
 	_execute_command: ($) =>
-		seq(
-			"execute",
-			repeat(
-				seq(
-					$._whitespace,
-					choice($._command_argument, $.subcommand_keyword),
+		choice(
+			seq(
+				"execute",
+				repeat(
+					seq(
+						$._whitespace,
+						choice($._command_argument, $.subcommand_keyword),
+					),
 				),
+				optional(seq($._whitespace, "run", $._whitespace, $.command)),
 			),
-			optional(seq($._whitespace, "run", $._whitespace, $.command)),
+			seq(
+				"execute",
+				$._whitespace,
+				$.macro,
+				"run",
+				$._whitespace,
+				$.command,
+			),
 		),
 
 	_generic_command: ($) =>
