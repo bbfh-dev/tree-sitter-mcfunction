@@ -196,5 +196,6 @@ module.exports = {
 	block_selector: ($) =>
 		seq($.selector_identifier, optional($.data_compound), $.snbt_compound),
 
-	selector_identifier: ($) => choice($._resource, $.score_holder, $.word),
+	selector_identifier: ($) =>
+		choice($._resource, $.score_holder, $.word, $.macro),
 };

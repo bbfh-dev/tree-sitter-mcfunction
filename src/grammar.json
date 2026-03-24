@@ -2896,6 +2896,10 @@
         {
           "type": "SYMBOL",
           "name": "word"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "macro"
         }
       ]
     },
@@ -4036,6 +4040,10 @@
     ],
     [
       "_word",
+      "selector_identifier"
+    ],
+    [
+      "_data_path_node",
       "selector_identifier"
     ]
   ],

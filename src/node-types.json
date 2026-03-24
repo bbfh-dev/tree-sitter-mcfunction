@@ -596,6 +596,10 @@
           "named": true
         },
         {
+          "type": "macro",
+          "named": true
+        },
+        {
           "type": "minecraft_resource",
           "named": true
         },

@@ -1218,6 +1218,7 @@ execute as @a[advancements={minecraft:story/form_obsidian=true, minecraft:story/
 execute as @a[advancements={minecraft:story/form_obsidian={foo=true, bar=false},minecraft:story/follow_ender_eye={foo=false, bar=true}}]
 
 clear @s #bubblellaneous:gui_item[custom_data~{bubblellaneous: {is_gui: 1b}}]
+$particle item $(base_item)[minecraft:custom_model_data=$(custom_model_data)]
 
 execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run return run function bs.hitbox:get_entity/get_custom
 tellraw @s [{"text": "Hi!"}]
@@ -1550,6 +1551,20 @@ tellraw @s [{"text": "Hi!"}]
                   (typed_number
                     (integer)
                     (measurement_unit))))))))))
+  (command
+    (macro_sign)
+    (identifier)
+    (word
+      (identifier))
+    (item_selector
+      (selector_identifier
+        (macro))
+      (data_compound
+        (data_key_value_pair
+          (key
+            (minecraft_resource
+              (word)))
+          (macro)))))
   (command
     (subcommand_keyword)
     (subcommand_keyword)
