@@ -79,7 +79,14 @@ module.exports = {
 		),
 
 	_data_path_node: ($) =>
-		choice(seq($._word, $.snbt_array), seq($._word, $.snbt_compound)),
+		seq(
+			$._word,
+			choice(
+				$.snbt_array,
+				$.snbt_compound,
+				seq($.snbt_array, choice($.snbt_array, $.snbt_compound)),
+			),
+		),
 
 	_path_node: ($) =>
 		choice(
@@ -107,7 +114,7 @@ module.exports = {
 		seq(
 			"[",
 			optional(seq(alias(token(prec(1, /[A-Z]/)), $.array_type), ";")),
-			list($, $._snbt_value),
+			optional(list($, $._snbt_value)),
 			"]",
 		),
 

@@ -676,7 +676,7 @@ sNBT Arrays
 
 data [""]
 data [I; 15, 61, 52]
-data modify block ~ ~ ~ RecordItem.tag.messages append value [ { message: "hello world" } ]
+data modify block ~ ~ ~ RecordItem.tag.messages append value [ { message: "hello world" }, word ]
 data [0f,0f,1f]
 
 ------------------
@@ -712,7 +712,9 @@ data [0f,0f,1f]
       (snbt_compound
         (snbt_key_value_pair
           (key)
-          (string)))))
+          (string)))
+      (word
+        (identifier))))
   (command
     (identifier)
     (snbt_array
