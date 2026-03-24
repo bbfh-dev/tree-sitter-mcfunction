@@ -78,7 +78,7 @@
       "members": [
         {
           "type": "PATTERN",
-          "value": " "
+          "value": " +"
         },
         {
           "type": "SYMBOL",
@@ -2162,6 +2162,15 @@
     "_path_node": {
       "type": "CHOICE",
       "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "PATTERN",
+            "value": "minecraft:[0-9a-zA-Z_]+"
+          },
+          "named": true,
+          "value": "word"
+        },
         {
           "type": "SYMBOL",
           "name": "macro"

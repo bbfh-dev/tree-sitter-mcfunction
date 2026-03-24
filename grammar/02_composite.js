@@ -123,6 +123,7 @@ module.exports = {
 
 	_path_node: ($) =>
 		choice(
+			alias(/minecraft:[0-9a-zA-Z_]+/, $.word),
 			$.macro,
 			$.string,
 			$._data_path_node,

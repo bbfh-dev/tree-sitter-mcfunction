@@ -51,7 +51,7 @@ module.exports = grammar({
 
 		backslash: (_) => /\s*\\\r?\n\s*/,
 
-		_whitespace: ($) => choice(/ /, $.backslash),
+		_whitespace: ($) => choice(/ +/, $.backslash),
 
 		_statement: ($) =>
 			seq(optional($._indentation), choice($.comment, $.command)),

@@ -252,6 +252,7 @@ data modify storage bs:out string.upper set from storage bs:ctx _.1
 execute store result storage bs:data vector.distance[0] float 1 run scoreboard players get $vector.length.0 bs.in
 $execute store result score $vector.normalize.0 bs.out run data get storage bs:ctx _[0] $(scale)
 execute if data storage bs:data xp.stack[-1].var{} run return run function bs.dump:interpret/compound/compound
+execute if data entity @s Item.components."minecraft:entity_data".Item.components.minecraft:custom_data.bubblellaneous.block_data
 
 ------------------
 
@@ -642,7 +643,26 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
                 (identifier))))
           (word)
           (word)
-          (word))))))
+          (word)))))
+  (command
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (subcommand_keyword)
+    (entity_selector
+      (word))
+    (path
+      (word)
+      (word
+        (identifier))
+      (string)
+      (word)
+      (word
+        (identifier))
+      (word)
+      (word
+        (identifier))
+      (word
+        (identifier)))))
 
 ==================
 sNBT Compounds
