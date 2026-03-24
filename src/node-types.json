@@ -406,7 +406,17 @@
   {
     "type": "item_slot",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "integer",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "key",
@@ -866,6 +876,10 @@
         },
         {
           "type": "uuid_8_segment",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]

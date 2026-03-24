@@ -41,7 +41,7 @@ module.exports = {
 			1,
 			seq(
 				choice(
-					seq(choice($.uuid_8_segment, "0", $.macro), "-"),
+					seq(choice($.uuid_8_segment, "0", $.word, $.macro), "-"),
 					token(prec(1, "0-")),
 				),
 				choice($.uuid_4_segment, "0", $.macro),

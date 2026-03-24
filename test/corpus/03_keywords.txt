@@ -170,12 +170,17 @@ item contents container.50 hotbar.7 inventory.* enderchest.12 villager.5 horse.1
   (command
     (identifier)
     (item_slot)
+    (item_slot
+      (integer))
+    (item_slot
+      (integer))
     (item_slot)
-    (item_slot)
-    (item_slot)
-    (item_slot)
-    (item_slot)
-    (item_slot)
+    (item_slot
+      (integer))
+    (item_slot
+      (integer))
+    (item_slot
+      (integer))
     (backslash)
     (item_slot)
     (item_slot)
@@ -191,4 +196,5 @@ item contents container.50 hotbar.7 inventory.* enderchest.12 villager.5 horse.1
     (item_slot)
     (backslash)
     (item_slot)
-    (item_slot)))
+    (item_slot
+      (integer))))

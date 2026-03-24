@@ -1363,8 +1363,8 @@
                   "value": "*"
                 },
                 {
-                  "type": "PATTERN",
-                  "value": "\\d+"
+                  "type": "SYMBOL",
+                  "name": "integer"
                 }
               ]
             }
@@ -1385,8 +1385,8 @@
                   "value": "*"
                 },
                 {
-                  "type": "PATTERN",
-                  "value": "\\d+"
+                  "type": "SYMBOL",
+                  "name": "integer"
                 }
               ]
             }
@@ -1407,8 +1407,8 @@
                   "value": "*"
                 },
                 {
-                  "type": "PATTERN",
-                  "value": "\\d+"
+                  "type": "SYMBOL",
+                  "name": "integer"
                 }
               ]
             }
@@ -1429,8 +1429,8 @@
                   "value": "*"
                 },
                 {
-                  "type": "PATTERN",
-                  "value": "\\d+"
+                  "type": "SYMBOL",
+                  "name": "integer"
                 }
               ]
             }
@@ -1451,8 +1451,8 @@
                   "value": "*"
                 },
                 {
-                  "type": "PATTERN",
-                  "value": "\\d+"
+                  "type": "SYMBOL",
+                  "name": "integer"
                 }
               ]
             }
@@ -1473,8 +1473,8 @@
                   "value": "*"
                 },
                 {
-                  "type": "PATTERN",
-                  "value": "\\d+"
+                  "type": "SYMBOL",
+                  "name": "integer"
                 }
               ]
             }
@@ -1495,8 +1495,8 @@
                   "value": "*"
                 },
                 {
-                  "type": "PATTERN",
-                  "value": "\\d+"
+                  "type": "SYMBOL",
+                  "name": "integer"
                 }
               ]
             }
@@ -2952,6 +2952,10 @@
                       {
                         "type": "STRING",
                         "value": "0"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "word"
                       },
                       {
                         "type": "SYMBOL",

@@ -72,15 +72,15 @@ module.exports = {
 			"below_name",
 		),
 
-	item_slot: (_) =>
+	item_slot: ($) =>
 		choice(
-			seq("container.", choice("*", /\d+/)),
-			seq("hotbar.", choice("*", /\d+/)),
-			seq("inventory.", choice("*", /\d+/)),
-			seq("enderchest.", choice("*", /\d+/)),
-			seq("villager.", choice("*", /\d+/)),
-			seq("horse.", choice("*", /\d+/)),
-			seq("player.crafting.", choice("*", /\d+/)),
+			seq("container.", choice("*", $.integer)),
+			seq("hotbar.", choice("*", $.integer)),
+			seq("inventory.", choice("*", $.integer)),
+			seq("enderchest.", choice("*", $.integer)),
+			seq("villager.", choice("*", $.integer)),
+			seq("horse.", choice("*", $.integer)),
+			seq("player.crafting.", choice("*", $.integer)),
 			"contents",
 			"weapon",
 			"weapon.offhand",
