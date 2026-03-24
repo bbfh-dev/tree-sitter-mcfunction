@@ -88,7 +88,7 @@ module.exports = {
 
 	_data_path_node: ($) =>
 		seq(
-			$._word,
+			choice($._word, $.macro),
 			choice(
 				$.snbt_array,
 				$.snbt_compound,

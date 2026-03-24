@@ -240,6 +240,7 @@ sNBT Paths
 data foo.bar[0]."A [crazy name]".baz.$(hello).{foo:bar}
 data get entity @s item.components."minecraft:custom_data".item[5]
 data get entity @s Pos[0]
+data get entity @s $(macro){foo: bar}
 data get entity @s entity.path
 data get entity @s container.i
 $data modify storage bs:ctx _.v set from storage bs:ctx _.g[{n:"$(name)"}].o[0]
@@ -301,6 +302,20 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
       (word)
       (snbt_array
         (integer))))
+  (command
+    (identifier)
+    (argument_keyword)
+    (word
+      (subcommand_keyword))
+    (entity_selector
+      (word))
+    (path
+      (macro)
+      (snbt_compound
+        (snbt_key_value_pair
+          (key)
+          (word
+            (identifier))))))
   (command
     (identifier)
     (argument_keyword)
