@@ -48,7 +48,7 @@ module.exports = grammar({
 
 		identifier: (_) => /[a-z_]+/,
 
-		backslash: (_) => /\s*\\\r?\n\s*/,
+		backslash: (_) => /[ \t]*\\[ \t]*\r?\n[ \t]*/,
 
 		_whitespace: ($) => choice(/ +/, $.backslash),
 

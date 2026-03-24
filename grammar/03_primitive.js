@@ -147,6 +147,7 @@ module.exports = {
 					$._word_token,
 					repeat(
 						choice(
+							/[0-9a-zA-Z_]+/,
 							$.macro,
 							$._word_token,
 							"-",

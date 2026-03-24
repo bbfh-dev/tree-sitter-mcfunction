@@ -76,11 +76,12 @@ Special commands
 $$(macro)
 execute $(macro)run say Hi
 say Hello World! :)
-execute run \
+execute run \  
 	return run function ./call:
 	say Hi!
 summon villager    
 give @s[advancements={vanilla:consumed_item=true}]
+
 
 ------------------
 

@@ -88,7 +88,7 @@
     },
     "backslash": {
       "type": "PATTERN",
-      "value": "\\s*\\\\\\r?\\n\\s*"
+      "value": "[ \\t]*\\\\[ \\t]*\\r?\\n[ \\t]*"
     },
     "_whitespace": {
       "type": "CHOICE",
@@ -3962,6 +3962,10 @@
                 "content": {
                   "type": "CHOICE",
                   "members": [
+                    {
+                      "type": "PATTERN",
+                      "value": "[0-9a-zA-Z_]+"
+                    },
                     {
                       "type": "SYMBOL",
                       "name": "macro"
