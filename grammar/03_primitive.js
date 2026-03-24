@@ -107,7 +107,7 @@ module.exports = {
 			"*",
 			seq("-", /[_\.\+a-zA-Z][_\.\-\+0-9a-zA-Z]*/),
 			seq(
-				choice("#", "$", "%"),
+				choice("#", "$", "%", "."),
 				repeat1(choice(/[_\.\-\+0-9a-zA-Z]+/, $.macro)),
 			),
 		),
