@@ -65,25 +65,15 @@ module.exports = {
 
 	escape_sequence: (_) =>
 		token(
-			seq(
-				"\\",
-				token.immediate(
-					choice("r", "n", "t", "v", "0", "'", '"', "\\"),
-				),
-			),
+			seq("\\", choice("r", "n", "t", "v", "0", "'", '"', "\\", /u\d+/)),
 		),
+
 	_double_quoted_string: ($) =>
-		seq(
-			'"',
-			repeat(choice($.escape_sequence, /[^\\"\$%]+/, $.macro)),
-			token.immediate('"'),
-		),
+		seq('"', repeat(choice($.escape_sequence, /[^\\"\$%]+/, $.macro)), '"'),
+
 	_single_quoted_string: ($) =>
-		seq(
-			"'",
-			repeat(choice($.escape_sequence, /[^\\'\$%]+/, $.macro)),
-			token.immediate("'"),
-		),
+		seq("'", repeat(choice($.escape_sequence, /[^\\'\$%]+/, $.macro)), "'"),
+
 	string: ($) => choice($._double_quoted_string, $._single_quoted_string),
 
 	greedy_string: (_) => /[^\r\n]+/,

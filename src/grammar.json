@@ -3119,44 +3119,45 @@
             "value": "\\"
           },
           {
-            "type": "IMMEDIATE_TOKEN",
-            "content": {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "r"
-                },
-                {
-                  "type": "STRING",
-                  "value": "n"
-                },
-                {
-                  "type": "STRING",
-                  "value": "t"
-                },
-                {
-                  "type": "STRING",
-                  "value": "v"
-                },
-                {
-                  "type": "STRING",
-                  "value": "0"
-                },
-                {
-                  "type": "STRING",
-                  "value": "'"
-                },
-                {
-                  "type": "STRING",
-                  "value": "\""
-                },
-                {
-                  "type": "STRING",
-                  "value": "\\"
-                }
-              ]
-            }
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "r"
+              },
+              {
+                "type": "STRING",
+                "value": "n"
+              },
+              {
+                "type": "STRING",
+                "value": "t"
+              },
+              {
+                "type": "STRING",
+                "value": "v"
+              },
+              {
+                "type": "STRING",
+                "value": "0"
+              },
+              {
+                "type": "STRING",
+                "value": "'"
+              },
+              {
+                "type": "STRING",
+                "value": "\""
+              },
+              {
+                "type": "STRING",
+                "value": "\\"
+              },
+              {
+                "type": "PATTERN",
+                "value": "u\\d+"
+              }
+            ]
           }
         ]
       }
@@ -3189,11 +3190,8 @@
           }
         },
         {
-          "type": "IMMEDIATE_TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "\""
-          }
+          "type": "STRING",
+          "value": "\""
         }
       ]
     },
@@ -3225,11 +3223,8 @@
           }
         },
         {
-          "type": "IMMEDIATE_TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "'"
-          }
+          "type": "STRING",
+          "value": "'"
         }
       ]
     },
