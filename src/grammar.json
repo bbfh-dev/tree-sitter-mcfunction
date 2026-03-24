@@ -1929,6 +1929,22 @@
       ]
     },
     "_resource_segment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_resource_segment_word"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_resource_segment_word"
+          }
+        }
+      ]
+    },
+    "_resource_segment_word": {
       "type": "CHOICE",
       "members": [
         {

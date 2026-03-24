@@ -74,6 +74,9 @@ module.exports = {
 		),
 
 	_resource_segment: ($) =>
+		seq($._resource_segment_word, repeat($._resource_segment_word)),
+
+	_resource_segment_word: ($) =>
 		choice($.macro, alias(/[0-9a-zA-Z_\-\+\.\*\?]+/, $.word)),
 
 	path: ($) =>

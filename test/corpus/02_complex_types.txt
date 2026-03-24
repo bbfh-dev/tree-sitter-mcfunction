@@ -142,6 +142,7 @@ Resources
 
 execute in minecraft:overworld
 execute in minecraft:$(macro)
+execute in minecraft:$(macro).a.b/ab_$(macro)
 execute in minecraft:the_nether
 function #foo
 function give:example/path
@@ -162,6 +163,13 @@ function bs.dump:interpret/any
   (command
     (subcommand_keyword)
     (minecraft_resource
+      (macro)))
+  (command
+    (subcommand_keyword)
+    (minecraft_resource
+      (macro)
+      (word)
+      (word)
       (macro)))
   (command
     (subcommand_keyword)
