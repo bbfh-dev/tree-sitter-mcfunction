@@ -14,6 +14,7 @@ module.exports = grammar({
 
 	conflicts: ($) => [
 		[$.argument_keyword, $.subcommand_keyword],
+		[$._path_node, $.item_slot],
 		[$._word, $.selector_identifier],
 	],
 

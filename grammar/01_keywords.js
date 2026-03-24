@@ -75,13 +75,13 @@ module.exports = {
 
 	item_slot: ($) =>
 		choice(
-			seq("container.", $._item_slot_identifier),
-			seq("hotbar.", $._item_slot_identifier),
-			seq("inventory.", $._item_slot_identifier),
-			seq("enderchest.", $._item_slot_identifier),
-			seq("villager.", $._item_slot_identifier),
-			seq("horse.", $._item_slot_identifier),
-			seq("player.crafting.", $._item_slot_identifier),
+			seq("container", ".", $._item_slot_identifier),
+			seq("hotbar", ".", $._item_slot_identifier),
+			seq("inventory", ".", $._item_slot_identifier),
+			seq("enderchest", ".", $._item_slot_identifier),
+			seq("villager", ".", $._item_slot_identifier),
+			seq("horse", ".", $._item_slot_identifier),
+			seq("player.crafting", ".", $._item_slot_identifier),
 			"contents",
 			"weapon",
 			"weapon.offhand",

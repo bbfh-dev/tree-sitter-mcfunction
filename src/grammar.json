@@ -1404,7 +1404,11 @@
           "members": [
             {
               "type": "STRING",
-              "value": "container."
+              "value": "container"
+            },
+            {
+              "type": "STRING",
+              "value": "."
             },
             {
               "type": "SYMBOL",
@@ -1417,7 +1421,11 @@
           "members": [
             {
               "type": "STRING",
-              "value": "hotbar."
+              "value": "hotbar"
+            },
+            {
+              "type": "STRING",
+              "value": "."
             },
             {
               "type": "SYMBOL",
@@ -1430,7 +1438,11 @@
           "members": [
             {
               "type": "STRING",
-              "value": "inventory."
+              "value": "inventory"
+            },
+            {
+              "type": "STRING",
+              "value": "."
             },
             {
               "type": "SYMBOL",
@@ -1443,7 +1455,11 @@
           "members": [
             {
               "type": "STRING",
-              "value": "enderchest."
+              "value": "enderchest"
+            },
+            {
+              "type": "STRING",
+              "value": "."
             },
             {
               "type": "SYMBOL",
@@ -1456,7 +1472,11 @@
           "members": [
             {
               "type": "STRING",
-              "value": "villager."
+              "value": "villager"
+            },
+            {
+              "type": "STRING",
+              "value": "."
             },
             {
               "type": "SYMBOL",
@@ -1469,7 +1489,11 @@
           "members": [
             {
               "type": "STRING",
-              "value": "horse."
+              "value": "horse"
+            },
+            {
+              "type": "STRING",
+              "value": "."
             },
             {
               "type": "SYMBOL",
@@ -1482,7 +1506,11 @@
           "members": [
             {
               "type": "STRING",
-              "value": "player.crafting."
+              "value": "player.crafting"
+            },
+            {
+              "type": "STRING",
+              "value": "."
             },
             {
               "type": "SYMBOL",
@@ -2039,6 +2067,82 @@
         {
           "type": "STRING",
           "value": "say"
+        },
+        {
+          "type": "STRING",
+          "value": "container"
+        },
+        {
+          "type": "STRING",
+          "value": "hotbar"
+        },
+        {
+          "type": "STRING",
+          "value": "inventory"
+        },
+        {
+          "type": "STRING",
+          "value": "enderchest"
+        },
+        {
+          "type": "STRING",
+          "value": "villager"
+        },
+        {
+          "type": "STRING",
+          "value": "horse"
+        },
+        {
+          "type": "STRING",
+          "value": "player.crafting"
+        },
+        {
+          "type": "STRING",
+          "value": "contents"
+        },
+        {
+          "type": "STRING",
+          "value": "weapon"
+        },
+        {
+          "type": "STRING",
+          "value": "weapon.offhand"
+        },
+        {
+          "type": "STRING",
+          "value": "weapon.mainhand"
+        },
+        {
+          "type": "STRING",
+          "value": "armor.head"
+        },
+        {
+          "type": "STRING",
+          "value": "armor.chest"
+        },
+        {
+          "type": "STRING",
+          "value": "armor.legs"
+        },
+        {
+          "type": "STRING",
+          "value": "armor.feet"
+        },
+        {
+          "type": "STRING",
+          "value": "armor.body"
+        },
+        {
+          "type": "STRING",
+          "value": "horse.saddle"
+        },
+        {
+          "type": "STRING",
+          "value": "horse.chest"
+        },
+        {
+          "type": "STRING",
+          "value": "player.cursor"
         }
       ]
     },
@@ -3812,6 +3916,10 @@
     [
       "argument_keyword",
       "subcommand_keyword"
+    ],
+    [
+      "_path_node",
+      "item_slot"
     ],
     [
       "_word",

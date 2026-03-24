@@ -226,6 +226,7 @@ data foo.bar[0]."A [crazy name]".baz.$(hello).{foo:bar}
 data get entity @s item.components."minecraft:custom_data".item[5]
 data get entity @s Pos[0]
 data get entity @s entity.path
+data get entity @s container.i
 $data modify storage bs:ctx _.v set from storage bs:ctx _.g[{n:"$(name)"}].o[0]
 $data modify storage bs:ctx _.v set from storage bs:ctx _.g[{n:"$(name)"}].o[{v:"$(v)"}]
 data get entity @s entity.path[][]
@@ -291,6 +292,15 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
       (word))
     (path
       (subcommand_keyword)
+      (word
+        (identifier))))
+  (command
+    (identifier)
+    (argument_keyword)
+    (argument_keyword)
+    (entity_selector
+      (word))
+    (path
       (word
         (identifier))))
   (command

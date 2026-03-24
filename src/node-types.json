@@ -1312,7 +1312,7 @@
     "named": false
   },
   {
-    "type": "container.",
+    "type": "container",
     "named": false
   },
   {
@@ -1408,7 +1408,7 @@
     "named": false
   },
   {
-    "type": "enderchest.",
+    "type": "enderchest",
     "named": false
   },
   {
@@ -1536,7 +1536,7 @@
     "named": false
   },
   {
-    "type": "horse.",
+    "type": "horse",
     "named": false
   },
   {
@@ -1552,7 +1552,7 @@
     "named": false
   },
   {
-    "type": "hotbar.",
+    "type": "hotbar",
     "named": false
   },
   {
@@ -1576,7 +1576,7 @@
     "named": false
   },
   {
-    "type": "inventory.",
+    "type": "inventory",
     "named": false
   },
   {
@@ -1784,7 +1784,7 @@
     "named": false
   },
   {
-    "type": "player.crafting.",
+    "type": "player.crafting",
     "named": false
   },
   {
@@ -2092,7 +2092,7 @@
     "named": false
   },
   {
-    "type": "villager.",
+    "type": "villager",
     "named": false
   },
   {
