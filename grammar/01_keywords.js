@@ -36,11 +36,14 @@ module.exports = {
 	subcommand_keyword: (_) => choice(...KEYWORDS.subcommands),
 
 	_keywords: ($) =>
-		choice(
-			$.color,
-			$.scoreboard_objective,
-			$.scoreboard_display_slot,
-			$.item_slot,
+		prec(
+			1,
+			choice(
+				$.color,
+				$.scoreboard_objective,
+				$.scoreboard_display_slot,
+				$.item_slot,
+			),
 		),
 
 	operation: (_) =>

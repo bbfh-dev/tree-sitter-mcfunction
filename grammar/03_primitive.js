@@ -112,7 +112,18 @@ module.exports = {
 			),
 		),
 
-	_word_token: ($) => choice(/[\-\+]*[a-zA-Z_][0-9a-zA-Z_]*/, $.identifier),
+	_word_overlap: ($) =>
+		choice(
+			$.argument_keyword,
+			$.subcommand_keyword,
+			$.color,
+			$.scoreboard_objective,
+			$.scoreboard_display_slot,
+			$.item_slot,
+		),
+
+	_word_token: ($) =>
+		choice(/[\-\+]*[a-zA-Z_][0-9a-zA-Z_]*/, $.identifier, $._word_overlap),
 
 	word: ($) =>
 		choice(

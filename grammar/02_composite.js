@@ -49,8 +49,8 @@ module.exports = {
 	minecraft_resource: ($) =>
 		seq(
 			token(prec(2, "minecraft:")),
-			choice($.word, $.macro),
-			repeat(seq("/", $.word)),
+			$._resource_segment,
+			repeat(seq("/", $._resource_segment)),
 		),
 
 	generic_resource: ($) =>
@@ -69,7 +69,7 @@ module.exports = {
 
 	namespace: ($) =>
 		seq(
-			choice($.macro, $.word, $.score_holder, $.path, $._word_overlap),
+			choice($.macro, $.word, $.score_holder, $.path),
 			token(prec(2, ":")),
 		),
 
@@ -125,17 +125,7 @@ module.exports = {
 			"player.cursor",
 		),
 
-	_word_overlap: ($) =>
-		choice(
-			$.argument_keyword,
-			$.subcommand_keyword,
-			$.color,
-			$.scoreboard_objective,
-			$.scoreboard_display_slot,
-			$.item_slot,
-		),
-
-	_word: ($) => choice(alias($.integer, $.word), $.word, $._word_overlap),
+	_word: ($) => choice(alias($.integer, $.word), $.word),
 
 	snbt_array: ($) =>
 		seq(
@@ -169,7 +159,6 @@ module.exports = {
 	_snbt_value: ($) =>
 		choice(
 			$.macro,
-			$._word_overlap,
 			$._primitive_type,
 			$.path,
 			$.range,

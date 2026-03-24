@@ -158,8 +158,7 @@ function bs.dump:interpret/any
   (command
     (subcommand_keyword)
     (minecraft_resource
-      (word
-        (identifier))))
+      (word)))
   (command
     (subcommand_keyword)
     (minecraft_resource
@@ -167,8 +166,7 @@ function bs.dump:interpret/any
   (command
     (subcommand_keyword)
     (minecraft_resource
-      (word
-        (identifier))))
+      (word)))
   (command
     (identifier)
     (score_holder))
@@ -176,7 +174,8 @@ function bs.dump:interpret/any
     (identifier)
     (generic_resource
       (namespace
-        (argument_keyword))
+        (word
+          (argument_keyword)))
       (word)
       (word)))
   (command
@@ -269,7 +268,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
   (command
     (identifier)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (entity_selector
       (word))
     (path
@@ -285,7 +285,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
   (command
     (identifier)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (entity_selector
       (word))
     (path
@@ -295,17 +296,20 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
   (command
     (identifier)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (entity_selector
       (word))
     (path
-      (subcommand_keyword)
+      (word
+        (subcommand_keyword))
       (word
         (identifier))))
   (command
     (identifier)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (entity_selector
       (word))
     (path
@@ -315,7 +319,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
     (macro_sign)
     (identifier)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (generic_resource
       (namespace
         (word
@@ -328,7 +333,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
         (identifier)))
     (argument_keyword)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (generic_resource
       (namespace
         (word
@@ -353,7 +359,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
     (macro_sign)
     (identifier)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (generic_resource
       (namespace
         (word
@@ -366,7 +373,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
         (identifier)))
     (argument_keyword)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (generic_resource
       (namespace
         (word
@@ -394,11 +402,13 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
   (command
     (identifier)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (entity_selector
       (word))
     (path
-      (subcommand_keyword)
+      (word
+        (subcommand_keyword))
       (word
         (identifier))
       (snbt_array)
@@ -419,7 +429,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
         (identifier))
       (snbt_array
         (integer))
-      (argument_keyword))
+      (word
+        (argument_keyword)))
     (subcommand_keyword)
     (subcommand_keyword)
     (subcommand_keyword)
@@ -432,7 +443,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
     (command
       (identifier)
       (argument_keyword)
-      (argument_keyword)
+      (word
+        (subcommand_keyword))
       (generic_resource
         (namespace
           (word
@@ -445,7 +457,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
           (identifier))
         (snbt_array
           (integer))
-        (argument_keyword))))
+        (word
+          (argument_keyword)))))
   (command
     (macro_sign)
     (subcommand_keyword)
@@ -457,7 +470,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
           (identifier)))
       (word))
     (path
-      (argument_keyword)
+      (word
+        (argument_keyword))
       (word
         (identifier))
       (snbt_array
@@ -477,33 +491,38 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
     (command
       (identifier)
       (argument_keyword)
-      (argument_keyword)
+      (word
+        (subcommand_keyword))
       (generic_resource
         (namespace
           (word
             (identifier)))
         (word))
       (path
-        (argument_keyword)
+        (word
+          (argument_keyword))
         (word
           (identifier))
         (macro))))
   (command
     (identifier)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (generic_resource
       (namespace
         (word
           (identifier)))
       (word))
     (path
-      (argument_keyword)
+      (word
+        (argument_keyword))
       (word
         (identifier)))
     (argument_keyword)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (generic_resource
       (namespace
         (word
@@ -525,7 +544,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
     (path
       (word
         (identifier))
-      (argument_keyword)
+      (word
+        (argument_keyword))
       (snbt_array
         (integer)))
     (word
@@ -539,7 +559,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
       (path
         (word
           (identifier))
-        (subcommand_keyword))))
+        (word
+          (subcommand_keyword)))))
   (command
     (macro_sign)
     (subcommand_keyword)
@@ -554,7 +575,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
     (command
       (identifier)
       (argument_keyword)
-      (argument_keyword)
+      (word
+        (subcommand_keyword))
       (generic_resource
         (namespace
           (word
@@ -576,7 +598,8 @@ execute if data storage bs:data xp.stack[-1].var{} run return run function bs.du
           (identifier)))
       (word))
     (path
-      (scoreboard_objective)
+      (word
+        (scoreboard_objective))
       (word
         (identifier))
       (snbt_array
@@ -637,7 +660,8 @@ data modify storage bs:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5
         (snbt_compound
           (snbt_key_value_pair
             (key)
-            (argument_keyword))
+            (word
+              (argument_keyword)))
           (snbt_key_value_pair
             (key)
             (snbt_compound))))))
@@ -663,7 +687,8 @@ data modify storage bs:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5
   (command
     (identifier)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (vector)
     (vector)
     (vector)
@@ -672,7 +697,8 @@ data modify storage bs:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5
       (word
         (identifier)))
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (snbt_compound
       (snbt_key_value_pair
         (key)
@@ -684,18 +710,21 @@ data modify storage bs:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5
   (command
     (identifier)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (generic_resource
       (namespace
         (word
           (identifier)))
       (word))
     (path
-      (argument_keyword)
+      (word
+        (argument_keyword))
       (word
         (identifier)))
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (snbt_compound
       (snbt_key_value_pair
         (key)
@@ -745,7 +774,8 @@ data [0f,0f,1f]
   (command
     (identifier)
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (vector)
     (vector)
     (vector)
@@ -756,7 +786,8 @@ data [0f,0f,1f]
       (word
         (identifier)))
     (argument_keyword)
-    (argument_keyword)
+    (word
+      (subcommand_keyword))
     (snbt_array
       (snbt_compound
         (snbt_key_value_pair
@@ -798,8 +829,7 @@ give armor_stand[entity_data={id:"minecraft:armor_stand", Tags:[taco_sauce]}]
   (command
     (identifier)
     (minecraft_resource
-      (word
-        (identifier))))
+      (word)))
   (command
     (identifier)
     (item_selector
@@ -876,8 +906,7 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
   (command
     (identifier)
     (minecraft_resource
-      (word
-        (identifier))))
+      (word)))
   (command
     (identifier)
     (item_selector
@@ -909,8 +938,10 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
             (identifier))))))
   (command
     (identifier)
-    (path
-      (scoreboard_objective)
+    (block_selector
+      (selector_identifier
+        (word
+          (scoreboard_objective)))
       (snbt_compound
         (snbt_key_value_pair
           (key)
@@ -925,8 +956,7 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (item_selector
       (selector_identifier
         (minecraft_resource
-          (word
-            (identifier))))
+          (word)))
       (data_compound
         (data_key_value_pair
           (key)
@@ -941,8 +971,7 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (item_selector
       (selector_identifier
         (minecraft_resource
-          (word
-            (identifier))))
+          (word)))
       (data_compound
         (data_key_value_pair
           (key)
@@ -956,8 +985,7 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (item_selector
       (selector_identifier
         (minecraft_resource
-          (word
-            (identifier))))
+          (word)))
       (data_compound
         (data_key_value_pair
           (key)
@@ -971,8 +999,7 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (item_selector
       (selector_identifier
         (minecraft_resource
-          (word
-            (identifier))))
+          (word)))
       (data_compound
         (data_key_value_pair
           (key)
@@ -986,8 +1013,7 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (item_selector
       (selector_identifier
         (minecraft_resource
-          (word
-            (identifier))))
+          (word)))
       (data_compound
         (data_key_value_pair
           (key)
@@ -1120,8 +1146,7 @@ setblock ~ ~ ~ minecraft:dispenser[facing=up]{Items: [{id: "minecraft:diamond", 
     (block_selector
       (selector_identifier
         (minecraft_resource
-          (word
-            (identifier))))
+          (word)))
       (data_compound
         (data_key_value_pair
           (key)
@@ -1301,7 +1326,8 @@ tellraw @s [{"text": "Hi!"}]
               (identifier))
             (word
               (identifier))
-            (argument_keyword))))))
+            (word
+              (argument_keyword)))))))
   (command
     (subcommand_keyword)
     (entity_selector
@@ -1385,10 +1411,8 @@ tellraw @s [{"text": "Hi!"}]
             (snbt_key_value_pair
               (key
                 (minecraft_resource
-                  (word
-                    (identifier))
-                  (word
-                    (identifier))))
+                  (word)
+                  (word)))
               (boolean)))))))
   (command
     (subcommand_keyword)
@@ -1401,10 +1425,8 @@ tellraw @s [{"text": "Hi!"}]
             (snbt_key_value_pair
               (key
                 (minecraft_resource
-                  (word
-                    (identifier))
-                  (word
-                    (identifier))))
+                  (word)
+                  (word)))
               (snbt_compound
                 (snbt_key_value_pair
                   (key)
@@ -1420,10 +1442,8 @@ tellraw @s [{"text": "Hi!"}]
             (snbt_key_value_pair
               (key
                 (minecraft_resource
-                  (word
-                    (identifier))
-                  (word
-                    (identifier))))
+                  (word)
+                  (word)))
               (snbt_compound
                 (snbt_key_value_pair
                   (key)
@@ -1442,18 +1462,14 @@ tellraw @s [{"text": "Hi!"}]
             (snbt_key_value_pair
               (key
                 (minecraft_resource
-                  (word
-                    (identifier))
-                  (word
-                    (identifier))))
+                  (word)
+                  (word)))
               (boolean))
             (snbt_key_value_pair
               (key
                 (minecraft_resource
-                  (word
-                    (identifier))
-                  (word
-                    (identifier))))
+                  (word)
+                  (word)))
               (boolean)))))))
   (command
     (subcommand_keyword)
@@ -1466,10 +1482,8 @@ tellraw @s [{"text": "Hi!"}]
             (snbt_key_value_pair
               (key
                 (minecraft_resource
-                  (word
-                    (identifier))
-                  (word
-                    (identifier))))
+                  (word)
+                  (word)))
               (snbt_compound
                 (snbt_key_value_pair
                   (key)
@@ -1480,10 +1494,8 @@ tellraw @s [{"text": "Hi!"}]
             (snbt_key_value_pair
               (key
                 (minecraft_resource
-                  (word
-                    (identifier))
-                  (word
-                    (identifier))))
+                  (word)
+                  (word)))
               (snbt_compound
                 (snbt_key_value_pair
                   (key)

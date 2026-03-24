@@ -189,7 +189,8 @@ datapack enable 'name $$(line) $(id)'
     (path
       (word
         (identifier))
-      (argument_keyword)
+      (word
+        (argument_keyword))
       (word
         (identifier)))
     (path
@@ -213,7 +214,8 @@ datapack enable 'name $$(line) $(id)'
     (path
       (word
         (identifier))
-      (subcommand_keyword)))
+      (word
+        (subcommand_keyword))))
   (command
     (identifier)
     (argument_keyword)
@@ -249,7 +251,8 @@ datapack enable 'name $$(line) $(id)'
     (path
       (word
         (identifier))
-      (subcommand_keyword))
+      (word
+        (subcommand_keyword)))
     (integer))
   (command
     (identifier)

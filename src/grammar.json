@@ -946,25 +946,29 @@
       ]
     },
     "_keywords": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "color"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "scoreboard_objective"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "scoreboard_display_slot"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "item_slot"
-        }
-      ]
+      "type": "PREC",
+      "value": 1,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "color"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "scoreboard_objective"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "scoreboard_display_slot"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "item_slot"
+          }
+        ]
+      }
     },
     "operation": {
       "type": "CHOICE",
@@ -1803,17 +1807,8 @@
           }
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "word"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "macro"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "_resource_segment"
         },
         {
           "type": "REPEAT",
@@ -1826,7 +1821,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "word"
+                "name": "_resource_segment"
               }
             ]
           }
@@ -1917,10 +1912,6 @@
             {
               "type": "SYMBOL",
               "name": "path"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "_word_overlap"
             }
           ]
         },
@@ -2150,35 +2141,6 @@
         }
       ]
     },
-    "_word_overlap": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "argument_keyword"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "subcommand_keyword"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "color"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "scoreboard_objective"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "scoreboard_display_slot"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "item_slot"
-        }
-      ]
-    },
     "_word": {
       "type": "CHOICE",
       "members": [
@@ -2194,10 +2156,6 @@
         {
           "type": "SYMBOL",
           "name": "word"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_word_overlap"
         }
       ]
     },
@@ -2591,10 +2549,6 @@
         {
           "type": "SYMBOL",
           "name": "macro"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_word_overlap"
         },
         {
           "type": "SYMBOL",
@@ -3502,6 +3456,35 @@
         }
       ]
     },
+    "_word_overlap": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "argument_keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "subcommand_keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "color"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "scoreboard_objective"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "scoreboard_display_slot"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "item_slot"
+        }
+      ]
+    },
     "_word_token": {
       "type": "CHOICE",
       "members": [
@@ -3512,6 +3495,10 @@
         {
           "type": "SYMBOL",
           "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_word_overlap"
         }
       ]
     },
@@ -3785,8 +3772,12 @@
                         "name": "_command_argument"
                       },
                       {
-                        "type": "SYMBOL",
-                        "name": "subcommand_keyword"
+                        "type": "PREC",
+                        "value": 1,
+                        "content": {
+                          "type": "SYMBOL",
+                          "name": "subcommand_keyword"
+                        }
                       }
                     ]
                   }
@@ -3879,8 +3870,12 @@
                     "name": "_command_argument"
                   },
                   {
-                    "type": "SYMBOL",
-                    "name": "argument_keyword"
+                    "type": "PREC",
+                    "value": 1,
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "argument_keyword"
+                    }
                   }
                 ]
               }

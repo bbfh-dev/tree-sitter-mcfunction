@@ -37,7 +37,10 @@ module.exports = {
 				repeat(
 					seq(
 						$._whitespace,
-						choice($._command_argument, $.subcommand_keyword),
+						choice(
+							$._command_argument,
+							prec(1, $.subcommand_keyword),
+						),
 					),
 				),
 				optional(seq($._whitespace, "run", $._whitespace, $.command)),
@@ -58,7 +61,7 @@ module.exports = {
 			repeat(
 				seq(
 					$._whitespace,
-					choice($._command_argument, $.argument_keyword),
+					choice($._command_argument, prec(1, $.argument_keyword)),
 				),
 			),
 		),
