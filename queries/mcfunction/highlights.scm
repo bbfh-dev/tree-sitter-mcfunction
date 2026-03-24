@@ -75,7 +75,7 @@
 
 ; Misc
 (command
-  (generic_resource) @markup.link)
+  (generic_resource) @markup.link.url)
 
 (command
   (generic_resource
@@ -84,7 +84,7 @@
         (path)
         (score_holder)
         (word)
-      ] @markup.link)))
+      ] @markup.link.url)))
 
 (minecraft_resource) @variable
 
