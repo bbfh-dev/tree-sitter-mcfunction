@@ -96,14 +96,8 @@ module.exports = {
 			),
 		),
 
-	_path_node: ($) =>
+	_constant: ($) =>
 		choice(
-			$.macro,
-			$.string,
-			$._data_path_node,
-			$.snbt_array,
-			$.snbt_compound,
-			$._word,
 			"execute",
 			"run",
 			"say",
@@ -127,6 +121,17 @@ module.exports = {
 			"horse.saddle",
 			"horse.chest",
 			"player.cursor",
+		),
+
+	_path_node: ($) =>
+		choice(
+			$.macro,
+			$.string,
+			$._data_path_node,
+			$.snbt_array,
+			$.snbt_compound,
+			$._word,
+			$._constant,
 		),
 
 	_word: ($) => choice(alias($.integer, $.word), $.word),
@@ -169,6 +174,7 @@ module.exports = {
 			$.typed_number,
 			$.snbt_array,
 			$.snbt_compound,
+			$._constant,
 		),
 
 	data_compound: ($) => seq("[", list($, $.data_key_value_pair), "]"),

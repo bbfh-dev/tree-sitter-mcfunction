@@ -2074,33 +2074,9 @@
         }
       ]
     },
-    "_path_node": {
+    "_constant": {
       "type": "CHOICE",
       "members": [
-        {
-          "type": "SYMBOL",
-          "name": "macro"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "string"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_data_path_node"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "snbt_array"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "snbt_compound"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_word"
-        },
         {
           "type": "STRING",
           "value": "execute"
@@ -2188,6 +2164,39 @@
         {
           "type": "STRING",
           "value": "player.cursor"
+        }
+      ]
+    },
+    "_path_node": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "macro"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_data_path_node"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "snbt_array"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "snbt_compound"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_word"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_constant"
         }
       ]
     },
@@ -2623,6 +2632,10 @@
         {
           "type": "SYMBOL",
           "name": "snbt_compound"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_constant"
         }
       ]
     },
@@ -3996,8 +4009,8 @@
       "subcommand_keyword"
     ],
     [
-      "_path_node",
-      "item_slot"
+      "item_slot",
+      "_constant"
     ],
     [
       "_word",
