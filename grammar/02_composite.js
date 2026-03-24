@@ -191,6 +191,11 @@ module.exports = {
 				$._data_value,
 			),
 			seq(optional("!"), prec(1, $._resource)),
+			seq(
+				optional("!"),
+				prec(1, $._resource),
+				repeat1(seq("|", prec(1, $._resource))),
+			),
 		),
 
 	_data_value: ($) =>
