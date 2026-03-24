@@ -180,6 +180,7 @@ module.exports = {
 
 	data_key_value_pair: ($) =>
 		seq(
+			optional("!"),
 			$.key,
 			optional($._whitespace),
 			choice(seq("=", optional("!")), "~"),
