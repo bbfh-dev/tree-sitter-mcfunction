@@ -129,5 +129,7 @@ module.exports = {
 		choice(
 			seq($._word_token, repeat(choice($.macro, $._word_token))),
 			seq($.macro, repeat1(choice($.macro, $._word_token))),
+			"villager",
+			"horse",
 		),
 };

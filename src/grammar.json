@@ -2107,14 +2107,6 @@
         },
         {
           "type": "STRING",
-          "value": "villager"
-        },
-        {
-          "type": "STRING",
-          "value": "horse"
-        },
-        {
-          "type": "STRING",
           "value": "player.crafting"
         },
         {
@@ -3646,6 +3638,14 @@
               }
             }
           ]
+        },
+        {
+          "type": "STRING",
+          "value": "villager"
+        },
+        {
+          "type": "STRING",
+          "value": "horse"
         }
       ]
     },
@@ -4011,6 +4011,10 @@
     [
       "item_slot",
       "_constant"
+    ],
+    [
+      "item_slot",
+      "word"
     ],
     [
       "_word",

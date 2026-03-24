@@ -106,8 +106,6 @@ module.exports = {
 			"hotbar",
 			"inventory",
 			"enderchest",
-			"villager",
-			"horse",
 			"player.crafting",
 			"contents",
 			"weapon",

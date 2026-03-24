@@ -79,6 +79,7 @@ say Hello World! :)
 execute run \
 	return run function ./call:
 	say Hi!
+summon villager
 
 ------------------
 
@@ -100,4 +101,7 @@ execute run \
         (generic_resource
           (word)))))
   (command
-    (greedy_string)))
+    (greedy_string))
+  (command
+    (identifier)
+    (word)))
