@@ -80,6 +80,7 @@ execute run \
 	return run function ./call:
 	say Hi!
 summon villager    
+give @s[advancements={vanilla:consumed_item=true}]
 
 ------------------
 
@@ -104,4 +105,18 @@ summon villager
     (greedy_string))
   (command
     (identifier)
-    (word)))
+    (word))
+  (command
+    (identifier)
+    (entity_selector
+      (word)
+      (data_compound
+        (data_key_value_pair
+          (advancements_data_compound
+            (advancements_key_value_pair
+              (generic_resource
+                (namespace
+                  (word
+                    (identifier)))
+                (word))
+              (boolean))))))))

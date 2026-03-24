@@ -18,7 +18,6 @@ module.exports = grammar({
 		[$.item_slot, $.word],
 		[$._word, $.selector_identifier],
 		[$._data_path_node, $.selector_identifier],
-		[$._data_value, $.snbt_key_value_pair],
 	],
 
 	// Handle whitespace manually.

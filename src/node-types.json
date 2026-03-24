@@ -1,5 +1,103 @@
 [
   {
+    "type": "advancements_data_compound",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "advancements_key_value_pair",
+          "named": true
+        },
+        {
+          "type": "backslash",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "advancements_key_value_pair",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "generic_resource",
+          "named": true
+        },
+        {
+          "type": "hexadecimal",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "minecraft_resource",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        },
+        {
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "score_holder",
+          "named": true
+        },
+        {
+          "type": "snbt_array",
+          "named": true
+        },
+        {
+          "type": "snbt_compound",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_number",
+          "named": true
+        },
+        {
+          "type": "uuid",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "argument_keyword",
     "named": true,
     "fields": {}
@@ -200,25 +298,6 @@
     }
   },
   {
-    "type": "curly_data_compound",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "backslash",
-          "named": true
-        },
-        {
-          "type": "data_key_value_pair",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "data_compound",
     "named": true,
     "fields": {},
@@ -246,15 +325,15 @@
       "required": true,
       "types": [
         {
+          "type": "advancements_data_compound",
+          "named": true
+        },
+        {
           "type": "backslash",
           "named": true
         },
         {
           "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "curly_data_compound",
           "named": true
         },
         {

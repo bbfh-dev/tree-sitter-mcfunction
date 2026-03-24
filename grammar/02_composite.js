@@ -178,7 +178,8 @@ module.exports = {
 
 	data_compound: ($) => seq("[", list($, $.data_key_value_pair), "]"),
 
-	curly_data_compound: ($) => seq("{", list($, $.data_key_value_pair), "}"),
+	advancements_data_compound: ($) =>
+		seq("{", list($, $.advancements_key_value_pair), "}"),
 
 	data_key_value_pair: ($) =>
 		choice(
@@ -194,12 +195,24 @@ module.exports = {
 			seq(
 				optional("!"),
 				prec(1, $._resource),
-				repeat1(seq("|", prec(1, $._resource))),
+				repeat1(seq("|", choice(prec(1, $._resource), $.word))),
+			),
+			seq(
+				token(prec(2, /advancements *= */)),
+				$.advancements_data_compound,
 			),
 		),
 
-	_data_value: ($) =>
-		choice($._snbt_value, $._resource, $.curly_data_compound),
+	advancements_key_value_pair: ($) =>
+		seq(
+			$._resource,
+			optional($._whitespace),
+			choice(seq("=", optional($._whitespace), optional("!")), "~"),
+			optional($._whitespace),
+			$._data_value,
+		),
+
+	_data_value: ($) => choice($._snbt_value, $._resource),
 
 	entity_selector: ($) =>
 		seq(alias(/@[a-z]/, $.word), optional($.data_compound)),

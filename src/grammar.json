@@ -2764,7 +2764,7 @@
         }
       ]
     },
-    "curly_data_compound": {
+    "advancements_data_compound": {
       "type": "SEQ",
       "members": [
         {
@@ -2788,7 +2788,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "data_key_value_pair"
+              "name": "advancements_key_value_pair"
             },
             {
               "type": "REPEAT",
@@ -2825,7 +2825,7 @@
                   },
                   {
                     "type": "SYMBOL",
-                    "name": "data_key_value_pair"
+                    "name": "advancements_key_value_pair"
                   }
                 ]
               }
@@ -3014,17 +3014,125 @@
                     "value": "|"
                   },
                   {
-                    "type": "PREC",
-                    "value": 1,
-                    "content": {
-                      "type": "SYMBOL",
-                      "name": "_resource"
-                    }
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "PREC",
+                        "value": 1,
+                        "content": {
+                          "type": "SYMBOL",
+                          "name": "_resource"
+                        }
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "word"
+                      }
+                    ]
                   }
                 ]
               }
             }
           ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "TOKEN",
+              "content": {
+                "type": "PREC",
+                "value": 2,
+                "content": {
+                  "type": "PATTERN",
+                  "value": "advancements *= *"
+                }
+              }
+            },
+            {
+              "type": "SYMBOL",
+              "name": "advancements_data_compound"
+            }
+          ]
+        }
+      ]
+    },
+    "advancements_key_value_pair": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_resource"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_whitespace"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "="
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "_whitespace"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": "!"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "STRING",
+              "value": "~"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_whitespace"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_data_value"
         }
       ]
     },
@@ -3038,10 +3146,6 @@
         {
           "type": "SYMBOL",
           "name": "_resource"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "curly_data_compound"
         }
       ]
     },
@@ -4271,10 +4375,6 @@
     [
       "_data_path_node",
       "selector_identifier"
-    ],
-    [
-      "_data_value",
-      "snbt_key_value_pair"
     ]
   ],
   "precedences": [],
