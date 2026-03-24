@@ -138,7 +138,7 @@ effect 0.$(macro) -$(macro).96
 String literals
 ==================
 
-kill -+._A-Za-z0-9word word_with_underscores "quoted phrase \u0002" ""
+kill -+._A-Za-z0-9word word_with_underscores "quoted phrase \u0002 🐡" ""
 scoreboard $input.rgb.r example.id.out _.i #name.target_entity
 scoreboard players operation #t bs.ctx = $vector.cross_product.u.2 bs.in
 scoreboard players operation $vector.cross_product.0 bs.out -= #t bs.ctx
