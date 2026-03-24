@@ -2021,6 +2021,18 @@
         {
           "type": "SYMBOL",
           "name": "_word"
+        },
+        {
+          "type": "STRING",
+          "value": "execute"
+        },
+        {
+          "type": "STRING",
+          "value": "run"
+        },
+        {
+          "type": "STRING",
+          "value": "say"
         }
       ]
     },

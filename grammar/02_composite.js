@@ -96,6 +96,9 @@ module.exports = {
 			$.snbt_array,
 			$.snbt_compound,
 			$._word,
+			"execute",
+			"run",
+			"say",
 		),
 
 	_word_overlap: ($) =>
