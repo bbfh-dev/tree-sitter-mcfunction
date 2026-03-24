@@ -668,7 +668,7 @@ execute if data entity @s Item.components."minecraft:entity_data".Item.component
 sNBT Compounds
 ==================
 
-data {"text":"hello world"}
+data {"text":"hello world",}
 data {foo:bar}
 data {type_specific:{type:player,player:{}}}
 data {\

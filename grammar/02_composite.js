@@ -8,7 +8,7 @@ function list($, item) {
 		repeat(
 			seq(optional($._whitespace), ",", optional($._whitespace), item),
 		),
-		optional(seq(",", $.backslash)),
+		optional(","),
 		optional($._whitespace),
 	);
 }
