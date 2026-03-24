@@ -82,7 +82,13 @@ module.exports = {
 		choice(
 			"*",
 			seq("-", /[_\.\+a-zA-Z][_\.\-\+0-9a-zA-Z]*/),
-			seq(choice("#", "$", "%"), choice(/[_\.\-\+0-9a-zA-Z]+/, $.macro)),
+			seq(
+				choice("#", "$", "%"),
+				choice(
+					/[_\.\-\+0-9a-zA-Z]+/,
+					seq($.macro, optional(/[_\.\-\+0-9a-zA-Z]+/)),
+				),
+			),
 		),
 
 	word: ($) => choice(/[\-\+]*[a-zA-Z_][0-9a-zA-Z_]*/, $.identifier),

@@ -144,6 +144,7 @@ scoreboard players operation #t bs.ctx = $vector.cross_product.u.2 bs.in
 scoreboard players operation $vector.cross_product.0 bs.out -= #t bs.ctx
 scoreboard players reset * load.status
 scoreboard players set #view.looked_entity bs.data 0
+scoreboard players get $$(module).major load.status
 
 say Hello @p[tag=test] :)
 
@@ -232,6 +233,17 @@ datapack enable 'escape \' me'
         (identifier))
       (subcommand_keyword))
     (integer))
+  (command
+    (identifier)
+    (argument_keyword)
+    (argument_keyword)
+    (score_holder
+      (macro))
+    (path
+      (word
+        (identifier))
+      (word
+        (identifier))))
   (command
     (greedy_string))
   (command

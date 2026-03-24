@@ -581,6 +581,7 @@ sNBT Compounds
 
 data {"text":"hello world"}
 data {foo:bar}
+data {type_specific:{type:player,player:{}}}
 data {\
 	a: [I; 1, 2, 3], \
 	abc: {value: false} \
@@ -605,6 +606,18 @@ data modify storage bs:const color.hex_values set value {00:0,01:1,5b:91,5c:92,5
         (key)
         (word
           (identifier)))))
+  (command
+    (identifier)
+    (snbt_compound
+      (snbt_key_value_pair
+        (key)
+        (snbt_compound
+          (snbt_key_value_pair
+            (key)
+            (argument_keyword))
+          (snbt_key_value_pair
+            (key)
+            (snbt_compound))))))
   (command
     (identifier)
     (snbt_compound
