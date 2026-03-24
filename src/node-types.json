@@ -200,6 +200,25 @@
     }
   },
   {
+    "type": "curly_data_compound",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "backslash",
+          "named": true
+        },
+        {
+          "type": "data_key_value_pair",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "data_compound",
     "named": true,
     "fields": {},
@@ -232,6 +251,10 @@
         },
         {
           "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "curly_data_compound",
           "named": true
         },
         {

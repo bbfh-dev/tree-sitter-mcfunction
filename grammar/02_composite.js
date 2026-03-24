@@ -69,9 +69,12 @@ module.exports = {
 		),
 
 	namespace: ($) =>
-		seq(
-			choice($.macro, $.word, $.score_holder, $.path),
-			token(prec(2, ":")),
+		prec(
+			2,
+			seq(
+				choice($.macro, $.word, $.score_holder, $.path),
+				token(prec(2, ":")),
+			),
 		),
 
 	_resource_segment: ($) =>
@@ -178,6 +181,8 @@ module.exports = {
 
 	data_compound: ($) => seq("[", list($, $.data_key_value_pair), "]"),
 
+	curly_data_compound: ($) => seq("{", list($, $.data_key_value_pair), "}"),
+
 	data_key_value_pair: ($) =>
 		choice(
 			seq(
@@ -191,7 +196,8 @@ module.exports = {
 			seq(optional("!"), prec(1, $._resource)),
 		),
 
-	_data_value: ($) => choice($._snbt_value, $._resource),
+	_data_value: ($) =>
+		choice($._snbt_value, $._resource, $.curly_data_compound),
 
 	entity_selector: ($) =>
 		seq(alias(/@[a-z]/, $.word), optional($.data_compound)),

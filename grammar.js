@@ -18,6 +18,7 @@ module.exports = grammar({
 		[$.item_slot, $.word],
 		[$._word, $.selector_identifier],
 		[$._data_path_node, $.selector_identifier],
+		[$._data_value, $.snbt_key_value_pair],
 	],
 
 	// Handle whitespace manually.
@@ -39,7 +40,7 @@ module.exports = grammar({
 					repeat(
 						seq(
 							choice(optional($._statement), $._indentation),
-							$._newline,
+							seq(optional($._indentation), $._newline),
 						),
 					),
 					$._statement,
@@ -60,7 +61,7 @@ module.exports = grammar({
 		_indentation: (_) => /[ \t]+/,
 
 		// Allows for ":" from Python 'github.com/mcbeet/mecha'
-		_newline: (_) => seq(optional(":"), / *\r?\n/),
+		_newline: (_) => seq(optional(":"), /(?: *\r?\n)+/),
 
 		macro: (_) =>
 			token(
