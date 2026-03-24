@@ -48,7 +48,7 @@ module.exports = {
 						choice(
 							$.uuid_8_segment,
 							"0",
-							$.word,
+							$._word_token,
 							$.integer,
 							$.macro,
 						),
@@ -56,13 +56,37 @@ module.exports = {
 					),
 					token(prec(1, "0-")),
 				),
-				choice($.uuid_4_segment, "0", $.word, $.integer, $.macro),
+				choice(
+					$.uuid_4_segment,
+					"0",
+					$._word_token,
+					$.integer,
+					$.macro,
+				),
 				"-",
-				choice($.uuid_4_segment, "0", $.word, $.integer, $.macro),
+				choice(
+					$.uuid_4_segment,
+					"0",
+					$._word_token,
+					$.integer,
+					$.macro,
+				),
 				"-",
-				choice($.uuid_4_segment, "0", $.word, $.integer, $.macro),
+				choice(
+					$.uuid_4_segment,
+					"0",
+					$._word_token,
+					$.integer,
+					$.macro,
+				),
 				"-",
-				choice($.uuid_12_segment, "0", $.word, $.integer, $.macro),
+				choice(
+					$.uuid_12_segment,
+					"0",
+					$._word_token,
+					$.integer,
+					$.macro,
+				),
 			),
 		),
 
@@ -117,10 +141,24 @@ module.exports = {
 		),
 
 	word: ($) =>
-		choice(
-			seq($._word_token, repeat(choice($.macro, $._word_token))),
-			seq($.macro, repeat1(choice($.macro, $._word_token))),
-			"villager",
-			"horse",
+		prec.right(
+			choice(
+				seq(
+					$._word_token,
+					repeat(
+						choice(
+							$.macro,
+							$._word_token,
+							"-",
+							$.uuid_4_segment,
+							$.uuid_8_segment,
+							$.uuid_12_segment,
+						),
+					),
+				),
+				seq($.macro, repeat1(choice($.macro, $._word_token))),
+				"villager",
+				"horse",
+			),
 		),
 };

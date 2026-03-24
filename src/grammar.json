@@ -3523,7 +3523,7 @@
                       },
                       {
                         "type": "SYMBOL",
-                        "name": "word"
+                        "name": "_word_token"
                       },
                       {
                         "type": "SYMBOL",
@@ -3567,7 +3567,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "word"
+                "name": "_word_token"
               },
               {
                 "type": "SYMBOL",
@@ -3596,7 +3596,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "word"
+                "name": "_word_token"
               },
               {
                 "type": "SYMBOL",
@@ -3625,7 +3625,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "word"
+                "name": "_word_token"
               },
               {
                 "type": "SYMBOL",
@@ -3654,7 +3654,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "word"
+                "name": "_word_token"
               },
               {
                 "type": "SYMBOL",
@@ -3939,67 +3939,87 @@
       ]
     },
     "word": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_word_token"
-            },
-            {
-              "type": "REPEAT",
-              "content": {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "macro"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "_word_token"
-                  }
-                ]
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_word_token"
+              },
+              {
+                "type": "REPEAT",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "macro"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "_word_token"
+                    },
+                    {
+                      "type": "STRING",
+                      "value": "-"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "uuid_4_segment"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "uuid_8_segment"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "uuid_12_segment"
+                    }
+                  ]
+                }
               }
-            }
-          ]
-        },
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "macro"
-            },
-            {
-              "type": "REPEAT1",
-              "content": {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "macro"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "_word_token"
-                  }
-                ]
+            ]
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "macro"
+              },
+              {
+                "type": "REPEAT1",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "macro"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "_word_token"
+                    }
+                  ]
+                }
               }
-            }
-          ]
-        },
-        {
-          "type": "STRING",
-          "value": "villager"
-        },
-        {
-          "type": "STRING",
-          "value": "horse"
-        }
-      ]
+            ]
+          },
+          {
+            "type": "STRING",
+            "value": "villager"
+          },
+          {
+            "type": "STRING",
+            "value": "horse"
+          }
+        ]
+      }
     },
     "comment": {
       "type": "CHOICE",
@@ -4363,10 +4383,6 @@
     [
       "item_slot",
       "_constant"
-    ],
-    [
-      "item_slot",
-      "word"
     ],
     [
       "_word",
