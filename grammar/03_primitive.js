@@ -28,7 +28,7 @@ module.exports = {
 			optional(/[eE]-?\d+/),
 		),
 
-	_number: ($) => choice($.integer, $.float, $.macro),
+	_number: ($) => choice($.integer, $.float, prec(1, $.macro)),
 
 	hexadecimal: ($) =>
 		choice(
@@ -107,7 +107,7 @@ module.exports = {
 			"*",
 			seq("-", /[_\.\+a-zA-Z][_\.\-\+0-9a-zA-Z]*/),
 			seq(
-				choice("#", "$", "%", "."),
+				choice("#", "$", "%", ".", "^"),
 				repeat1(choice(/[_\.\-\+0-9a-zA-Z]+/, $.macro)),
 			),
 		),

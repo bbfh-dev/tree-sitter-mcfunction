@@ -3023,8 +3023,12 @@
           "name": "float"
         },
         {
-          "type": "SYMBOL",
-          "name": "macro"
+          "type": "PREC",
+          "value": 1,
+          "content": {
+            "type": "SYMBOL",
+            "name": "macro"
+          }
         }
       ]
     },
@@ -3444,6 +3448,10 @@
                 {
                   "type": "STRING",
                   "value": "."
+                },
+                {
+                  "type": "STRING",
+                  "value": "^"
                 }
               ]
             },
