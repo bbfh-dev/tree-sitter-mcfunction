@@ -862,6 +862,7 @@ item #stone
 item #stone[foo=bar]
 give armor_stand[entity_data={id:"minecraft:armor_stand", Tags:[taco_sauce]}]
 give *[!custom_data~{bubblellaneous: {is_gui: true}}]
+give *[minecraft:dyed_color]
 
 ------------------
 
@@ -930,7 +931,16 @@ give *[!custom_data~{bubblellaneous: {is_gui: true}}]
               (snbt_compound
                 (snbt_key_value_pair
                   (key)
-                  (boolean))))))))))
+                  (boolean)))))))))
+  (command
+    (identifier)
+    (item_selector
+      (selector_identifier
+        (score_holder))
+      (data_compound
+        (data_key_value_pair
+          (minecraft_resource
+            (word)))))))
 
 ==================
 Block Selectors

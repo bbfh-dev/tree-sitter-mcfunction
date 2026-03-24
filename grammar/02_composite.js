@@ -179,13 +179,16 @@ module.exports = {
 	data_compound: ($) => seq("[", list($, $.data_key_value_pair), "]"),
 
 	data_key_value_pair: ($) =>
-		seq(
-			optional("!"),
-			$.key,
-			optional($._whitespace),
-			choice(seq("=", optional("!")), "~"),
-			optional($._whitespace),
-			$._data_value,
+		choice(
+			seq(
+				optional("!"),
+				$.key,
+				optional($._whitespace),
+				choice(seq("=", optional("!")), "~"),
+				optional($._whitespace),
+				$._data_value,
+			),
+			seq(optional("!"), prec(1, $._resource)),
 		),
 
 	_data_value: ($) => choice($._snbt_value, $._resource),
