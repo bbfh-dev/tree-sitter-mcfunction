@@ -1,17 +1,23 @@
 # Tree-sitter for MCFunction
 
-Tree-sitter grammar for Minecraft 1.21.11+ data pack function language
+Tree-sitter grammar for Minecraft 1.21.11+ data pack function language.
 
-## Roadmap before v1
+- [x] Supports macros.[⁽¹⁾](#1-macros)
+- [x] Tested on `>146,314` lines of code.[⁽²⁾](#2-testing)
 
-- [ ] Support for keywords (scoreboard objectives, colors, etc.).
-- [ ] Proper macro support (with tests!).
-- [ ] There are multiple workarounds that I had to do:
-    - That includes `highlight.scm` which has some duplicates.
-    - Many edge-cases were fixed with a tape rather than defining clean rules.
-- [ ] Add more precise tests to capture all edge-cases without unnecessary verbosity.
+If you have any issues with parsing/highlighting, feel free to [create an issue](https://github.com/bbfh-dev/tree-sitter-mcfunction/issues/new).
 
-## Neovim installation
+<!-- vim-markdown-toc GFM -->
+
+* [Neovim installation](#neovim-installation)
+* [Other editors](#other-editors)
+* [Addendum](#addendum)
+    * [1 Macros](#1-macros)
+    * [2 Testing](#2-testing)
+
+<!-- vim-markdown-toc -->
+
+# Neovim installation
 
 Using lazy:
 
@@ -41,3 +47,24 @@ return {
 ```
 
 If needed, run: `:TSInstall mcfunction`.
+
+# Other editors
+
+Refer to your editor's documentation on custom tree-sitter grammars.
+
+I do not use other text editors, but I will happily accept contributions for plugins/add-ons/extensions that enable this grammar in a different editor.
+
+# Addendum
+
+## 1 Macros
+
+This grammar accepts `$(macro)`-s in many common places. However, some `$(macro)` tricks simply cannot be properly handled and can lead to errors.
+
+## 2 Testing
+
+> [!IMPORTANT]
+> Quantity ≠ quality. I used all projects I could scramble on my machine, but that **does not** mean that all possible syntax is covered.
+
+Alongside [tree-sitter tests](./test/corpus/), the grammar was tested on **at least** `19,293` files (`~146,314` lines) worth of mcfunction code.
+
+The script used can be found in this repository: [test_local_files.sh](./test_local_files.sh). (Note: the script is sloppy, I did not intend for it to even be public)
