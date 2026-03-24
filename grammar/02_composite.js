@@ -65,6 +65,7 @@ module.exports = {
 				$._resource_segment,
 				repeat(seq("/", $._resource_segment)),
 			),
+			seq($.word, repeat1(seq("/", $._resource_segment))),
 		),
 
 	namespace: ($) =>
