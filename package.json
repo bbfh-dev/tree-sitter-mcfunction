@@ -2,7 +2,10 @@
 	"name": "tree-sitter-mcfunction",
 	"version": "0.3.6",
 	"description": "Tree-sitter for the latest version of Minecraft mcfunction syntax",
-	"repository": "https://github.com/bbfh-dev/tree-sitter-mcfunction",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bbfh-dev/tree-sitter-mcfunction.git"
+	},
 	"license": "ISC",
 	"author": {
 		"name": "BubbleFish",
