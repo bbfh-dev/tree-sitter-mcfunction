@@ -34,15 +34,18 @@ module.exports = grammar({
 			// all this does is make $._newline of the LAST $._statement
 			// optional.
 			optional(
-				seq(
-					repeat(
-						seq(
-							choice(optional($._statement), $._indentation),
-							seq(optional($._indentation), $._newline),
+				choice(
+					seq(
+						repeat(
+							seq(
+								choice(optional($._statement), $._indentation),
+								seq(optional($._indentation), $._newline),
+							),
 						),
+						$._statement,
+						optional($._newline),
 					),
-					$._statement,
-					optional($._newline),
+					$._newline,
 				),
 			),
 
