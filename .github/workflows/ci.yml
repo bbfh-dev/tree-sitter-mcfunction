@@ -4,6 +4,7 @@ on:
     push:
         branches: [main]
         paths:
+            - .github/workflows/**
             - grammar.js
             - src/**
             - bindings/**
@@ -31,6 +32,7 @@ jobs:
             - uses: actions/checkout@v4
             - uses: tree-sitter/parser-test-action@v3
               with:
+                  generate: false
                   test-rust: true
                   test-node: true
                   test-python: true
