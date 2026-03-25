@@ -27,9 +27,6 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v5
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: 20
             - name: Set up tree-sitter
               uses: tree-sitter/setup-action/cli@v2
             - uses: actions/checkout@v4
@@ -38,4 +35,4 @@ jobs:
                   generate: false
                   test-rust: true
                   test-node: true
-                  test-python: true
+                  node-version: 20
