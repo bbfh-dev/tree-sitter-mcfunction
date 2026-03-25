@@ -15,8 +15,8 @@ module.exports = grammar({
 	conflicts: ($) => [
 		[$.argument_keyword, $.subcommand_keyword],
 		[$.item_slot, $._constant],
-		[$._word, $.selector_identifier],
-		[$._data_path_node, $.selector_identifier],
+		[$.selector_identifier, $._word],
+		[$.selector_identifier, $._data_path_node],
 	],
 
 	// Handle whitespace manually.
