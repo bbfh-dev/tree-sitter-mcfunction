@@ -13,7 +13,7 @@ module.exports = grammar({
 	name: "mcfunction",
 
 	conflicts: ($) => [
-		[$.argument_keyword, $.subcommand_keyword],
+		[$.subcommand_keyword, $.argument_keyword],
 		[$.item_slot, $._constant],
 		[$.selector_identifier, $._word],
 		[$.selector_identifier, $._data_path_node],
