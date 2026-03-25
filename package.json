@@ -1,6 +1,6 @@
 {
 	"name": "@bbfh/tree-sitter-mcfunction",
-	"version": "0.3.6",
+	"version": "0.3.7",
 	"description": "Tree-sitter for the latest version of Minecraft mcfunction syntax",
 	"repository": {
 		"type": "git",
