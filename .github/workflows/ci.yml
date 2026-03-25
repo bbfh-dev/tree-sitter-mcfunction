@@ -32,7 +32,7 @@ jobs:
             - uses: actions/checkout@v4
             - uses: tree-sitter/parser-test-action@v3
               with:
-                  generate: true
+                  generate: false
                   test-rust: true
                   test-node: true
                   node-version: 20
