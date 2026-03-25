@@ -4424,8 +4424,8 @@
   "extras": [],
   "conflicts": [
     [
-      "argument_keyword",
-      "subcommand_keyword"
+      "subcommand_keyword",
+      "argument_keyword"
     ],
     [
       "item_slot",
