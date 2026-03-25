@@ -58,7 +58,7 @@ module.exports = grammar({
 				choice($.comment, $.special_comment, $.command),
 			),
 
-		// 'github.com/bbfh-dev/vintage' & 'github.com/mcbeet/mecha'
+		// Languages such as 'github.com/bbfh-dev/vintage' & 'github.com/mcbeet/mecha'
 		_indentation: (_) => /[ \t]+/,
 
 		// Allows for ":" from Python 'github.com/mcbeet/mecha'
