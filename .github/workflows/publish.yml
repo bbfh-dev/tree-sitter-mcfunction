@@ -2,7 +2,7 @@ name: Publish packages
 
 on:
     push:
-        tags: ["*"]
+        tags: ["v*"]
     workflow_dispatch:
 
 permissions:
