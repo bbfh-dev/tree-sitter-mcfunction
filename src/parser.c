@@ -102280,7 +102280,7 @@ TS_PUBLIC const TSLanguage *tree_sitter_mcfunction(void) {
     .metadata = {
       .major_version = 0,
       .minor_version = 3,
-      .patch_version = 8,
+      .patch_version = 9,
     },
   };
   return &language;
