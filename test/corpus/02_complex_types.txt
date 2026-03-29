@@ -152,6 +152,7 @@ function ./_my_local_function_01/and/subfunction
 function #example:$(macro)/path/%[sub]/to
 function #ns.with.dots:function
 function foo.dump:interpret/any
+time of minecraft:overworld resume
 
 ------------------
 
@@ -231,7 +232,13 @@ function foo.dump:interpret/any
           (word
             (identifier))))
       (word)
-      (word))))
+      (word)))
+  (command
+    (identifier)
+    (argument_keyword)
+    (minecraft_resource
+      (word))
+    (argument_keyword)))
 
 ==================
 sNBT Paths

@@ -1845,6 +1845,10 @@
     "named": false
   },
   {
+    "type": "of",
+    "named": false
+  },
+  {
     "type": "off",
     "named": false
   },
@@ -1882,6 +1886,10 @@
   },
   {
     "type": "passengers",
+    "named": false
+  },
+  {
+    "type": "pause",
     "named": false
   },
   {
@@ -1982,6 +1990,10 @@
   },
   {
     "type": "result",
+    "named": false
+  },
+  {
+    "type": "resume",
     "named": false
   },
   {

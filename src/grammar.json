@@ -546,6 +546,10 @@
         },
         {
           "type": "STRING",
+          "value": "of"
+        },
+        {
+          "type": "STRING",
           "value": "off"
         },
         {
@@ -567,6 +571,10 @@
         {
           "type": "STRING",
           "value": "outline"
+        },
+        {
+          "type": "STRING",
+          "value": "pause"
         },
         {
           "type": "STRING",
@@ -635,6 +643,10 @@
         {
           "type": "STRING",
           "value": "resetthese"
+        },
+        {
+          "type": "STRING",
+          "value": "resume"
         },
         {
           "type": "STRING",

@@ -17,9 +17,9 @@
 #define LANGUAGE_VERSION 15
 #define STATE_COUNT 829
 #define LARGE_STATE_COUNT 286
-#define SYMBOL_COUNT 392
+#define SYMBOL_COUNT 395
 #define ALIAS_COUNT 1
-#define TOKEN_COUNT 314
+#define TOKEN_COUNT 317
 #define EXTERNAL_TOKEN_COUNT 0
 #define FIELD_COUNT 0
 #define MAX_ALIAS_SEQUENCE_LENGTH 9
@@ -116,310 +116,313 @@ enum ts_symbol_identifiers {
   anon_sym_noon = 86,
   anon_sym_normal = 87,
   anon_sym_objectives = 88,
-  anon_sym_off = 89,
-  anon_sym_offhand = 90,
-  anon_sym_on = 91,
-  anon_sym_only = 92,
-  anon_sym_operation = 93,
-  anon_sym_outline = 94,
-  anon_sym_player = 95,
-  anon_sym_players = 96,
-  anon_sym_poi = 97,
-  anon_sym_points = 98,
-  anon_sym_pos = 99,
-  anon_sym_prefix = 100,
-  anon_sym_prepend = 101,
-  anon_sym_query = 102,
-  anon_sym_rain = 103,
-  anon_sym_record = 104,
-  anon_sym_reload = 105,
-  anon_sym_remove = 106,
-  anon_sym_replace = 107,
-  anon_sym_reset = 108,
-  anon_sym_resetclosest = 109,
-  anon_sym_resetthat = 110,
-  anon_sym_resetthese = 111,
-  anon_sym_revoke = 112,
-  anon_sym_roll = 113,
-  anon_sym_runclosest = 114,
-  anon_sym_runfailed = 115,
-  anon_sym_runthat = 116,
-  anon_sym_runthese = 117,
-  anon_sym_seeFriendlyInvisibles = 118,
-  anon_sym_set = 119,
-  anon_sym_setdisplay = 120,
-  anon_sym_show = 121,
-  anon_sym_spawn = 122,
-  anon_sym_start = 123,
-  anon_sym_stop = 124,
-  anon_sym_storage = 125,
-  anon_sym_strict = 126,
-  anon_sym_string = 127,
-  anon_sym_structure = 128,
-  anon_sym_style = 129,
-  anon_sym_subtitle = 130,
-  anon_sym_suffix = 131,
-  anon_sym_take = 132,
-  anon_sym_template = 133,
-  anon_sym_through = 134,
-  anon_sym_thunder = 135,
-  anon_sym_time = 136,
-  anon_sym_times = 137,
-  anon_sym_title = 138,
-  anon_sym_to = 139,
-  anon_sym_ui = 140,
-  anon_sym_under = 141,
-  anon_sym_until = 142,
-  anon_sym_uuids = 143,
-  anon_sym_value = 144,
-  anon_sym_verify = 145,
-  anon_sym_visible = 146,
-  anon_sym_voice = 147,
-  anon_sym_warning = 148,
-  anon_sym_weather = 149,
-  anon_sym_with = 150,
-  anon_sym_align = 151,
-  anon_sym_all = 152,
-  anon_sym_anchored = 153,
-  anon_sym_as = 154,
-  anon_sym_attacker = 155,
-  anon_sym_bossbar = 156,
-  anon_sym_controller = 157,
-  anon_sym_data = 158,
-  anon_sym_dimension = 159,
-  anon_sym_eyes = 160,
-  anon_sym_feet = 161,
-  anon_sym_if = 162,
-  anon_sym_in = 163,
-  anon_sym_items = 164,
-  anon_sym_leasher = 165,
-  anon_sym_loaded = 166,
-  anon_sym_masked = 167,
-  anon_sym_matches = 168,
-  anon_sym_origin = 169,
-  anon_sym_over = 170,
-  anon_sym_owner = 171,
-  anon_sym_passengers = 172,
-  anon_sym_positioned = 173,
-  anon_sym_predicate = 174,
-  anon_sym_result = 175,
-  anon_sym_rotated = 176,
-  anon_sym_score = 177,
-  anon_sym_store = 178,
-  anon_sym_success = 179,
-  anon_sym_summon = 180,
-  anon_sym_target = 181,
-  anon_sym_unless = 182,
-  anon_sym_vehicle = 183,
-  anon_sym_EQ = 184,
-  anon_sym_PLUS_EQ = 185,
-  anon_sym_DASH_EQ = 186,
-  anon_sym_STAR_EQ = 187,
-  anon_sym_SLASH_EQ = 188,
-  anon_sym_PERCENT_EQ = 189,
-  anon_sym_GT_LT = 190,
-  anon_sym_LT = 191,
-  anon_sym_GT = 192,
-  anon_sym_LT_EQ = 193,
-  anon_sym_GT_EQ = 194,
-  anon_sym_black = 195,
-  anon_sym_dark_blue = 196,
-  anon_sym_dark_green = 197,
-  anon_sym_dark_aqua = 198,
-  anon_sym_dark_red = 199,
-  anon_sym_dark_purple = 200,
-  anon_sym_gold = 201,
-  anon_sym_gray = 202,
-  anon_sym_dark_gray = 203,
-  anon_sym_blue = 204,
-  anon_sym_green = 205,
-  anon_sym_aqua = 206,
-  anon_sym_red = 207,
-  anon_sym_light_purple = 208,
-  anon_sym_yellow = 209,
-  anon_sym_white = 210,
-  anon_sym_teamkill_DOT = 211,
-  anon_sym_killedByTeam_DOT = 212,
-  anon_sym_dummy = 213,
-  anon_sym_trigger = 214,
-  anon_sym_deathCount = 215,
-  anon_sym_playerKillCount = 216,
-  anon_sym_totalKillCount = 217,
-  anon_sym_health = 218,
-  anon_sym_xp = 219,
-  anon_sym_level = 220,
-  anon_sym_food = 221,
-  anon_sym_air = 222,
-  anon_sym_armor = 223,
-  anon_sym_sidebar_DOTteam_DOT = 224,
-  anon_sym_sidebar = 225,
-  anon_sym_below_name = 226,
-  anon_sym_container = 227,
-  anon_sym_DOT = 228,
-  anon_sym_hotbar = 229,
-  anon_sym_inventory = 230,
-  anon_sym_enderchest = 231,
-  aux_sym_item_slot_token1 = 232,
-  aux_sym_item_slot_token2 = 233,
-  anon_sym_player_DOTcrafting = 234,
-  anon_sym_contents = 235,
-  anon_sym_weapon = 236,
-  anon_sym_weapon_DOT_STAR = 237,
-  anon_sym_weapon_DOToffhand = 238,
-  anon_sym_weapon_DOTmainhand = 239,
-  anon_sym_armor_DOT_STAR = 240,
-  anon_sym_armor_DOThead = 241,
-  anon_sym_armor_DOTchest = 242,
-  anon_sym_armor_DOTlegs = 243,
-  anon_sym_armor_DOTfeet = 244,
-  anon_sym_armor_DOTbody = 245,
-  anon_sym_horse_DOT_STAR = 246,
-  anon_sym_horse_DOTsaddle = 247,
-  anon_sym_horse_DOTchest = 248,
-  anon_sym_player_DOT_STAR = 249,
-  anon_sym_player_DOTcursor = 250,
-  anon_sym_STAR = 251,
-  aux_sym_typed_number_token1 = 252,
-  anon_sym_TILDE = 253,
-  anon_sym_CARET = 254,
-  anon_sym_DOT_DOT = 255,
-  anon_sym_DOT_DOT2 = 256,
-  anon_sym_minecraft_COLON = 257,
-  anon_sym_SLASH = 258,
-  anon_sym_DOT_SLASH = 259,
-  anon_sym_COLON2 = 260,
-  aux_sym__resource_segment_word_token1 = 261,
-  anon_sym_execute = 262,
-  anon_sym_run = 263,
-  anon_sym_say = 264,
-  aux_sym__path_node_token1 = 265,
-  anon_sym_LBRACK = 266,
-  aux_sym_snbt_array_token1 = 267,
-  anon_sym_SEMI = 268,
-  anon_sym_COMMA = 269,
-  anon_sym_RBRACK = 270,
-  anon_sym_LBRACE = 271,
-  anon_sym_RBRACE = 272,
-  anon_sym_BANG = 273,
-  aux_sym_key_token1 = 274,
-  anon_sym_PIPE = 275,
-  aux_sym_data_key_value_pair_token1 = 276,
-  aux_sym_entity_selector_token1 = 277,
-  anon_sym_true = 278,
-  anon_sym_false = 279,
-  anon_sym_0 = 280,
-  aux_sym_integer_token1 = 281,
-  anon_sym_DASH = 282,
-  aux_sym_float_token1 = 283,
-  aux_sym_float_token2 = 284,
-  aux_sym_float_token3 = 285,
-  aux_sym_float_token4 = 286,
-  aux_sym_hexadecimal_token1 = 287,
-  aux_sym_hexadecimal_token2 = 288,
-  sym_uuid_12_segment = 289,
-  sym_uuid_8_segment = 290,
-  sym_uuid_4_segment = 291,
-  anon_sym_0_DASH = 292,
-  sym_escape_sequence = 293,
-  anon_sym_DQUOTE = 294,
-  aux_sym__double_quoted_string_token1 = 295,
-  anon_sym_DOLLAR = 296,
-  anon_sym_PERCENT = 297,
-  anon_sym_SQUOTE = 298,
-  aux_sym__single_quoted_string_token1 = 299,
-  sym_greedy_string = 300,
-  aux_sym_score_holder_token1 = 301,
-  anon_sym_POUND = 302,
-  aux_sym_score_holder_token2 = 303,
-  aux_sym__word_token_token1 = 304,
-  aux_sym__word_token_token2 = 305,
-  aux_sym__word_token_token3 = 306,
-  aux_sym_word_token1 = 307,
-  anon_sym_villager = 308,
-  anon_sym_horse = 309,
-  anon_sym_POUND_GT = 310,
-  anon_sym_POUND_TILDE_GT = 311,
-  anon_sym_POUND_COLON = 312,
-  anon_sym_returnrun = 313,
-  sym_source_file = 314,
-  sym__whitespace = 315,
-  sym__statement = 316,
-  sym__newline = 317,
-  sym_argument_keyword = 318,
-  sym_subcommand_keyword = 319,
-  sym__keywords = 320,
-  sym_operation = 321,
-  sym_color = 322,
-  sym_scoreboard_objective = 323,
-  sym_scoreboard_display_slot = 324,
-  sym_item_slot = 325,
-  sym__item_slot_identifier = 326,
-  sym__composite_type = 327,
-  sym_typed_number = 328,
-  sym_vector = 329,
-  sym_range = 330,
-  sym__resource = 331,
-  sym_minecraft_resource = 332,
-  sym_generic_resource = 333,
-  sym_namespace = 334,
-  sym__resource_segment = 335,
-  sym__resource_segment_word = 336,
-  sym_path = 337,
-  sym__data_path_node = 338,
-  sym__constant = 339,
-  sym__path_node = 340,
-  sym__word = 341,
-  sym_snbt_array = 342,
-  sym_snbt_compound = 343,
-  sym_snbt_key_value_pair = 344,
-  sym_key = 345,
-  sym__snbt_value = 346,
-  sym_data_compound = 347,
-  sym_advancements_data_compound = 348,
-  sym_data_key_value_pair = 349,
-  sym_advancements_key_value_pair = 350,
-  sym__data_value = 351,
-  sym_entity_selector = 352,
-  sym_item_selector = 353,
-  sym_block_selector = 354,
-  sym_selector_identifier = 355,
-  sym__primitive_type = 356,
-  sym_boolean = 357,
-  sym_integer = 358,
-  sym_float = 359,
-  sym__number = 360,
-  sym_hexadecimal = 361,
-  sym_uuid = 362,
-  sym__double_quoted_string = 363,
-  sym__single_quoted_string = 364,
-  sym_string = 365,
-  sym_score_holder = 366,
-  sym__word_overlap = 367,
-  sym__word_token = 368,
-  sym_word = 369,
-  sym_comment = 370,
-  sym_special_comment = 371,
-  sym_command = 372,
-  sym__execute_command = 373,
-  sym__generic_command = 374,
-  sym__command_argument = 375,
-  aux_sym_source_file_repeat1 = 376,
-  aux_sym_minecraft_resource_repeat1 = 377,
-  aux_sym__resource_segment_repeat1 = 378,
-  aux_sym_path_repeat1 = 379,
-  aux_sym_snbt_array_repeat1 = 380,
-  aux_sym_snbt_compound_repeat1 = 381,
-  aux_sym_data_compound_repeat1 = 382,
-  aux_sym_advancements_data_compound_repeat1 = 383,
-  aux_sym_data_key_value_pair_repeat1 = 384,
-  aux_sym__double_quoted_string_repeat1 = 385,
-  aux_sym__single_quoted_string_repeat1 = 386,
-  aux_sym_score_holder_repeat1 = 387,
-  aux_sym_word_repeat1 = 388,
-  aux_sym_word_repeat2 = 389,
-  aux_sym__execute_command_repeat1 = 390,
-  aux_sym__generic_command_repeat1 = 391,
-  alias_sym_macro_sign = 392,
+  anon_sym_of = 89,
+  anon_sym_off = 90,
+  anon_sym_offhand = 91,
+  anon_sym_on = 92,
+  anon_sym_only = 93,
+  anon_sym_operation = 94,
+  anon_sym_outline = 95,
+  anon_sym_pause = 96,
+  anon_sym_player = 97,
+  anon_sym_players = 98,
+  anon_sym_poi = 99,
+  anon_sym_points = 100,
+  anon_sym_pos = 101,
+  anon_sym_prefix = 102,
+  anon_sym_prepend = 103,
+  anon_sym_query = 104,
+  anon_sym_rain = 105,
+  anon_sym_record = 106,
+  anon_sym_reload = 107,
+  anon_sym_remove = 108,
+  anon_sym_replace = 109,
+  anon_sym_reset = 110,
+  anon_sym_resetclosest = 111,
+  anon_sym_resetthat = 112,
+  anon_sym_resetthese = 113,
+  anon_sym_resume = 114,
+  anon_sym_revoke = 115,
+  anon_sym_roll = 116,
+  anon_sym_runclosest = 117,
+  anon_sym_runfailed = 118,
+  anon_sym_runthat = 119,
+  anon_sym_runthese = 120,
+  anon_sym_seeFriendlyInvisibles = 121,
+  anon_sym_set = 122,
+  anon_sym_setdisplay = 123,
+  anon_sym_show = 124,
+  anon_sym_spawn = 125,
+  anon_sym_start = 126,
+  anon_sym_stop = 127,
+  anon_sym_storage = 128,
+  anon_sym_strict = 129,
+  anon_sym_string = 130,
+  anon_sym_structure = 131,
+  anon_sym_style = 132,
+  anon_sym_subtitle = 133,
+  anon_sym_suffix = 134,
+  anon_sym_take = 135,
+  anon_sym_template = 136,
+  anon_sym_through = 137,
+  anon_sym_thunder = 138,
+  anon_sym_time = 139,
+  anon_sym_times = 140,
+  anon_sym_title = 141,
+  anon_sym_to = 142,
+  anon_sym_ui = 143,
+  anon_sym_under = 144,
+  anon_sym_until = 145,
+  anon_sym_uuids = 146,
+  anon_sym_value = 147,
+  anon_sym_verify = 148,
+  anon_sym_visible = 149,
+  anon_sym_voice = 150,
+  anon_sym_warning = 151,
+  anon_sym_weather = 152,
+  anon_sym_with = 153,
+  anon_sym_align = 154,
+  anon_sym_all = 155,
+  anon_sym_anchored = 156,
+  anon_sym_as = 157,
+  anon_sym_attacker = 158,
+  anon_sym_bossbar = 159,
+  anon_sym_controller = 160,
+  anon_sym_data = 161,
+  anon_sym_dimension = 162,
+  anon_sym_eyes = 163,
+  anon_sym_feet = 164,
+  anon_sym_if = 165,
+  anon_sym_in = 166,
+  anon_sym_items = 167,
+  anon_sym_leasher = 168,
+  anon_sym_loaded = 169,
+  anon_sym_masked = 170,
+  anon_sym_matches = 171,
+  anon_sym_origin = 172,
+  anon_sym_over = 173,
+  anon_sym_owner = 174,
+  anon_sym_passengers = 175,
+  anon_sym_positioned = 176,
+  anon_sym_predicate = 177,
+  anon_sym_result = 178,
+  anon_sym_rotated = 179,
+  anon_sym_score = 180,
+  anon_sym_store = 181,
+  anon_sym_success = 182,
+  anon_sym_summon = 183,
+  anon_sym_target = 184,
+  anon_sym_unless = 185,
+  anon_sym_vehicle = 186,
+  anon_sym_EQ = 187,
+  anon_sym_PLUS_EQ = 188,
+  anon_sym_DASH_EQ = 189,
+  anon_sym_STAR_EQ = 190,
+  anon_sym_SLASH_EQ = 191,
+  anon_sym_PERCENT_EQ = 192,
+  anon_sym_GT_LT = 193,
+  anon_sym_LT = 194,
+  anon_sym_GT = 195,
+  anon_sym_LT_EQ = 196,
+  anon_sym_GT_EQ = 197,
+  anon_sym_black = 198,
+  anon_sym_dark_blue = 199,
+  anon_sym_dark_green = 200,
+  anon_sym_dark_aqua = 201,
+  anon_sym_dark_red = 202,
+  anon_sym_dark_purple = 203,
+  anon_sym_gold = 204,
+  anon_sym_gray = 205,
+  anon_sym_dark_gray = 206,
+  anon_sym_blue = 207,
+  anon_sym_green = 208,
+  anon_sym_aqua = 209,
+  anon_sym_red = 210,
+  anon_sym_light_purple = 211,
+  anon_sym_yellow = 212,
+  anon_sym_white = 213,
+  anon_sym_teamkill_DOT = 214,
+  anon_sym_killedByTeam_DOT = 215,
+  anon_sym_dummy = 216,
+  anon_sym_trigger = 217,
+  anon_sym_deathCount = 218,
+  anon_sym_playerKillCount = 219,
+  anon_sym_totalKillCount = 220,
+  anon_sym_health = 221,
+  anon_sym_xp = 222,
+  anon_sym_level = 223,
+  anon_sym_food = 224,
+  anon_sym_air = 225,
+  anon_sym_armor = 226,
+  anon_sym_sidebar_DOTteam_DOT = 227,
+  anon_sym_sidebar = 228,
+  anon_sym_below_name = 229,
+  anon_sym_container = 230,
+  anon_sym_DOT = 231,
+  anon_sym_hotbar = 232,
+  anon_sym_inventory = 233,
+  anon_sym_enderchest = 234,
+  aux_sym_item_slot_token1 = 235,
+  aux_sym_item_slot_token2 = 236,
+  anon_sym_player_DOTcrafting = 237,
+  anon_sym_contents = 238,
+  anon_sym_weapon = 239,
+  anon_sym_weapon_DOT_STAR = 240,
+  anon_sym_weapon_DOToffhand = 241,
+  anon_sym_weapon_DOTmainhand = 242,
+  anon_sym_armor_DOT_STAR = 243,
+  anon_sym_armor_DOThead = 244,
+  anon_sym_armor_DOTchest = 245,
+  anon_sym_armor_DOTlegs = 246,
+  anon_sym_armor_DOTfeet = 247,
+  anon_sym_armor_DOTbody = 248,
+  anon_sym_horse_DOT_STAR = 249,
+  anon_sym_horse_DOTsaddle = 250,
+  anon_sym_horse_DOTchest = 251,
+  anon_sym_player_DOT_STAR = 252,
+  anon_sym_player_DOTcursor = 253,
+  anon_sym_STAR = 254,
+  aux_sym_typed_number_token1 = 255,
+  anon_sym_TILDE = 256,
+  anon_sym_CARET = 257,
+  anon_sym_DOT_DOT = 258,
+  anon_sym_DOT_DOT2 = 259,
+  anon_sym_minecraft_COLON = 260,
+  anon_sym_SLASH = 261,
+  anon_sym_DOT_SLASH = 262,
+  anon_sym_COLON2 = 263,
+  aux_sym__resource_segment_word_token1 = 264,
+  anon_sym_execute = 265,
+  anon_sym_run = 266,
+  anon_sym_say = 267,
+  aux_sym__path_node_token1 = 268,
+  anon_sym_LBRACK = 269,
+  aux_sym_snbt_array_token1 = 270,
+  anon_sym_SEMI = 271,
+  anon_sym_COMMA = 272,
+  anon_sym_RBRACK = 273,
+  anon_sym_LBRACE = 274,
+  anon_sym_RBRACE = 275,
+  anon_sym_BANG = 276,
+  aux_sym_key_token1 = 277,
+  anon_sym_PIPE = 278,
+  aux_sym_data_key_value_pair_token1 = 279,
+  aux_sym_entity_selector_token1 = 280,
+  anon_sym_true = 281,
+  anon_sym_false = 282,
+  anon_sym_0 = 283,
+  aux_sym_integer_token1 = 284,
+  anon_sym_DASH = 285,
+  aux_sym_float_token1 = 286,
+  aux_sym_float_token2 = 287,
+  aux_sym_float_token3 = 288,
+  aux_sym_float_token4 = 289,
+  aux_sym_hexadecimal_token1 = 290,
+  aux_sym_hexadecimal_token2 = 291,
+  sym_uuid_12_segment = 292,
+  sym_uuid_8_segment = 293,
+  sym_uuid_4_segment = 294,
+  anon_sym_0_DASH = 295,
+  sym_escape_sequence = 296,
+  anon_sym_DQUOTE = 297,
+  aux_sym__double_quoted_string_token1 = 298,
+  anon_sym_DOLLAR = 299,
+  anon_sym_PERCENT = 300,
+  anon_sym_SQUOTE = 301,
+  aux_sym__single_quoted_string_token1 = 302,
+  sym_greedy_string = 303,
+  aux_sym_score_holder_token1 = 304,
+  anon_sym_POUND = 305,
+  aux_sym_score_holder_token2 = 306,
+  aux_sym__word_token_token1 = 307,
+  aux_sym__word_token_token2 = 308,
+  aux_sym__word_token_token3 = 309,
+  aux_sym_word_token1 = 310,
+  anon_sym_villager = 311,
+  anon_sym_horse = 312,
+  anon_sym_POUND_GT = 313,
+  anon_sym_POUND_TILDE_GT = 314,
+  anon_sym_POUND_COLON = 315,
+  anon_sym_returnrun = 316,
+  sym_source_file = 317,
+  sym__whitespace = 318,
+  sym__statement = 319,
+  sym__newline = 320,
+  sym_argument_keyword = 321,
+  sym_subcommand_keyword = 322,
+  sym__keywords = 323,
+  sym_operation = 324,
+  sym_color = 325,
+  sym_scoreboard_objective = 326,
+  sym_scoreboard_display_slot = 327,
+  sym_item_slot = 328,
+  sym__item_slot_identifier = 329,
+  sym__composite_type = 330,
+  sym_typed_number = 331,
+  sym_vector = 332,
+  sym_range = 333,
+  sym__resource = 334,
+  sym_minecraft_resource = 335,
+  sym_generic_resource = 336,
+  sym_namespace = 337,
+  sym__resource_segment = 338,
+  sym__resource_segment_word = 339,
+  sym_path = 340,
+  sym__data_path_node = 341,
+  sym__constant = 342,
+  sym__path_node = 343,
+  sym__word = 344,
+  sym_snbt_array = 345,
+  sym_snbt_compound = 346,
+  sym_snbt_key_value_pair = 347,
+  sym_key = 348,
+  sym__snbt_value = 349,
+  sym_data_compound = 350,
+  sym_advancements_data_compound = 351,
+  sym_data_key_value_pair = 352,
+  sym_advancements_key_value_pair = 353,
+  sym__data_value = 354,
+  sym_entity_selector = 355,
+  sym_item_selector = 356,
+  sym_block_selector = 357,
+  sym_selector_identifier = 358,
+  sym__primitive_type = 359,
+  sym_boolean = 360,
+  sym_integer = 361,
+  sym_float = 362,
+  sym__number = 363,
+  sym_hexadecimal = 364,
+  sym_uuid = 365,
+  sym__double_quoted_string = 366,
+  sym__single_quoted_string = 367,
+  sym_string = 368,
+  sym_score_holder = 369,
+  sym__word_overlap = 370,
+  sym__word_token = 371,
+  sym_word = 372,
+  sym_comment = 373,
+  sym_special_comment = 374,
+  sym_command = 375,
+  sym__execute_command = 376,
+  sym__generic_command = 377,
+  sym__command_argument = 378,
+  aux_sym_source_file_repeat1 = 379,
+  aux_sym_minecraft_resource_repeat1 = 380,
+  aux_sym__resource_segment_repeat1 = 381,
+  aux_sym_path_repeat1 = 382,
+  aux_sym_snbt_array_repeat1 = 383,
+  aux_sym_snbt_compound_repeat1 = 384,
+  aux_sym_data_compound_repeat1 = 385,
+  aux_sym_advancements_data_compound_repeat1 = 386,
+  aux_sym_data_key_value_pair_repeat1 = 387,
+  aux_sym__double_quoted_string_repeat1 = 388,
+  aux_sym__single_quoted_string_repeat1 = 389,
+  aux_sym_score_holder_repeat1 = 390,
+  aux_sym_word_repeat1 = 391,
+  aux_sym_word_repeat2 = 392,
+  aux_sym__execute_command_repeat1 = 393,
+  aux_sym__generic_command_repeat1 = 394,
+  alias_sym_macro_sign = 395,
 };
 
 static const char * const ts_symbol_names[] = {
@@ -512,12 +515,14 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_noon] = "noon",
   [anon_sym_normal] = "normal",
   [anon_sym_objectives] = "objectives",
+  [anon_sym_of] = "of",
   [anon_sym_off] = "off",
   [anon_sym_offhand] = "offhand",
   [anon_sym_on] = "on",
   [anon_sym_only] = "only",
   [anon_sym_operation] = "operation",
   [anon_sym_outline] = "outline",
+  [anon_sym_pause] = "pause",
   [anon_sym_player] = "player",
   [anon_sym_players] = "players",
   [anon_sym_poi] = "poi",
@@ -535,6 +540,7 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_resetclosest] = "resetclosest",
   [anon_sym_resetthat] = "resetthat",
   [anon_sym_resetthese] = "resetthese",
+  [anon_sym_resume] = "resume",
   [anon_sym_revoke] = "revoke",
   [anon_sym_roll] = "roll",
   [anon_sym_runclosest] = "runclosest",
@@ -908,12 +914,14 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_noon] = anon_sym_noon,
   [anon_sym_normal] = anon_sym_normal,
   [anon_sym_objectives] = anon_sym_objectives,
+  [anon_sym_of] = anon_sym_of,
   [anon_sym_off] = anon_sym_off,
   [anon_sym_offhand] = anon_sym_offhand,
   [anon_sym_on] = anon_sym_on,
   [anon_sym_only] = anon_sym_only,
   [anon_sym_operation] = anon_sym_operation,
   [anon_sym_outline] = anon_sym_outline,
+  [anon_sym_pause] = anon_sym_pause,
   [anon_sym_player] = anon_sym_player,
   [anon_sym_players] = anon_sym_players,
   [anon_sym_poi] = anon_sym_poi,
@@ -931,6 +939,7 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_resetclosest] = anon_sym_resetclosest,
   [anon_sym_resetthat] = anon_sym_resetthat,
   [anon_sym_resetthese] = anon_sym_resetthese,
+  [anon_sym_resume] = anon_sym_resume,
   [anon_sym_revoke] = anon_sym_revoke,
   [anon_sym_roll] = anon_sym_roll,
   [anon_sym_runclosest] = anon_sym_runclosest,
@@ -1571,6 +1580,10 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = false,
   },
+  [anon_sym_of] = {
+    .visible = true,
+    .named = false,
+  },
   [anon_sym_off] = {
     .visible = true,
     .named = false,
@@ -1592,6 +1605,10 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = false,
   },
   [anon_sym_outline] = {
+    .visible = true,
+    .named = false,
+  },
+  [anon_sym_pause] = {
     .visible = true,
     .named = false,
   },
@@ -1660,6 +1677,10 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = false,
   },
   [anon_sym_resetthese] = {
+    .visible = true,
+    .named = false,
+  },
+  [anon_sym_resume] = {
     .visible = true,
     .named = false,
   },
@@ -12586,6 +12607,7 @@ static bool ts_lex_keywords(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'j') ADVANCE(228);
       END_STATE();
     case 92:
+      ACCEPT_TOKEN(anon_sym_of);
       if (lookahead == 'f') ADVANCE(229);
       END_STATE();
     case 93:
@@ -12609,2428 +12631,2445 @@ static bool ts_lex_keywords(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 99:
       if (lookahead == 's') ADVANCE(236);
+      if (lookahead == 'u') ADVANCE(237);
       END_STATE();
     case 100:
-      if (lookahead == 'a') ADVANCE(237);
+      if (lookahead == 'a') ADVANCE(238);
       END_STATE();
     case 101:
-      if (lookahead == 'i') ADVANCE(238);
-      if (lookahead == 's') ADVANCE(239);
+      if (lookahead == 'i') ADVANCE(239);
+      if (lookahead == 's') ADVANCE(240);
       END_STATE();
     case 102:
-      if (lookahead == 'e') ADVANCE(240);
-      END_STATE();
-    case 103:
       if (lookahead == 'e') ADVANCE(241);
       END_STATE();
+    case 103:
+      if (lookahead == 'e') ADVANCE(242);
+      END_STATE();
     case 104:
-      if (lookahead == 'i') ADVANCE(242);
+      if (lookahead == 'i') ADVANCE(243);
       END_STATE();
     case 105:
-      if (lookahead == 'c') ADVANCE(243);
-      if (lookahead == 'd') ADVANCE(244);
-      if (lookahead == 'l') ADVANCE(245);
-      if (lookahead == 'm') ADVANCE(246);
-      if (lookahead == 'p') ADVANCE(247);
-      if (lookahead == 's') ADVANCE(248);
-      if (lookahead == 'v') ADVANCE(249);
+      if (lookahead == 'c') ADVANCE(244);
+      if (lookahead == 'd') ADVANCE(245);
+      if (lookahead == 'l') ADVANCE(246);
+      if (lookahead == 'm') ADVANCE(247);
+      if (lookahead == 'p') ADVANCE(248);
+      if (lookahead == 's') ADVANCE(249);
+      if (lookahead == 'v') ADVANCE(250);
       END_STATE();
     case 106:
-      if (lookahead == 'l') ADVANCE(250);
-      if (lookahead == 't') ADVANCE(251);
+      if (lookahead == 'l') ADVANCE(251);
+      if (lookahead == 't') ADVANCE(252);
       END_STATE();
     case 107:
-      if (lookahead == 'n') ADVANCE(252);
+      if (lookahead == 'n') ADVANCE(253);
       END_STATE();
     case 108:
-      if (lookahead == 'y') ADVANCE(253);
+      if (lookahead == 'y') ADVANCE(254);
       END_STATE();
     case 109:
-      if (lookahead == 'o') ADVANCE(254);
+      if (lookahead == 'o') ADVANCE(255);
       END_STATE();
     case 110:
-      if (lookahead == 't') ADVANCE(255);
+      if (lookahead == 't') ADVANCE(256);
       END_STATE();
     case 111:
-      if (lookahead == 'o') ADVANCE(256);
+      if (lookahead == 'o') ADVANCE(257);
       END_STATE();
     case 112:
-      if (lookahead == 'd') ADVANCE(257);
+      if (lookahead == 'd') ADVANCE(258);
       END_STATE();
     case 113:
-      if (lookahead == 'a') ADVANCE(258);
+      if (lookahead == 'a') ADVANCE(259);
       END_STATE();
     case 114:
-      if (lookahead == 'a') ADVANCE(259);
-      if (lookahead == 'o') ADVANCE(260);
-      if (lookahead == 'r') ADVANCE(261);
-      if (lookahead == 'y') ADVANCE(262);
+      if (lookahead == 'a') ADVANCE(260);
+      if (lookahead == 'o') ADVANCE(261);
+      if (lookahead == 'r') ADVANCE(262);
+      if (lookahead == 'y') ADVANCE(263);
       END_STATE();
     case 115:
-      if (lookahead == 'b') ADVANCE(263);
-      if (lookahead == 'c') ADVANCE(264);
-      if (lookahead == 'f') ADVANCE(265);
-      if (lookahead == 'm') ADVANCE(266);
+      if (lookahead == 'b') ADVANCE(264);
+      if (lookahead == 'c') ADVANCE(265);
+      if (lookahead == 'f') ADVANCE(266);
+      if (lookahead == 'm') ADVANCE(267);
       END_STATE();
     case 116:
-      if (lookahead == 'k') ADVANCE(267);
-      if (lookahead == 'r') ADVANCE(268);
+      if (lookahead == 'k') ADVANCE(268);
+      if (lookahead == 'r') ADVANCE(269);
       END_STATE();
     case 117:
-      if (lookahead == 'm') ADVANCE(269);
+      if (lookahead == 'm') ADVANCE(270);
       END_STATE();
     case 118:
-      if (lookahead == 'r') ADVANCE(270);
-      if (lookahead == 'u') ADVANCE(271);
+      if (lookahead == 'r') ADVANCE(271);
+      if (lookahead == 'u') ADVANCE(272);
       END_STATE();
     case 119:
-      if (lookahead == 'm') ADVANCE(272);
-      if (lookahead == 't') ADVANCE(273);
+      if (lookahead == 'm') ADVANCE(273);
+      if (lookahead == 't') ADVANCE(274);
       END_STATE();
     case 120:
       ACCEPT_TOKEN(anon_sym_to);
       END_STATE();
     case 121:
-      if (lookahead == 'i') ADVANCE(274);
-      if (lookahead == 'u') ADVANCE(275);
+      if (lookahead == 'i') ADVANCE(275);
+      if (lookahead == 'u') ADVANCE(276);
       END_STATE();
     case 122:
       ACCEPT_TOKEN(anon_sym_ui);
       END_STATE();
     case 123:
-      if (lookahead == 'd') ADVANCE(276);
-      if (lookahead == 'l') ADVANCE(277);
-      if (lookahead == 't') ADVANCE(278);
+      if (lookahead == 'd') ADVANCE(277);
+      if (lookahead == 'l') ADVANCE(278);
+      if (lookahead == 't') ADVANCE(279);
       END_STATE();
     case 124:
-      if (lookahead == 'i') ADVANCE(279);
+      if (lookahead == 'i') ADVANCE(280);
       END_STATE();
     case 125:
-      if (lookahead == 'l') ADVANCE(280);
+      if (lookahead == 'l') ADVANCE(281);
       END_STATE();
     case 126:
-      if (lookahead == 'h') ADVANCE(281);
-      if (lookahead == 'r') ADVANCE(282);
+      if (lookahead == 'h') ADVANCE(282);
+      if (lookahead == 'r') ADVANCE(283);
       END_STATE();
     case 127:
-      if (lookahead == 'l') ADVANCE(283);
-      if (lookahead == 's') ADVANCE(284);
+      if (lookahead == 'l') ADVANCE(284);
+      if (lookahead == 's') ADVANCE(285);
       END_STATE();
     case 128:
-      if (lookahead == 'i') ADVANCE(285);
+      if (lookahead == 'i') ADVANCE(286);
       END_STATE();
     case 129:
-      if (lookahead == 'r') ADVANCE(286);
+      if (lookahead == 'r') ADVANCE(287);
       END_STATE();
     case 130:
-      if (lookahead == 'a') ADVANCE(287);
+      if (lookahead == 'a') ADVANCE(288);
       END_STATE();
     case 131:
-      if (lookahead == 'i') ADVANCE(288);
+      if (lookahead == 'i') ADVANCE(289);
       END_STATE();
     case 132:
-      if (lookahead == 't') ADVANCE(289);
+      if (lookahead == 't') ADVANCE(290);
       END_STATE();
     case 133:
       ACCEPT_TOKEN(anon_sym_xp);
       END_STATE();
     case 134:
-      if (lookahead == 'l') ADVANCE(290);
+      if (lookahead == 'l') ADVANCE(291);
       END_STATE();
     case 135:
-      if (lookahead == 'i') ADVANCE(291);
+      if (lookahead == 'i') ADVANCE(292);
       END_STATE();
     case 136:
       ACCEPT_TOKEN(anon_sym_add);
-      if (lookahead == '_') ADVANCE(292);
+      if (lookahead == '_') ADVANCE(293);
       END_STATE();
     case 137:
       ACCEPT_TOKEN(anon_sym_air);
       END_STATE();
     case 138:
-      if (lookahead == 'g') ADVANCE(293);
+      if (lookahead == 'g') ADVANCE(294);
       END_STATE();
     case 139:
       ACCEPT_TOKEN(anon_sym_all);
       END_STATE();
     case 140:
-      if (lookahead == 'i') ADVANCE(294);
+      if (lookahead == 'i') ADVANCE(295);
       END_STATE();
     case 141:
-      if (lookahead == 'u') ADVANCE(295);
+      if (lookahead == 'u') ADVANCE(296);
       END_STATE();
     case 142:
-      if (lookahead == 'h') ADVANCE(296);
+      if (lookahead == 'h') ADVANCE(297);
       END_STATE();
     case 143:
-      if (lookahead == 'e') ADVANCE(297);
+      if (lookahead == 'e') ADVANCE(298);
       END_STATE();
     case 144:
-      if (lookahead == 'a') ADVANCE(298);
+      if (lookahead == 'a') ADVANCE(299);
       END_STATE();
     case 145:
-      if (lookahead == 'o') ADVANCE(299);
+      if (lookahead == 'o') ADVANCE(300);
       END_STATE();
     case 146:
-      if (lookahead == 'a') ADVANCE(300);
+      if (lookahead == 'a') ADVANCE(301);
       END_STATE();
     case 147:
-      if (lookahead == 'e') ADVANCE(301);
+      if (lookahead == 'e') ADVANCE(302);
       END_STATE();
     case 148:
-      if (lookahead == 'o') ADVANCE(302);
+      if (lookahead == 'o') ADVANCE(303);
       END_STATE();
     case 149:
-      if (lookahead == 'm') ADVANCE(303);
+      if (lookahead == 'm') ADVANCE(304);
       END_STATE();
     case 150:
-      if (lookahead == 'c') ADVANCE(304);
-      END_STATE();
-    case 151:
       if (lookahead == 'c') ADVANCE(305);
       END_STATE();
+    case 151:
+      if (lookahead == 'c') ADVANCE(306);
+      END_STATE();
     case 152:
-      if (lookahead == 'e') ADVANCE(306);
+      if (lookahead == 'e') ADVANCE(307);
       END_STATE();
     case 153:
-      if (lookahead == 's') ADVANCE(307);
+      if (lookahead == 's') ADVANCE(308);
       END_STATE();
     case 154:
-      if (lookahead == 'f') ADVANCE(308);
+      if (lookahead == 'f') ADVANCE(309);
       END_STATE();
     case 155:
-      if (lookahead == 't') ADVANCE(309);
+      if (lookahead == 't') ADVANCE(310);
       END_STATE();
     case 156:
-      if (lookahead == 'a') ADVANCE(310);
+      if (lookahead == 'a') ADVANCE(311);
       END_STATE();
     case 157:
-      if (lookahead == 'o') ADVANCE(311);
+      if (lookahead == 'o') ADVANCE(312);
       END_STATE();
     case 158:
-      if (lookahead == 't') ADVANCE(312);
+      if (lookahead == 't') ADVANCE(313);
       END_STATE();
     case 159:
-      if (lookahead == 'a') ADVANCE(313);
-      END_STATE();
-    case 160:
       if (lookahead == 'a') ADVANCE(314);
       END_STATE();
+    case 160:
+      if (lookahead == 'a') ADVANCE(315);
+      END_STATE();
     case 161:
-      if (lookahead == 'k') ADVANCE(315);
+      if (lookahead == 'k') ADVANCE(316);
       END_STATE();
     case 162:
-      if (lookahead == 'a') ADVANCE(316);
+      if (lookahead == 'a') ADVANCE(317);
       END_STATE();
     case 163:
       ACCEPT_TOKEN(anon_sym_day);
-      if (lookahead == 't') ADVANCE(317);
-      END_STATE();
-    case 164:
       if (lookahead == 't') ADVANCE(318);
       END_STATE();
+    case 164:
+      if (lookahead == 't') ADVANCE(319);
+      END_STATE();
     case 165:
-      if (lookahead == 'e') ADVANCE(319);
+      if (lookahead == 'e') ADVANCE(320);
       END_STATE();
     case 166:
-      if (lookahead == 'a') ADVANCE(320);
-      if (lookahead == 'm') ADVANCE(321);
-      if (lookahead == 't') ADVANCE(322);
+      if (lookahead == 'a') ADVANCE(321);
+      if (lookahead == 'm') ADVANCE(322);
+      if (lookahead == 't') ADVANCE(323);
       END_STATE();
     case 167:
-      if (lookahead == 'm') ADVANCE(323);
+      if (lookahead == 'm') ADVANCE(324);
       END_STATE();
     case 168:
-      if (lookahead == 'b') ADVANCE(324);
+      if (lookahead == 'b') ADVANCE(325);
       END_STATE();
     case 169:
-      if (lookahead == 'e') ADVANCE(325);
+      if (lookahead == 'e') ADVANCE(326);
       END_STATE();
     case 170:
-      if (lookahead == 'i') ADVANCE(326);
+      if (lookahead == 'i') ADVANCE(327);
       END_STATE();
     case 171:
-      if (lookahead == 'r') ADVANCE(327);
+      if (lookahead == 'r') ADVANCE(328);
       END_STATE();
     case 172:
-      if (lookahead == 'c') ADVANCE(328);
+      if (lookahead == 'c') ADVANCE(329);
       END_STATE();
     case 173:
-      if (lookahead == 'o') ADVANCE(329);
+      if (lookahead == 'o') ADVANCE(330);
       END_STATE();
     case 174:
-      if (lookahead == 's') ADVANCE(330);
+      if (lookahead == 's') ADVANCE(331);
       END_STATE();
     case 175:
-      if (lookahead == 'i') ADVANCE(331);
+      if (lookahead == 'i') ADVANCE(332);
       END_STATE();
     case 176:
-      if (lookahead == 'l') ADVANCE(332);
+      if (lookahead == 'l') ADVANCE(333);
       END_STATE();
     case 177:
-      if (lookahead == 's') ADVANCE(333);
+      if (lookahead == 's') ADVANCE(334);
       END_STATE();
     case 178:
-      if (lookahead == 't') ADVANCE(334);
-      END_STATE();
-    case 179:
       if (lookahead == 't') ADVANCE(335);
       END_STATE();
+    case 179:
+      if (lookahead == 't') ADVANCE(336);
+      END_STATE();
     case 180:
-      if (lookahead == 'h') ADVANCE(336);
+      if (lookahead == 'h') ADVANCE(337);
       END_STATE();
     case 181:
-      if (lookahead == 's') ADVANCE(337);
+      if (lookahead == 's') ADVANCE(338);
       END_STATE();
     case 182:
-      if (lookahead == 'd') ADVANCE(338);
+      if (lookahead == 'd') ADVANCE(339);
       END_STATE();
     case 183:
-      if (lookahead == 'c') ADVANCE(339);
+      if (lookahead == 'c') ADVANCE(340);
       END_STATE();
     case 184:
-      if (lookahead == 'm') ADVANCE(340);
+      if (lookahead == 'm') ADVANCE(341);
       END_STATE();
     case 185:
-      if (lookahead == 'c') ADVANCE(341);
+      if (lookahead == 'c') ADVANCE(342);
       END_STATE();
     case 186:
-      if (lookahead == 'e') ADVANCE(342);
+      if (lookahead == 'e') ADVANCE(343);
       END_STATE();
     case 187:
       ACCEPT_TOKEN(anon_sym_get);
       END_STATE();
     case 188:
-      if (lookahead == 'e') ADVANCE(343);
+      if (lookahead == 'e') ADVANCE(344);
       END_STATE();
     case 189:
-      if (lookahead == 'd') ADVANCE(344);
+      if (lookahead == 'd') ADVANCE(345);
       END_STATE();
     case 190:
-      if (lookahead == 'n') ADVANCE(345);
-      if (lookahead == 'y') ADVANCE(346);
+      if (lookahead == 'n') ADVANCE(346);
+      if (lookahead == 'y') ADVANCE(347);
       END_STATE();
     case 191:
-      if (lookahead == 'e') ADVANCE(347);
+      if (lookahead == 'e') ADVANCE(348);
       END_STATE();
     case 192:
-      if (lookahead == 'l') ADVANCE(348);
-      END_STATE();
-    case 193:
       if (lookahead == 'l') ADVANCE(349);
       END_STATE();
+    case 193:
+      if (lookahead == 'l') ADVANCE(350);
+      END_STATE();
     case 194:
-      if (lookahead == 's') ADVANCE(350);
+      if (lookahead == 's') ADVANCE(351);
       END_STATE();
     case 195:
-      if (lookahead == 't') ADVANCE(351);
+      if (lookahead == 't') ADVANCE(352);
       END_STATE();
     case 196:
-      if (lookahead == 'b') ADVANCE(352);
+      if (lookahead == 'b') ADVANCE(353);
       END_STATE();
     case 197:
-      if (lookahead == 'e') ADVANCE(353);
+      if (lookahead == 'e') ADVANCE(354);
       END_STATE();
     case 198:
-      if (lookahead == 'e') ADVANCE(354);
+      if (lookahead == 'e') ADVANCE(355);
       END_STATE();
     case 199:
       ACCEPT_TOKEN(anon_sym_ips);
       END_STATE();
     case 200:
-      if (lookahead == 'm') ADVANCE(355);
+      if (lookahead == 'm') ADVANCE(356);
       END_STATE();
     case 201:
-      if (lookahead == 's') ADVANCE(356);
+      if (lookahead == 's') ADVANCE(357);
       END_STATE();
     case 202:
-      if (lookahead == 'n') ADVANCE(357);
+      if (lookahead == 'n') ADVANCE(358);
       END_STATE();
     case 203:
-      if (lookahead == 'p') ADVANCE(358);
+      if (lookahead == 'p') ADVANCE(359);
       END_STATE();
     case 204:
-      if (lookahead == 'l') ADVANCE(359);
+      if (lookahead == 'l') ADVANCE(360);
       END_STATE();
     case 205:
-      if (lookahead == 's') ADVANCE(360);
-      if (lookahead == 'v') ADVANCE(361);
+      if (lookahead == 's') ADVANCE(361);
+      if (lookahead == 'v') ADVANCE(362);
       END_STATE();
     case 206:
-      if (lookahead == 'e') ADVANCE(362);
+      if (lookahead == 'e') ADVANCE(363);
       END_STATE();
     case 207:
-      if (lookahead == 'h') ADVANCE(363);
+      if (lookahead == 'h') ADVANCE(364);
       END_STATE();
     case 208:
-      if (lookahead == 't') ADVANCE(364);
+      if (lookahead == 't') ADVANCE(365);
       END_STATE();
     case 209:
-      if (lookahead == 'd') ADVANCE(365);
+      if (lookahead == 'd') ADVANCE(366);
       END_STATE();
     case 210:
-      if (lookahead == 'a') ADVANCE(366);
+      if (lookahead == 'a') ADVANCE(367);
       END_STATE();
     case 211:
-      if (lookahead == 't') ADVANCE(367);
+      if (lookahead == 't') ADVANCE(368);
       END_STATE();
     case 212:
-      if (lookahead == 'n') ADVANCE(368);
+      if (lookahead == 'n') ADVANCE(369);
       END_STATE();
     case 213:
-      if (lookahead == 'k') ADVANCE(369);
-      if (lookahead == 't') ADVANCE(370);
+      if (lookahead == 'k') ADVANCE(370);
+      if (lookahead == 't') ADVANCE(371);
       END_STATE();
     case 214:
-      if (lookahead == 'c') ADVANCE(371);
+      if (lookahead == 'c') ADVANCE(372);
       END_STATE();
     case 215:
       ACCEPT_TOKEN(anon_sym_max);
       END_STATE();
     case 216:
-      if (lookahead == 'g') ADVANCE(372);
+      if (lookahead == 'g') ADVANCE(373);
       END_STATE();
     case 217:
-      if (lookahead == 'n') ADVANCE(373);
+      if (lookahead == 'n') ADVANCE(374);
       END_STATE();
     case 218:
-      if (lookahead == 'e') ADVANCE(374);
+      if (lookahead == 'e') ADVANCE(375);
       END_STATE();
     case 219:
-      if (lookahead == 'i') ADVANCE(375);
+      if (lookahead == 'i') ADVANCE(376);
       END_STATE();
     case 220:
-      if (lookahead == 'n') ADVANCE(376);
+      if (lookahead == 'n') ADVANCE(377);
       END_STATE();
     case 221:
-      if (lookahead == 'e') ADVANCE(377);
+      if (lookahead == 'e') ADVANCE(378);
       END_STATE();
     case 222:
-      if (lookahead == 'i') ADVANCE(378);
+      if (lookahead == 'i') ADVANCE(379);
       END_STATE();
     case 223:
-      if (lookahead == 'e') ADVANCE(379);
+      if (lookahead == 'e') ADVANCE(380);
       END_STATE();
     case 224:
-      if (lookahead == 't') ADVANCE(380);
+      if (lookahead == 't') ADVANCE(381);
       END_STATE();
     case 225:
-      if (lookahead == 'h') ADVANCE(381);
+      if (lookahead == 'h') ADVANCE(382);
       END_STATE();
     case 226:
-      if (lookahead == 'n') ADVANCE(382);
+      if (lookahead == 'n') ADVANCE(383);
       END_STATE();
     case 227:
-      if (lookahead == 'm') ADVANCE(383);
+      if (lookahead == 'm') ADVANCE(384);
       END_STATE();
     case 228:
-      if (lookahead == 'e') ADVANCE(384);
+      if (lookahead == 'e') ADVANCE(385);
       END_STATE();
     case 229:
       ACCEPT_TOKEN(anon_sym_off);
-      if (lookahead == 'h') ADVANCE(385);
+      if (lookahead == 'h') ADVANCE(386);
       END_STATE();
     case 230:
-      if (lookahead == 'y') ADVANCE(386);
+      if (lookahead == 'y') ADVANCE(387);
       END_STATE();
     case 231:
-      if (lookahead == 'r') ADVANCE(387);
+      if (lookahead == 'r') ADVANCE(388);
       END_STATE();
     case 232:
-      if (lookahead == 'g') ADVANCE(388);
+      if (lookahead == 'g') ADVANCE(389);
       END_STATE();
     case 233:
-      if (lookahead == 'l') ADVANCE(389);
+      if (lookahead == 'l') ADVANCE(390);
       END_STATE();
     case 234:
-      if (lookahead == 'r') ADVANCE(390);
+      if (lookahead == 'r') ADVANCE(391);
       END_STATE();
     case 235:
-      if (lookahead == 'e') ADVANCE(391);
+      if (lookahead == 'e') ADVANCE(392);
       END_STATE();
     case 236:
-      if (lookahead == 's') ADVANCE(392);
+      if (lookahead == 's') ADVANCE(393);
       END_STATE();
     case 237:
-      if (lookahead == 'y') ADVANCE(393);
+      if (lookahead == 's') ADVANCE(394);
       END_STATE();
     case 238:
-      ACCEPT_TOKEN(anon_sym_poi);
-      if (lookahead == 'n') ADVANCE(394);
+      if (lookahead == 'y') ADVANCE(395);
       END_STATE();
     case 239:
-      ACCEPT_TOKEN(anon_sym_pos);
-      if (lookahead == 'i') ADVANCE(395);
+      ACCEPT_TOKEN(anon_sym_poi);
+      if (lookahead == 'n') ADVANCE(396);
       END_STATE();
     case 240:
-      if (lookahead == 'd') ADVANCE(396);
-      if (lookahead == 'f') ADVANCE(397);
-      if (lookahead == 'p') ADVANCE(398);
+      ACCEPT_TOKEN(anon_sym_pos);
+      if (lookahead == 'i') ADVANCE(397);
       END_STATE();
     case 241:
-      if (lookahead == 'r') ADVANCE(399);
+      if (lookahead == 'd') ADVANCE(398);
+      if (lookahead == 'f') ADVANCE(399);
+      if (lookahead == 'p') ADVANCE(400);
       END_STATE();
     case 242:
-      if (lookahead == 'n') ADVANCE(400);
+      if (lookahead == 'r') ADVANCE(401);
       END_STATE();
     case 243:
-      if (lookahead == 'o') ADVANCE(401);
+      if (lookahead == 'n') ADVANCE(402);
       END_STATE();
     case 244:
-      ACCEPT_TOKEN(anon_sym_red);
-      END_STATE();
-    case 245:
-      if (lookahead == 'o') ADVANCE(402);
-      END_STATE();
-    case 246:
       if (lookahead == 'o') ADVANCE(403);
       END_STATE();
+    case 245:
+      ACCEPT_TOKEN(anon_sym_red);
+      END_STATE();
+    case 246:
+      if (lookahead == 'o') ADVANCE(404);
+      END_STATE();
     case 247:
-      if (lookahead == 'l') ADVANCE(404);
+      if (lookahead == 'o') ADVANCE(405);
       END_STATE();
     case 248:
-      if (lookahead == 'e') ADVANCE(405);
-      if (lookahead == 'u') ADVANCE(406);
+      if (lookahead == 'l') ADVANCE(406);
       END_STATE();
     case 249:
-      if (lookahead == 'o') ADVANCE(407);
+      if (lookahead == 'e') ADVANCE(407);
+      if (lookahead == 'u') ADVANCE(408);
       END_STATE();
     case 250:
-      if (lookahead == 'l') ADVANCE(408);
+      if (lookahead == 'o') ADVANCE(409);
       END_STATE();
     case 251:
-      if (lookahead == 'a') ADVANCE(409);
+      if (lookahead == 'l') ADVANCE(410);
       END_STATE();
     case 252:
-      ACCEPT_TOKEN(anon_sym_run);
-      if (lookahead == 'c') ADVANCE(410);
-      if (lookahead == 'f') ADVANCE(411);
-      if (lookahead == 't') ADVANCE(412);
+      if (lookahead == 'a') ADVANCE(411);
       END_STATE();
     case 253:
-      ACCEPT_TOKEN(anon_sym_say);
+      ACCEPT_TOKEN(anon_sym_run);
+      if (lookahead == 'c') ADVANCE(412);
+      if (lookahead == 'f') ADVANCE(413);
+      if (lookahead == 't') ADVANCE(414);
       END_STATE();
     case 254:
-      if (lookahead == 'r') ADVANCE(413);
+      ACCEPT_TOKEN(anon_sym_say);
       END_STATE();
     case 255:
-      ACCEPT_TOKEN(anon_sym_set);
-      if (lookahead == 'd') ADVANCE(414);
+      if (lookahead == 'r') ADVANCE(415);
       END_STATE();
     case 256:
-      if (lookahead == 'w') ADVANCE(415);
+      ACCEPT_TOKEN(anon_sym_set);
+      if (lookahead == 'd') ADVANCE(416);
       END_STATE();
     case 257:
-      if (lookahead == 'e') ADVANCE(416);
-      END_STATE();
-    case 258:
       if (lookahead == 'w') ADVANCE(417);
       END_STATE();
+    case 258:
+      if (lookahead == 'e') ADVANCE(418);
+      END_STATE();
     case 259:
-      if (lookahead == 'r') ADVANCE(418);
+      if (lookahead == 'w') ADVANCE(419);
       END_STATE();
     case 260:
-      if (lookahead == 'p') ADVANCE(419);
       if (lookahead == 'r') ADVANCE(420);
       END_STATE();
     case 261:
-      if (lookahead == 'i') ADVANCE(421);
-      if (lookahead == 'u') ADVANCE(422);
+      if (lookahead == 'p') ADVANCE(421);
+      if (lookahead == 'r') ADVANCE(422);
       END_STATE();
     case 262:
-      if (lookahead == 'l') ADVANCE(423);
+      if (lookahead == 'i') ADVANCE(423);
+      if (lookahead == 'u') ADVANCE(424);
       END_STATE();
     case 263:
-      if (lookahead == 't') ADVANCE(424);
+      if (lookahead == 'l') ADVANCE(425);
       END_STATE();
     case 264:
-      if (lookahead == 'c') ADVANCE(425);
+      if (lookahead == 't') ADVANCE(426);
       END_STATE();
     case 265:
-      if (lookahead == 'f') ADVANCE(426);
+      if (lookahead == 'c') ADVANCE(427);
       END_STATE();
     case 266:
-      if (lookahead == 'm') ADVANCE(427);
+      if (lookahead == 'f') ADVANCE(428);
       END_STATE();
     case 267:
-      if (lookahead == 'e') ADVANCE(428);
+      if (lookahead == 'm') ADVANCE(429);
       END_STATE();
     case 268:
-      if (lookahead == 'g') ADVANCE(429);
+      if (lookahead == 'e') ADVANCE(430);
       END_STATE();
     case 269:
-      if (lookahead == 'p') ADVANCE(430);
+      if (lookahead == 'g') ADVANCE(431);
       END_STATE();
     case 270:
-      if (lookahead == 'o') ADVANCE(431);
+      if (lookahead == 'p') ADVANCE(432);
       END_STATE();
     case 271:
-      if (lookahead == 'n') ADVANCE(432);
+      if (lookahead == 'o') ADVANCE(433);
       END_STATE();
     case 272:
-      if (lookahead == 'e') ADVANCE(433);
+      if (lookahead == 'n') ADVANCE(434);
       END_STATE();
     case 273:
-      if (lookahead == 'l') ADVANCE(434);
+      if (lookahead == 'e') ADVANCE(435);
       END_STATE();
     case 274:
-      if (lookahead == 'g') ADVANCE(435);
+      if (lookahead == 'l') ADVANCE(436);
       END_STATE();
     case 275:
-      if (lookahead == 'e') ADVANCE(436);
+      if (lookahead == 'g') ADVANCE(437);
       END_STATE();
     case 276:
-      if (lookahead == 'e') ADVANCE(437);
-      END_STATE();
-    case 277:
       if (lookahead == 'e') ADVANCE(438);
       END_STATE();
+    case 277:
+      if (lookahead == 'e') ADVANCE(439);
+      END_STATE();
     case 278:
-      if (lookahead == 'i') ADVANCE(439);
+      if (lookahead == 'e') ADVANCE(440);
       END_STATE();
     case 279:
-      if (lookahead == 'd') ADVANCE(440);
+      if (lookahead == 'i') ADVANCE(441);
       END_STATE();
     case 280:
-      if (lookahead == 'u') ADVANCE(441);
+      if (lookahead == 'd') ADVANCE(442);
       END_STATE();
     case 281:
-      if (lookahead == 'i') ADVANCE(442);
+      if (lookahead == 'u') ADVANCE(443);
       END_STATE();
     case 282:
-      if (lookahead == 'i') ADVANCE(443);
+      if (lookahead == 'i') ADVANCE(444);
       END_STATE();
     case 283:
-      if (lookahead == 'l') ADVANCE(444);
-      END_STATE();
-    case 284:
       if (lookahead == 'i') ADVANCE(445);
       END_STATE();
+    case 284:
+      if (lookahead == 'l') ADVANCE(446);
+      END_STATE();
     case 285:
-      if (lookahead == 'c') ADVANCE(446);
+      if (lookahead == 'i') ADVANCE(447);
       END_STATE();
     case 286:
-      if (lookahead == 'n') ADVANCE(447);
+      if (lookahead == 'c') ADVANCE(448);
       END_STATE();
     case 287:
-      if (lookahead == 'p') ADVANCE(448);
-      if (lookahead == 't') ADVANCE(449);
+      if (lookahead == 'n') ADVANCE(449);
       END_STATE();
     case 288:
-      if (lookahead == 't') ADVANCE(450);
+      if (lookahead == 'p') ADVANCE(450);
+      if (lookahead == 't') ADVANCE(451);
       END_STATE();
     case 289:
-      if (lookahead == 'h') ADVANCE(451);
+      if (lookahead == 't') ADVANCE(452);
       END_STATE();
     case 290:
-      if (lookahead == 'l') ADVANCE(452);
+      if (lookahead == 'h') ADVANCE(453);
       END_STATE();
     case 291:
-      if (lookahead == 'o') ADVANCE(453);
+      if (lookahead == 'l') ADVANCE(454);
       END_STATE();
     case 292:
-      if (lookahead == 'm') ADVANCE(454);
-      if (lookahead == 'v') ADVANCE(455);
+      if (lookahead == 'o') ADVANCE(455);
       END_STATE();
     case 293:
-      if (lookahead == 'n') ADVANCE(456);
+      if (lookahead == 'm') ADVANCE(456);
+      if (lookahead == 'v') ADVANCE(457);
       END_STATE();
     case 294:
-      if (lookahead == 'e') ADVANCE(457);
-      END_STATE();
-    case 295:
       if (lookahead == 'n') ADVANCE(458);
       END_STATE();
-    case 296:
-      if (lookahead == 'o') ADVANCE(459);
+    case 295:
+      if (lookahead == 'e') ADVANCE(459);
       END_STATE();
-    case 297:
+    case 296:
       if (lookahead == 'n') ADVANCE(460);
       END_STATE();
+    case 297:
+      if (lookahead == 'o') ADVANCE(461);
+      END_STATE();
     case 298:
-      ACCEPT_TOKEN(anon_sym_aqua);
+      if (lookahead == 'n') ADVANCE(462);
       END_STATE();
     case 299:
-      if (lookahead == 'r') ADVANCE(461);
+      ACCEPT_TOKEN(anon_sym_aqua);
       END_STATE();
     case 300:
-      if (lookahead == 'c') ADVANCE(462);
+      if (lookahead == 'r') ADVANCE(463);
       END_STATE();
     case 301:
-      ACCEPT_TOKEN(anon_sym_base);
+      if (lookahead == 'c') ADVANCE(464);
       END_STATE();
     case 302:
-      if (lookahead == 'w') ADVANCE(463);
+      ACCEPT_TOKEN(anon_sym_base);
       END_STATE();
     case 303:
-      if (lookahead == 'e') ADVANCE(464);
+      if (lookahead == 'w') ADVANCE(465);
       END_STATE();
     case 304:
-      if (lookahead == 'k') ADVANCE(465);
+      if (lookahead == 'e') ADVANCE(466);
       END_STATE();
     case 305:
-      if (lookahead == 'k') ADVANCE(466);
+      if (lookahead == 'k') ADVANCE(467);
       END_STATE();
     case 306:
-      ACCEPT_TOKEN(anon_sym_blue);
+      if (lookahead == 'k') ADVANCE(468);
       END_STATE();
     case 307:
-      if (lookahead == 'b') ADVANCE(467);
+      ACCEPT_TOKEN(anon_sym_blue);
       END_STATE();
     case 308:
-      if (lookahead == 'e') ADVANCE(468);
+      if (lookahead == 'b') ADVANCE(469);
       END_STATE();
     case 309:
-      if (lookahead == 'e') ADVANCE(469);
+      if (lookahead == 'e') ADVANCE(470);
       END_STATE();
     case 310:
-      if (lookahead == 'r') ADVANCE(470);
+      if (lookahead == 'e') ADVANCE(471);
       END_STATE();
     case 311:
-      if (lookahead == 'r') ADVANCE(471);
+      if (lookahead == 'r') ADVANCE(472);
       END_STATE();
     case 312:
-      if (lookahead == 'a') ADVANCE(472);
-      if (lookahead == 'e') ADVANCE(473);
-      if (lookahead == 'r') ADVANCE(474);
+      if (lookahead == 'r') ADVANCE(473);
       END_STATE();
     case 313:
-      if (lookahead == 't') ADVANCE(475);
+      if (lookahead == 'a') ADVANCE(474);
+      if (lookahead == 'e') ADVANCE(475);
+      if (lookahead == 'r') ADVANCE(476);
       END_STATE();
     case 314:
-      if (lookahead == 'g') ADVANCE(476);
+      if (lookahead == 't') ADVANCE(477);
       END_STATE();
     case 315:
-      if (lookahead == '_') ADVANCE(477);
+      if (lookahead == 'g') ADVANCE(478);
       END_STATE();
     case 316:
-      ACCEPT_TOKEN(anon_sym_data);
+      if (lookahead == '_') ADVANCE(479);
       END_STATE();
     case 317:
-      if (lookahead == 'i') ADVANCE(478);
+      ACCEPT_TOKEN(anon_sym_data);
       END_STATE();
     case 318:
-      if (lookahead == 'r') ADVANCE(479);
+      if (lookahead == 'i') ADVANCE(480);
       END_STATE();
     case 319:
-      if (lookahead == 'n') ADVANCE(480);
+      if (lookahead == 'r') ADVANCE(481);
       END_STATE();
     case 320:
-      if (lookahead == 'b') ADVANCE(481);
+      if (lookahead == 'n') ADVANCE(482);
       END_STATE();
     case 321:
-      if (lookahead == 'o') ADVANCE(482);
+      if (lookahead == 'b') ADVANCE(483);
       END_STATE();
     case 322:
-      if (lookahead == 'a') ADVANCE(483);
+      if (lookahead == 'o') ADVANCE(484);
       END_STATE();
     case 323:
-      if (lookahead == 'y') ADVANCE(484);
+      if (lookahead == 'a') ADVANCE(485);
       END_STATE();
     case 324:
-      if (lookahead == 'l') ADVANCE(485);
+      if (lookahead == 'y') ADVANCE(486);
       END_STATE();
     case 325:
-      if (lookahead == 'r') ADVANCE(486);
+      if (lookahead == 'l') ADVANCE(487);
       END_STATE();
     case 326:
-      if (lookahead == 't') ADVANCE(487);
+      if (lookahead == 'r') ADVANCE(488);
       END_STATE();
     case 327:
-      if (lookahead == 'y') ADVANCE(488);
+      if (lookahead == 't') ADVANCE(489);
       END_STATE();
     case 328:
-      if (lookahead == 'u') ADVANCE(489);
+      if (lookahead == 'y') ADVANCE(490);
       END_STATE();
     case 329:
-      if (lookahead == 'r') ADVANCE(490);
+      if (lookahead == 'u') ADVANCE(491);
       END_STATE();
     case 330:
-      ACCEPT_TOKEN(anon_sym_eyes);
+      if (lookahead == 'r') ADVANCE(492);
       END_STATE();
     case 331:
-      if (lookahead == 'n') ADVANCE(491);
+      ACCEPT_TOKEN(anon_sym_eyes);
       END_STATE();
     case 332:
-      ACCEPT_TOKEN(anon_sym_fail);
+      if (lookahead == 'n') ADVANCE(493);
       END_STATE();
     case 333:
-      if (lookahead == 'e') ADVANCE(492);
+      ACCEPT_TOKEN(anon_sym_fail);
       END_STATE();
     case 334:
-      if (lookahead == 'u') ADVANCE(493);
+      if (lookahead == 'e') ADVANCE(494);
       END_STATE();
     case 335:
-      ACCEPT_TOKEN(anon_sym_feet);
+      if (lookahead == 'u') ADVANCE(495);
       END_STATE();
     case 336:
-      ACCEPT_TOKEN(anon_sym_fish);
+      ACCEPT_TOKEN(anon_sym_feet);
       END_STATE();
     case 337:
-      if (lookahead == 'h') ADVANCE(494);
+      ACCEPT_TOKEN(anon_sym_fish);
       END_STATE();
     case 338:
-      ACCEPT_TOKEN(anon_sym_food);
+      if (lookahead == 'h') ADVANCE(496);
       END_STATE();
     case 339:
-      if (lookahead == 'e') ADVANCE(495);
+      ACCEPT_TOKEN(anon_sym_food);
       END_STATE();
     case 340:
-      ACCEPT_TOKEN(anon_sym_from);
+      if (lookahead == 'e') ADVANCE(497);
       END_STATE();
     case 341:
-      if (lookahead == 't') ADVANCE(496);
+      ACCEPT_TOKEN(anon_sym_from);
       END_STATE();
     case 342:
-      if (lookahead == 't') ADVANCE(497);
-      END_STATE();
-    case 343:
-      ACCEPT_TOKEN(anon_sym_give);
-      END_STATE();
-    case 344:
-      ACCEPT_TOKEN(anon_sym_gold);
-      END_STATE();
-    case 345:
       if (lookahead == 't') ADVANCE(498);
       END_STATE();
+    case 343:
+      if (lookahead == 't') ADVANCE(499);
+      END_STATE();
+    case 344:
+      ACCEPT_TOKEN(anon_sym_give);
+      END_STATE();
+    case 345:
+      ACCEPT_TOKEN(anon_sym_gold);
+      END_STATE();
     case 346:
-      ACCEPT_TOKEN(anon_sym_gray);
-      END_STATE();
-    case 347:
-      if (lookahead == 'n') ADVANCE(499);
-      END_STATE();
-    case 348:
       if (lookahead == 't') ADVANCE(500);
       END_STATE();
+    case 347:
+      ACCEPT_TOKEN(anon_sym_gray);
+      END_STATE();
+    case 348:
+      if (lookahead == 'n') ADVANCE(501);
+      END_STATE();
     case 349:
-      if (lookahead == 'o') ADVANCE(501);
+      if (lookahead == 't') ADVANCE(502);
       END_STATE();
     case 350:
-      if (lookahead == 'e') ADVANCE(502);
+      if (lookahead == 'o') ADVANCE(503);
       END_STATE();
     case 351:
-      if (lookahead == 'i') ADVANCE(503);
+      if (lookahead == 'e') ADVANCE(504);
       END_STATE();
     case 352:
-      if (lookahead == 'a') ADVANCE(504);
+      if (lookahead == 'i') ADVANCE(505);
       END_STATE();
     case 353:
-      if (lookahead == 'r') ADVANCE(505);
+      if (lookahead == 'a') ADVANCE(506);
       END_STATE();
     case 354:
-      if (lookahead == 'n') ADVANCE(506);
+      if (lookahead == 'r') ADVANCE(507);
       END_STATE();
     case 355:
-      if (lookahead == 's') ADVANCE(507);
+      if (lookahead == 'n') ADVANCE(508);
       END_STATE();
     case 356:
-      if (lookahead == 'a') ADVANCE(508);
+      if (lookahead == 's') ADVANCE(509);
       END_STATE();
     case 357:
-      ACCEPT_TOKEN(anon_sym_join);
+      if (lookahead == 'a') ADVANCE(510);
       END_STATE();
     case 358:
-      ACCEPT_TOKEN(anon_sym_keep);
+      ACCEPT_TOKEN(anon_sym_join);
       END_STATE();
     case 359:
-      ACCEPT_TOKEN(anon_sym_kill);
+      ACCEPT_TOKEN(anon_sym_keep);
       END_STATE();
     case 360:
-      if (lookahead == 'h') ADVANCE(509);
+      ACCEPT_TOKEN(anon_sym_kill);
       END_STATE();
     case 361:
-      if (lookahead == 'e') ADVANCE(510);
+      if (lookahead == 'h') ADVANCE(511);
       END_STATE();
     case 362:
-      if (lookahead == 'l') ADVANCE(511);
+      if (lookahead == 'e') ADVANCE(512);
       END_STATE();
     case 363:
-      if (lookahead == 't') ADVANCE(512);
+      if (lookahead == 'l') ADVANCE(513);
       END_STATE();
     case 364:
-      ACCEPT_TOKEN(anon_sym_list);
-      END_STATE();
-    case 365:
-      if (lookahead == 'e') ADVANCE(513);
-      END_STATE();
-    case 366:
       if (lookahead == 't') ADVANCE(514);
       END_STATE();
+    case 365:
+      ACCEPT_TOKEN(anon_sym_list);
+      END_STATE();
+    case 366:
+      if (lookahead == 'e') ADVANCE(515);
+      END_STATE();
     case 367:
-      ACCEPT_TOKEN(anon_sym_loot);
+      if (lookahead == 't') ADVANCE(516);
       END_STATE();
     case 368:
-      if (lookahead == 'h') ADVANCE(515);
+      ACCEPT_TOKEN(anon_sym_loot);
       END_STATE();
     case 369:
-      if (lookahead == 'e') ADVANCE(516);
+      if (lookahead == 'h') ADVANCE(517);
       END_STATE();
     case 370:
-      if (lookahead == 'e') ADVANCE(517);
+      if (lookahead == 'e') ADVANCE(518);
       END_STATE();
     case 371:
-      if (lookahead == 'h') ADVANCE(518);
-      END_STATE();
-    case 372:
       if (lookahead == 'e') ADVANCE(519);
       END_STATE();
+    case 372:
+      if (lookahead == 'h') ADVANCE(520);
+      END_STATE();
     case 373:
-      if (lookahead == 'i') ADVANCE(520);
+      if (lookahead == 'e') ADVANCE(521);
       END_STATE();
     case 374:
-      ACCEPT_TOKEN(anon_sym_mine);
+      if (lookahead == 'i') ADVANCE(522);
       END_STATE();
     case 375:
-      if (lookahead == 'f') ADVANCE(521);
+      ACCEPT_TOKEN(anon_sym_mine);
       END_STATE();
     case 376:
-      if (lookahead == 't') ADVANCE(522);
+      if (lookahead == 'f') ADVANCE(523);
       END_STATE();
     case 377:
-      ACCEPT_TOKEN(anon_sym_move);
+      if (lookahead == 't') ADVANCE(524);
       END_STATE();
     case 378:
-      if (lookahead == 'c') ADVANCE(523);
+      ACCEPT_TOKEN(anon_sym_move);
       END_STATE();
     case 379:
-      ACCEPT_TOKEN(anon_sym_name);
+      if (lookahead == 'c') ADVANCE(525);
       END_STATE();
     case 380:
-      if (lookahead == 'r') ADVANCE(524);
+      ACCEPT_TOKEN(anon_sym_name);
       END_STATE();
     case 381:
-      if (lookahead == 't') ADVANCE(525);
+      if (lookahead == 'r') ADVANCE(526);
       END_STATE();
     case 382:
-      ACCEPT_TOKEN(anon_sym_noon);
+      if (lookahead == 't') ADVANCE(527);
       END_STATE();
     case 383:
-      if (lookahead == 'a') ADVANCE(526);
+      ACCEPT_TOKEN(anon_sym_noon);
       END_STATE();
     case 384:
-      if (lookahead == 'c') ADVANCE(527);
-      END_STATE();
-    case 385:
       if (lookahead == 'a') ADVANCE(528);
       END_STATE();
+    case 385:
+      if (lookahead == 'c') ADVANCE(529);
+      END_STATE();
     case 386:
-      ACCEPT_TOKEN(anon_sym_only);
+      if (lookahead == 'a') ADVANCE(530);
       END_STATE();
     case 387:
-      if (lookahead == 'a') ADVANCE(529);
+      ACCEPT_TOKEN(anon_sym_only);
       END_STATE();
     case 388:
-      if (lookahead == 'i') ADVANCE(530);
+      if (lookahead == 'a') ADVANCE(531);
       END_STATE();
     case 389:
-      if (lookahead == 'i') ADVANCE(531);
+      if (lookahead == 'i') ADVANCE(532);
       END_STATE();
     case 390:
-      ACCEPT_TOKEN(anon_sym_over);
+      if (lookahead == 'i') ADVANCE(533);
       END_STATE();
     case 391:
-      if (lookahead == 'r') ADVANCE(532);
+      ACCEPT_TOKEN(anon_sym_over);
       END_STATE();
     case 392:
-      if (lookahead == 'e') ADVANCE(533);
+      if (lookahead == 'r') ADVANCE(534);
       END_STATE();
     case 393:
-      if (lookahead == 'e') ADVANCE(534);
+      if (lookahead == 'e') ADVANCE(535);
       END_STATE();
     case 394:
-      if (lookahead == 't') ADVANCE(535);
+      if (lookahead == 'e') ADVANCE(536);
       END_STATE();
     case 395:
-      if (lookahead == 't') ADVANCE(536);
+      if (lookahead == 'e') ADVANCE(537);
       END_STATE();
     case 396:
-      if (lookahead == 'i') ADVANCE(537);
+      if (lookahead == 't') ADVANCE(538);
       END_STATE();
     case 397:
-      if (lookahead == 'i') ADVANCE(538);
+      if (lookahead == 't') ADVANCE(539);
       END_STATE();
     case 398:
-      if (lookahead == 'e') ADVANCE(539);
+      if (lookahead == 'i') ADVANCE(540);
       END_STATE();
     case 399:
-      if (lookahead == 'y') ADVANCE(540);
+      if (lookahead == 'i') ADVANCE(541);
       END_STATE();
     case 400:
-      ACCEPT_TOKEN(anon_sym_rain);
+      if (lookahead == 'e') ADVANCE(542);
       END_STATE();
     case 401:
-      if (lookahead == 'r') ADVANCE(541);
+      if (lookahead == 'y') ADVANCE(543);
       END_STATE();
     case 402:
-      if (lookahead == 'a') ADVANCE(542);
+      ACCEPT_TOKEN(anon_sym_rain);
       END_STATE();
     case 403:
-      if (lookahead == 'v') ADVANCE(543);
+      if (lookahead == 'r') ADVANCE(544);
       END_STATE();
     case 404:
-      if (lookahead == 'a') ADVANCE(544);
+      if (lookahead == 'a') ADVANCE(545);
       END_STATE();
     case 405:
-      if (lookahead == 't') ADVANCE(545);
+      if (lookahead == 'v') ADVANCE(546);
       END_STATE();
     case 406:
-      if (lookahead == 'l') ADVANCE(546);
+      if (lookahead == 'a') ADVANCE(547);
       END_STATE();
     case 407:
-      if (lookahead == 'k') ADVANCE(547);
-      END_STATE();
-    case 408:
-      ACCEPT_TOKEN(anon_sym_roll);
-      END_STATE();
-    case 409:
       if (lookahead == 't') ADVANCE(548);
       END_STATE();
-    case 410:
+    case 408:
       if (lookahead == 'l') ADVANCE(549);
+      if (lookahead == 'm') ADVANCE(550);
+      END_STATE();
+    case 409:
+      if (lookahead == 'k') ADVANCE(551);
+      END_STATE();
+    case 410:
+      ACCEPT_TOKEN(anon_sym_roll);
       END_STATE();
     case 411:
-      if (lookahead == 'a') ADVANCE(550);
+      if (lookahead == 't') ADVANCE(552);
       END_STATE();
     case 412:
-      if (lookahead == 'h') ADVANCE(551);
+      if (lookahead == 'l') ADVANCE(553);
       END_STATE();
     case 413:
-      if (lookahead == 'e') ADVANCE(552);
+      if (lookahead == 'a') ADVANCE(554);
       END_STATE();
     case 414:
-      if (lookahead == 'i') ADVANCE(553);
+      if (lookahead == 'h') ADVANCE(555);
       END_STATE();
     case 415:
-      ACCEPT_TOKEN(anon_sym_show);
+      if (lookahead == 'e') ADVANCE(556);
       END_STATE();
     case 416:
-      if (lookahead == 'b') ADVANCE(554);
+      if (lookahead == 'i') ADVANCE(557);
       END_STATE();
     case 417:
-      if (lookahead == 'n') ADVANCE(555);
+      ACCEPT_TOKEN(anon_sym_show);
       END_STATE();
     case 418:
-      if (lookahead == 't') ADVANCE(556);
+      if (lookahead == 'b') ADVANCE(558);
       END_STATE();
     case 419:
-      ACCEPT_TOKEN(anon_sym_stop);
+      if (lookahead == 'n') ADVANCE(559);
       END_STATE();
     case 420:
-      if (lookahead == 'a') ADVANCE(557);
-      if (lookahead == 'e') ADVANCE(558);
+      if (lookahead == 't') ADVANCE(560);
       END_STATE();
     case 421:
-      if (lookahead == 'c') ADVANCE(559);
-      if (lookahead == 'n') ADVANCE(560);
+      ACCEPT_TOKEN(anon_sym_stop);
       END_STATE();
     case 422:
-      if (lookahead == 'c') ADVANCE(561);
-      END_STATE();
-    case 423:
+      if (lookahead == 'a') ADVANCE(561);
       if (lookahead == 'e') ADVANCE(562);
       END_STATE();
+    case 423:
+      if (lookahead == 'c') ADVANCE(563);
+      if (lookahead == 'n') ADVANCE(564);
+      END_STATE();
     case 424:
-      if (lookahead == 'i') ADVANCE(563);
+      if (lookahead == 'c') ADVANCE(565);
       END_STATE();
     case 425:
-      if (lookahead == 'e') ADVANCE(564);
+      if (lookahead == 'e') ADVANCE(566);
       END_STATE();
     case 426:
-      if (lookahead == 'i') ADVANCE(565);
+      if (lookahead == 'i') ADVANCE(567);
       END_STATE();
     case 427:
-      if (lookahead == 'o') ADVANCE(566);
+      if (lookahead == 'e') ADVANCE(568);
       END_STATE();
     case 428:
-      ACCEPT_TOKEN(anon_sym_take);
+      if (lookahead == 'i') ADVANCE(569);
       END_STATE();
     case 429:
-      if (lookahead == 'e') ADVANCE(567);
+      if (lookahead == 'o') ADVANCE(570);
       END_STATE();
     case 430:
-      if (lookahead == 'l') ADVANCE(568);
+      ACCEPT_TOKEN(anon_sym_take);
       END_STATE();
     case 431:
-      if (lookahead == 'u') ADVANCE(569);
+      if (lookahead == 'e') ADVANCE(571);
       END_STATE();
     case 432:
-      if (lookahead == 'd') ADVANCE(570);
+      if (lookahead == 'l') ADVANCE(572);
       END_STATE();
     case 433:
-      ACCEPT_TOKEN(anon_sym_time);
-      if (lookahead == 's') ADVANCE(571);
+      if (lookahead == 'u') ADVANCE(573);
       END_STATE();
     case 434:
-      if (lookahead == 'e') ADVANCE(572);
+      if (lookahead == 'd') ADVANCE(574);
       END_STATE();
     case 435:
-      if (lookahead == 'g') ADVANCE(573);
-      END_STATE();
-    case 436:
-      ACCEPT_TOKEN(anon_sym_true);
-      END_STATE();
-    case 437:
-      if (lookahead == 'r') ADVANCE(574);
-      END_STATE();
-    case 438:
+      ACCEPT_TOKEN(anon_sym_time);
       if (lookahead == 's') ADVANCE(575);
       END_STATE();
+    case 436:
+      if (lookahead == 'e') ADVANCE(576);
+      END_STATE();
+    case 437:
+      if (lookahead == 'g') ADVANCE(577);
+      END_STATE();
+    case 438:
+      ACCEPT_TOKEN(anon_sym_true);
+      END_STATE();
     case 439:
-      if (lookahead == 'l') ADVANCE(576);
+      if (lookahead == 'r') ADVANCE(578);
       END_STATE();
     case 440:
-      if (lookahead == 's') ADVANCE(577);
+      if (lookahead == 's') ADVANCE(579);
       END_STATE();
     case 441:
-      if (lookahead == 'e') ADVANCE(578);
+      if (lookahead == 'l') ADVANCE(580);
       END_STATE();
     case 442:
-      if (lookahead == 'c') ADVANCE(579);
+      if (lookahead == 's') ADVANCE(581);
       END_STATE();
     case 443:
-      if (lookahead == 'f') ADVANCE(580);
+      if (lookahead == 'e') ADVANCE(582);
       END_STATE();
     case 444:
-      if (lookahead == 'a') ADVANCE(581);
+      if (lookahead == 'c') ADVANCE(583);
       END_STATE();
     case 445:
-      if (lookahead == 'b') ADVANCE(582);
+      if (lookahead == 'f') ADVANCE(584);
       END_STATE();
     case 446:
-      if (lookahead == 'e') ADVANCE(583);
+      if (lookahead == 'a') ADVANCE(585);
       END_STATE();
     case 447:
-      if (lookahead == 'i') ADVANCE(584);
+      if (lookahead == 'b') ADVANCE(586);
       END_STATE();
     case 448:
-      if (lookahead == 'o') ADVANCE(585);
-      END_STATE();
-    case 449:
-      if (lookahead == 'h') ADVANCE(586);
-      END_STATE();
-    case 450:
       if (lookahead == 'e') ADVANCE(587);
       END_STATE();
+    case 449:
+      if (lookahead == 'i') ADVANCE(588);
+      END_STATE();
+    case 450:
+      if (lookahead == 'o') ADVANCE(589);
+      END_STATE();
     case 451:
-      ACCEPT_TOKEN(anon_sym_with);
+      if (lookahead == 'h') ADVANCE(590);
       END_STATE();
     case 452:
-      if (lookahead == 'o') ADVANCE(588);
+      if (lookahead == 'e') ADVANCE(591);
       END_STATE();
     case 453:
-      if (lookahead == 'n') ADVANCE(589);
+      ACCEPT_TOKEN(anon_sym_with);
       END_STATE();
     case 454:
-      if (lookahead == 'u') ADVANCE(590);
+      if (lookahead == 'o') ADVANCE(592);
       END_STATE();
     case 455:
-      if (lookahead == 'a') ADVANCE(591);
+      if (lookahead == 'n') ADVANCE(593);
       END_STATE();
     case 456:
-      ACCEPT_TOKEN(anon_sym_align);
+      if (lookahead == 'u') ADVANCE(594);
       END_STATE();
     case 457:
-      if (lookahead == 'n') ADVANCE(592);
+      if (lookahead == 'a') ADVANCE(595);
       END_STATE();
     case 458:
-      if (lookahead == 't') ADVANCE(593);
+      ACCEPT_TOKEN(anon_sym_align);
       END_STATE();
     case 459:
-      if (lookahead == 'r') ADVANCE(594);
+      if (lookahead == 'n') ADVANCE(596);
       END_STATE();
     case 460:
-      if (lookahead == 'd') ADVANCE(595);
+      if (lookahead == 't') ADVANCE(597);
       END_STATE();
     case 461:
-      ACCEPT_TOKEN(anon_sym_armor);
+      if (lookahead == 'r') ADVANCE(598);
       END_STATE();
     case 462:
-      if (lookahead == 'k') ADVANCE(596);
+      if (lookahead == 'd') ADVANCE(599);
       END_STATE();
     case 463:
-      if (lookahead == '_') ADVANCE(597);
+      ACCEPT_TOKEN(anon_sym_armor);
       END_STATE();
     case 464:
-      ACCEPT_TOKEN(anon_sym_biome);
+      if (lookahead == 'k') ADVANCE(600);
       END_STATE();
     case 465:
-      ACCEPT_TOKEN(anon_sym_black);
+      if (lookahead == '_') ADVANCE(601);
       END_STATE();
     case 466:
-      ACCEPT_TOKEN(anon_sym_block);
-      if (lookahead == 's') ADVANCE(598);
+      ACCEPT_TOKEN(anon_sym_biome);
       END_STATE();
     case 467:
-      if (lookahead == 'a') ADVANCE(599);
+      ACCEPT_TOKEN(anon_sym_black);
       END_STATE();
     case 468:
-      if (lookahead == 'r') ADVANCE(600);
+      ACCEPT_TOKEN(anon_sym_block);
+      if (lookahead == 's') ADVANCE(602);
       END_STATE();
     case 469:
-      if (lookahead == 'r') ADVANCE(601);
+      if (lookahead == 'a') ADVANCE(603);
       END_STATE();
     case 470:
-      ACCEPT_TOKEN(anon_sym_clear);
+      if (lookahead == 'r') ADVANCE(604);
       END_STATE();
     case 471:
-      ACCEPT_TOKEN(anon_sym_color);
+      if (lookahead == 'r') ADVANCE(605);
       END_STATE();
     case 472:
-      if (lookahead == 'i') ADVANCE(602);
+      ACCEPT_TOKEN(anon_sym_clear);
       END_STATE();
     case 473:
-      if (lookahead == 'n') ADVANCE(603);
+      ACCEPT_TOKEN(anon_sym_color);
       END_STATE();
     case 474:
-      if (lookahead == 'o') ADVANCE(604);
+      if (lookahead == 'i') ADVANCE(606);
       END_STATE();
     case 475:
-      if (lookahead == 'e') ADVANCE(605);
+      if (lookahead == 'n') ADVANCE(607);
       END_STATE();
     case 476:
-      if (lookahead == 'e') ADVANCE(606);
+      if (lookahead == 'o') ADVANCE(608);
       END_STATE();
     case 477:
-      if (lookahead == 'a') ADVANCE(607);
-      if (lookahead == 'b') ADVANCE(608);
-      if (lookahead == 'g') ADVANCE(609);
-      if (lookahead == 'p') ADVANCE(610);
-      if (lookahead == 'r') ADVANCE(611);
+      if (lookahead == 'e') ADVANCE(609);
       END_STATE();
     case 478:
-      if (lookahead == 'm') ADVANCE(612);
+      if (lookahead == 'e') ADVANCE(610);
       END_STATE();
     case 479:
-      if (lookahead == 'o') ADVANCE(613);
+      if (lookahead == 'a') ADVANCE(611);
+      if (lookahead == 'b') ADVANCE(612);
+      if (lookahead == 'g') ADVANCE(613);
+      if (lookahead == 'p') ADVANCE(614);
+      if (lookahead == 'r') ADVANCE(615);
       END_STATE();
     case 480:
-      if (lookahead == 's') ADVANCE(614);
+      if (lookahead == 'm') ADVANCE(616);
       END_STATE();
     case 481:
-      if (lookahead == 'l') ADVANCE(615);
+      if (lookahead == 'o') ADVANCE(617);
       END_STATE();
     case 482:
-      if (lookahead == 'u') ADVANCE(616);
+      if (lookahead == 's') ADVANCE(618);
       END_STATE();
     case 483:
-      if (lookahead == 'n') ADVANCE(617);
+      if (lookahead == 'l') ADVANCE(619);
       END_STATE();
     case 484:
-      ACCEPT_TOKEN(anon_sym_dummy);
+      if (lookahead == 'u') ADVANCE(620);
       END_STATE();
     case 485:
-      if (lookahead == 'e') ADVANCE(618);
+      if (lookahead == 'n') ADVANCE(621);
       END_STATE();
     case 486:
-      if (lookahead == 'c') ADVANCE(619);
+      ACCEPT_TOKEN(anon_sym_dummy);
       END_STATE();
     case 487:
-      if (lookahead == 'y') ADVANCE(620);
+      if (lookahead == 'e') ADVANCE(622);
       END_STATE();
     case 488:
-      if (lookahead == 't') ADVANCE(621);
+      if (lookahead == 'c') ADVANCE(623);
       END_STATE();
     case 489:
-      if (lookahead == 't') ADVANCE(622);
+      if (lookahead == 'y') ADVANCE(624);
       END_STATE();
     case 490:
-      if (lookahead == 't') ADVANCE(623);
+      if (lookahead == 't') ADVANCE(625);
       END_STATE();
     case 491:
-      if (lookahead == 'g') ADVANCE(624);
+      if (lookahead == 't') ADVANCE(626);
       END_STATE();
     case 492:
-      ACCEPT_TOKEN(anon_sym_false);
+      if (lookahead == 't') ADVANCE(627);
       END_STATE();
     case 493:
-      if (lookahead == 'r') ADVANCE(625);
+      if (lookahead == 'g') ADVANCE(628);
       END_STATE();
     case 494:
-      ACCEPT_TOKEN(anon_sym_flush);
+      ACCEPT_TOKEN(anon_sym_false);
       END_STATE();
     case 495:
-      ACCEPT_TOKEN(anon_sym_force);
+      if (lookahead == 'r') ADVANCE(629);
       END_STATE();
     case 496:
-      if (lookahead == 'i') ADVANCE(626);
+      ACCEPT_TOKEN(anon_sym_flush);
       END_STATE();
     case 497:
-      if (lookahead == 'i') ADVANCE(627);
+      ACCEPT_TOKEN(anon_sym_force);
       END_STATE();
     case 498:
-      ACCEPT_TOKEN(anon_sym_grant);
+      if (lookahead == 'i') ADVANCE(630);
       END_STATE();
     case 499:
-      ACCEPT_TOKEN(anon_sym_green);
+      if (lookahead == 'i') ADVANCE(631);
       END_STATE();
     case 500:
-      if (lookahead == 'h') ADVANCE(628);
+      ACCEPT_TOKEN(anon_sym_grant);
       END_STATE();
     case 501:
-      if (lookahead == 'w') ADVANCE(629);
+      ACCEPT_TOKEN(anon_sym_green);
       END_STATE();
     case 502:
-      ACCEPT_TOKEN(anon_sym_horse);
+      if (lookahead == 'h') ADVANCE(632);
       END_STATE();
     case 503:
-      if (lookahead == 'l') ADVANCE(630);
+      if (lookahead == 'w') ADVANCE(633);
       END_STATE();
     case 504:
-      if (lookahead == 'r') ADVANCE(631);
+      ACCEPT_TOKEN(anon_sym_horse);
       END_STATE();
     case 505:
-      if (lookahead == 't') ADVANCE(632);
+      if (lookahead == 'l') ADVANCE(634);
       END_STATE();
     case 506:
-      if (lookahead == 't') ADVANCE(633);
+      if (lookahead == 'r') ADVANCE(635);
       END_STATE();
     case 507:
-      ACCEPT_TOKEN(anon_sym_items);
+      if (lookahead == 't') ADVANCE(636);
       END_STATE();
     case 508:
-      if (lookahead == 'w') ADVANCE(634);
+      if (lookahead == 't') ADVANCE(637);
       END_STATE();
     case 509:
-      if (lookahead == 'e') ADVANCE(635);
+      ACCEPT_TOKEN(anon_sym_items);
       END_STATE();
     case 510:
-      ACCEPT_TOKEN(anon_sym_leave);
+      if (lookahead == 'w') ADVANCE(638);
       END_STATE();
     case 511:
-      ACCEPT_TOKEN(anon_sym_level);
-      if (lookahead == 's') ADVANCE(636);
-      END_STATE();
-    case 512:
-      if (lookahead == '_') ADVANCE(637);
-      END_STATE();
-    case 513:
-      if (lookahead == 'd') ADVANCE(638);
-      END_STATE();
-    case 514:
       if (lookahead == 'e') ADVANCE(639);
       END_STATE();
+    case 512:
+      ACCEPT_TOKEN(anon_sym_leave);
+      END_STATE();
+    case 513:
+      ACCEPT_TOKEN(anon_sym_level);
+      if (lookahead == 's') ADVANCE(640);
+      END_STATE();
+    case 514:
+      if (lookahead == '_') ADVANCE(641);
+      END_STATE();
     case 515:
-      if (lookahead == 'a') ADVANCE(640);
+      if (lookahead == 'd') ADVANCE(642);
       END_STATE();
     case 516:
-      if (lookahead == 'd') ADVANCE(641);
-      END_STATE();
-    case 517:
-      if (lookahead == 'r') ADVANCE(642);
-      END_STATE();
-    case 518:
       if (lookahead == 'e') ADVANCE(643);
       END_STATE();
+    case 517:
+      if (lookahead == 'a') ADVANCE(644);
+      END_STATE();
+    case 518:
+      if (lookahead == 'd') ADVANCE(645);
+      END_STATE();
     case 519:
-      ACCEPT_TOKEN(anon_sym_merge);
+      if (lookahead == 'r') ADVANCE(646);
       END_STATE();
     case 520:
-      if (lookahead == 'g') ADVANCE(644);
+      if (lookahead == 'e') ADVANCE(647);
       END_STATE();
     case 521:
-      if (lookahead == 'i') ADVANCE(645);
-      if (lookahead == 'y') ADVANCE(646);
+      ACCEPT_TOKEN(anon_sym_merge);
       END_STATE();
     case 522:
-      ACCEPT_TOKEN(anon_sym_mount);
+      if (lookahead == 'g') ADVANCE(648);
       END_STATE();
     case 523:
-      ACCEPT_TOKEN(anon_sym_music);
+      if (lookahead == 'i') ADVANCE(649);
+      if (lookahead == 'y') ADVANCE(650);
       END_STATE();
     case 524:
-      if (lookahead == 'a') ADVANCE(647);
+      ACCEPT_TOKEN(anon_sym_mount);
       END_STATE();
     case 525:
-      ACCEPT_TOKEN(anon_sym_night);
+      ACCEPT_TOKEN(anon_sym_music);
       END_STATE();
     case 526:
-      if (lookahead == 'l') ADVANCE(648);
+      if (lookahead == 'a') ADVANCE(651);
       END_STATE();
     case 527:
-      if (lookahead == 't') ADVANCE(649);
+      ACCEPT_TOKEN(anon_sym_night);
       END_STATE();
     case 528:
-      if (lookahead == 'n') ADVANCE(650);
+      if (lookahead == 'l') ADVANCE(652);
       END_STATE();
     case 529:
-      if (lookahead == 't') ADVANCE(651);
+      if (lookahead == 't') ADVANCE(653);
       END_STATE();
     case 530:
-      if (lookahead == 'n') ADVANCE(652);
-      END_STATE();
-    case 531:
-      if (lookahead == 'n') ADVANCE(653);
-      END_STATE();
-    case 532:
-      ACCEPT_TOKEN(anon_sym_owner);
-      END_STATE();
-    case 533:
       if (lookahead == 'n') ADVANCE(654);
       END_STATE();
+    case 531:
+      if (lookahead == 't') ADVANCE(655);
+      END_STATE();
+    case 532:
+      if (lookahead == 'n') ADVANCE(656);
+      END_STATE();
+    case 533:
+      if (lookahead == 'n') ADVANCE(657);
+      END_STATE();
     case 534:
-      if (lookahead == 'r') ADVANCE(655);
+      ACCEPT_TOKEN(anon_sym_owner);
       END_STATE();
     case 535:
-      if (lookahead == 's') ADVANCE(656);
+      if (lookahead == 'n') ADVANCE(658);
       END_STATE();
     case 536:
-      if (lookahead == 'i') ADVANCE(657);
+      ACCEPT_TOKEN(anon_sym_pause);
       END_STATE();
     case 537:
-      if (lookahead == 'c') ADVANCE(658);
+      if (lookahead == 'r') ADVANCE(659);
       END_STATE();
     case 538:
-      if (lookahead == 'x') ADVANCE(659);
+      if (lookahead == 's') ADVANCE(660);
       END_STATE();
     case 539:
-      if (lookahead == 'n') ADVANCE(660);
+      if (lookahead == 'i') ADVANCE(661);
       END_STATE();
     case 540:
-      ACCEPT_TOKEN(anon_sym_query);
+      if (lookahead == 'c') ADVANCE(662);
       END_STATE();
     case 541:
-      if (lookahead == 'd') ADVANCE(661);
+      if (lookahead == 'x') ADVANCE(663);
       END_STATE();
     case 542:
-      if (lookahead == 'd') ADVANCE(662);
+      if (lookahead == 'n') ADVANCE(664);
       END_STATE();
     case 543:
-      if (lookahead == 'e') ADVANCE(663);
+      ACCEPT_TOKEN(anon_sym_query);
       END_STATE();
     case 544:
-      if (lookahead == 'c') ADVANCE(664);
+      if (lookahead == 'd') ADVANCE(665);
       END_STATE();
     case 545:
-      ACCEPT_TOKEN(anon_sym_reset);
-      if (lookahead == 'c') ADVANCE(665);
-      if (lookahead == 't') ADVANCE(666);
+      if (lookahead == 'd') ADVANCE(666);
       END_STATE();
     case 546:
-      if (lookahead == 't') ADVANCE(667);
+      if (lookahead == 'e') ADVANCE(667);
       END_STATE();
     case 547:
-      if (lookahead == 'e') ADVANCE(668);
+      if (lookahead == 'c') ADVANCE(668);
       END_STATE();
     case 548:
-      if (lookahead == 'e') ADVANCE(669);
+      ACCEPT_TOKEN(anon_sym_reset);
+      if (lookahead == 'c') ADVANCE(669);
+      if (lookahead == 't') ADVANCE(670);
       END_STATE();
     case 549:
-      if (lookahead == 'o') ADVANCE(670);
+      if (lookahead == 't') ADVANCE(671);
       END_STATE();
     case 550:
-      if (lookahead == 'i') ADVANCE(671);
+      if (lookahead == 'e') ADVANCE(672);
       END_STATE();
     case 551:
-      if (lookahead == 'a') ADVANCE(672);
       if (lookahead == 'e') ADVANCE(673);
       END_STATE();
     case 552:
-      ACCEPT_TOKEN(anon_sym_score);
+      if (lookahead == 'e') ADVANCE(674);
       END_STATE();
     case 553:
-      if (lookahead == 's') ADVANCE(674);
+      if (lookahead == 'o') ADVANCE(675);
       END_STATE();
     case 554:
-      if (lookahead == 'a') ADVANCE(675);
+      if (lookahead == 'i') ADVANCE(676);
       END_STATE();
     case 555:
-      ACCEPT_TOKEN(anon_sym_spawn);
+      if (lookahead == 'a') ADVANCE(677);
+      if (lookahead == 'e') ADVANCE(678);
       END_STATE();
     case 556:
-      ACCEPT_TOKEN(anon_sym_start);
+      ACCEPT_TOKEN(anon_sym_score);
       END_STATE();
     case 557:
-      if (lookahead == 'g') ADVANCE(676);
+      if (lookahead == 's') ADVANCE(679);
       END_STATE();
     case 558:
-      ACCEPT_TOKEN(anon_sym_store);
+      if (lookahead == 'a') ADVANCE(680);
       END_STATE();
     case 559:
-      if (lookahead == 't') ADVANCE(677);
+      ACCEPT_TOKEN(anon_sym_spawn);
       END_STATE();
     case 560:
-      if (lookahead == 'g') ADVANCE(678);
+      ACCEPT_TOKEN(anon_sym_start);
       END_STATE();
     case 561:
-      if (lookahead == 't') ADVANCE(679);
+      if (lookahead == 'g') ADVANCE(681);
       END_STATE();
     case 562:
-      ACCEPT_TOKEN(anon_sym_style);
+      ACCEPT_TOKEN(anon_sym_store);
       END_STATE();
     case 563:
-      if (lookahead == 't') ADVANCE(680);
+      if (lookahead == 't') ADVANCE(682);
       END_STATE();
     case 564:
-      if (lookahead == 's') ADVANCE(681);
+      if (lookahead == 'g') ADVANCE(683);
       END_STATE();
     case 565:
-      if (lookahead == 'x') ADVANCE(682);
-      END_STATE();
-    case 566:
-      if (lookahead == 'n') ADVANCE(683);
-      END_STATE();
-    case 567:
       if (lookahead == 't') ADVANCE(684);
       END_STATE();
+    case 566:
+      ACCEPT_TOKEN(anon_sym_style);
+      END_STATE();
+    case 567:
+      if (lookahead == 't') ADVANCE(685);
+      END_STATE();
     case 568:
-      if (lookahead == 'a') ADVANCE(685);
+      if (lookahead == 's') ADVANCE(686);
       END_STATE();
     case 569:
-      if (lookahead == 'g') ADVANCE(686);
+      if (lookahead == 'x') ADVANCE(687);
       END_STATE();
     case 570:
-      if (lookahead == 'e') ADVANCE(687);
+      if (lookahead == 'n') ADVANCE(688);
       END_STATE();
     case 571:
-      ACCEPT_TOKEN(anon_sym_times);
+      if (lookahead == 't') ADVANCE(689);
       END_STATE();
     case 572:
-      ACCEPT_TOKEN(anon_sym_title);
+      if (lookahead == 'a') ADVANCE(690);
       END_STATE();
     case 573:
-      if (lookahead == 'e') ADVANCE(688);
+      if (lookahead == 'g') ADVANCE(691);
       END_STATE();
     case 574:
-      ACCEPT_TOKEN(anon_sym_under);
+      if (lookahead == 'e') ADVANCE(692);
       END_STATE();
     case 575:
-      if (lookahead == 's') ADVANCE(689);
+      ACCEPT_TOKEN(anon_sym_times);
       END_STATE();
     case 576:
-      ACCEPT_TOKEN(anon_sym_until);
+      ACCEPT_TOKEN(anon_sym_title);
       END_STATE();
     case 577:
-      ACCEPT_TOKEN(anon_sym_uuids);
+      if (lookahead == 'e') ADVANCE(693);
       END_STATE();
     case 578:
-      ACCEPT_TOKEN(anon_sym_value);
+      ACCEPT_TOKEN(anon_sym_under);
       END_STATE();
     case 579:
-      if (lookahead == 'l') ADVANCE(690);
+      if (lookahead == 's') ADVANCE(694);
       END_STATE();
     case 580:
-      if (lookahead == 'y') ADVANCE(691);
+      ACCEPT_TOKEN(anon_sym_until);
       END_STATE();
     case 581:
-      if (lookahead == 'g') ADVANCE(692);
+      ACCEPT_TOKEN(anon_sym_uuids);
       END_STATE();
     case 582:
-      if (lookahead == 'l') ADVANCE(693);
+      ACCEPT_TOKEN(anon_sym_value);
       END_STATE();
     case 583:
-      ACCEPT_TOKEN(anon_sym_voice);
+      if (lookahead == 'l') ADVANCE(695);
       END_STATE();
     case 584:
-      if (lookahead == 'n') ADVANCE(694);
+      if (lookahead == 'y') ADVANCE(696);
       END_STATE();
     case 585:
-      if (lookahead == 'n') ADVANCE(695);
+      if (lookahead == 'g') ADVANCE(697);
       END_STATE();
     case 586:
-      if (lookahead == 'e') ADVANCE(696);
+      if (lookahead == 'l') ADVANCE(698);
       END_STATE();
     case 587:
-      ACCEPT_TOKEN(anon_sym_white);
+      ACCEPT_TOKEN(anon_sym_voice);
       END_STATE();
     case 588:
-      if (lookahead == 'w') ADVANCE(697);
+      if (lookahead == 'n') ADVANCE(699);
       END_STATE();
     case 589:
-      if (lookahead == 'b') ADVANCE(698);
+      if (lookahead == 'n') ADVANCE(700);
       END_STATE();
     case 590:
-      if (lookahead == 'l') ADVANCE(699);
+      if (lookahead == 'e') ADVANCE(701);
       END_STATE();
     case 591:
-      if (lookahead == 'l') ADVANCE(700);
+      ACCEPT_TOKEN(anon_sym_white);
       END_STATE();
     case 592:
-      if (lookahead == 't') ADVANCE(701);
+      if (lookahead == 'w') ADVANCE(702);
       END_STATE();
     case 593:
-      ACCEPT_TOKEN(anon_sym_amount);
+      if (lookahead == 'b') ADVANCE(703);
       END_STATE();
     case 594:
-      if (lookahead == 'e') ADVANCE(702);
+      if (lookahead == 'l') ADVANCE(704);
       END_STATE();
     case 595:
-      ACCEPT_TOKEN(anon_sym_append);
+      if (lookahead == 'l') ADVANCE(705);
       END_STATE();
     case 596:
-      if (lookahead == 'e') ADVANCE(703);
+      if (lookahead == 't') ADVANCE(706);
       END_STATE();
     case 597:
-      if (lookahead == 'n') ADVANCE(704);
+      ACCEPT_TOKEN(anon_sym_amount);
       END_STATE();
     case 598:
-      ACCEPT_TOKEN(anon_sym_blocks);
+      if (lookahead == 'e') ADVANCE(707);
       END_STATE();
     case 599:
-      if (lookahead == 'r') ADVANCE(705);
+      ACCEPT_TOKEN(anon_sym_append);
       END_STATE();
     case 600:
-      ACCEPT_TOKEN(anon_sym_buffer);
+      if (lookahead == 'e') ADVANCE(708);
       END_STATE();
     case 601:
-      ACCEPT_TOKEN(anon_sym_center);
+      if (lookahead == 'n') ADVANCE(709);
       END_STATE();
     case 602:
-      if (lookahead == 'n') ADVANCE(706);
+      ACCEPT_TOKEN(anon_sym_blocks);
       END_STATE();
     case 603:
-      if (lookahead == 't') ADVANCE(707);
+      if (lookahead == 'r') ADVANCE(710);
       END_STATE();
     case 604:
-      if (lookahead == 'l') ADVANCE(708);
+      ACCEPT_TOKEN(anon_sym_buffer);
       END_STATE();
     case 605:
-      ACCEPT_TOKEN(anon_sym_create);
+      ACCEPT_TOKEN(anon_sym_center);
       END_STATE();
     case 606:
-      ACCEPT_TOKEN(anon_sym_damage);
+      if (lookahead == 'n') ADVANCE(711);
       END_STATE();
     case 607:
-      if (lookahead == 'q') ADVANCE(709);
+      if (lookahead == 't') ADVANCE(712);
       END_STATE();
     case 608:
-      if (lookahead == 'l') ADVANCE(710);
+      if (lookahead == 'l') ADVANCE(713);
       END_STATE();
     case 609:
-      if (lookahead == 'r') ADVANCE(711);
+      ACCEPT_TOKEN(anon_sym_create);
       END_STATE();
     case 610:
-      if (lookahead == 'u') ADVANCE(712);
+      ACCEPT_TOKEN(anon_sym_damage);
       END_STATE();
     case 611:
-      if (lookahead == 'e') ADVANCE(713);
+      if (lookahead == 'q') ADVANCE(714);
       END_STATE();
     case 612:
-      if (lookahead == 'e') ADVANCE(714);
+      if (lookahead == 'l') ADVANCE(715);
       END_STATE();
     case 613:
-      if (lookahead == 'y') ADVANCE(715);
+      if (lookahead == 'r') ADVANCE(716);
       END_STATE();
     case 614:
-      if (lookahead == 'i') ADVANCE(716);
+      if (lookahead == 'u') ADVANCE(717);
       END_STATE();
     case 615:
-      if (lookahead == 'e') ADVANCE(717);
+      if (lookahead == 'e') ADVANCE(718);
       END_STATE();
     case 616:
-      if (lookahead == 'n') ADVANCE(718);
+      if (lookahead == 'e') ADVANCE(719);
       END_STATE();
     case 617:
-      if (lookahead == 'c') ADVANCE(719);
+      if (lookahead == 'y') ADVANCE(720);
       END_STATE();
     case 618:
-      ACCEPT_TOKEN(anon_sym_enable);
+      if (lookahead == 'i') ADVANCE(721);
       END_STATE();
     case 619:
-      if (lookahead == 'h') ADVANCE(720);
-      END_STATE();
-    case 620:
-      ACCEPT_TOKEN(anon_sym_entity);
-      END_STATE();
-    case 621:
-      if (lookahead == 'h') ADVANCE(721);
-      END_STATE();
-    case 622:
       if (lookahead == 'e') ADVANCE(722);
       END_STATE();
+    case 620:
+      if (lookahead == 'n') ADVANCE(723);
+      END_STATE();
+    case 621:
+      if (lookahead == 'c') ADVANCE(724);
+      END_STATE();
+    case 622:
+      ACCEPT_TOKEN(anon_sym_enable);
+      END_STATE();
     case 623:
-      ACCEPT_TOKEN(anon_sym_export);
-      if (lookahead == 'c') ADVANCE(723);
-      if (lookahead == 't') ADVANCE(724);
+      if (lookahead == 'h') ADVANCE(725);
       END_STATE();
     case 624:
-      ACCEPT_TOKEN(anon_sym_facing);
+      ACCEPT_TOKEN(anon_sym_entity);
       END_STATE();
     case 625:
-      if (lookahead == 'e') ADVANCE(725);
+      if (lookahead == 'h') ADVANCE(726);
       END_STATE();
     case 626:
-      if (lookahead == 'o') ADVANCE(726);
+      if (lookahead == 'e') ADVANCE(727);
       END_STATE();
     case 627:
-      if (lookahead == 'm') ADVANCE(727);
+      ACCEPT_TOKEN(anon_sym_export);
+      if (lookahead == 'c') ADVANCE(728);
+      if (lookahead == 't') ADVANCE(729);
       END_STATE();
     case 628:
-      ACCEPT_TOKEN(anon_sym_health);
+      ACCEPT_TOKEN(anon_sym_facing);
       END_STATE();
     case 629:
-      ACCEPT_TOKEN(anon_sym_hollow);
+      if (lookahead == 'e') ADVANCE(730);
       END_STATE();
     case 630:
-      if (lookahead == 'e') ADVANCE(728);
+      if (lookahead == 'o') ADVANCE(731);
       END_STATE();
     case 631:
-      ACCEPT_TOKEN(anon_sym_hotbar);
+      if (lookahead == 'm') ADVANCE(732);
       END_STATE();
     case 632:
-      ACCEPT_TOKEN(anon_sym_insert);
+      ACCEPT_TOKEN(anon_sym_health);
       END_STATE();
     case 633:
-      if (lookahead == 'o') ADVANCE(729);
+      ACCEPT_TOKEN(anon_sym_hollow);
       END_STATE();
     case 634:
-      ACCEPT_TOKEN(anon_sym_jigsaw);
+      if (lookahead == 'e') ADVANCE(733);
       END_STATE();
     case 635:
-      if (lookahead == 'r') ADVANCE(730);
+      ACCEPT_TOKEN(anon_sym_hotbar);
       END_STATE();
     case 636:
-      ACCEPT_TOKEN(anon_sym_levels);
+      ACCEPT_TOKEN(anon_sym_insert);
       END_STATE();
     case 637:
-      if (lookahead == 'p') ADVANCE(731);
+      if (lookahead == 'o') ADVANCE(734);
       END_STATE();
     case 638:
-      ACCEPT_TOKEN(anon_sym_loaded);
+      ACCEPT_TOKEN(anon_sym_jigsaw);
       END_STATE();
     case 639:
-      ACCEPT_TOKEN(anon_sym_locate);
+      if (lookahead == 'r') ADVANCE(735);
       END_STATE();
     case 640:
-      if (lookahead == 'n') ADVANCE(732);
+      ACCEPT_TOKEN(anon_sym_levels);
       END_STATE();
     case 641:
-      ACCEPT_TOKEN(anon_sym_masked);
+      if (lookahead == 'p') ADVANCE(736);
       END_STATE();
     case 642:
-      ACCEPT_TOKEN(anon_sym_master);
+      ACCEPT_TOKEN(anon_sym_loaded);
       END_STATE();
     case 643:
-      if (lookahead == 's') ADVANCE(733);
+      ACCEPT_TOKEN(anon_sym_locate);
       END_STATE();
     case 644:
-      if (lookahead == 'h') ADVANCE(734);
+      if (lookahead == 'n') ADVANCE(737);
       END_STATE();
     case 645:
-      if (lookahead == 'e') ADVANCE(735);
+      ACCEPT_TOKEN(anon_sym_masked);
       END_STATE();
     case 646:
-      ACCEPT_TOKEN(anon_sym_modify);
+      ACCEPT_TOKEN(anon_sym_master);
       END_STATE();
     case 647:
-      if (lookahead == 'l') ADVANCE(736);
+      if (lookahead == 's') ADVANCE(738);
       END_STATE();
     case 648:
-      ACCEPT_TOKEN(anon_sym_normal);
+      if (lookahead == 'h') ADVANCE(739);
       END_STATE();
     case 649:
-      if (lookahead == 'i') ADVANCE(737);
-      END_STATE();
-    case 650:
-      if (lookahead == 'd') ADVANCE(738);
-      END_STATE();
-    case 651:
-      if (lookahead == 'i') ADVANCE(739);
-      END_STATE();
-    case 652:
-      ACCEPT_TOKEN(anon_sym_origin);
-      END_STATE();
-    case 653:
       if (lookahead == 'e') ADVANCE(740);
       END_STATE();
+    case 650:
+      ACCEPT_TOKEN(anon_sym_modify);
+      END_STATE();
+    case 651:
+      if (lookahead == 'l') ADVANCE(741);
+      END_STATE();
+    case 652:
+      ACCEPT_TOKEN(anon_sym_normal);
+      END_STATE();
+    case 653:
+      if (lookahead == 'i') ADVANCE(742);
+      END_STATE();
     case 654:
-      if (lookahead == 'g') ADVANCE(741);
+      if (lookahead == 'd') ADVANCE(743);
       END_STATE();
     case 655:
-      ACCEPT_TOKEN(anon_sym_player);
-      if (lookahead == 's') ADVANCE(742);
+      if (lookahead == 'i') ADVANCE(744);
       END_STATE();
     case 656:
-      ACCEPT_TOKEN(anon_sym_points);
+      ACCEPT_TOKEN(anon_sym_origin);
       END_STATE();
     case 657:
-      if (lookahead == 'o') ADVANCE(743);
+      if (lookahead == 'e') ADVANCE(745);
       END_STATE();
     case 658:
-      if (lookahead == 'a') ADVANCE(744);
+      if (lookahead == 'g') ADVANCE(746);
       END_STATE();
     case 659:
-      ACCEPT_TOKEN(anon_sym_prefix);
+      ACCEPT_TOKEN(anon_sym_player);
+      if (lookahead == 's') ADVANCE(747);
       END_STATE();
     case 660:
-      if (lookahead == 'd') ADVANCE(745);
+      ACCEPT_TOKEN(anon_sym_points);
       END_STATE();
     case 661:
-      ACCEPT_TOKEN(anon_sym_record);
+      if (lookahead == 'o') ADVANCE(748);
       END_STATE();
     case 662:
-      ACCEPT_TOKEN(anon_sym_reload);
+      if (lookahead == 'a') ADVANCE(749);
       END_STATE();
     case 663:
-      ACCEPT_TOKEN(anon_sym_remove);
+      ACCEPT_TOKEN(anon_sym_prefix);
       END_STATE();
     case 664:
-      if (lookahead == 'e') ADVANCE(746);
+      if (lookahead == 'd') ADVANCE(750);
       END_STATE();
     case 665:
-      if (lookahead == 'l') ADVANCE(747);
+      ACCEPT_TOKEN(anon_sym_record);
       END_STATE();
     case 666:
-      if (lookahead == 'h') ADVANCE(748);
+      ACCEPT_TOKEN(anon_sym_reload);
       END_STATE();
     case 667:
-      ACCEPT_TOKEN(anon_sym_result);
+      ACCEPT_TOKEN(anon_sym_remove);
       END_STATE();
     case 668:
-      ACCEPT_TOKEN(anon_sym_revoke);
+      if (lookahead == 'e') ADVANCE(751);
       END_STATE();
     case 669:
-      if (lookahead == 'd') ADVANCE(749);
+      if (lookahead == 'l') ADVANCE(752);
       END_STATE();
     case 670:
-      if (lookahead == 's') ADVANCE(750);
+      if (lookahead == 'h') ADVANCE(753);
       END_STATE();
     case 671:
-      if (lookahead == 'l') ADVANCE(751);
+      ACCEPT_TOKEN(anon_sym_result);
       END_STATE();
     case 672:
-      if (lookahead == 't') ADVANCE(752);
+      ACCEPT_TOKEN(anon_sym_resume);
       END_STATE();
     case 673:
-      if (lookahead == 's') ADVANCE(753);
+      ACCEPT_TOKEN(anon_sym_revoke);
       END_STATE();
     case 674:
-      if (lookahead == 'p') ADVANCE(754);
+      if (lookahead == 'd') ADVANCE(754);
       END_STATE();
     case 675:
-      if (lookahead == 'r') ADVANCE(755);
+      if (lookahead == 's') ADVANCE(755);
       END_STATE();
     case 676:
-      if (lookahead == 'e') ADVANCE(756);
+      if (lookahead == 'l') ADVANCE(756);
       END_STATE();
     case 677:
-      ACCEPT_TOKEN(anon_sym_strict);
+      if (lookahead == 't') ADVANCE(757);
       END_STATE();
     case 678:
-      ACCEPT_TOKEN(anon_sym_string);
+      if (lookahead == 's') ADVANCE(758);
       END_STATE();
     case 679:
-      if (lookahead == 'u') ADVANCE(757);
+      if (lookahead == 'p') ADVANCE(759);
       END_STATE();
     case 680:
-      if (lookahead == 'l') ADVANCE(758);
+      if (lookahead == 'r') ADVANCE(760);
       END_STATE();
     case 681:
-      if (lookahead == 's') ADVANCE(759);
+      if (lookahead == 'e') ADVANCE(761);
       END_STATE();
     case 682:
-      ACCEPT_TOKEN(anon_sym_suffix);
+      ACCEPT_TOKEN(anon_sym_strict);
       END_STATE();
     case 683:
-      ACCEPT_TOKEN(anon_sym_summon);
+      ACCEPT_TOKEN(anon_sym_string);
       END_STATE();
     case 684:
-      ACCEPT_TOKEN(anon_sym_target);
+      if (lookahead == 'u') ADVANCE(762);
       END_STATE();
     case 685:
-      if (lookahead == 't') ADVANCE(760);
+      if (lookahead == 'l') ADVANCE(763);
       END_STATE();
     case 686:
-      if (lookahead == 'h') ADVANCE(761);
+      if (lookahead == 's') ADVANCE(764);
       END_STATE();
     case 687:
-      if (lookahead == 'r') ADVANCE(762);
+      ACCEPT_TOKEN(anon_sym_suffix);
       END_STATE();
     case 688:
-      if (lookahead == 'r') ADVANCE(763);
+      ACCEPT_TOKEN(anon_sym_summon);
       END_STATE();
     case 689:
-      ACCEPT_TOKEN(anon_sym_unless);
+      ACCEPT_TOKEN(anon_sym_target);
       END_STATE();
     case 690:
-      if (lookahead == 'e') ADVANCE(764);
+      if (lookahead == 't') ADVANCE(765);
       END_STATE();
     case 691:
-      ACCEPT_TOKEN(anon_sym_verify);
+      if (lookahead == 'h') ADVANCE(766);
       END_STATE();
     case 692:
-      if (lookahead == 'e') ADVANCE(765);
+      if (lookahead == 'r') ADVANCE(767);
       END_STATE();
     case 693:
-      if (lookahead == 'e') ADVANCE(766);
-      END_STATE();
-    case 694:
-      if (lookahead == 'g') ADVANCE(767);
-      END_STATE();
-    case 695:
-      ACCEPT_TOKEN(anon_sym_weapon);
-      END_STATE();
-    case 696:
       if (lookahead == 'r') ADVANCE(768);
       END_STATE();
+    case 694:
+      ACCEPT_TOKEN(anon_sym_unless);
+      END_STATE();
+    case 695:
+      if (lookahead == 'e') ADVANCE(769);
+      END_STATE();
+    case 696:
+      ACCEPT_TOKEN(anon_sym_verify);
+      END_STATE();
     case 697:
-      ACCEPT_TOKEN(anon_sym_yellow);
+      if (lookahead == 'e') ADVANCE(770);
       END_STATE();
     case 698:
-      if (lookahead == 'a') ADVANCE(769);
+      if (lookahead == 'e') ADVANCE(771);
       END_STATE();
     case 699:
-      if (lookahead == 't') ADVANCE(770);
+      if (lookahead == 'g') ADVANCE(772);
       END_STATE();
     case 700:
-      if (lookahead == 'u') ADVANCE(771);
+      ACCEPT_TOKEN(anon_sym_weapon);
       END_STATE();
     case 701:
-      ACCEPT_TOKEN(anon_sym_ambient);
-      END_STATE();
-    case 702:
-      if (lookahead == 'd') ADVANCE(772);
-      END_STATE();
-    case 703:
       if (lookahead == 'r') ADVANCE(773);
       END_STATE();
-    case 704:
+    case 702:
+      ACCEPT_TOKEN(anon_sym_yellow);
+      END_STATE();
+    case 703:
       if (lookahead == 'a') ADVANCE(774);
       END_STATE();
+    case 704:
+      if (lookahead == 't') ADVANCE(775);
+      END_STATE();
     case 705:
-      ACCEPT_TOKEN(anon_sym_bossbar);
+      if (lookahead == 'u') ADVANCE(776);
       END_STATE();
     case 706:
-      if (lookahead == 'e') ADVANCE(775);
+      ACCEPT_TOKEN(anon_sym_ambient);
       END_STATE();
     case 707:
-      if (lookahead == 's') ADVANCE(776);
+      if (lookahead == 'd') ADVANCE(777);
       END_STATE();
     case 708:
-      if (lookahead == 'l') ADVANCE(777);
+      if (lookahead == 'r') ADVANCE(778);
       END_STATE();
     case 709:
-      if (lookahead == 'u') ADVANCE(778);
+      if (lookahead == 'a') ADVANCE(779);
       END_STATE();
     case 710:
-      if (lookahead == 'u') ADVANCE(779);
+      ACCEPT_TOKEN(anon_sym_bossbar);
       END_STATE();
     case 711:
-      if (lookahead == 'a') ADVANCE(780);
-      if (lookahead == 'e') ADVANCE(781);
+      if (lookahead == 'e') ADVANCE(780);
       END_STATE();
     case 712:
-      if (lookahead == 'r') ADVANCE(782);
+      if (lookahead == 's') ADVANCE(781);
       END_STATE();
     case 713:
-      if (lookahead == 'd') ADVANCE(783);
+      if (lookahead == 'l') ADVANCE(782);
       END_STATE();
     case 714:
-      ACCEPT_TOKEN(anon_sym_daytime);
+      if (lookahead == 'u') ADVANCE(783);
       END_STATE();
     case 715:
-      ACCEPT_TOKEN(anon_sym_destroy);
+      if (lookahead == 'u') ADVANCE(784);
       END_STATE();
     case 716:
-      if (lookahead == 'o') ADVANCE(784);
-      END_STATE();
-    case 717:
-      ACCEPT_TOKEN(anon_sym_disable);
-      END_STATE();
-    case 718:
-      if (lookahead == 't') ADVANCE(785);
-      END_STATE();
-    case 719:
+      if (lookahead == 'a') ADVANCE(785);
       if (lookahead == 'e') ADVANCE(786);
       END_STATE();
+    case 717:
+      if (lookahead == 'r') ADVANCE(787);
+      END_STATE();
+    case 718:
+      if (lookahead == 'd') ADVANCE(788);
+      END_STATE();
+    case 719:
+      ACCEPT_TOKEN(anon_sym_daytime);
+      END_STATE();
     case 720:
-      if (lookahead == 'e') ADVANCE(787);
+      ACCEPT_TOKEN(anon_sym_destroy);
       END_STATE();
     case 721:
-      if (lookahead == 'i') ADVANCE(788);
+      if (lookahead == 'o') ADVANCE(789);
       END_STATE();
     case 722:
-      ACCEPT_TOKEN(anon_sym_execute);
+      ACCEPT_TOKEN(anon_sym_disable);
       END_STATE();
     case 723:
-      if (lookahead == 'l') ADVANCE(789);
+      if (lookahead == 't') ADVANCE(790);
       END_STATE();
     case 724:
-      if (lookahead == 'h') ADVANCE(790);
+      if (lookahead == 'e') ADVANCE(791);
       END_STATE();
     case 725:
-      ACCEPT_TOKEN(anon_sym_feature);
-      END_STATE();
-    case 726:
-      if (lookahead == 'n') ADVANCE(791);
-      END_STATE();
-    case 727:
       if (lookahead == 'e') ADVANCE(792);
       END_STATE();
+    case 726:
+      if (lookahead == 'i') ADVANCE(793);
+      END_STATE();
+    case 727:
+      ACCEPT_TOKEN(anon_sym_execute);
+      END_STATE();
     case 728:
-      ACCEPT_TOKEN(anon_sym_hostile);
+      if (lookahead == 'l') ADVANCE(794);
       END_STATE();
     case 729:
-      if (lookahead == 'r') ADVANCE(793);
+      if (lookahead == 'h') ADVANCE(795);
       END_STATE();
     case 730:
-      ACCEPT_TOKEN(anon_sym_leasher);
+      ACCEPT_TOKEN(anon_sym_feature);
       END_STATE();
     case 731:
-      if (lookahead == 'u') ADVANCE(794);
+      if (lookahead == 'n') ADVANCE(796);
       END_STATE();
     case 732:
-      if (lookahead == 'd') ADVANCE(795);
+      if (lookahead == 'e') ADVANCE(797);
       END_STATE();
     case 733:
-      ACCEPT_TOKEN(anon_sym_matches);
+      ACCEPT_TOKEN(anon_sym_hostile);
       END_STATE();
     case 734:
-      if (lookahead == 't') ADVANCE(796);
+      if (lookahead == 'r') ADVANCE(798);
       END_STATE();
     case 735:
-      if (lookahead == 'r') ADVANCE(797);
+      ACCEPT_TOKEN(anon_sym_leasher);
       END_STATE();
     case 736:
-      ACCEPT_TOKEN(anon_sym_neutral);
+      if (lookahead == 'u') ADVANCE(799);
       END_STATE();
     case 737:
-      if (lookahead == 'v') ADVANCE(798);
+      if (lookahead == 'd') ADVANCE(800);
       END_STATE();
     case 738:
-      ACCEPT_TOKEN(anon_sym_offhand);
+      ACCEPT_TOKEN(anon_sym_matches);
       END_STATE();
     case 739:
-      if (lookahead == 'o') ADVANCE(799);
+      if (lookahead == 't') ADVANCE(801);
       END_STATE();
     case 740:
-      ACCEPT_TOKEN(anon_sym_outline);
+      if (lookahead == 'r') ADVANCE(802);
       END_STATE();
     case 741:
-      if (lookahead == 'e') ADVANCE(800);
+      ACCEPT_TOKEN(anon_sym_neutral);
       END_STATE();
     case 742:
-      ACCEPT_TOKEN(anon_sym_players);
+      if (lookahead == 'v') ADVANCE(803);
       END_STATE();
     case 743:
-      if (lookahead == 'n') ADVANCE(801);
+      ACCEPT_TOKEN(anon_sym_offhand);
       END_STATE();
     case 744:
-      if (lookahead == 't') ADVANCE(802);
+      if (lookahead == 'o') ADVANCE(804);
       END_STATE();
     case 745:
-      ACCEPT_TOKEN(anon_sym_prepend);
+      ACCEPT_TOKEN(anon_sym_outline);
       END_STATE();
     case 746:
-      ACCEPT_TOKEN(anon_sym_replace);
-      END_STATE();
-    case 747:
-      if (lookahead == 'o') ADVANCE(803);
-      END_STATE();
-    case 748:
-      if (lookahead == 'a') ADVANCE(804);
       if (lookahead == 'e') ADVANCE(805);
       END_STATE();
+    case 747:
+      ACCEPT_TOKEN(anon_sym_players);
+      END_STATE();
+    case 748:
+      if (lookahead == 'n') ADVANCE(806);
+      END_STATE();
     case 749:
-      ACCEPT_TOKEN(anon_sym_rotated);
+      if (lookahead == 't') ADVANCE(807);
       END_STATE();
     case 750:
-      if (lookahead == 'e') ADVANCE(806);
+      ACCEPT_TOKEN(anon_sym_prepend);
       END_STATE();
     case 751:
-      if (lookahead == 'e') ADVANCE(807);
+      ACCEPT_TOKEN(anon_sym_replace);
       END_STATE();
     case 752:
-      ACCEPT_TOKEN(anon_sym_runthat);
+      if (lookahead == 'o') ADVANCE(808);
       END_STATE();
     case 753:
-      if (lookahead == 'e') ADVANCE(808);
+      if (lookahead == 'a') ADVANCE(809);
+      if (lookahead == 'e') ADVANCE(810);
       END_STATE();
     case 754:
-      if (lookahead == 'l') ADVANCE(809);
+      ACCEPT_TOKEN(anon_sym_rotated);
       END_STATE();
     case 755:
-      ACCEPT_TOKEN(anon_sym_sidebar);
-      END_STATE();
-    case 756:
-      ACCEPT_TOKEN(anon_sym_storage);
-      END_STATE();
-    case 757:
-      if (lookahead == 'r') ADVANCE(810);
-      END_STATE();
-    case 758:
       if (lookahead == 'e') ADVANCE(811);
       END_STATE();
-    case 759:
-      ACCEPT_TOKEN(anon_sym_success);
-      END_STATE();
-    case 760:
+    case 756:
       if (lookahead == 'e') ADVANCE(812);
       END_STATE();
+    case 757:
+      ACCEPT_TOKEN(anon_sym_runthat);
+      END_STATE();
+    case 758:
+      if (lookahead == 'e') ADVANCE(813);
+      END_STATE();
+    case 759:
+      if (lookahead == 'l') ADVANCE(814);
+      END_STATE();
+    case 760:
+      ACCEPT_TOKEN(anon_sym_sidebar);
+      END_STATE();
     case 761:
-      ACCEPT_TOKEN(anon_sym_through);
+      ACCEPT_TOKEN(anon_sym_storage);
       END_STATE();
     case 762:
-      ACCEPT_TOKEN(anon_sym_thunder);
+      if (lookahead == 'r') ADVANCE(815);
       END_STATE();
     case 763:
-      ACCEPT_TOKEN(anon_sym_trigger);
-      END_STATE();
-    case 764:
-      ACCEPT_TOKEN(anon_sym_vehicle);
-      END_STATE();
-    case 765:
-      if (lookahead == 'r') ADVANCE(813);
-      END_STATE();
-    case 766:
-      ACCEPT_TOKEN(anon_sym_visible);
-      END_STATE();
-    case 767:
-      ACCEPT_TOKEN(anon_sym_warning);
-      END_STATE();
-    case 768:
-      ACCEPT_TOKEN(anon_sym_weather);
-      END_STATE();
-    case 769:
-      if (lookahead == 'r') ADVANCE(814);
-      END_STATE();
-    case 770:
-      if (lookahead == 'i') ADVANCE(815);
-      END_STATE();
-    case 771:
       if (lookahead == 'e') ADVANCE(816);
       END_STATE();
-    case 772:
-      ACCEPT_TOKEN(anon_sym_anchored);
+    case 764:
+      ACCEPT_TOKEN(anon_sym_success);
       END_STATE();
-    case 773:
-      ACCEPT_TOKEN(anon_sym_attacker);
+    case 765:
+      if (lookahead == 'e') ADVANCE(817);
       END_STATE();
-    case 774:
-      if (lookahead == 'm') ADVANCE(817);
+    case 766:
+      ACCEPT_TOKEN(anon_sym_through);
       END_STATE();
-    case 775:
+    case 767:
+      ACCEPT_TOKEN(anon_sym_thunder);
+      END_STATE();
+    case 768:
+      ACCEPT_TOKEN(anon_sym_trigger);
+      END_STATE();
+    case 769:
+      ACCEPT_TOKEN(anon_sym_vehicle);
+      END_STATE();
+    case 770:
       if (lookahead == 'r') ADVANCE(818);
       END_STATE();
+    case 771:
+      ACCEPT_TOKEN(anon_sym_visible);
+      END_STATE();
+    case 772:
+      ACCEPT_TOKEN(anon_sym_warning);
+      END_STATE();
+    case 773:
+      ACCEPT_TOKEN(anon_sym_weather);
+      END_STATE();
+    case 774:
+      if (lookahead == 'r') ADVANCE(819);
+      END_STATE();
+    case 775:
+      if (lookahead == 'i') ADVANCE(820);
+      END_STATE();
     case 776:
-      ACCEPT_TOKEN(anon_sym_contents);
-      END_STATE();
-    case 777:
-      if (lookahead == 'e') ADVANCE(819);
-      END_STATE();
-    case 778:
-      if (lookahead == 'a') ADVANCE(820);
-      END_STATE();
-    case 779:
       if (lookahead == 'e') ADVANCE(821);
       END_STATE();
+    case 777:
+      ACCEPT_TOKEN(anon_sym_anchored);
+      END_STATE();
+    case 778:
+      ACCEPT_TOKEN(anon_sym_attacker);
+      END_STATE();
+    case 779:
+      if (lookahead == 'm') ADVANCE(822);
+      END_STATE();
     case 780:
-      if (lookahead == 'y') ADVANCE(822);
+      if (lookahead == 'r') ADVANCE(823);
       END_STATE();
     case 781:
-      if (lookahead == 'e') ADVANCE(823);
+      ACCEPT_TOKEN(anon_sym_contents);
       END_STATE();
     case 782:
-      if (lookahead == 'p') ADVANCE(824);
+      if (lookahead == 'e') ADVANCE(824);
       END_STATE();
     case 783:
-      ACCEPT_TOKEN(anon_sym_dark_red);
+      if (lookahead == 'a') ADVANCE(825);
       END_STATE();
     case 784:
-      if (lookahead == 'n') ADVANCE(825);
+      if (lookahead == 'e') ADVANCE(826);
       END_STATE();
     case 785:
-      ACCEPT_TOKEN(anon_sym_dismount);
+      if (lookahead == 'y') ADVANCE(827);
       END_STATE();
     case 786:
-      ACCEPT_TOKEN(anon_sym_distance);
+      if (lookahead == 'e') ADVANCE(828);
       END_STATE();
     case 787:
-      if (lookahead == 's') ADVANCE(826);
+      if (lookahead == 'p') ADVANCE(829);
       END_STATE();
     case 788:
-      if (lookahead == 'n') ADVANCE(827);
+      ACCEPT_TOKEN(anon_sym_dark_red);
       END_STATE();
     case 789:
-      if (lookahead == 'o') ADVANCE(828);
+      if (lookahead == 'n') ADVANCE(830);
       END_STATE();
     case 790:
-      if (lookahead == 'a') ADVANCE(829);
-      if (lookahead == 'e') ADVANCE(830);
+      ACCEPT_TOKEN(anon_sym_dismount);
       END_STATE();
     case 791:
-      ACCEPT_TOKEN(anon_sym_function);
+      ACCEPT_TOKEN(anon_sym_distance);
       END_STATE();
     case 792:
-      ACCEPT_TOKEN(anon_sym_gametime);
+      if (lookahead == 's') ADVANCE(831);
       END_STATE();
     case 793:
-      if (lookahead == 'y') ADVANCE(831);
+      if (lookahead == 'n') ADVANCE(832);
       END_STATE();
     case 794:
-      if (lookahead == 'r') ADVANCE(832);
+      if (lookahead == 'o') ADVANCE(833);
       END_STATE();
     case 795:
-      ACCEPT_TOKEN(anon_sym_mainhand);
+      if (lookahead == 'a') ADVANCE(834);
+      if (lookahead == 'e') ADVANCE(835);
       END_STATE();
     case 796:
-      ACCEPT_TOKEN(anon_sym_midnight);
+      ACCEPT_TOKEN(anon_sym_function);
       END_STATE();
     case 797:
-      ACCEPT_TOKEN(anon_sym_modifier);
+      ACCEPT_TOKEN(anon_sym_gametime);
       END_STATE();
     case 798:
-      if (lookahead == 'e') ADVANCE(833);
+      if (lookahead == 'y') ADVANCE(836);
       END_STATE();
     case 799:
-      if (lookahead == 'n') ADVANCE(834);
+      if (lookahead == 'r') ADVANCE(837);
       END_STATE();
     case 800:
-      if (lookahead == 'r') ADVANCE(835);
+      ACCEPT_TOKEN(anon_sym_mainhand);
       END_STATE();
     case 801:
-      if (lookahead == 'e') ADVANCE(836);
+      ACCEPT_TOKEN(anon_sym_midnight);
       END_STATE();
     case 802:
-      if (lookahead == 'e') ADVANCE(837);
+      ACCEPT_TOKEN(anon_sym_modifier);
       END_STATE();
     case 803:
-      if (lookahead == 's') ADVANCE(838);
+      if (lookahead == 'e') ADVANCE(838);
       END_STATE();
     case 804:
-      if (lookahead == 't') ADVANCE(839);
+      if (lookahead == 'n') ADVANCE(839);
       END_STATE();
     case 805:
-      if (lookahead == 's') ADVANCE(840);
+      if (lookahead == 'r') ADVANCE(840);
       END_STATE();
     case 806:
-      if (lookahead == 's') ADVANCE(841);
+      if (lookahead == 'e') ADVANCE(841);
       END_STATE();
     case 807:
-      if (lookahead == 'd') ADVANCE(842);
+      if (lookahead == 'e') ADVANCE(842);
       END_STATE();
     case 808:
-      ACCEPT_TOKEN(anon_sym_runthese);
+      if (lookahead == 's') ADVANCE(843);
       END_STATE();
     case 809:
-      if (lookahead == 'a') ADVANCE(843);
+      if (lookahead == 't') ADVANCE(844);
       END_STATE();
     case 810:
-      if (lookahead == 'e') ADVANCE(844);
+      if (lookahead == 's') ADVANCE(845);
       END_STATE();
     case 811:
-      ACCEPT_TOKEN(anon_sym_subtitle);
+      if (lookahead == 's') ADVANCE(846);
       END_STATE();
     case 812:
-      ACCEPT_TOKEN(anon_sym_template);
+      if (lookahead == 'd') ADVANCE(847);
       END_STATE();
     case 813:
-      ACCEPT_TOKEN(anon_sym_villager);
+      ACCEPT_TOKEN(anon_sym_runthese);
       END_STATE();
     case 814:
-      ACCEPT_TOKEN(anon_sym_actionbar);
+      if (lookahead == 'a') ADVANCE(848);
       END_STATE();
     case 815:
-      if (lookahead == 'p') ADVANCE(845);
+      if (lookahead == 'e') ADVANCE(849);
       END_STATE();
     case 816:
-      ACCEPT_TOKEN(anon_sym_add_value);
+      ACCEPT_TOKEN(anon_sym_subtitle);
       END_STATE();
     case 817:
-      if (lookahead == 'e') ADVANCE(846);
+      ACCEPT_TOKEN(anon_sym_template);
       END_STATE();
     case 818:
-      ACCEPT_TOKEN(anon_sym_container);
+      ACCEPT_TOKEN(anon_sym_villager);
       END_STATE();
     case 819:
-      if (lookahead == 'r') ADVANCE(847);
+      ACCEPT_TOKEN(anon_sym_actionbar);
       END_STATE();
     case 820:
-      ACCEPT_TOKEN(anon_sym_dark_aqua);
+      if (lookahead == 'p') ADVANCE(850);
       END_STATE();
     case 821:
-      ACCEPT_TOKEN(anon_sym_dark_blue);
+      ACCEPT_TOKEN(anon_sym_add_value);
       END_STATE();
     case 822:
-      ACCEPT_TOKEN(anon_sym_dark_gray);
+      if (lookahead == 'e') ADVANCE(851);
       END_STATE();
     case 823:
-      if (lookahead == 'n') ADVANCE(848);
+      ACCEPT_TOKEN(anon_sym_container);
       END_STATE();
     case 824:
-      if (lookahead == 'l') ADVANCE(849);
+      if (lookahead == 'r') ADVANCE(852);
       END_STATE();
     case 825:
-      ACCEPT_TOKEN(anon_sym_dimension);
+      ACCEPT_TOKEN(anon_sym_dark_aqua);
       END_STATE();
     case 826:
-      if (lookahead == 't') ADVANCE(850);
+      ACCEPT_TOKEN(anon_sym_dark_blue);
       END_STATE();
     case 827:
-      if (lookahead == 'g') ADVANCE(851);
+      ACCEPT_TOKEN(anon_sym_dark_gray);
       END_STATE();
     case 828:
-      if (lookahead == 's') ADVANCE(852);
+      if (lookahead == 'n') ADVANCE(853);
       END_STATE();
     case 829:
-      if (lookahead == 't') ADVANCE(853);
+      if (lookahead == 'l') ADVANCE(854);
       END_STATE();
     case 830:
-      if (lookahead == 's') ADVANCE(854);
+      ACCEPT_TOKEN(anon_sym_dimension);
       END_STATE();
     case 831:
-      ACCEPT_TOKEN(anon_sym_inventory);
+      if (lookahead == 't') ADVANCE(855);
       END_STATE();
     case 832:
-      if (lookahead == 'p') ADVANCE(855);
+      if (lookahead == 'g') ADVANCE(856);
       END_STATE();
     case 833:
-      if (lookahead == 's') ADVANCE(856);
-      END_STATE();
-    case 834:
-      ACCEPT_TOKEN(anon_sym_operation);
-      END_STATE();
-    case 835:
       if (lookahead == 's') ADVANCE(857);
       END_STATE();
+    case 834:
+      if (lookahead == 't') ADVANCE(858);
+      END_STATE();
+    case 835:
+      if (lookahead == 's') ADVANCE(859);
+      END_STATE();
     case 836:
-      if (lookahead == 'd') ADVANCE(858);
+      ACCEPT_TOKEN(anon_sym_inventory);
       END_STATE();
     case 837:
-      ACCEPT_TOKEN(anon_sym_predicate);
+      if (lookahead == 'p') ADVANCE(860);
       END_STATE();
     case 838:
-      if (lookahead == 'e') ADVANCE(859);
+      if (lookahead == 's') ADVANCE(861);
       END_STATE();
     case 839:
-      ACCEPT_TOKEN(anon_sym_resetthat);
+      ACCEPT_TOKEN(anon_sym_operation);
       END_STATE();
     case 840:
-      if (lookahead == 'e') ADVANCE(860);
+      if (lookahead == 's') ADVANCE(862);
       END_STATE();
     case 841:
-      if (lookahead == 't') ADVANCE(861);
+      if (lookahead == 'd') ADVANCE(863);
       END_STATE();
     case 842:
-      ACCEPT_TOKEN(anon_sym_runfailed);
+      ACCEPT_TOKEN(anon_sym_predicate);
       END_STATE();
     case 843:
-      if (lookahead == 'y') ADVANCE(862);
-      END_STATE();
-    case 844:
-      ACCEPT_TOKEN(anon_sym_structure);
-      END_STATE();
-    case 845:
-      if (lookahead == 'l') ADVANCE(863);
-      END_STATE();
-    case 846:
-      ACCEPT_TOKEN(anon_sym_below_name);
-      END_STATE();
-    case 847:
-      ACCEPT_TOKEN(anon_sym_controller);
-      END_STATE();
-    case 848:
-      ACCEPT_TOKEN(anon_sym_dark_green);
-      END_STATE();
-    case 849:
       if (lookahead == 'e') ADVANCE(864);
       END_STATE();
-    case 850:
-      ACCEPT_TOKEN(anon_sym_enderchest);
+    case 844:
+      ACCEPT_TOKEN(anon_sym_resetthat);
       END_STATE();
-    case 851:
-      ACCEPT_TOKEN(anon_sym_everything);
-      END_STATE();
-    case 852:
+    case 845:
       if (lookahead == 'e') ADVANCE(865);
       END_STATE();
+    case 846:
+      if (lookahead == 't') ADVANCE(866);
+      END_STATE();
+    case 847:
+      ACCEPT_TOKEN(anon_sym_runfailed);
+      END_STATE();
+    case 848:
+      if (lookahead == 'y') ADVANCE(867);
+      END_STATE();
+    case 849:
+      ACCEPT_TOKEN(anon_sym_structure);
+      END_STATE();
+    case 850:
+      if (lookahead == 'l') ADVANCE(868);
+      END_STATE();
+    case 851:
+      ACCEPT_TOKEN(anon_sym_below_name);
+      END_STATE();
+    case 852:
+      ACCEPT_TOKEN(anon_sym_controller);
+      END_STATE();
     case 853:
-      ACCEPT_TOKEN(anon_sym_exportthat);
+      ACCEPT_TOKEN(anon_sym_dark_green);
       END_STATE();
     case 854:
-      if (lookahead == 'e') ADVANCE(866);
+      if (lookahead == 'e') ADVANCE(869);
       END_STATE();
     case 855:
-      if (lookahead == 'l') ADVANCE(867);
+      ACCEPT_TOKEN(anon_sym_enderchest);
       END_STATE();
     case 856:
-      ACCEPT_TOKEN(anon_sym_objectives);
+      ACCEPT_TOKEN(anon_sym_everything);
       END_STATE();
     case 857:
-      ACCEPT_TOKEN(anon_sym_passengers);
+      if (lookahead == 'e') ADVANCE(870);
       END_STATE();
     case 858:
-      ACCEPT_TOKEN(anon_sym_positioned);
+      ACCEPT_TOKEN(anon_sym_exportthat);
       END_STATE();
     case 859:
-      if (lookahead == 's') ADVANCE(868);
-      END_STATE();
-    case 860:
-      ACCEPT_TOKEN(anon_sym_resetthese);
-      END_STATE();
-    case 861:
-      ACCEPT_TOKEN(anon_sym_runclosest);
-      END_STATE();
-    case 862:
-      ACCEPT_TOKEN(anon_sym_setdisplay);
-      END_STATE();
-    case 863:
-      if (lookahead == 'i') ADVANCE(869);
-      END_STATE();
-    case 864:
-      ACCEPT_TOKEN(anon_sym_dark_purple);
-      END_STATE();
-    case 865:
-      if (lookahead == 's') ADVANCE(870);
-      END_STATE();
-    case 866:
-      ACCEPT_TOKEN(anon_sym_exportthese);
-      END_STATE();
-    case 867:
       if (lookahead == 'e') ADVANCE(871);
       END_STATE();
+    case 860:
+      if (lookahead == 'l') ADVANCE(872);
+      END_STATE();
+    case 861:
+      ACCEPT_TOKEN(anon_sym_objectives);
+      END_STATE();
+    case 862:
+      ACCEPT_TOKEN(anon_sym_passengers);
+      END_STATE();
+    case 863:
+      ACCEPT_TOKEN(anon_sym_positioned);
+      END_STATE();
+    case 864:
+      if (lookahead == 's') ADVANCE(873);
+      END_STATE();
+    case 865:
+      ACCEPT_TOKEN(anon_sym_resetthese);
+      END_STATE();
+    case 866:
+      ACCEPT_TOKEN(anon_sym_runclosest);
+      END_STATE();
+    case 867:
+      ACCEPT_TOKEN(anon_sym_setdisplay);
+      END_STATE();
     case 868:
-      if (lookahead == 't') ADVANCE(872);
+      if (lookahead == 'i') ADVANCE(874);
       END_STATE();
     case 869:
-      if (lookahead == 'e') ADVANCE(873);
+      ACCEPT_TOKEN(anon_sym_dark_purple);
       END_STATE();
     case 870:
-      if (lookahead == 't') ADVANCE(874);
+      if (lookahead == 's') ADVANCE(875);
       END_STATE();
     case 871:
-      ACCEPT_TOKEN(anon_sym_light_purple);
+      ACCEPT_TOKEN(anon_sym_exportthese);
       END_STATE();
     case 872:
-      ACCEPT_TOKEN(anon_sym_resetclosest);
+      if (lookahead == 'e') ADVANCE(876);
       END_STATE();
     case 873:
-      if (lookahead == 'd') ADVANCE(875);
+      if (lookahead == 't') ADVANCE(877);
       END_STATE();
     case 874:
-      ACCEPT_TOKEN(anon_sym_exportclosest);
+      if (lookahead == 'e') ADVANCE(878);
       END_STATE();
     case 875:
-      if (lookahead == '_') ADVANCE(876);
+      if (lookahead == 't') ADVANCE(879);
       END_STATE();
     case 876:
-      if (lookahead == 'b') ADVANCE(877);
-      if (lookahead == 't') ADVANCE(878);
+      ACCEPT_TOKEN(anon_sym_light_purple);
       END_STATE();
     case 877:
-      if (lookahead == 'a') ADVANCE(879);
+      ACCEPT_TOKEN(anon_sym_resetclosest);
       END_STATE();
     case 878:
-      if (lookahead == 'o') ADVANCE(880);
+      if (lookahead == 'd') ADVANCE(880);
       END_STATE();
     case 879:
-      if (lookahead == 's') ADVANCE(881);
+      ACCEPT_TOKEN(anon_sym_exportclosest);
       END_STATE();
     case 880:
-      if (lookahead == 't') ADVANCE(882);
+      if (lookahead == '_') ADVANCE(881);
       END_STATE();
     case 881:
-      if (lookahead == 'e') ADVANCE(883);
+      if (lookahead == 'b') ADVANCE(882);
+      if (lookahead == 't') ADVANCE(883);
       END_STATE();
     case 882:
       if (lookahead == 'a') ADVANCE(884);
       END_STATE();
     case 883:
-      ACCEPT_TOKEN(anon_sym_add_multiplied_base);
+      if (lookahead == 'o') ADVANCE(885);
       END_STATE();
     case 884:
-      if (lookahead == 'l') ADVANCE(885);
+      if (lookahead == 's') ADVANCE(886);
       END_STATE();
     case 885:
+      if (lookahead == 't') ADVANCE(887);
+      END_STATE();
+    case 886:
+      if (lookahead == 'e') ADVANCE(888);
+      END_STATE();
+    case 887:
+      if (lookahead == 'a') ADVANCE(889);
+      END_STATE();
+    case 888:
+      ACCEPT_TOKEN(anon_sym_add_multiplied_base);
+      END_STATE();
+    case 889:
+      if (lookahead == 'l') ADVANCE(890);
+      END_STATE();
+    case 890:
       ACCEPT_TOKEN(anon_sym_add_multiplied_total);
       END_STATE();
     default:
@@ -15973,12 +16012,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1),
     [anon_sym_normal] = ACTIONS(1),
     [anon_sym_objectives] = ACTIONS(1),
+    [anon_sym_of] = ACTIONS(1),
     [anon_sym_off] = ACTIONS(1),
     [anon_sym_offhand] = ACTIONS(1),
     [anon_sym_on] = ACTIONS(1),
     [anon_sym_only] = ACTIONS(1),
     [anon_sym_operation] = ACTIONS(1),
     [anon_sym_outline] = ACTIONS(1),
+    [anon_sym_pause] = ACTIONS(1),
     [anon_sym_player] = ACTIONS(1),
     [anon_sym_players] = ACTIONS(1),
     [anon_sym_poi] = ACTIONS(1),
@@ -15996,6 +16037,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1),
     [anon_sym_resetthat] = ACTIONS(1),
     [anon_sym_resetthese] = ACTIONS(1),
+    [anon_sym_resume] = ACTIONS(1),
     [anon_sym_revoke] = ACTIONS(1),
     [anon_sym_roll] = ACTIONS(1),
     [anon_sym_runclosest] = ACTIONS(1),
@@ -16341,12 +16383,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(33),
     [anon_sym_normal] = ACTIONS(33),
     [anon_sym_objectives] = ACTIONS(33),
+    [anon_sym_of] = ACTIONS(33),
     [anon_sym_off] = ACTIONS(33),
     [anon_sym_offhand] = ACTIONS(33),
     [anon_sym_on] = ACTIONS(35),
     [anon_sym_only] = ACTIONS(33),
     [anon_sym_operation] = ACTIONS(33),
     [anon_sym_outline] = ACTIONS(33),
+    [anon_sym_pause] = ACTIONS(33),
     [anon_sym_player] = ACTIONS(33),
     [anon_sym_players] = ACTIONS(33),
     [anon_sym_poi] = ACTIONS(33),
@@ -16364,6 +16408,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(33),
     [anon_sym_resetthat] = ACTIONS(33),
     [anon_sym_resetthese] = ACTIONS(33),
+    [anon_sym_resume] = ACTIONS(33),
     [anon_sym_revoke] = ACTIONS(33),
     [anon_sym_roll] = ACTIONS(33),
     [anon_sym_runclosest] = ACTIONS(33),
@@ -16664,12 +16709,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(33),
     [anon_sym_normal] = ACTIONS(33),
     [anon_sym_objectives] = ACTIONS(33),
+    [anon_sym_of] = ACTIONS(33),
     [anon_sym_off] = ACTIONS(33),
     [anon_sym_offhand] = ACTIONS(33),
     [anon_sym_on] = ACTIONS(35),
     [anon_sym_only] = ACTIONS(33),
     [anon_sym_operation] = ACTIONS(33),
     [anon_sym_outline] = ACTIONS(33),
+    [anon_sym_pause] = ACTIONS(33),
     [anon_sym_player] = ACTIONS(33),
     [anon_sym_players] = ACTIONS(33),
     [anon_sym_poi] = ACTIONS(33),
@@ -16687,6 +16734,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(33),
     [anon_sym_resetthat] = ACTIONS(33),
     [anon_sym_resetthese] = ACTIONS(33),
+    [anon_sym_resume] = ACTIONS(33),
     [anon_sym_revoke] = ACTIONS(33),
     [anon_sym_roll] = ACTIONS(33),
     [anon_sym_runclosest] = ACTIONS(33),
@@ -16987,12 +17035,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(33),
     [anon_sym_normal] = ACTIONS(33),
     [anon_sym_objectives] = ACTIONS(33),
+    [anon_sym_of] = ACTIONS(33),
     [anon_sym_off] = ACTIONS(33),
     [anon_sym_offhand] = ACTIONS(33),
     [anon_sym_on] = ACTIONS(35),
     [anon_sym_only] = ACTIONS(33),
     [anon_sym_operation] = ACTIONS(33),
     [anon_sym_outline] = ACTIONS(33),
+    [anon_sym_pause] = ACTIONS(33),
     [anon_sym_player] = ACTIONS(33),
     [anon_sym_players] = ACTIONS(33),
     [anon_sym_poi] = ACTIONS(33),
@@ -17010,6 +17060,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(33),
     [anon_sym_resetthat] = ACTIONS(33),
     [anon_sym_resetthese] = ACTIONS(33),
+    [anon_sym_resume] = ACTIONS(33),
     [anon_sym_revoke] = ACTIONS(33),
     [anon_sym_roll] = ACTIONS(33),
     [anon_sym_runclosest] = ACTIONS(33),
@@ -17310,12 +17361,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(123),
     [anon_sym_normal] = ACTIONS(123),
     [anon_sym_objectives] = ACTIONS(123),
+    [anon_sym_of] = ACTIONS(123),
     [anon_sym_off] = ACTIONS(123),
     [anon_sym_offhand] = ACTIONS(123),
     [anon_sym_on] = ACTIONS(125),
     [anon_sym_only] = ACTIONS(123),
     [anon_sym_operation] = ACTIONS(123),
     [anon_sym_outline] = ACTIONS(123),
+    [anon_sym_pause] = ACTIONS(123),
     [anon_sym_player] = ACTIONS(123),
     [anon_sym_players] = ACTIONS(123),
     [anon_sym_poi] = ACTIONS(123),
@@ -17333,6 +17386,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(123),
     [anon_sym_resetthat] = ACTIONS(123),
     [anon_sym_resetthese] = ACTIONS(123),
+    [anon_sym_resume] = ACTIONS(123),
     [anon_sym_revoke] = ACTIONS(123),
     [anon_sym_roll] = ACTIONS(123),
     [anon_sym_runclosest] = ACTIONS(123),
@@ -17633,12 +17687,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(123),
     [anon_sym_normal] = ACTIONS(123),
     [anon_sym_objectives] = ACTIONS(123),
+    [anon_sym_of] = ACTIONS(123),
     [anon_sym_off] = ACTIONS(123),
     [anon_sym_offhand] = ACTIONS(123),
     [anon_sym_on] = ACTIONS(125),
     [anon_sym_only] = ACTIONS(123),
     [anon_sym_operation] = ACTIONS(123),
     [anon_sym_outline] = ACTIONS(123),
+    [anon_sym_pause] = ACTIONS(123),
     [anon_sym_player] = ACTIONS(123),
     [anon_sym_players] = ACTIONS(123),
     [anon_sym_poi] = ACTIONS(123),
@@ -17656,6 +17712,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(123),
     [anon_sym_resetthat] = ACTIONS(123),
     [anon_sym_resetthese] = ACTIONS(123),
+    [anon_sym_resume] = ACTIONS(123),
     [anon_sym_revoke] = ACTIONS(123),
     [anon_sym_roll] = ACTIONS(123),
     [anon_sym_runclosest] = ACTIONS(123),
@@ -17956,12 +18013,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(33),
     [anon_sym_normal] = ACTIONS(33),
     [anon_sym_objectives] = ACTIONS(33),
+    [anon_sym_of] = ACTIONS(33),
     [anon_sym_off] = ACTIONS(33),
     [anon_sym_offhand] = ACTIONS(33),
     [anon_sym_on] = ACTIONS(35),
     [anon_sym_only] = ACTIONS(33),
     [anon_sym_operation] = ACTIONS(33),
     [anon_sym_outline] = ACTIONS(33),
+    [anon_sym_pause] = ACTIONS(33),
     [anon_sym_player] = ACTIONS(33),
     [anon_sym_players] = ACTIONS(33),
     [anon_sym_poi] = ACTIONS(33),
@@ -17979,6 +18038,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(33),
     [anon_sym_resetthat] = ACTIONS(33),
     [anon_sym_resetthese] = ACTIONS(33),
+    [anon_sym_resume] = ACTIONS(33),
     [anon_sym_revoke] = ACTIONS(33),
     [anon_sym_roll] = ACTIONS(33),
     [anon_sym_runclosest] = ACTIONS(33),
@@ -18279,12 +18339,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(123),
     [anon_sym_normal] = ACTIONS(123),
     [anon_sym_objectives] = ACTIONS(123),
+    [anon_sym_of] = ACTIONS(123),
     [anon_sym_off] = ACTIONS(123),
     [anon_sym_offhand] = ACTIONS(123),
     [anon_sym_on] = ACTIONS(125),
     [anon_sym_only] = ACTIONS(123),
     [anon_sym_operation] = ACTIONS(123),
     [anon_sym_outline] = ACTIONS(123),
+    [anon_sym_pause] = ACTIONS(123),
     [anon_sym_player] = ACTIONS(123),
     [anon_sym_players] = ACTIONS(123),
     [anon_sym_poi] = ACTIONS(123),
@@ -18302,6 +18364,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(123),
     [anon_sym_resetthat] = ACTIONS(123),
     [anon_sym_resetthese] = ACTIONS(123),
+    [anon_sym_resume] = ACTIONS(123),
     [anon_sym_revoke] = ACTIONS(123),
     [anon_sym_roll] = ACTIONS(123),
     [anon_sym_runclosest] = ACTIONS(123),
@@ -18602,12 +18665,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(123),
     [anon_sym_normal] = ACTIONS(123),
     [anon_sym_objectives] = ACTIONS(123),
+    [anon_sym_of] = ACTIONS(123),
     [anon_sym_off] = ACTIONS(123),
     [anon_sym_offhand] = ACTIONS(123),
     [anon_sym_on] = ACTIONS(125),
     [anon_sym_only] = ACTIONS(123),
     [anon_sym_operation] = ACTIONS(123),
     [anon_sym_outline] = ACTIONS(123),
+    [anon_sym_pause] = ACTIONS(123),
     [anon_sym_player] = ACTIONS(123),
     [anon_sym_players] = ACTIONS(123),
     [anon_sym_poi] = ACTIONS(123),
@@ -18625,6 +18690,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(123),
     [anon_sym_resetthat] = ACTIONS(123),
     [anon_sym_resetthese] = ACTIONS(123),
+    [anon_sym_resume] = ACTIONS(123),
     [anon_sym_revoke] = ACTIONS(123),
     [anon_sym_roll] = ACTIONS(123),
     [anon_sym_runclosest] = ACTIONS(123),
@@ -18921,12 +18987,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -18944,6 +19012,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -19228,12 +19297,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -19251,6 +19322,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -19535,12 +19607,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -19558,6 +19632,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -19842,12 +19917,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -19865,6 +19942,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -20149,12 +20227,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -20172,6 +20252,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -20456,12 +20537,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -20479,6 +20562,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -20763,12 +20847,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -20786,6 +20872,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -21070,12 +21157,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -21093,6 +21182,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -21377,12 +21467,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -21400,6 +21492,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -21684,12 +21777,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -21707,6 +21802,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -21991,12 +22087,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -22014,6 +22112,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -22297,12 +22396,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -22320,6 +22421,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -22603,12 +22705,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -22626,6 +22730,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -22909,12 +23014,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -22932,6 +23039,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -23215,12 +23323,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -23238,6 +23348,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -23521,12 +23632,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -23544,6 +23657,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -23827,12 +23941,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -23850,6 +23966,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -24133,12 +24250,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -24156,6 +24275,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -24439,12 +24559,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -24462,6 +24584,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -24742,12 +24865,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -24765,6 +24890,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -25045,12 +25171,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -25068,6 +25196,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -25348,12 +25477,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -25371,6 +25502,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -25651,12 +25783,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -25674,6 +25808,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -25954,12 +26089,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -25977,6 +26114,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -26257,12 +26395,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -26280,6 +26420,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -26560,12 +26701,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -26583,6 +26726,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -26863,12 +27007,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -26886,6 +27032,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -27166,12 +27313,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -27189,6 +27338,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -27467,12 +27617,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -27490,6 +27642,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -27768,12 +27921,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -27791,6 +27946,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -28069,12 +28225,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -28092,6 +28250,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -28370,12 +28529,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -28393,6 +28554,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -28670,12 +28832,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -28693,6 +28857,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -28970,12 +29135,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -28993,6 +29160,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -29270,12 +29438,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -29293,6 +29463,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -29570,12 +29741,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -29593,6 +29766,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -29870,12 +30044,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -29893,6 +30069,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -30170,12 +30347,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -30193,6 +30372,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -30470,12 +30650,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -30493,6 +30675,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -30770,12 +30953,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -30793,6 +30978,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -31070,12 +31256,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -31093,6 +31281,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -31370,12 +31559,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -31393,6 +31584,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -31670,12 +31862,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -31693,6 +31887,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -31970,12 +32165,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -31993,6 +32190,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -32270,12 +32468,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -32293,6 +32493,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -32570,12 +32771,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -32593,6 +32796,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -32870,12 +33074,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -32893,6 +33099,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -33170,12 +33377,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -33193,6 +33402,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -33470,12 +33680,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -33493,6 +33705,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -33770,12 +33983,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -33793,6 +34008,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -34070,12 +34286,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -34093,6 +34311,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -34370,12 +34589,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -34393,6 +34614,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -34669,12 +34891,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -34692,6 +34916,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -34968,12 +35193,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -34991,6 +35218,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -35267,12 +35495,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -35290,6 +35520,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -35566,12 +35797,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -35589,6 +35822,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -35862,12 +36096,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -35885,6 +36121,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -36159,12 +36396,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -36182,6 +36421,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -36456,12 +36696,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -36479,6 +36721,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -36753,12 +36996,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -36776,6 +37021,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -37050,12 +37296,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -37073,6 +37321,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -37347,12 +37596,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -37370,6 +37621,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -37644,12 +37896,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -37667,6 +37921,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -37941,12 +38196,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -37964,6 +38221,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -38238,12 +38496,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -38261,6 +38521,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -38535,12 +38796,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -38558,6 +38821,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -38832,12 +39096,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -38855,6 +39121,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -39129,12 +39396,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -39152,6 +39421,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -39426,12 +39696,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -39449,6 +39721,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -39723,12 +39996,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -39746,6 +40021,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -40020,12 +40296,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -40043,6 +40321,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -40317,12 +40596,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -40340,6 +40621,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -40613,12 +40895,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -40636,6 +40920,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -40909,12 +41194,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -40932,6 +41219,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -41205,12 +41493,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -41228,6 +41518,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -41501,12 +41792,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -41524,6 +41817,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -41797,12 +42091,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -41820,6 +42116,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -42093,12 +42390,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -42116,6 +42415,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -42389,12 +42689,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -42412,6 +42714,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -42685,12 +42988,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -42708,6 +43013,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -42981,12 +43287,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -43004,6 +43312,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -43277,12 +43586,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -43300,6 +43611,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -43573,12 +43885,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -43596,6 +43910,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -43866,12 +44181,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -43889,6 +44206,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -44159,12 +44477,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -44182,6 +44502,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -44452,12 +44773,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -44475,6 +44798,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -44744,12 +45068,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -44767,6 +45093,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -45036,12 +45363,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -45059,6 +45388,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -45328,12 +45658,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -45351,6 +45683,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -45619,12 +45952,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -45642,6 +45977,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -45910,12 +46246,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -45933,6 +46271,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -46201,12 +46540,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -46224,6 +46565,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -46492,12 +46834,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -46515,6 +46859,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -46783,12 +47128,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -46806,6 +47153,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -47074,12 +47422,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -47097,6 +47447,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -47365,12 +47716,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -47388,6 +47741,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -47656,12 +48010,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -47679,6 +48035,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -47947,12 +48304,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -47970,6 +48329,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -48238,12 +48598,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -48261,6 +48623,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -48529,12 +48892,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -48552,6 +48917,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -48817,12 +49183,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -48840,6 +49208,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -49107,12 +49476,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -49130,6 +49501,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -49400,12 +49772,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -49423,6 +49797,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -49687,12 +50062,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -49710,6 +50087,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -49980,12 +50358,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -50003,6 +50383,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -50267,12 +50648,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -50290,6 +50673,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -50558,12 +50942,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -50581,6 +50967,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -50847,12 +51234,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -50870,6 +51259,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -51134,12 +51524,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -51157,6 +51549,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -51423,12 +51816,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -51446,6 +51841,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -51714,12 +52110,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -51737,6 +52135,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -52001,12 +52400,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -52024,6 +52425,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -52291,12 +52693,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -52314,6 +52718,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -52577,12 +52982,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -52600,6 +53007,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -52865,12 +53273,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -52888,6 +53298,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -53153,12 +53564,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -53176,6 +53589,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -53441,12 +53855,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -53464,6 +53880,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -53729,12 +54146,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -53752,6 +54171,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -54017,12 +54437,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -54040,6 +54462,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -54305,12 +54728,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -54328,6 +54753,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -54593,12 +55019,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -54616,6 +55044,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -54883,12 +55312,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -54906,6 +55337,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -55171,12 +55603,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -55194,6 +55628,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -55457,12 +55892,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -55480,6 +55917,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -55744,12 +56182,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -55767,6 +56207,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -56031,12 +56472,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -56054,6 +56497,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -56318,12 +56762,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -56341,6 +56787,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -56605,12 +57052,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -56628,6 +57077,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -56891,12 +57341,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -56914,6 +57366,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -57177,12 +57630,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -57200,6 +57655,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -57463,12 +57919,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -57486,6 +57944,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -57749,12 +58208,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -57772,6 +58233,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -58035,12 +58497,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -58058,6 +58522,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -58320,12 +58785,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -58343,6 +58810,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -58605,12 +59073,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -58628,6 +59098,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -58889,12 +59360,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -58912,6 +59385,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -59167,12 +59641,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -59190,6 +59666,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -59437,12 +59914,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(123),
     [anon_sym_normal] = ACTIONS(123),
     [anon_sym_objectives] = ACTIONS(123),
+    [anon_sym_of] = ACTIONS(123),
     [anon_sym_off] = ACTIONS(123),
     [anon_sym_offhand] = ACTIONS(123),
     [anon_sym_on] = ACTIONS(125),
     [anon_sym_only] = ACTIONS(123),
     [anon_sym_operation] = ACTIONS(123),
     [anon_sym_outline] = ACTIONS(123),
+    [anon_sym_pause] = ACTIONS(123),
     [anon_sym_player] = ACTIONS(123),
     [anon_sym_players] = ACTIONS(123),
     [anon_sym_poi] = ACTIONS(123),
@@ -59460,6 +59939,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(123),
     [anon_sym_resetthat] = ACTIONS(123),
     [anon_sym_resetthese] = ACTIONS(123),
+    [anon_sym_resume] = ACTIONS(123),
     [anon_sym_revoke] = ACTIONS(123),
     [anon_sym_roll] = ACTIONS(123),
     [anon_sym_runclosest] = ACTIONS(123),
@@ -59707,12 +60187,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(33),
     [anon_sym_normal] = ACTIONS(33),
     [anon_sym_objectives] = ACTIONS(33),
+    [anon_sym_of] = ACTIONS(33),
     [anon_sym_off] = ACTIONS(33),
     [anon_sym_offhand] = ACTIONS(33),
     [anon_sym_on] = ACTIONS(35),
     [anon_sym_only] = ACTIONS(33),
     [anon_sym_operation] = ACTIONS(33),
     [anon_sym_outline] = ACTIONS(33),
+    [anon_sym_pause] = ACTIONS(33),
     [anon_sym_player] = ACTIONS(33),
     [anon_sym_players] = ACTIONS(33),
     [anon_sym_poi] = ACTIONS(33),
@@ -59730,6 +60212,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(33),
     [anon_sym_resetthat] = ACTIONS(33),
     [anon_sym_resetthese] = ACTIONS(33),
+    [anon_sym_resume] = ACTIONS(33),
     [anon_sym_revoke] = ACTIONS(33),
     [anon_sym_roll] = ACTIONS(33),
     [anon_sym_runclosest] = ACTIONS(33),
@@ -59977,12 +60460,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -60000,6 +60485,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -60247,12 +60733,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -60270,6 +60758,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -60513,12 +61002,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -60536,6 +61027,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -60780,12 +61272,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(765),
     [anon_sym_normal] = ACTIONS(765),
     [anon_sym_objectives] = ACTIONS(765),
+    [anon_sym_of] = ACTIONS(765),
     [anon_sym_off] = ACTIONS(765),
     [anon_sym_offhand] = ACTIONS(765),
     [anon_sym_on] = ACTIONS(767),
     [anon_sym_only] = ACTIONS(765),
     [anon_sym_operation] = ACTIONS(765),
     [anon_sym_outline] = ACTIONS(765),
+    [anon_sym_pause] = ACTIONS(765),
     [anon_sym_player] = ACTIONS(765),
     [anon_sym_players] = ACTIONS(765),
     [anon_sym_poi] = ACTIONS(765),
@@ -60803,6 +61297,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(765),
     [anon_sym_resetthat] = ACTIONS(765),
     [anon_sym_resetthese] = ACTIONS(765),
+    [anon_sym_resume] = ACTIONS(765),
     [anon_sym_revoke] = ACTIONS(765),
     [anon_sym_roll] = ACTIONS(765),
     [anon_sym_runclosest] = ACTIONS(765),
@@ -61038,12 +61533,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -61061,6 +61558,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -61305,12 +61803,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -61328,6 +61828,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -61566,12 +62067,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(827),
     [anon_sym_normal] = ACTIONS(827),
     [anon_sym_objectives] = ACTIONS(827),
+    [anon_sym_of] = ACTIONS(827),
     [anon_sym_off] = ACTIONS(827),
     [anon_sym_offhand] = ACTIONS(827),
     [anon_sym_on] = ACTIONS(830),
     [anon_sym_only] = ACTIONS(827),
     [anon_sym_operation] = ACTIONS(827),
     [anon_sym_outline] = ACTIONS(827),
+    [anon_sym_pause] = ACTIONS(827),
     [anon_sym_player] = ACTIONS(827),
     [anon_sym_players] = ACTIONS(827),
     [anon_sym_poi] = ACTIONS(827),
@@ -61589,6 +62092,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(827),
     [anon_sym_resetthat] = ACTIONS(827),
     [anon_sym_resetthese] = ACTIONS(827),
+    [anon_sym_resume] = ACTIONS(827),
     [anon_sym_revoke] = ACTIONS(827),
     [anon_sym_roll] = ACTIONS(827),
     [anon_sym_runclosest] = ACTIONS(827),
@@ -61829,12 +62333,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -61852,6 +62358,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -62098,12 +62605,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(765),
     [anon_sym_normal] = ACTIONS(765),
     [anon_sym_objectives] = ACTIONS(765),
+    [anon_sym_of] = ACTIONS(765),
     [anon_sym_off] = ACTIONS(765),
     [anon_sym_offhand] = ACTIONS(765),
     [anon_sym_on] = ACTIONS(767),
     [anon_sym_only] = ACTIONS(765),
     [anon_sym_operation] = ACTIONS(765),
     [anon_sym_outline] = ACTIONS(765),
+    [anon_sym_pause] = ACTIONS(765),
     [anon_sym_player] = ACTIONS(765),
     [anon_sym_players] = ACTIONS(765),
     [anon_sym_poi] = ACTIONS(765),
@@ -62121,6 +62630,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(765),
     [anon_sym_resetthat] = ACTIONS(765),
     [anon_sym_resetthese] = ACTIONS(765),
+    [anon_sym_resume] = ACTIONS(765),
     [anon_sym_revoke] = ACTIONS(765),
     [anon_sym_roll] = ACTIONS(765),
     [anon_sym_runclosest] = ACTIONS(765),
@@ -62359,12 +62869,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(33),
     [anon_sym_normal] = ACTIONS(33),
     [anon_sym_objectives] = ACTIONS(33),
+    [anon_sym_of] = ACTIONS(33),
     [anon_sym_off] = ACTIONS(33),
     [anon_sym_offhand] = ACTIONS(33),
     [anon_sym_on] = ACTIONS(35),
     [anon_sym_only] = ACTIONS(33),
     [anon_sym_operation] = ACTIONS(33),
     [anon_sym_outline] = ACTIONS(33),
+    [anon_sym_pause] = ACTIONS(33),
     [anon_sym_player] = ACTIONS(33),
     [anon_sym_players] = ACTIONS(33),
     [anon_sym_poi] = ACTIONS(33),
@@ -62382,6 +62894,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(33),
     [anon_sym_resetthat] = ACTIONS(33),
     [anon_sym_resetthese] = ACTIONS(33),
+    [anon_sym_resume] = ACTIONS(33),
     [anon_sym_revoke] = ACTIONS(33),
     [anon_sym_roll] = ACTIONS(33),
     [anon_sym_runclosest] = ACTIONS(33),
@@ -62622,12 +63135,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(893),
     [anon_sym_normal] = ACTIONS(893),
     [anon_sym_objectives] = ACTIONS(893),
+    [anon_sym_of] = ACTIONS(893),
     [anon_sym_off] = ACTIONS(893),
     [anon_sym_offhand] = ACTIONS(893),
     [anon_sym_on] = ACTIONS(896),
     [anon_sym_only] = ACTIONS(893),
     [anon_sym_operation] = ACTIONS(893),
     [anon_sym_outline] = ACTIONS(893),
+    [anon_sym_pause] = ACTIONS(893),
     [anon_sym_player] = ACTIONS(893),
     [anon_sym_players] = ACTIONS(893),
     [anon_sym_poi] = ACTIONS(893),
@@ -62645,6 +63160,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(893),
     [anon_sym_resetthat] = ACTIONS(893),
     [anon_sym_resetthese] = ACTIONS(893),
+    [anon_sym_resume] = ACTIONS(893),
     [anon_sym_revoke] = ACTIONS(893),
     [anon_sym_roll] = ACTIONS(893),
     [anon_sym_runclosest] = ACTIONS(893),
@@ -62886,12 +63402,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(933),
     [anon_sym_normal] = ACTIONS(933),
     [anon_sym_objectives] = ACTIONS(933),
+    [anon_sym_of] = ACTIONS(933),
     [anon_sym_off] = ACTIONS(933),
     [anon_sym_offhand] = ACTIONS(933),
     [anon_sym_on] = ACTIONS(935),
     [anon_sym_only] = ACTIONS(933),
     [anon_sym_operation] = ACTIONS(933),
     [anon_sym_outline] = ACTIONS(933),
+    [anon_sym_pause] = ACTIONS(933),
     [anon_sym_player] = ACTIONS(933),
     [anon_sym_players] = ACTIONS(933),
     [anon_sym_poi] = ACTIONS(933),
@@ -62909,6 +63427,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(933),
     [anon_sym_resetthat] = ACTIONS(933),
     [anon_sym_resetthese] = ACTIONS(933),
+    [anon_sym_resume] = ACTIONS(933),
     [anon_sym_revoke] = ACTIONS(933),
     [anon_sym_roll] = ACTIONS(933),
     [anon_sym_runclosest] = ACTIONS(933),
@@ -63144,12 +63663,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -63167,6 +63688,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -63411,12 +63933,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(33),
     [anon_sym_normal] = ACTIONS(33),
     [anon_sym_objectives] = ACTIONS(33),
+    [anon_sym_of] = ACTIONS(33),
     [anon_sym_off] = ACTIONS(33),
     [anon_sym_offhand] = ACTIONS(33),
     [anon_sym_on] = ACTIONS(35),
     [anon_sym_only] = ACTIONS(33),
     [anon_sym_operation] = ACTIONS(33),
     [anon_sym_outline] = ACTIONS(33),
+    [anon_sym_pause] = ACTIONS(33),
     [anon_sym_player] = ACTIONS(33),
     [anon_sym_players] = ACTIONS(33),
     [anon_sym_poi] = ACTIONS(33),
@@ -63434,6 +63958,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(33),
     [anon_sym_resetthat] = ACTIONS(33),
     [anon_sym_resetthese] = ACTIONS(33),
+    [anon_sym_resume] = ACTIONS(33),
     [anon_sym_revoke] = ACTIONS(33),
     [anon_sym_roll] = ACTIONS(33),
     [anon_sym_runclosest] = ACTIONS(33),
@@ -63675,12 +64200,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(933),
     [anon_sym_normal] = ACTIONS(933),
     [anon_sym_objectives] = ACTIONS(933),
+    [anon_sym_of] = ACTIONS(933),
     [anon_sym_off] = ACTIONS(933),
     [anon_sym_offhand] = ACTIONS(933),
     [anon_sym_on] = ACTIONS(935),
     [anon_sym_only] = ACTIONS(933),
     [anon_sym_operation] = ACTIONS(933),
     [anon_sym_outline] = ACTIONS(933),
+    [anon_sym_pause] = ACTIONS(933),
     [anon_sym_player] = ACTIONS(933),
     [anon_sym_players] = ACTIONS(933),
     [anon_sym_poi] = ACTIONS(933),
@@ -63698,6 +64225,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(933),
     [anon_sym_resetthat] = ACTIONS(933),
     [anon_sym_resetthese] = ACTIONS(933),
+    [anon_sym_resume] = ACTIONS(933),
     [anon_sym_revoke] = ACTIONS(933),
     [anon_sym_roll] = ACTIONS(933),
     [anon_sym_runclosest] = ACTIONS(933),
@@ -63932,12 +64460,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -63955,6 +64485,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -64198,12 +64729,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(33),
     [anon_sym_normal] = ACTIONS(33),
     [anon_sym_objectives] = ACTIONS(33),
+    [anon_sym_of] = ACTIONS(33),
     [anon_sym_off] = ACTIONS(33),
     [anon_sym_offhand] = ACTIONS(33),
     [anon_sym_on] = ACTIONS(35),
     [anon_sym_only] = ACTIONS(33),
     [anon_sym_operation] = ACTIONS(33),
     [anon_sym_outline] = ACTIONS(33),
+    [anon_sym_pause] = ACTIONS(33),
     [anon_sym_player] = ACTIONS(33),
     [anon_sym_players] = ACTIONS(33),
     [anon_sym_poi] = ACTIONS(33),
@@ -64221,6 +64754,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(33),
     [anon_sym_resetthat] = ACTIONS(33),
     [anon_sym_resetthese] = ACTIONS(33),
+    [anon_sym_resume] = ACTIONS(33),
     [anon_sym_revoke] = ACTIONS(33),
     [anon_sym_roll] = ACTIONS(33),
     [anon_sym_runclosest] = ACTIONS(33),
@@ -64459,12 +64993,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(979),
     [anon_sym_normal] = ACTIONS(979),
     [anon_sym_objectives] = ACTIONS(979),
+    [anon_sym_of] = ACTIONS(979),
     [anon_sym_off] = ACTIONS(979),
     [anon_sym_offhand] = ACTIONS(979),
     [anon_sym_on] = ACTIONS(982),
     [anon_sym_only] = ACTIONS(979),
     [anon_sym_operation] = ACTIONS(979),
     [anon_sym_outline] = ACTIONS(979),
+    [anon_sym_pause] = ACTIONS(979),
     [anon_sym_player] = ACTIONS(979),
     [anon_sym_players] = ACTIONS(979),
     [anon_sym_poi] = ACTIONS(979),
@@ -64482,6 +65018,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(979),
     [anon_sym_resetthat] = ACTIONS(979),
     [anon_sym_resetthese] = ACTIONS(979),
+    [anon_sym_resume] = ACTIONS(979),
     [anon_sym_revoke] = ACTIONS(979),
     [anon_sym_roll] = ACTIONS(979),
     [anon_sym_runclosest] = ACTIONS(979),
@@ -64721,12 +65258,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(123),
     [anon_sym_normal] = ACTIONS(123),
     [anon_sym_objectives] = ACTIONS(123),
+    [anon_sym_of] = ACTIONS(123),
     [anon_sym_off] = ACTIONS(123),
     [anon_sym_offhand] = ACTIONS(123),
     [anon_sym_on] = ACTIONS(125),
     [anon_sym_only] = ACTIONS(123),
     [anon_sym_operation] = ACTIONS(123),
     [anon_sym_outline] = ACTIONS(123),
+    [anon_sym_pause] = ACTIONS(123),
     [anon_sym_player] = ACTIONS(123),
     [anon_sym_players] = ACTIONS(123),
     [anon_sym_poi] = ACTIONS(123),
@@ -64744,6 +65283,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(123),
     [anon_sym_resetthat] = ACTIONS(123),
     [anon_sym_resetthese] = ACTIONS(123),
+    [anon_sym_resume] = ACTIONS(123),
     [anon_sym_revoke] = ACTIONS(123),
     [anon_sym_roll] = ACTIONS(123),
     [anon_sym_runclosest] = ACTIONS(123),
@@ -64983,12 +65523,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(123),
     [anon_sym_normal] = ACTIONS(123),
     [anon_sym_objectives] = ACTIONS(123),
+    [anon_sym_of] = ACTIONS(123),
     [anon_sym_off] = ACTIONS(123),
     [anon_sym_offhand] = ACTIONS(123),
     [anon_sym_on] = ACTIONS(125),
     [anon_sym_only] = ACTIONS(123),
     [anon_sym_operation] = ACTIONS(123),
     [anon_sym_outline] = ACTIONS(123),
+    [anon_sym_pause] = ACTIONS(123),
     [anon_sym_player] = ACTIONS(123),
     [anon_sym_players] = ACTIONS(123),
     [anon_sym_poi] = ACTIONS(123),
@@ -65006,6 +65548,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(123),
     [anon_sym_resetthat] = ACTIONS(123),
     [anon_sym_resetthese] = ACTIONS(123),
+    [anon_sym_resume] = ACTIONS(123),
     [anon_sym_revoke] = ACTIONS(123),
     [anon_sym_roll] = ACTIONS(123),
     [anon_sym_runclosest] = ACTIONS(123),
@@ -65244,12 +65787,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1037),
     [anon_sym_normal] = ACTIONS(1037),
     [anon_sym_objectives] = ACTIONS(1037),
+    [anon_sym_of] = ACTIONS(1037),
     [anon_sym_off] = ACTIONS(1037),
     [anon_sym_offhand] = ACTIONS(1037),
     [anon_sym_on] = ACTIONS(1039),
     [anon_sym_only] = ACTIONS(1037),
     [anon_sym_operation] = ACTIONS(1037),
     [anon_sym_outline] = ACTIONS(1037),
+    [anon_sym_pause] = ACTIONS(1037),
     [anon_sym_player] = ACTIONS(1037),
     [anon_sym_players] = ACTIONS(1037),
     [anon_sym_poi] = ACTIONS(1037),
@@ -65267,6 +65812,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1037),
     [anon_sym_resetthat] = ACTIONS(1037),
     [anon_sym_resetthese] = ACTIONS(1037),
+    [anon_sym_resume] = ACTIONS(1037),
     [anon_sym_revoke] = ACTIONS(1037),
     [anon_sym_roll] = ACTIONS(1037),
     [anon_sym_runclosest] = ACTIONS(1037),
@@ -65507,12 +66053,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(123),
     [anon_sym_normal] = ACTIONS(123),
     [anon_sym_objectives] = ACTIONS(123),
+    [anon_sym_of] = ACTIONS(123),
     [anon_sym_off] = ACTIONS(123),
     [anon_sym_offhand] = ACTIONS(123),
     [anon_sym_on] = ACTIONS(125),
     [anon_sym_only] = ACTIONS(123),
     [anon_sym_operation] = ACTIONS(123),
     [anon_sym_outline] = ACTIONS(123),
+    [anon_sym_pause] = ACTIONS(123),
     [anon_sym_player] = ACTIONS(123),
     [anon_sym_players] = ACTIONS(123),
     [anon_sym_poi] = ACTIONS(123),
@@ -65530,6 +66078,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(123),
     [anon_sym_resetthat] = ACTIONS(123),
     [anon_sym_resetthese] = ACTIONS(123),
+    [anon_sym_resume] = ACTIONS(123),
     [anon_sym_revoke] = ACTIONS(123),
     [anon_sym_roll] = ACTIONS(123),
     [anon_sym_runclosest] = ACTIONS(123),
@@ -65767,12 +66316,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1037),
     [anon_sym_normal] = ACTIONS(1037),
     [anon_sym_objectives] = ACTIONS(1037),
+    [anon_sym_of] = ACTIONS(1037),
     [anon_sym_off] = ACTIONS(1037),
     [anon_sym_offhand] = ACTIONS(1037),
     [anon_sym_on] = ACTIONS(1039),
     [anon_sym_only] = ACTIONS(1037),
     [anon_sym_operation] = ACTIONS(1037),
     [anon_sym_outline] = ACTIONS(1037),
+    [anon_sym_pause] = ACTIONS(1037),
     [anon_sym_player] = ACTIONS(1037),
     [anon_sym_players] = ACTIONS(1037),
     [anon_sym_poi] = ACTIONS(1037),
@@ -65790,6 +66341,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1037),
     [anon_sym_resetthat] = ACTIONS(1037),
     [anon_sym_resetthese] = ACTIONS(1037),
+    [anon_sym_resume] = ACTIONS(1037),
     [anon_sym_revoke] = ACTIONS(1037),
     [anon_sym_roll] = ACTIONS(1037),
     [anon_sym_runclosest] = ACTIONS(1037),
@@ -66032,12 +66584,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(765),
     [anon_sym_normal] = ACTIONS(765),
     [anon_sym_objectives] = ACTIONS(765),
+    [anon_sym_of] = ACTIONS(765),
     [anon_sym_off] = ACTIONS(765),
     [anon_sym_offhand] = ACTIONS(765),
     [anon_sym_on] = ACTIONS(767),
     [anon_sym_only] = ACTIONS(765),
     [anon_sym_operation] = ACTIONS(765),
     [anon_sym_outline] = ACTIONS(765),
+    [anon_sym_pause] = ACTIONS(765),
     [anon_sym_player] = ACTIONS(765),
     [anon_sym_players] = ACTIONS(765),
     [anon_sym_poi] = ACTIONS(765),
@@ -66055,6 +66609,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(765),
     [anon_sym_resetthat] = ACTIONS(765),
     [anon_sym_resetthese] = ACTIONS(765),
+    [anon_sym_resume] = ACTIONS(765),
     [anon_sym_revoke] = ACTIONS(765),
     [anon_sym_roll] = ACTIONS(765),
     [anon_sym_runclosest] = ACTIONS(765),
@@ -66289,12 +66844,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1081),
     [anon_sym_normal] = ACTIONS(1081),
     [anon_sym_objectives] = ACTIONS(1081),
+    [anon_sym_of] = ACTIONS(1081),
     [anon_sym_off] = ACTIONS(1081),
     [anon_sym_offhand] = ACTIONS(1081),
     [anon_sym_on] = ACTIONS(1084),
     [anon_sym_only] = ACTIONS(1081),
     [anon_sym_operation] = ACTIONS(1081),
     [anon_sym_outline] = ACTIONS(1081),
+    [anon_sym_pause] = ACTIONS(1081),
     [anon_sym_player] = ACTIONS(1081),
     [anon_sym_players] = ACTIONS(1081),
     [anon_sym_poi] = ACTIONS(1081),
@@ -66312,6 +66869,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1081),
     [anon_sym_resetthat] = ACTIONS(1081),
     [anon_sym_resetthese] = ACTIONS(1081),
+    [anon_sym_resume] = ACTIONS(1081),
     [anon_sym_revoke] = ACTIONS(1081),
     [anon_sym_roll] = ACTIONS(1081),
     [anon_sym_runclosest] = ACTIONS(1081),
@@ -66543,12 +67101,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1037),
     [anon_sym_normal] = ACTIONS(1037),
     [anon_sym_objectives] = ACTIONS(1037),
+    [anon_sym_of] = ACTIONS(1037),
     [anon_sym_off] = ACTIONS(1037),
     [anon_sym_offhand] = ACTIONS(1037),
     [anon_sym_on] = ACTIONS(1039),
     [anon_sym_only] = ACTIONS(1037),
     [anon_sym_operation] = ACTIONS(1037),
     [anon_sym_outline] = ACTIONS(1037),
+    [anon_sym_pause] = ACTIONS(1037),
     [anon_sym_player] = ACTIONS(1037),
     [anon_sym_players] = ACTIONS(1037),
     [anon_sym_poi] = ACTIONS(1037),
@@ -66566,6 +67126,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1037),
     [anon_sym_resetthat] = ACTIONS(1037),
     [anon_sym_resetthese] = ACTIONS(1037),
+    [anon_sym_resume] = ACTIONS(1037),
     [anon_sym_revoke] = ACTIONS(1037),
     [anon_sym_roll] = ACTIONS(1037),
     [anon_sym_runclosest] = ACTIONS(1037),
@@ -66803,12 +67364,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1037),
     [anon_sym_normal] = ACTIONS(1037),
     [anon_sym_objectives] = ACTIONS(1037),
+    [anon_sym_of] = ACTIONS(1037),
     [anon_sym_off] = ACTIONS(1037),
     [anon_sym_offhand] = ACTIONS(1037),
     [anon_sym_on] = ACTIONS(1039),
     [anon_sym_only] = ACTIONS(1037),
     [anon_sym_operation] = ACTIONS(1037),
     [anon_sym_outline] = ACTIONS(1037),
+    [anon_sym_pause] = ACTIONS(1037),
     [anon_sym_player] = ACTIONS(1037),
     [anon_sym_players] = ACTIONS(1037),
     [anon_sym_poi] = ACTIONS(1037),
@@ -66826,6 +67389,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1037),
     [anon_sym_resetthat] = ACTIONS(1037),
     [anon_sym_resetthese] = ACTIONS(1037),
+    [anon_sym_resume] = ACTIONS(1037),
     [anon_sym_revoke] = ACTIONS(1037),
     [anon_sym_roll] = ACTIONS(1037),
     [anon_sym_runclosest] = ACTIONS(1037),
@@ -67064,12 +67628,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(933),
     [anon_sym_normal] = ACTIONS(933),
     [anon_sym_objectives] = ACTIONS(933),
+    [anon_sym_of] = ACTIONS(933),
     [anon_sym_off] = ACTIONS(933),
     [anon_sym_offhand] = ACTIONS(933),
     [anon_sym_on] = ACTIONS(935),
     [anon_sym_only] = ACTIONS(933),
     [anon_sym_operation] = ACTIONS(933),
     [anon_sym_outline] = ACTIONS(933),
+    [anon_sym_pause] = ACTIONS(933),
     [anon_sym_player] = ACTIONS(933),
     [anon_sym_players] = ACTIONS(933),
     [anon_sym_poi] = ACTIONS(933),
@@ -67087,6 +67653,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(933),
     [anon_sym_resetthat] = ACTIONS(933),
     [anon_sym_resetthese] = ACTIONS(933),
+    [anon_sym_resume] = ACTIONS(933),
     [anon_sym_revoke] = ACTIONS(933),
     [anon_sym_roll] = ACTIONS(933),
     [anon_sym_runclosest] = ACTIONS(933),
@@ -67317,12 +67884,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1131),
     [anon_sym_normal] = ACTIONS(1131),
     [anon_sym_objectives] = ACTIONS(1131),
+    [anon_sym_of] = ACTIONS(1131),
     [anon_sym_off] = ACTIONS(1131),
     [anon_sym_offhand] = ACTIONS(1131),
     [anon_sym_on] = ACTIONS(1134),
     [anon_sym_only] = ACTIONS(1131),
     [anon_sym_operation] = ACTIONS(1131),
     [anon_sym_outline] = ACTIONS(1131),
+    [anon_sym_pause] = ACTIONS(1131),
     [anon_sym_player] = ACTIONS(1131),
     [anon_sym_players] = ACTIONS(1131),
     [anon_sym_poi] = ACTIONS(1131),
@@ -67340,6 +67909,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1131),
     [anon_sym_resetthat] = ACTIONS(1131),
     [anon_sym_resetthese] = ACTIONS(1131),
+    [anon_sym_resume] = ACTIONS(1131),
     [anon_sym_revoke] = ACTIONS(1131),
     [anon_sym_roll] = ACTIONS(1131),
     [anon_sym_runclosest] = ACTIONS(1131),
@@ -67579,12 +68149,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(765),
     [anon_sym_normal] = ACTIONS(765),
     [anon_sym_objectives] = ACTIONS(765),
+    [anon_sym_of] = ACTIONS(765),
     [anon_sym_off] = ACTIONS(765),
     [anon_sym_offhand] = ACTIONS(765),
     [anon_sym_on] = ACTIONS(767),
     [anon_sym_only] = ACTIONS(765),
     [anon_sym_operation] = ACTIONS(765),
     [anon_sym_outline] = ACTIONS(765),
+    [anon_sym_pause] = ACTIONS(765),
     [anon_sym_player] = ACTIONS(765),
     [anon_sym_players] = ACTIONS(765),
     [anon_sym_poi] = ACTIONS(765),
@@ -67602,6 +68174,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(765),
     [anon_sym_resetthat] = ACTIONS(765),
     [anon_sym_resetthese] = ACTIONS(765),
+    [anon_sym_resume] = ACTIONS(765),
     [anon_sym_revoke] = ACTIONS(765),
     [anon_sym_roll] = ACTIONS(765),
     [anon_sym_runclosest] = ACTIONS(765),
@@ -67835,12 +68408,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1037),
     [anon_sym_normal] = ACTIONS(1037),
     [anon_sym_objectives] = ACTIONS(1037),
+    [anon_sym_of] = ACTIONS(1037),
     [anon_sym_off] = ACTIONS(1037),
     [anon_sym_offhand] = ACTIONS(1037),
     [anon_sym_on] = ACTIONS(1039),
     [anon_sym_only] = ACTIONS(1037),
     [anon_sym_operation] = ACTIONS(1037),
     [anon_sym_outline] = ACTIONS(1037),
+    [anon_sym_pause] = ACTIONS(1037),
     [anon_sym_player] = ACTIONS(1037),
     [anon_sym_players] = ACTIONS(1037),
     [anon_sym_poi] = ACTIONS(1037),
@@ -67858,6 +68433,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1037),
     [anon_sym_resetthat] = ACTIONS(1037),
     [anon_sym_resetthese] = ACTIONS(1037),
+    [anon_sym_resume] = ACTIONS(1037),
     [anon_sym_revoke] = ACTIONS(1037),
     [anon_sym_roll] = ACTIONS(1037),
     [anon_sym_runclosest] = ACTIONS(1037),
@@ -68093,12 +68669,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1181),
     [anon_sym_normal] = ACTIONS(1181),
     [anon_sym_objectives] = ACTIONS(1181),
+    [anon_sym_of] = ACTIONS(1181),
     [anon_sym_off] = ACTIONS(1181),
     [anon_sym_offhand] = ACTIONS(1181),
     [anon_sym_on] = ACTIONS(1184),
     [anon_sym_only] = ACTIONS(1181),
     [anon_sym_operation] = ACTIONS(1181),
     [anon_sym_outline] = ACTIONS(1181),
+    [anon_sym_pause] = ACTIONS(1181),
     [anon_sym_player] = ACTIONS(1181),
     [anon_sym_players] = ACTIONS(1181),
     [anon_sym_poi] = ACTIONS(1181),
@@ -68116,6 +68694,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1181),
     [anon_sym_resetthat] = ACTIONS(1181),
     [anon_sym_resetthese] = ACTIONS(1181),
+    [anon_sym_resume] = ACTIONS(1181),
     [anon_sym_revoke] = ACTIONS(1181),
     [anon_sym_roll] = ACTIONS(1181),
     [anon_sym_runclosest] = ACTIONS(1181),
@@ -68350,12 +68929,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(933),
     [anon_sym_normal] = ACTIONS(933),
     [anon_sym_objectives] = ACTIONS(933),
+    [anon_sym_of] = ACTIONS(933),
     [anon_sym_off] = ACTIONS(933),
     [anon_sym_offhand] = ACTIONS(933),
     [anon_sym_on] = ACTIONS(935),
     [anon_sym_only] = ACTIONS(933),
     [anon_sym_operation] = ACTIONS(933),
     [anon_sym_outline] = ACTIONS(933),
+    [anon_sym_pause] = ACTIONS(933),
     [anon_sym_player] = ACTIONS(933),
     [anon_sym_players] = ACTIONS(933),
     [anon_sym_poi] = ACTIONS(933),
@@ -68373,6 +68954,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(933),
     [anon_sym_resetthat] = ACTIONS(933),
     [anon_sym_resetthese] = ACTIONS(933),
+    [anon_sym_resume] = ACTIONS(933),
     [anon_sym_revoke] = ACTIONS(933),
     [anon_sym_roll] = ACTIONS(933),
     [anon_sym_runclosest] = ACTIONS(933),
@@ -68606,12 +69188,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1037),
     [anon_sym_normal] = ACTIONS(1037),
     [anon_sym_objectives] = ACTIONS(1037),
+    [anon_sym_of] = ACTIONS(1037),
     [anon_sym_off] = ACTIONS(1037),
     [anon_sym_offhand] = ACTIONS(1037),
     [anon_sym_on] = ACTIONS(1039),
     [anon_sym_only] = ACTIONS(1037),
     [anon_sym_operation] = ACTIONS(1037),
     [anon_sym_outline] = ACTIONS(1037),
+    [anon_sym_pause] = ACTIONS(1037),
     [anon_sym_player] = ACTIONS(1037),
     [anon_sym_players] = ACTIONS(1037),
     [anon_sym_poi] = ACTIONS(1037),
@@ -68629,6 +69213,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1037),
     [anon_sym_resetthat] = ACTIONS(1037),
     [anon_sym_resetthese] = ACTIONS(1037),
+    [anon_sym_resume] = ACTIONS(1037),
     [anon_sym_revoke] = ACTIONS(1037),
     [anon_sym_roll] = ACTIONS(1037),
     [anon_sym_runclosest] = ACTIONS(1037),
@@ -68855,12 +69440,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -68878,6 +69465,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -69109,12 +69697,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1227),
     [anon_sym_normal] = ACTIONS(1227),
     [anon_sym_objectives] = ACTIONS(1227),
+    [anon_sym_of] = ACTIONS(1227),
     [anon_sym_off] = ACTIONS(1227),
     [anon_sym_offhand] = ACTIONS(1227),
     [anon_sym_on] = ACTIONS(1227),
     [anon_sym_only] = ACTIONS(1227),
     [anon_sym_operation] = ACTIONS(1227),
     [anon_sym_outline] = ACTIONS(1227),
+    [anon_sym_pause] = ACTIONS(1227),
     [anon_sym_player] = ACTIONS(1227),
     [anon_sym_players] = ACTIONS(1227),
     [anon_sym_poi] = ACTIONS(1227),
@@ -69132,6 +69722,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1227),
     [anon_sym_resetthat] = ACTIONS(1227),
     [anon_sym_resetthese] = ACTIONS(1227),
+    [anon_sym_resume] = ACTIONS(1227),
     [anon_sym_revoke] = ACTIONS(1227),
     [anon_sym_roll] = ACTIONS(1227),
     [anon_sym_runclosest] = ACTIONS(1227),
@@ -69363,12 +69954,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1231),
     [anon_sym_normal] = ACTIONS(1231),
     [anon_sym_objectives] = ACTIONS(1231),
+    [anon_sym_of] = ACTIONS(1231),
     [anon_sym_off] = ACTIONS(1231),
     [anon_sym_offhand] = ACTIONS(1231),
     [anon_sym_on] = ACTIONS(1231),
     [anon_sym_only] = ACTIONS(1231),
     [anon_sym_operation] = ACTIONS(1231),
     [anon_sym_outline] = ACTIONS(1231),
+    [anon_sym_pause] = ACTIONS(1231),
     [anon_sym_player] = ACTIONS(1231),
     [anon_sym_players] = ACTIONS(1231),
     [anon_sym_poi] = ACTIONS(1231),
@@ -69386,6 +69979,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1231),
     [anon_sym_resetthat] = ACTIONS(1231),
     [anon_sym_resetthese] = ACTIONS(1231),
+    [anon_sym_resume] = ACTIONS(1231),
     [anon_sym_revoke] = ACTIONS(1231),
     [anon_sym_roll] = ACTIONS(1231),
     [anon_sym_runclosest] = ACTIONS(1231),
@@ -69617,12 +70211,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1235),
     [anon_sym_normal] = ACTIONS(1235),
     [anon_sym_objectives] = ACTIONS(1235),
+    [anon_sym_of] = ACTIONS(1235),
     [anon_sym_off] = ACTIONS(1235),
     [anon_sym_offhand] = ACTIONS(1235),
     [anon_sym_on] = ACTIONS(1235),
     [anon_sym_only] = ACTIONS(1235),
     [anon_sym_operation] = ACTIONS(1235),
     [anon_sym_outline] = ACTIONS(1235),
+    [anon_sym_pause] = ACTIONS(1235),
     [anon_sym_player] = ACTIONS(1235),
     [anon_sym_players] = ACTIONS(1235),
     [anon_sym_poi] = ACTIONS(1235),
@@ -69640,6 +70236,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1235),
     [anon_sym_resetthat] = ACTIONS(1235),
     [anon_sym_resetthese] = ACTIONS(1235),
+    [anon_sym_resume] = ACTIONS(1235),
     [anon_sym_revoke] = ACTIONS(1235),
     [anon_sym_roll] = ACTIONS(1235),
     [anon_sym_runclosest] = ACTIONS(1235),
@@ -69871,12 +70468,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1239),
     [anon_sym_normal] = ACTIONS(1239),
     [anon_sym_objectives] = ACTIONS(1239),
+    [anon_sym_of] = ACTIONS(1239),
     [anon_sym_off] = ACTIONS(1239),
     [anon_sym_offhand] = ACTIONS(1239),
     [anon_sym_on] = ACTIONS(1239),
     [anon_sym_only] = ACTIONS(1239),
     [anon_sym_operation] = ACTIONS(1239),
     [anon_sym_outline] = ACTIONS(1239),
+    [anon_sym_pause] = ACTIONS(1239),
     [anon_sym_player] = ACTIONS(1239),
     [anon_sym_players] = ACTIONS(1239),
     [anon_sym_poi] = ACTIONS(1239),
@@ -69894,6 +70493,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1239),
     [anon_sym_resetthat] = ACTIONS(1239),
     [anon_sym_resetthese] = ACTIONS(1239),
+    [anon_sym_resume] = ACTIONS(1239),
     [anon_sym_revoke] = ACTIONS(1239),
     [anon_sym_roll] = ACTIONS(1239),
     [anon_sym_runclosest] = ACTIONS(1239),
@@ -70125,12 +70725,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1243),
     [anon_sym_normal] = ACTIONS(1243),
     [anon_sym_objectives] = ACTIONS(1243),
+    [anon_sym_of] = ACTIONS(1243),
     [anon_sym_off] = ACTIONS(1243),
     [anon_sym_offhand] = ACTIONS(1243),
     [anon_sym_on] = ACTIONS(1243),
     [anon_sym_only] = ACTIONS(1243),
     [anon_sym_operation] = ACTIONS(1243),
     [anon_sym_outline] = ACTIONS(1243),
+    [anon_sym_pause] = ACTIONS(1243),
     [anon_sym_player] = ACTIONS(1243),
     [anon_sym_players] = ACTIONS(1243),
     [anon_sym_poi] = ACTIONS(1243),
@@ -70148,6 +70750,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1243),
     [anon_sym_resetthat] = ACTIONS(1243),
     [anon_sym_resetthese] = ACTIONS(1243),
+    [anon_sym_resume] = ACTIONS(1243),
     [anon_sym_revoke] = ACTIONS(1243),
     [anon_sym_roll] = ACTIONS(1243),
     [anon_sym_runclosest] = ACTIONS(1243),
@@ -70379,12 +70982,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1247),
     [anon_sym_normal] = ACTIONS(1247),
     [anon_sym_objectives] = ACTIONS(1247),
+    [anon_sym_of] = ACTIONS(1247),
     [anon_sym_off] = ACTIONS(1247),
     [anon_sym_offhand] = ACTIONS(1247),
     [anon_sym_on] = ACTIONS(1247),
     [anon_sym_only] = ACTIONS(1247),
     [anon_sym_operation] = ACTIONS(1247),
     [anon_sym_outline] = ACTIONS(1247),
+    [anon_sym_pause] = ACTIONS(1247),
     [anon_sym_player] = ACTIONS(1247),
     [anon_sym_players] = ACTIONS(1247),
     [anon_sym_poi] = ACTIONS(1247),
@@ -70402,6 +71007,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1247),
     [anon_sym_resetthat] = ACTIONS(1247),
     [anon_sym_resetthese] = ACTIONS(1247),
+    [anon_sym_resume] = ACTIONS(1247),
     [anon_sym_revoke] = ACTIONS(1247),
     [anon_sym_roll] = ACTIONS(1247),
     [anon_sym_runclosest] = ACTIONS(1247),
@@ -70633,12 +71239,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1252),
     [anon_sym_normal] = ACTIONS(1252),
     [anon_sym_objectives] = ACTIONS(1252),
+    [anon_sym_of] = ACTIONS(1252),
     [anon_sym_off] = ACTIONS(1252),
     [anon_sym_offhand] = ACTIONS(1252),
     [anon_sym_on] = ACTIONS(1252),
     [anon_sym_only] = ACTIONS(1252),
     [anon_sym_operation] = ACTIONS(1252),
     [anon_sym_outline] = ACTIONS(1252),
+    [anon_sym_pause] = ACTIONS(1252),
     [anon_sym_player] = ACTIONS(1252),
     [anon_sym_players] = ACTIONS(1252),
     [anon_sym_poi] = ACTIONS(1252),
@@ -70656,6 +71264,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1252),
     [anon_sym_resetthat] = ACTIONS(1252),
     [anon_sym_resetthese] = ACTIONS(1252),
+    [anon_sym_resume] = ACTIONS(1252),
     [anon_sym_revoke] = ACTIONS(1252),
     [anon_sym_roll] = ACTIONS(1252),
     [anon_sym_runclosest] = ACTIONS(1252),
@@ -70887,12 +71496,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1257),
     [anon_sym_normal] = ACTIONS(1257),
     [anon_sym_objectives] = ACTIONS(1257),
+    [anon_sym_of] = ACTIONS(1257),
     [anon_sym_off] = ACTIONS(1257),
     [anon_sym_offhand] = ACTIONS(1257),
     [anon_sym_on] = ACTIONS(1257),
     [anon_sym_only] = ACTIONS(1257),
     [anon_sym_operation] = ACTIONS(1257),
     [anon_sym_outline] = ACTIONS(1257),
+    [anon_sym_pause] = ACTIONS(1257),
     [anon_sym_player] = ACTIONS(1257),
     [anon_sym_players] = ACTIONS(1257),
     [anon_sym_poi] = ACTIONS(1257),
@@ -70910,6 +71521,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1257),
     [anon_sym_resetthat] = ACTIONS(1257),
     [anon_sym_resetthese] = ACTIONS(1257),
+    [anon_sym_resume] = ACTIONS(1257),
     [anon_sym_revoke] = ACTIONS(1257),
     [anon_sym_roll] = ACTIONS(1257),
     [anon_sym_runclosest] = ACTIONS(1257),
@@ -71141,12 +71753,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1261),
     [anon_sym_normal] = ACTIONS(1261),
     [anon_sym_objectives] = ACTIONS(1261),
+    [anon_sym_of] = ACTIONS(1261),
     [anon_sym_off] = ACTIONS(1261),
     [anon_sym_offhand] = ACTIONS(1261),
     [anon_sym_on] = ACTIONS(1261),
     [anon_sym_only] = ACTIONS(1261),
     [anon_sym_operation] = ACTIONS(1261),
     [anon_sym_outline] = ACTIONS(1261),
+    [anon_sym_pause] = ACTIONS(1261),
     [anon_sym_player] = ACTIONS(1261),
     [anon_sym_players] = ACTIONS(1261),
     [anon_sym_poi] = ACTIONS(1261),
@@ -71164,6 +71778,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1261),
     [anon_sym_resetthat] = ACTIONS(1261),
     [anon_sym_resetthese] = ACTIONS(1261),
+    [anon_sym_resume] = ACTIONS(1261),
     [anon_sym_revoke] = ACTIONS(1261),
     [anon_sym_roll] = ACTIONS(1261),
     [anon_sym_runclosest] = ACTIONS(1261),
@@ -71395,12 +72010,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -71418,6 +72035,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -71645,12 +72263,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1261),
     [anon_sym_normal] = ACTIONS(1261),
     [anon_sym_objectives] = ACTIONS(1261),
+    [anon_sym_of] = ACTIONS(1261),
     [anon_sym_off] = ACTIONS(1261),
     [anon_sym_offhand] = ACTIONS(1261),
     [anon_sym_on] = ACTIONS(1261),
     [anon_sym_only] = ACTIONS(1261),
     [anon_sym_operation] = ACTIONS(1261),
     [anon_sym_outline] = ACTIONS(1261),
+    [anon_sym_pause] = ACTIONS(1261),
     [anon_sym_player] = ACTIONS(1261),
     [anon_sym_players] = ACTIONS(1261),
     [anon_sym_poi] = ACTIONS(1261),
@@ -71668,6 +72288,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1261),
     [anon_sym_resetthat] = ACTIONS(1261),
     [anon_sym_resetthese] = ACTIONS(1261),
+    [anon_sym_resume] = ACTIONS(1261),
     [anon_sym_revoke] = ACTIONS(1261),
     [anon_sym_roll] = ACTIONS(1261),
     [anon_sym_runclosest] = ACTIONS(1261),
@@ -71899,12 +72520,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1252),
     [anon_sym_normal] = ACTIONS(1252),
     [anon_sym_objectives] = ACTIONS(1252),
+    [anon_sym_of] = ACTIONS(1252),
     [anon_sym_off] = ACTIONS(1252),
     [anon_sym_offhand] = ACTIONS(1252),
     [anon_sym_on] = ACTIONS(1252),
     [anon_sym_only] = ACTIONS(1252),
     [anon_sym_operation] = ACTIONS(1252),
     [anon_sym_outline] = ACTIONS(1252),
+    [anon_sym_pause] = ACTIONS(1252),
     [anon_sym_player] = ACTIONS(1252),
     [anon_sym_players] = ACTIONS(1252),
     [anon_sym_poi] = ACTIONS(1252),
@@ -71922,6 +72545,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1252),
     [anon_sym_resetthat] = ACTIONS(1252),
     [anon_sym_resetthese] = ACTIONS(1252),
+    [anon_sym_resume] = ACTIONS(1252),
     [anon_sym_revoke] = ACTIONS(1252),
     [anon_sym_roll] = ACTIONS(1252),
     [anon_sym_runclosest] = ACTIONS(1252),
@@ -72153,12 +72777,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1231),
     [anon_sym_normal] = ACTIONS(1231),
     [anon_sym_objectives] = ACTIONS(1231),
+    [anon_sym_of] = ACTIONS(1231),
     [anon_sym_off] = ACTIONS(1231),
     [anon_sym_offhand] = ACTIONS(1231),
     [anon_sym_on] = ACTIONS(1231),
     [anon_sym_only] = ACTIONS(1231),
     [anon_sym_operation] = ACTIONS(1231),
     [anon_sym_outline] = ACTIONS(1231),
+    [anon_sym_pause] = ACTIONS(1231),
     [anon_sym_player] = ACTIONS(1231),
     [anon_sym_players] = ACTIONS(1231),
     [anon_sym_poi] = ACTIONS(1231),
@@ -72176,6 +72802,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1231),
     [anon_sym_resetthat] = ACTIONS(1231),
     [anon_sym_resetthese] = ACTIONS(1231),
+    [anon_sym_resume] = ACTIONS(1231),
     [anon_sym_revoke] = ACTIONS(1231),
     [anon_sym_roll] = ACTIONS(1231),
     [anon_sym_runclosest] = ACTIONS(1231),
@@ -72407,12 +73034,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1235),
     [anon_sym_normal] = ACTIONS(1235),
     [anon_sym_objectives] = ACTIONS(1235),
+    [anon_sym_of] = ACTIONS(1235),
     [anon_sym_off] = ACTIONS(1235),
     [anon_sym_offhand] = ACTIONS(1235),
     [anon_sym_on] = ACTIONS(1235),
     [anon_sym_only] = ACTIONS(1235),
     [anon_sym_operation] = ACTIONS(1235),
     [anon_sym_outline] = ACTIONS(1235),
+    [anon_sym_pause] = ACTIONS(1235),
     [anon_sym_player] = ACTIONS(1235),
     [anon_sym_players] = ACTIONS(1235),
     [anon_sym_poi] = ACTIONS(1235),
@@ -72430,6 +73059,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1235),
     [anon_sym_resetthat] = ACTIONS(1235),
     [anon_sym_resetthese] = ACTIONS(1235),
+    [anon_sym_resume] = ACTIONS(1235),
     [anon_sym_revoke] = ACTIONS(1235),
     [anon_sym_roll] = ACTIONS(1235),
     [anon_sym_runclosest] = ACTIONS(1235),
@@ -72661,12 +73291,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1239),
     [anon_sym_normal] = ACTIONS(1239),
     [anon_sym_objectives] = ACTIONS(1239),
+    [anon_sym_of] = ACTIONS(1239),
     [anon_sym_off] = ACTIONS(1239),
     [anon_sym_offhand] = ACTIONS(1239),
     [anon_sym_on] = ACTIONS(1239),
     [anon_sym_only] = ACTIONS(1239),
     [anon_sym_operation] = ACTIONS(1239),
     [anon_sym_outline] = ACTIONS(1239),
+    [anon_sym_pause] = ACTIONS(1239),
     [anon_sym_player] = ACTIONS(1239),
     [anon_sym_players] = ACTIONS(1239),
     [anon_sym_poi] = ACTIONS(1239),
@@ -72684,6 +73316,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1239),
     [anon_sym_resetthat] = ACTIONS(1239),
     [anon_sym_resetthese] = ACTIONS(1239),
+    [anon_sym_resume] = ACTIONS(1239),
     [anon_sym_revoke] = ACTIONS(1239),
     [anon_sym_roll] = ACTIONS(1239),
     [anon_sym_runclosest] = ACTIONS(1239),
@@ -72915,12 +73548,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1247),
     [anon_sym_normal] = ACTIONS(1247),
     [anon_sym_objectives] = ACTIONS(1247),
+    [anon_sym_of] = ACTIONS(1247),
     [anon_sym_off] = ACTIONS(1247),
     [anon_sym_offhand] = ACTIONS(1247),
     [anon_sym_on] = ACTIONS(1247),
     [anon_sym_only] = ACTIONS(1247),
     [anon_sym_operation] = ACTIONS(1247),
     [anon_sym_outline] = ACTIONS(1247),
+    [anon_sym_pause] = ACTIONS(1247),
     [anon_sym_player] = ACTIONS(1247),
     [anon_sym_players] = ACTIONS(1247),
     [anon_sym_poi] = ACTIONS(1247),
@@ -72938,6 +73573,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1247),
     [anon_sym_resetthat] = ACTIONS(1247),
     [anon_sym_resetthese] = ACTIONS(1247),
+    [anon_sym_resume] = ACTIONS(1247),
     [anon_sym_revoke] = ACTIONS(1247),
     [anon_sym_roll] = ACTIONS(1247),
     [anon_sym_runclosest] = ACTIONS(1247),
@@ -73169,12 +73805,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -73192,6 +73830,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -73427,12 +74066,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1268),
     [anon_sym_normal] = ACTIONS(1268),
     [anon_sym_objectives] = ACTIONS(1268),
+    [anon_sym_of] = ACTIONS(1268),
     [anon_sym_off] = ACTIONS(1268),
     [anon_sym_offhand] = ACTIONS(1268),
     [anon_sym_on] = ACTIONS(1268),
     [anon_sym_only] = ACTIONS(1268),
     [anon_sym_operation] = ACTIONS(1268),
     [anon_sym_outline] = ACTIONS(1268),
+    [anon_sym_pause] = ACTIONS(1268),
     [anon_sym_player] = ACTIONS(1268),
     [anon_sym_players] = ACTIONS(1268),
     [anon_sym_poi] = ACTIONS(1268),
@@ -73450,6 +74091,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1268),
     [anon_sym_resetthat] = ACTIONS(1268),
     [anon_sym_resetthese] = ACTIONS(1268),
+    [anon_sym_resume] = ACTIONS(1268),
     [anon_sym_revoke] = ACTIONS(1268),
     [anon_sym_roll] = ACTIONS(1268),
     [anon_sym_runclosest] = ACTIONS(1268),
@@ -73677,12 +74319,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1270),
     [anon_sym_normal] = ACTIONS(1270),
     [anon_sym_objectives] = ACTIONS(1270),
+    [anon_sym_of] = ACTIONS(1270),
     [anon_sym_off] = ACTIONS(1270),
     [anon_sym_offhand] = ACTIONS(1270),
     [anon_sym_on] = ACTIONS(1270),
     [anon_sym_only] = ACTIONS(1270),
     [anon_sym_operation] = ACTIONS(1270),
     [anon_sym_outline] = ACTIONS(1270),
+    [anon_sym_pause] = ACTIONS(1270),
     [anon_sym_player] = ACTIONS(1270),
     [anon_sym_players] = ACTIONS(1270),
     [anon_sym_poi] = ACTIONS(1270),
@@ -73700,6 +74344,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1270),
     [anon_sym_resetthat] = ACTIONS(1270),
     [anon_sym_resetthese] = ACTIONS(1270),
+    [anon_sym_resume] = ACTIONS(1270),
     [anon_sym_revoke] = ACTIONS(1270),
     [anon_sym_roll] = ACTIONS(1270),
     [anon_sym_runclosest] = ACTIONS(1270),
@@ -73931,12 +74576,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1227),
     [anon_sym_normal] = ACTIONS(1227),
     [anon_sym_objectives] = ACTIONS(1227),
+    [anon_sym_of] = ACTIONS(1227),
     [anon_sym_off] = ACTIONS(1227),
     [anon_sym_offhand] = ACTIONS(1227),
     [anon_sym_on] = ACTIONS(1227),
     [anon_sym_only] = ACTIONS(1227),
     [anon_sym_operation] = ACTIONS(1227),
     [anon_sym_outline] = ACTIONS(1227),
+    [anon_sym_pause] = ACTIONS(1227),
     [anon_sym_player] = ACTIONS(1227),
     [anon_sym_players] = ACTIONS(1227),
     [anon_sym_poi] = ACTIONS(1227),
@@ -73954,6 +74601,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1227),
     [anon_sym_resetthat] = ACTIONS(1227),
     [anon_sym_resetthese] = ACTIONS(1227),
+    [anon_sym_resume] = ACTIONS(1227),
     [anon_sym_revoke] = ACTIONS(1227),
     [anon_sym_roll] = ACTIONS(1227),
     [anon_sym_runclosest] = ACTIONS(1227),
@@ -74185,12 +74833,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1268),
     [anon_sym_normal] = ACTIONS(1268),
     [anon_sym_objectives] = ACTIONS(1268),
+    [anon_sym_of] = ACTIONS(1268),
     [anon_sym_off] = ACTIONS(1268),
     [anon_sym_offhand] = ACTIONS(1268),
     [anon_sym_on] = ACTIONS(1268),
     [anon_sym_only] = ACTIONS(1268),
     [anon_sym_operation] = ACTIONS(1268),
     [anon_sym_outline] = ACTIONS(1268),
+    [anon_sym_pause] = ACTIONS(1268),
     [anon_sym_player] = ACTIONS(1268),
     [anon_sym_players] = ACTIONS(1268),
     [anon_sym_poi] = ACTIONS(1268),
@@ -74208,6 +74858,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1268),
     [anon_sym_resetthat] = ACTIONS(1268),
     [anon_sym_resetthese] = ACTIONS(1268),
+    [anon_sym_resume] = ACTIONS(1268),
     [anon_sym_revoke] = ACTIONS(1268),
     [anon_sym_roll] = ACTIONS(1268),
     [anon_sym_runclosest] = ACTIONS(1268),
@@ -74439,12 +75090,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1243),
     [anon_sym_normal] = ACTIONS(1243),
     [anon_sym_objectives] = ACTIONS(1243),
+    [anon_sym_of] = ACTIONS(1243),
     [anon_sym_off] = ACTIONS(1243),
     [anon_sym_offhand] = ACTIONS(1243),
     [anon_sym_on] = ACTIONS(1243),
     [anon_sym_only] = ACTIONS(1243),
     [anon_sym_operation] = ACTIONS(1243),
     [anon_sym_outline] = ACTIONS(1243),
+    [anon_sym_pause] = ACTIONS(1243),
     [anon_sym_player] = ACTIONS(1243),
     [anon_sym_players] = ACTIONS(1243),
     [anon_sym_poi] = ACTIONS(1243),
@@ -74462,6 +75115,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1243),
     [anon_sym_resetthat] = ACTIONS(1243),
     [anon_sym_resetthese] = ACTIONS(1243),
+    [anon_sym_resume] = ACTIONS(1243),
     [anon_sym_revoke] = ACTIONS(1243),
     [anon_sym_roll] = ACTIONS(1243),
     [anon_sym_runclosest] = ACTIONS(1243),
@@ -74693,12 +75347,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1257),
     [anon_sym_normal] = ACTIONS(1257),
     [anon_sym_objectives] = ACTIONS(1257),
+    [anon_sym_of] = ACTIONS(1257),
     [anon_sym_off] = ACTIONS(1257),
     [anon_sym_offhand] = ACTIONS(1257),
     [anon_sym_on] = ACTIONS(1257),
     [anon_sym_only] = ACTIONS(1257),
     [anon_sym_operation] = ACTIONS(1257),
     [anon_sym_outline] = ACTIONS(1257),
+    [anon_sym_pause] = ACTIONS(1257),
     [anon_sym_player] = ACTIONS(1257),
     [anon_sym_players] = ACTIONS(1257),
     [anon_sym_poi] = ACTIONS(1257),
@@ -74716,6 +75372,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1257),
     [anon_sym_resetthat] = ACTIONS(1257),
     [anon_sym_resetthese] = ACTIONS(1257),
+    [anon_sym_resume] = ACTIONS(1257),
     [anon_sym_revoke] = ACTIONS(1257),
     [anon_sym_roll] = ACTIONS(1257),
     [anon_sym_runclosest] = ACTIONS(1257),
@@ -74951,12 +75608,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1276),
     [anon_sym_normal] = ACTIONS(1276),
     [anon_sym_objectives] = ACTIONS(1276),
+    [anon_sym_of] = ACTIONS(1276),
     [anon_sym_off] = ACTIONS(1276),
     [anon_sym_offhand] = ACTIONS(1276),
     [anon_sym_on] = ACTIONS(1276),
     [anon_sym_only] = ACTIONS(1276),
     [anon_sym_operation] = ACTIONS(1276),
     [anon_sym_outline] = ACTIONS(1276),
+    [anon_sym_pause] = ACTIONS(1276),
     [anon_sym_player] = ACTIONS(1276),
     [anon_sym_players] = ACTIONS(1276),
     [anon_sym_poi] = ACTIONS(1276),
@@ -74974,6 +75633,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1276),
     [anon_sym_resetthat] = ACTIONS(1276),
     [anon_sym_resetthese] = ACTIONS(1276),
+    [anon_sym_resume] = ACTIONS(1276),
     [anon_sym_revoke] = ACTIONS(1276),
     [anon_sym_roll] = ACTIONS(1276),
     [anon_sym_runclosest] = ACTIONS(1276),
@@ -75205,12 +75865,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1276),
     [anon_sym_normal] = ACTIONS(1276),
     [anon_sym_objectives] = ACTIONS(1276),
+    [anon_sym_of] = ACTIONS(1276),
     [anon_sym_off] = ACTIONS(1276),
     [anon_sym_offhand] = ACTIONS(1276),
     [anon_sym_on] = ACTIONS(1276),
     [anon_sym_only] = ACTIONS(1276),
     [anon_sym_operation] = ACTIONS(1276),
     [anon_sym_outline] = ACTIONS(1276),
+    [anon_sym_pause] = ACTIONS(1276),
     [anon_sym_player] = ACTIONS(1276),
     [anon_sym_players] = ACTIONS(1276),
     [anon_sym_poi] = ACTIONS(1276),
@@ -75228,6 +75890,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1276),
     [anon_sym_resetthat] = ACTIONS(1276),
     [anon_sym_resetthese] = ACTIONS(1276),
+    [anon_sym_resume] = ACTIONS(1276),
     [anon_sym_revoke] = ACTIONS(1276),
     [anon_sym_roll] = ACTIONS(1276),
     [anon_sym_runclosest] = ACTIONS(1276),
@@ -75459,12 +76122,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1276),
     [anon_sym_normal] = ACTIONS(1276),
     [anon_sym_objectives] = ACTIONS(1276),
+    [anon_sym_of] = ACTIONS(1276),
     [anon_sym_off] = ACTIONS(1276),
     [anon_sym_offhand] = ACTIONS(1276),
     [anon_sym_on] = ACTIONS(1276),
     [anon_sym_only] = ACTIONS(1276),
     [anon_sym_operation] = ACTIONS(1276),
     [anon_sym_outline] = ACTIONS(1276),
+    [anon_sym_pause] = ACTIONS(1276),
     [anon_sym_player] = ACTIONS(1276),
     [anon_sym_players] = ACTIONS(1276),
     [anon_sym_poi] = ACTIONS(1276),
@@ -75482,6 +76147,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1276),
     [anon_sym_resetthat] = ACTIONS(1276),
     [anon_sym_resetthese] = ACTIONS(1276),
+    [anon_sym_resume] = ACTIONS(1276),
     [anon_sym_revoke] = ACTIONS(1276),
     [anon_sym_roll] = ACTIONS(1276),
     [anon_sym_runclosest] = ACTIONS(1276),
@@ -75713,12 +76379,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1270),
     [anon_sym_normal] = ACTIONS(1270),
     [anon_sym_objectives] = ACTIONS(1270),
+    [anon_sym_of] = ACTIONS(1270),
     [anon_sym_off] = ACTIONS(1270),
     [anon_sym_offhand] = ACTIONS(1270),
     [anon_sym_on] = ACTIONS(1270),
     [anon_sym_only] = ACTIONS(1270),
     [anon_sym_operation] = ACTIONS(1270),
     [anon_sym_outline] = ACTIONS(1270),
+    [anon_sym_pause] = ACTIONS(1270),
     [anon_sym_player] = ACTIONS(1270),
     [anon_sym_players] = ACTIONS(1270),
     [anon_sym_poi] = ACTIONS(1270),
@@ -75736,6 +76404,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1270),
     [anon_sym_resetthat] = ACTIONS(1270),
     [anon_sym_resetthese] = ACTIONS(1270),
+    [anon_sym_resume] = ACTIONS(1270),
     [anon_sym_revoke] = ACTIONS(1270),
     [anon_sym_roll] = ACTIONS(1270),
     [anon_sym_runclosest] = ACTIONS(1270),
@@ -75966,12 +76635,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1276),
     [anon_sym_normal] = ACTIONS(1276),
     [anon_sym_objectives] = ACTIONS(1276),
+    [anon_sym_of] = ACTIONS(1276),
     [anon_sym_off] = ACTIONS(1276),
     [anon_sym_offhand] = ACTIONS(1276),
     [anon_sym_on] = ACTIONS(1276),
     [anon_sym_only] = ACTIONS(1276),
     [anon_sym_operation] = ACTIONS(1276),
     [anon_sym_outline] = ACTIONS(1276),
+    [anon_sym_pause] = ACTIONS(1276),
     [anon_sym_player] = ACTIONS(1276),
     [anon_sym_players] = ACTIONS(1276),
     [anon_sym_poi] = ACTIONS(1276),
@@ -75989,6 +76660,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1276),
     [anon_sym_resetthat] = ACTIONS(1276),
     [anon_sym_resetthese] = ACTIONS(1276),
+    [anon_sym_resume] = ACTIONS(1276),
     [anon_sym_revoke] = ACTIONS(1276),
     [anon_sym_roll] = ACTIONS(1276),
     [anon_sym_runclosest] = ACTIONS(1276),
@@ -76219,12 +76891,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1276),
     [anon_sym_normal] = ACTIONS(1276),
     [anon_sym_objectives] = ACTIONS(1276),
+    [anon_sym_of] = ACTIONS(1276),
     [anon_sym_off] = ACTIONS(1276),
     [anon_sym_offhand] = ACTIONS(1276),
     [anon_sym_on] = ACTIONS(1276),
     [anon_sym_only] = ACTIONS(1276),
     [anon_sym_operation] = ACTIONS(1276),
     [anon_sym_outline] = ACTIONS(1276),
+    [anon_sym_pause] = ACTIONS(1276),
     [anon_sym_player] = ACTIONS(1276),
     [anon_sym_players] = ACTIONS(1276),
     [anon_sym_poi] = ACTIONS(1276),
@@ -76242,6 +76916,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1276),
     [anon_sym_resetthat] = ACTIONS(1276),
     [anon_sym_resetthese] = ACTIONS(1276),
+    [anon_sym_resume] = ACTIONS(1276),
     [anon_sym_revoke] = ACTIONS(1276),
     [anon_sym_roll] = ACTIONS(1276),
     [anon_sym_runclosest] = ACTIONS(1276),
@@ -76472,12 +77147,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -76495,6 +77172,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -76725,12 +77403,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1276),
     [anon_sym_normal] = ACTIONS(1276),
     [anon_sym_objectives] = ACTIONS(1276),
+    [anon_sym_of] = ACTIONS(1276),
     [anon_sym_off] = ACTIONS(1276),
     [anon_sym_offhand] = ACTIONS(1276),
     [anon_sym_on] = ACTIONS(1276),
     [anon_sym_only] = ACTIONS(1276),
     [anon_sym_operation] = ACTIONS(1276),
     [anon_sym_outline] = ACTIONS(1276),
+    [anon_sym_pause] = ACTIONS(1276),
     [anon_sym_player] = ACTIONS(1276),
     [anon_sym_players] = ACTIONS(1276),
     [anon_sym_poi] = ACTIONS(1276),
@@ -76748,6 +77428,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1276),
     [anon_sym_resetthat] = ACTIONS(1276),
     [anon_sym_resetthese] = ACTIONS(1276),
+    [anon_sym_resume] = ACTIONS(1276),
     [anon_sym_revoke] = ACTIONS(1276),
     [anon_sym_roll] = ACTIONS(1276),
     [anon_sym_runclosest] = ACTIONS(1276),
@@ -76975,12 +77656,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -76998,6 +77681,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -77231,12 +77915,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1261),
     [anon_sym_normal] = ACTIONS(1261),
     [anon_sym_objectives] = ACTIONS(1261),
+    [anon_sym_of] = ACTIONS(1261),
     [anon_sym_off] = ACTIONS(1261),
     [anon_sym_offhand] = ACTIONS(1261),
     [anon_sym_on] = ACTIONS(1261),
     [anon_sym_only] = ACTIONS(1261),
     [anon_sym_operation] = ACTIONS(1261),
     [anon_sym_outline] = ACTIONS(1261),
+    [anon_sym_pause] = ACTIONS(1261),
     [anon_sym_player] = ACTIONS(1261),
     [anon_sym_players] = ACTIONS(1261),
     [anon_sym_poi] = ACTIONS(1261),
@@ -77254,6 +77940,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1261),
     [anon_sym_resetthat] = ACTIONS(1261),
     [anon_sym_resetthese] = ACTIONS(1261),
+    [anon_sym_resume] = ACTIONS(1261),
     [anon_sym_revoke] = ACTIONS(1261),
     [anon_sym_roll] = ACTIONS(1261),
     [anon_sym_runclosest] = ACTIONS(1261),
@@ -77484,12 +78171,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1252),
     [anon_sym_normal] = ACTIONS(1252),
     [anon_sym_objectives] = ACTIONS(1252),
+    [anon_sym_of] = ACTIONS(1252),
     [anon_sym_off] = ACTIONS(1252),
     [anon_sym_offhand] = ACTIONS(1252),
     [anon_sym_on] = ACTIONS(1252),
     [anon_sym_only] = ACTIONS(1252),
     [anon_sym_operation] = ACTIONS(1252),
     [anon_sym_outline] = ACTIONS(1252),
+    [anon_sym_pause] = ACTIONS(1252),
     [anon_sym_player] = ACTIONS(1252),
     [anon_sym_players] = ACTIONS(1252),
     [anon_sym_poi] = ACTIONS(1252),
@@ -77507,6 +78196,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1252),
     [anon_sym_resetthat] = ACTIONS(1252),
     [anon_sym_resetthese] = ACTIONS(1252),
+    [anon_sym_resume] = ACTIONS(1252),
     [anon_sym_revoke] = ACTIONS(1252),
     [anon_sym_roll] = ACTIONS(1252),
     [anon_sym_runclosest] = ACTIONS(1252),
@@ -77737,12 +78427,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1231),
     [anon_sym_normal] = ACTIONS(1231),
     [anon_sym_objectives] = ACTIONS(1231),
+    [anon_sym_of] = ACTIONS(1231),
     [anon_sym_off] = ACTIONS(1231),
     [anon_sym_offhand] = ACTIONS(1231),
     [anon_sym_on] = ACTIONS(1231),
     [anon_sym_only] = ACTIONS(1231),
     [anon_sym_operation] = ACTIONS(1231),
     [anon_sym_outline] = ACTIONS(1231),
+    [anon_sym_pause] = ACTIONS(1231),
     [anon_sym_player] = ACTIONS(1231),
     [anon_sym_players] = ACTIONS(1231),
     [anon_sym_poi] = ACTIONS(1231),
@@ -77760,6 +78452,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1231),
     [anon_sym_resetthat] = ACTIONS(1231),
     [anon_sym_resetthese] = ACTIONS(1231),
+    [anon_sym_resume] = ACTIONS(1231),
     [anon_sym_revoke] = ACTIONS(1231),
     [anon_sym_roll] = ACTIONS(1231),
     [anon_sym_runclosest] = ACTIONS(1231),
@@ -77990,12 +78683,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1235),
     [anon_sym_normal] = ACTIONS(1235),
     [anon_sym_objectives] = ACTIONS(1235),
+    [anon_sym_of] = ACTIONS(1235),
     [anon_sym_off] = ACTIONS(1235),
     [anon_sym_offhand] = ACTIONS(1235),
     [anon_sym_on] = ACTIONS(1235),
     [anon_sym_only] = ACTIONS(1235),
     [anon_sym_operation] = ACTIONS(1235),
     [anon_sym_outline] = ACTIONS(1235),
+    [anon_sym_pause] = ACTIONS(1235),
     [anon_sym_player] = ACTIONS(1235),
     [anon_sym_players] = ACTIONS(1235),
     [anon_sym_poi] = ACTIONS(1235),
@@ -78013,6 +78708,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1235),
     [anon_sym_resetthat] = ACTIONS(1235),
     [anon_sym_resetthese] = ACTIONS(1235),
+    [anon_sym_resume] = ACTIONS(1235),
     [anon_sym_revoke] = ACTIONS(1235),
     [anon_sym_roll] = ACTIONS(1235),
     [anon_sym_runclosest] = ACTIONS(1235),
@@ -78243,12 +78939,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1239),
     [anon_sym_normal] = ACTIONS(1239),
     [anon_sym_objectives] = ACTIONS(1239),
+    [anon_sym_of] = ACTIONS(1239),
     [anon_sym_off] = ACTIONS(1239),
     [anon_sym_offhand] = ACTIONS(1239),
     [anon_sym_on] = ACTIONS(1239),
     [anon_sym_only] = ACTIONS(1239),
     [anon_sym_operation] = ACTIONS(1239),
     [anon_sym_outline] = ACTIONS(1239),
+    [anon_sym_pause] = ACTIONS(1239),
     [anon_sym_player] = ACTIONS(1239),
     [anon_sym_players] = ACTIONS(1239),
     [anon_sym_poi] = ACTIONS(1239),
@@ -78266,6 +78964,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1239),
     [anon_sym_resetthat] = ACTIONS(1239),
     [anon_sym_resetthese] = ACTIONS(1239),
+    [anon_sym_resume] = ACTIONS(1239),
     [anon_sym_revoke] = ACTIONS(1239),
     [anon_sym_roll] = ACTIONS(1239),
     [anon_sym_runclosest] = ACTIONS(1239),
@@ -78496,12 +79195,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1247),
     [anon_sym_normal] = ACTIONS(1247),
     [anon_sym_objectives] = ACTIONS(1247),
+    [anon_sym_of] = ACTIONS(1247),
     [anon_sym_off] = ACTIONS(1247),
     [anon_sym_offhand] = ACTIONS(1247),
     [anon_sym_on] = ACTIONS(1247),
     [anon_sym_only] = ACTIONS(1247),
     [anon_sym_operation] = ACTIONS(1247),
     [anon_sym_outline] = ACTIONS(1247),
+    [anon_sym_pause] = ACTIONS(1247),
     [anon_sym_player] = ACTIONS(1247),
     [anon_sym_players] = ACTIONS(1247),
     [anon_sym_poi] = ACTIONS(1247),
@@ -78519,6 +79220,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1247),
     [anon_sym_resetthat] = ACTIONS(1247),
     [anon_sym_resetthese] = ACTIONS(1247),
+    [anon_sym_resume] = ACTIONS(1247),
     [anon_sym_revoke] = ACTIONS(1247),
     [anon_sym_roll] = ACTIONS(1247),
     [anon_sym_runclosest] = ACTIONS(1247),
@@ -78749,12 +79451,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -78772,6 +79476,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -79002,12 +79707,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1243),
     [anon_sym_normal] = ACTIONS(1243),
     [anon_sym_objectives] = ACTIONS(1243),
+    [anon_sym_of] = ACTIONS(1243),
     [anon_sym_off] = ACTIONS(1243),
     [anon_sym_offhand] = ACTIONS(1243),
     [anon_sym_on] = ACTIONS(1243),
     [anon_sym_only] = ACTIONS(1243),
     [anon_sym_operation] = ACTIONS(1243),
     [anon_sym_outline] = ACTIONS(1243),
+    [anon_sym_pause] = ACTIONS(1243),
     [anon_sym_player] = ACTIONS(1243),
     [anon_sym_players] = ACTIONS(1243),
     [anon_sym_poi] = ACTIONS(1243),
@@ -79025,6 +79732,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1243),
     [anon_sym_resetthat] = ACTIONS(1243),
     [anon_sym_resetthese] = ACTIONS(1243),
+    [anon_sym_resume] = ACTIONS(1243),
     [anon_sym_revoke] = ACTIONS(1243),
     [anon_sym_roll] = ACTIONS(1243),
     [anon_sym_runclosest] = ACTIONS(1243),
@@ -79255,12 +79963,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1270),
     [anon_sym_normal] = ACTIONS(1270),
     [anon_sym_objectives] = ACTIONS(1270),
+    [anon_sym_of] = ACTIONS(1270),
     [anon_sym_off] = ACTIONS(1270),
     [anon_sym_offhand] = ACTIONS(1270),
     [anon_sym_on] = ACTIONS(1270),
     [anon_sym_only] = ACTIONS(1270),
     [anon_sym_operation] = ACTIONS(1270),
     [anon_sym_outline] = ACTIONS(1270),
+    [anon_sym_pause] = ACTIONS(1270),
     [anon_sym_player] = ACTIONS(1270),
     [anon_sym_players] = ACTIONS(1270),
     [anon_sym_poi] = ACTIONS(1270),
@@ -79278,6 +79988,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1270),
     [anon_sym_resetthat] = ACTIONS(1270),
     [anon_sym_resetthese] = ACTIONS(1270),
+    [anon_sym_resume] = ACTIONS(1270),
     [anon_sym_revoke] = ACTIONS(1270),
     [anon_sym_roll] = ACTIONS(1270),
     [anon_sym_runclosest] = ACTIONS(1270),
@@ -79508,12 +80219,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1227),
     [anon_sym_normal] = ACTIONS(1227),
     [anon_sym_objectives] = ACTIONS(1227),
+    [anon_sym_of] = ACTIONS(1227),
     [anon_sym_off] = ACTIONS(1227),
     [anon_sym_offhand] = ACTIONS(1227),
     [anon_sym_on] = ACTIONS(1227),
     [anon_sym_only] = ACTIONS(1227),
     [anon_sym_operation] = ACTIONS(1227),
     [anon_sym_outline] = ACTIONS(1227),
+    [anon_sym_pause] = ACTIONS(1227),
     [anon_sym_player] = ACTIONS(1227),
     [anon_sym_players] = ACTIONS(1227),
     [anon_sym_poi] = ACTIONS(1227),
@@ -79531,6 +80244,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1227),
     [anon_sym_resetthat] = ACTIONS(1227),
     [anon_sym_resetthese] = ACTIONS(1227),
+    [anon_sym_resume] = ACTIONS(1227),
     [anon_sym_revoke] = ACTIONS(1227),
     [anon_sym_roll] = ACTIONS(1227),
     [anon_sym_runclosest] = ACTIONS(1227),
@@ -79767,12 +80481,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1037),
     [anon_sym_normal] = ACTIONS(1037),
     [anon_sym_objectives] = ACTIONS(1037),
+    [anon_sym_of] = ACTIONS(1037),
     [anon_sym_off] = ACTIONS(1037),
     [anon_sym_offhand] = ACTIONS(1037),
     [anon_sym_on] = ACTIONS(1039),
     [anon_sym_only] = ACTIONS(1037),
     [anon_sym_operation] = ACTIONS(1037),
     [anon_sym_outline] = ACTIONS(1037),
+    [anon_sym_pause] = ACTIONS(1037),
     [anon_sym_player] = ACTIONS(1037),
     [anon_sym_players] = ACTIONS(1037),
     [anon_sym_poi] = ACTIONS(1037),
@@ -79790,6 +80506,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1037),
     [anon_sym_resetthat] = ACTIONS(1037),
     [anon_sym_resetthese] = ACTIONS(1037),
+    [anon_sym_resume] = ACTIONS(1037),
     [anon_sym_revoke] = ACTIONS(1037),
     [anon_sym_roll] = ACTIONS(1037),
     [anon_sym_runclosest] = ACTIONS(1037),
@@ -80014,12 +80731,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1268),
     [anon_sym_normal] = ACTIONS(1268),
     [anon_sym_objectives] = ACTIONS(1268),
+    [anon_sym_of] = ACTIONS(1268),
     [anon_sym_off] = ACTIONS(1268),
     [anon_sym_offhand] = ACTIONS(1268),
     [anon_sym_on] = ACTIONS(1268),
     [anon_sym_only] = ACTIONS(1268),
     [anon_sym_operation] = ACTIONS(1268),
     [anon_sym_outline] = ACTIONS(1268),
+    [anon_sym_pause] = ACTIONS(1268),
     [anon_sym_player] = ACTIONS(1268),
     [anon_sym_players] = ACTIONS(1268),
     [anon_sym_poi] = ACTIONS(1268),
@@ -80037,6 +80756,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1268),
     [anon_sym_resetthat] = ACTIONS(1268),
     [anon_sym_resetthese] = ACTIONS(1268),
+    [anon_sym_resume] = ACTIONS(1268),
     [anon_sym_revoke] = ACTIONS(1268),
     [anon_sym_roll] = ACTIONS(1268),
     [anon_sym_runclosest] = ACTIONS(1268),
@@ -80267,12 +80987,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1257),
     [anon_sym_normal] = ACTIONS(1257),
     [anon_sym_objectives] = ACTIONS(1257),
+    [anon_sym_of] = ACTIONS(1257),
     [anon_sym_off] = ACTIONS(1257),
     [anon_sym_offhand] = ACTIONS(1257),
     [anon_sym_on] = ACTIONS(1257),
     [anon_sym_only] = ACTIONS(1257),
     [anon_sym_operation] = ACTIONS(1257),
     [anon_sym_outline] = ACTIONS(1257),
+    [anon_sym_pause] = ACTIONS(1257),
     [anon_sym_player] = ACTIONS(1257),
     [anon_sym_players] = ACTIONS(1257),
     [anon_sym_poi] = ACTIONS(1257),
@@ -80290,6 +81012,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1257),
     [anon_sym_resetthat] = ACTIONS(1257),
     [anon_sym_resetthese] = ACTIONS(1257),
+    [anon_sym_resume] = ACTIONS(1257),
     [anon_sym_revoke] = ACTIONS(1257),
     [anon_sym_roll] = ACTIONS(1257),
     [anon_sym_runclosest] = ACTIONS(1257),
@@ -80521,12 +81244,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -80544,6 +81269,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -80779,12 +81505,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1037),
     [anon_sym_normal] = ACTIONS(1037),
     [anon_sym_objectives] = ACTIONS(1037),
+    [anon_sym_of] = ACTIONS(1037),
     [anon_sym_off] = ACTIONS(1037),
     [anon_sym_offhand] = ACTIONS(1037),
     [anon_sym_on] = ACTIONS(1039),
     [anon_sym_only] = ACTIONS(1037),
     [anon_sym_operation] = ACTIONS(1037),
     [anon_sym_outline] = ACTIONS(1037),
+    [anon_sym_pause] = ACTIONS(1037),
     [anon_sym_player] = ACTIONS(1037),
     [anon_sym_players] = ACTIONS(1037),
     [anon_sym_poi] = ACTIONS(1037),
@@ -80802,6 +81530,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1037),
     [anon_sym_resetthat] = ACTIONS(1037),
     [anon_sym_resetthese] = ACTIONS(1037),
+    [anon_sym_resume] = ACTIONS(1037),
     [anon_sym_revoke] = ACTIONS(1037),
     [anon_sym_roll] = ACTIONS(1037),
     [anon_sym_runclosest] = ACTIONS(1037),
@@ -81023,12 +81752,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -81046,6 +81777,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -81276,12 +82008,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -81299,6 +82033,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -81531,12 +82266,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -81554,6 +82291,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -81787,12 +82525,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -81810,6 +82550,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -82038,12 +82779,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -82061,6 +82804,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -82289,12 +83033,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -82312,6 +83058,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -82540,12 +83287,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(181),
     [anon_sym_normal] = ACTIONS(181),
     [anon_sym_objectives] = ACTIONS(181),
+    [anon_sym_of] = ACTIONS(181),
     [anon_sym_off] = ACTIONS(181),
     [anon_sym_offhand] = ACTIONS(181),
     [anon_sym_on] = ACTIONS(183),
     [anon_sym_only] = ACTIONS(181),
     [anon_sym_operation] = ACTIONS(181),
     [anon_sym_outline] = ACTIONS(181),
+    [anon_sym_pause] = ACTIONS(181),
     [anon_sym_player] = ACTIONS(181),
     [anon_sym_players] = ACTIONS(181),
     [anon_sym_poi] = ACTIONS(181),
@@ -82563,6 +83312,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(181),
     [anon_sym_resetthat] = ACTIONS(181),
     [anon_sym_resetthese] = ACTIONS(181),
+    [anon_sym_resume] = ACTIONS(181),
     [anon_sym_revoke] = ACTIONS(181),
     [anon_sym_roll] = ACTIONS(181),
     [anon_sym_runclosest] = ACTIONS(181),
@@ -82791,12 +83541,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -82814,6 +83566,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -83042,12 +83795,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -83065,6 +83820,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -83293,12 +84049,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -83316,6 +84074,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -83544,12 +84303,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -83567,6 +84328,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -83795,12 +84557,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -83818,6 +84582,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -84046,12 +84811,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -84069,6 +84836,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -84297,12 +85065,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -84320,6 +85090,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -84548,12 +85319,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -84571,6 +85344,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -84799,12 +85573,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -84822,6 +85598,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -85050,12 +85827,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -85073,6 +85852,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -85301,12 +86081,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -85324,6 +86106,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -85552,12 +86335,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(731),
     [anon_sym_normal] = ACTIONS(731),
     [anon_sym_objectives] = ACTIONS(731),
+    [anon_sym_of] = ACTIONS(731),
     [anon_sym_off] = ACTIONS(731),
     [anon_sym_offhand] = ACTIONS(731),
     [anon_sym_on] = ACTIONS(733),
     [anon_sym_only] = ACTIONS(731),
     [anon_sym_operation] = ACTIONS(731),
     [anon_sym_outline] = ACTIONS(731),
+    [anon_sym_pause] = ACTIONS(731),
     [anon_sym_player] = ACTIONS(731),
     [anon_sym_players] = ACTIONS(731),
     [anon_sym_poi] = ACTIONS(731),
@@ -85575,6 +86360,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(731),
     [anon_sym_resetthat] = ACTIONS(731),
     [anon_sym_resetthese] = ACTIONS(731),
+    [anon_sym_resume] = ACTIONS(731),
     [anon_sym_revoke] = ACTIONS(731),
     [anon_sym_roll] = ACTIONS(731),
     [anon_sym_runclosest] = ACTIONS(731),
@@ -85800,12 +86586,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1235),
     [anon_sym_normal] = ACTIONS(1235),
     [anon_sym_objectives] = ACTIONS(1235),
+    [anon_sym_of] = ACTIONS(1235),
     [anon_sym_off] = ACTIONS(1235),
     [anon_sym_offhand] = ACTIONS(1235),
     [anon_sym_on] = ACTIONS(1235),
     [anon_sym_only] = ACTIONS(1235),
     [anon_sym_operation] = ACTIONS(1235),
     [anon_sym_outline] = ACTIONS(1235),
+    [anon_sym_pause] = ACTIONS(1235),
     [anon_sym_player] = ACTIONS(1235),
     [anon_sym_players] = ACTIONS(1235),
     [anon_sym_poi] = ACTIONS(1235),
@@ -85823,6 +86611,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1235),
     [anon_sym_resetthat] = ACTIONS(1235),
     [anon_sym_resetthese] = ACTIONS(1235),
+    [anon_sym_resume] = ACTIONS(1235),
     [anon_sym_revoke] = ACTIONS(1235),
     [anon_sym_roll] = ACTIONS(1235),
     [anon_sym_runclosest] = ACTIONS(1235),
@@ -86045,12 +86834,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -86068,6 +86859,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -86298,12 +87090,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1257),
     [anon_sym_normal] = ACTIONS(1257),
     [anon_sym_objectives] = ACTIONS(1257),
+    [anon_sym_of] = ACTIONS(1257),
     [anon_sym_off] = ACTIONS(1257),
     [anon_sym_offhand] = ACTIONS(1257),
     [anon_sym_on] = ACTIONS(1257),
     [anon_sym_only] = ACTIONS(1257),
     [anon_sym_operation] = ACTIONS(1257),
     [anon_sym_outline] = ACTIONS(1257),
+    [anon_sym_pause] = ACTIONS(1257),
     [anon_sym_player] = ACTIONS(1257),
     [anon_sym_players] = ACTIONS(1257),
     [anon_sym_poi] = ACTIONS(1257),
@@ -86321,6 +87115,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1257),
     [anon_sym_resetthat] = ACTIONS(1257),
     [anon_sym_resetthese] = ACTIONS(1257),
+    [anon_sym_resume] = ACTIONS(1257),
     [anon_sym_revoke] = ACTIONS(1257),
     [anon_sym_roll] = ACTIONS(1257),
     [anon_sym_runclosest] = ACTIONS(1257),
@@ -86543,12 +87338,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1270),
     [anon_sym_normal] = ACTIONS(1270),
     [anon_sym_objectives] = ACTIONS(1270),
+    [anon_sym_of] = ACTIONS(1270),
     [anon_sym_off] = ACTIONS(1270),
     [anon_sym_offhand] = ACTIONS(1270),
     [anon_sym_on] = ACTIONS(1270),
     [anon_sym_only] = ACTIONS(1270),
     [anon_sym_operation] = ACTIONS(1270),
     [anon_sym_outline] = ACTIONS(1270),
+    [anon_sym_pause] = ACTIONS(1270),
     [anon_sym_player] = ACTIONS(1270),
     [anon_sym_players] = ACTIONS(1270),
     [anon_sym_poi] = ACTIONS(1270),
@@ -86566,6 +87363,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1270),
     [anon_sym_resetthat] = ACTIONS(1270),
     [anon_sym_resetthese] = ACTIONS(1270),
+    [anon_sym_resume] = ACTIONS(1270),
     [anon_sym_revoke] = ACTIONS(1270),
     [anon_sym_roll] = ACTIONS(1270),
     [anon_sym_runclosest] = ACTIONS(1270),
@@ -86792,12 +87590,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1227),
     [anon_sym_normal] = ACTIONS(1227),
     [anon_sym_objectives] = ACTIONS(1227),
+    [anon_sym_of] = ACTIONS(1227),
     [anon_sym_off] = ACTIONS(1227),
     [anon_sym_offhand] = ACTIONS(1227),
     [anon_sym_on] = ACTIONS(1227),
     [anon_sym_only] = ACTIONS(1227),
     [anon_sym_operation] = ACTIONS(1227),
     [anon_sym_outline] = ACTIONS(1227),
+    [anon_sym_pause] = ACTIONS(1227),
     [anon_sym_player] = ACTIONS(1227),
     [anon_sym_players] = ACTIONS(1227),
     [anon_sym_poi] = ACTIONS(1227),
@@ -86815,6 +87615,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1227),
     [anon_sym_resetthat] = ACTIONS(1227),
     [anon_sym_resetthese] = ACTIONS(1227),
+    [anon_sym_resume] = ACTIONS(1227),
     [anon_sym_revoke] = ACTIONS(1227),
     [anon_sym_roll] = ACTIONS(1227),
     [anon_sym_runclosest] = ACTIONS(1227),
@@ -87041,12 +87842,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1243),
     [anon_sym_normal] = ACTIONS(1243),
     [anon_sym_objectives] = ACTIONS(1243),
+    [anon_sym_of] = ACTIONS(1243),
     [anon_sym_off] = ACTIONS(1243),
     [anon_sym_offhand] = ACTIONS(1243),
     [anon_sym_on] = ACTIONS(1243),
     [anon_sym_only] = ACTIONS(1243),
     [anon_sym_operation] = ACTIONS(1243),
     [anon_sym_outline] = ACTIONS(1243),
+    [anon_sym_pause] = ACTIONS(1243),
     [anon_sym_player] = ACTIONS(1243),
     [anon_sym_players] = ACTIONS(1243),
     [anon_sym_poi] = ACTIONS(1243),
@@ -87064,6 +87867,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1243),
     [anon_sym_resetthat] = ACTIONS(1243),
     [anon_sym_resetthese] = ACTIONS(1243),
+    [anon_sym_resume] = ACTIONS(1243),
     [anon_sym_revoke] = ACTIONS(1243),
     [anon_sym_roll] = ACTIONS(1243),
     [anon_sym_runclosest] = ACTIONS(1243),
@@ -87294,12 +88098,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1247),
     [anon_sym_normal] = ACTIONS(1247),
     [anon_sym_objectives] = ACTIONS(1247),
+    [anon_sym_of] = ACTIONS(1247),
     [anon_sym_off] = ACTIONS(1247),
     [anon_sym_offhand] = ACTIONS(1247),
     [anon_sym_on] = ACTIONS(1247),
     [anon_sym_only] = ACTIONS(1247),
     [anon_sym_operation] = ACTIONS(1247),
     [anon_sym_outline] = ACTIONS(1247),
+    [anon_sym_pause] = ACTIONS(1247),
     [anon_sym_player] = ACTIONS(1247),
     [anon_sym_players] = ACTIONS(1247),
     [anon_sym_poi] = ACTIONS(1247),
@@ -87317,6 +88123,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1247),
     [anon_sym_resetthat] = ACTIONS(1247),
     [anon_sym_resetthese] = ACTIONS(1247),
+    [anon_sym_resume] = ACTIONS(1247),
     [anon_sym_revoke] = ACTIONS(1247),
     [anon_sym_roll] = ACTIONS(1247),
     [anon_sym_runclosest] = ACTIONS(1247),
@@ -87539,12 +88346,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1268),
     [anon_sym_normal] = ACTIONS(1268),
     [anon_sym_objectives] = ACTIONS(1268),
+    [anon_sym_of] = ACTIONS(1268),
     [anon_sym_off] = ACTIONS(1268),
     [anon_sym_offhand] = ACTIONS(1268),
     [anon_sym_on] = ACTIONS(1268),
     [anon_sym_only] = ACTIONS(1268),
     [anon_sym_operation] = ACTIONS(1268),
     [anon_sym_outline] = ACTIONS(1268),
+    [anon_sym_pause] = ACTIONS(1268),
     [anon_sym_player] = ACTIONS(1268),
     [anon_sym_players] = ACTIONS(1268),
     [anon_sym_poi] = ACTIONS(1268),
@@ -87562,6 +88371,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1268),
     [anon_sym_resetthat] = ACTIONS(1268),
     [anon_sym_resetthese] = ACTIONS(1268),
+    [anon_sym_resume] = ACTIONS(1268),
     [anon_sym_revoke] = ACTIONS(1268),
     [anon_sym_roll] = ACTIONS(1268),
     [anon_sym_runclosest] = ACTIONS(1268),
@@ -87792,12 +88602,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1243),
     [anon_sym_normal] = ACTIONS(1243),
     [anon_sym_objectives] = ACTIONS(1243),
+    [anon_sym_of] = ACTIONS(1243),
     [anon_sym_off] = ACTIONS(1243),
     [anon_sym_offhand] = ACTIONS(1243),
     [anon_sym_on] = ACTIONS(1243),
     [anon_sym_only] = ACTIONS(1243),
     [anon_sym_operation] = ACTIONS(1243),
     [anon_sym_outline] = ACTIONS(1243),
+    [anon_sym_pause] = ACTIONS(1243),
     [anon_sym_player] = ACTIONS(1243),
     [anon_sym_players] = ACTIONS(1243),
     [anon_sym_poi] = ACTIONS(1243),
@@ -87815,6 +88627,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1243),
     [anon_sym_resetthat] = ACTIONS(1243),
     [anon_sym_resetthese] = ACTIONS(1243),
+    [anon_sym_resume] = ACTIONS(1243),
     [anon_sym_revoke] = ACTIONS(1243),
     [anon_sym_roll] = ACTIONS(1243),
     [anon_sym_runclosest] = ACTIONS(1243),
@@ -88041,12 +88854,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1261),
     [anon_sym_normal] = ACTIONS(1261),
     [anon_sym_objectives] = ACTIONS(1261),
+    [anon_sym_of] = ACTIONS(1261),
     [anon_sym_off] = ACTIONS(1261),
     [anon_sym_offhand] = ACTIONS(1261),
     [anon_sym_on] = ACTIONS(1261),
     [anon_sym_only] = ACTIONS(1261),
     [anon_sym_operation] = ACTIONS(1261),
     [anon_sym_outline] = ACTIONS(1261),
+    [anon_sym_pause] = ACTIONS(1261),
     [anon_sym_player] = ACTIONS(1261),
     [anon_sym_players] = ACTIONS(1261),
     [anon_sym_poi] = ACTIONS(1261),
@@ -88064,6 +88879,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1261),
     [anon_sym_resetthat] = ACTIONS(1261),
     [anon_sym_resetthese] = ACTIONS(1261),
+    [anon_sym_resume] = ACTIONS(1261),
     [anon_sym_revoke] = ACTIONS(1261),
     [anon_sym_roll] = ACTIONS(1261),
     [anon_sym_runclosest] = ACTIONS(1261),
@@ -88290,12 +89106,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1239),
     [anon_sym_normal] = ACTIONS(1239),
     [anon_sym_objectives] = ACTIONS(1239),
+    [anon_sym_of] = ACTIONS(1239),
     [anon_sym_off] = ACTIONS(1239),
     [anon_sym_offhand] = ACTIONS(1239),
     [anon_sym_on] = ACTIONS(1239),
     [anon_sym_only] = ACTIONS(1239),
     [anon_sym_operation] = ACTIONS(1239),
     [anon_sym_outline] = ACTIONS(1239),
+    [anon_sym_pause] = ACTIONS(1239),
     [anon_sym_player] = ACTIONS(1239),
     [anon_sym_players] = ACTIONS(1239),
     [anon_sym_poi] = ACTIONS(1239),
@@ -88313,6 +89131,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1239),
     [anon_sym_resetthat] = ACTIONS(1239),
     [anon_sym_resetthese] = ACTIONS(1239),
+    [anon_sym_resume] = ACTIONS(1239),
     [anon_sym_revoke] = ACTIONS(1239),
     [anon_sym_roll] = ACTIONS(1239),
     [anon_sym_runclosest] = ACTIONS(1239),
@@ -88539,12 +89358,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1252),
     [anon_sym_normal] = ACTIONS(1252),
     [anon_sym_objectives] = ACTIONS(1252),
+    [anon_sym_of] = ACTIONS(1252),
     [anon_sym_off] = ACTIONS(1252),
     [anon_sym_offhand] = ACTIONS(1252),
     [anon_sym_on] = ACTIONS(1252),
     [anon_sym_only] = ACTIONS(1252),
     [anon_sym_operation] = ACTIONS(1252),
     [anon_sym_outline] = ACTIONS(1252),
+    [anon_sym_pause] = ACTIONS(1252),
     [anon_sym_player] = ACTIONS(1252),
     [anon_sym_players] = ACTIONS(1252),
     [anon_sym_poi] = ACTIONS(1252),
@@ -88562,6 +89383,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1252),
     [anon_sym_resetthat] = ACTIONS(1252),
     [anon_sym_resetthese] = ACTIONS(1252),
+    [anon_sym_resume] = ACTIONS(1252),
     [anon_sym_revoke] = ACTIONS(1252),
     [anon_sym_roll] = ACTIONS(1252),
     [anon_sym_runclosest] = ACTIONS(1252),
@@ -88788,12 +89610,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1231),
     [anon_sym_normal] = ACTIONS(1231),
     [anon_sym_objectives] = ACTIONS(1231),
+    [anon_sym_of] = ACTIONS(1231),
     [anon_sym_off] = ACTIONS(1231),
     [anon_sym_offhand] = ACTIONS(1231),
     [anon_sym_on] = ACTIONS(1231),
     [anon_sym_only] = ACTIONS(1231),
     [anon_sym_operation] = ACTIONS(1231),
     [anon_sym_outline] = ACTIONS(1231),
+    [anon_sym_pause] = ACTIONS(1231),
     [anon_sym_player] = ACTIONS(1231),
     [anon_sym_players] = ACTIONS(1231),
     [anon_sym_poi] = ACTIONS(1231),
@@ -88811,6 +89635,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1231),
     [anon_sym_resetthat] = ACTIONS(1231),
     [anon_sym_resetthese] = ACTIONS(1231),
+    [anon_sym_resume] = ACTIONS(1231),
     [anon_sym_revoke] = ACTIONS(1231),
     [anon_sym_roll] = ACTIONS(1231),
     [anon_sym_runclosest] = ACTIONS(1231),
@@ -89037,12 +89862,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -89060,6 +89887,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -89286,12 +90114,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1268),
     [anon_sym_normal] = ACTIONS(1268),
     [anon_sym_objectives] = ACTIONS(1268),
+    [anon_sym_of] = ACTIONS(1268),
     [anon_sym_off] = ACTIONS(1268),
     [anon_sym_offhand] = ACTIONS(1268),
     [anon_sym_on] = ACTIONS(1268),
     [anon_sym_only] = ACTIONS(1268),
     [anon_sym_operation] = ACTIONS(1268),
     [anon_sym_outline] = ACTIONS(1268),
+    [anon_sym_pause] = ACTIONS(1268),
     [anon_sym_player] = ACTIONS(1268),
     [anon_sym_players] = ACTIONS(1268),
     [anon_sym_poi] = ACTIONS(1268),
@@ -89309,6 +90139,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1268),
     [anon_sym_resetthat] = ACTIONS(1268),
     [anon_sym_resetthese] = ACTIONS(1268),
+    [anon_sym_resume] = ACTIONS(1268),
     [anon_sym_revoke] = ACTIONS(1268),
     [anon_sym_roll] = ACTIONS(1268),
     [anon_sym_runclosest] = ACTIONS(1268),
@@ -89535,12 +90366,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1270),
     [anon_sym_normal] = ACTIONS(1270),
     [anon_sym_objectives] = ACTIONS(1270),
+    [anon_sym_of] = ACTIONS(1270),
     [anon_sym_off] = ACTIONS(1270),
     [anon_sym_offhand] = ACTIONS(1270),
     [anon_sym_on] = ACTIONS(1270),
     [anon_sym_only] = ACTIONS(1270),
     [anon_sym_operation] = ACTIONS(1270),
     [anon_sym_outline] = ACTIONS(1270),
+    [anon_sym_pause] = ACTIONS(1270),
     [anon_sym_player] = ACTIONS(1270),
     [anon_sym_players] = ACTIONS(1270),
     [anon_sym_poi] = ACTIONS(1270),
@@ -89558,6 +90391,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1270),
     [anon_sym_resetthat] = ACTIONS(1270),
     [anon_sym_resetthese] = ACTIONS(1270),
+    [anon_sym_resume] = ACTIONS(1270),
     [anon_sym_revoke] = ACTIONS(1270),
     [anon_sym_roll] = ACTIONS(1270),
     [anon_sym_runclosest] = ACTIONS(1270),
@@ -89784,12 +90618,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1227),
     [anon_sym_normal] = ACTIONS(1227),
     [anon_sym_objectives] = ACTIONS(1227),
+    [anon_sym_of] = ACTIONS(1227),
     [anon_sym_off] = ACTIONS(1227),
     [anon_sym_offhand] = ACTIONS(1227),
     [anon_sym_on] = ACTIONS(1227),
     [anon_sym_only] = ACTIONS(1227),
     [anon_sym_operation] = ACTIONS(1227),
     [anon_sym_outline] = ACTIONS(1227),
+    [anon_sym_pause] = ACTIONS(1227),
     [anon_sym_player] = ACTIONS(1227),
     [anon_sym_players] = ACTIONS(1227),
     [anon_sym_poi] = ACTIONS(1227),
@@ -89807,6 +90643,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1227),
     [anon_sym_resetthat] = ACTIONS(1227),
     [anon_sym_resetthese] = ACTIONS(1227),
+    [anon_sym_resume] = ACTIONS(1227),
     [anon_sym_revoke] = ACTIONS(1227),
     [anon_sym_roll] = ACTIONS(1227),
     [anon_sym_runclosest] = ACTIONS(1227),
@@ -90029,12 +90866,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1261),
     [anon_sym_normal] = ACTIONS(1261),
     [anon_sym_objectives] = ACTIONS(1261),
+    [anon_sym_of] = ACTIONS(1261),
     [anon_sym_off] = ACTIONS(1261),
     [anon_sym_offhand] = ACTIONS(1261),
     [anon_sym_on] = ACTIONS(1261),
     [anon_sym_only] = ACTIONS(1261),
     [anon_sym_operation] = ACTIONS(1261),
     [anon_sym_outline] = ACTIONS(1261),
+    [anon_sym_pause] = ACTIONS(1261),
     [anon_sym_player] = ACTIONS(1261),
     [anon_sym_players] = ACTIONS(1261),
     [anon_sym_poi] = ACTIONS(1261),
@@ -90052,6 +90891,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1261),
     [anon_sym_resetthat] = ACTIONS(1261),
     [anon_sym_resetthese] = ACTIONS(1261),
+    [anon_sym_resume] = ACTIONS(1261),
     [anon_sym_revoke] = ACTIONS(1261),
     [anon_sym_roll] = ACTIONS(1261),
     [anon_sym_runclosest] = ACTIONS(1261),
@@ -90278,12 +91118,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1252),
     [anon_sym_normal] = ACTIONS(1252),
     [anon_sym_objectives] = ACTIONS(1252),
+    [anon_sym_of] = ACTIONS(1252),
     [anon_sym_off] = ACTIONS(1252),
     [anon_sym_offhand] = ACTIONS(1252),
     [anon_sym_on] = ACTIONS(1252),
     [anon_sym_only] = ACTIONS(1252),
     [anon_sym_operation] = ACTIONS(1252),
     [anon_sym_outline] = ACTIONS(1252),
+    [anon_sym_pause] = ACTIONS(1252),
     [anon_sym_player] = ACTIONS(1252),
     [anon_sym_players] = ACTIONS(1252),
     [anon_sym_poi] = ACTIONS(1252),
@@ -90301,6 +91143,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1252),
     [anon_sym_resetthat] = ACTIONS(1252),
     [anon_sym_resetthese] = ACTIONS(1252),
+    [anon_sym_resume] = ACTIONS(1252),
     [anon_sym_revoke] = ACTIONS(1252),
     [anon_sym_roll] = ACTIONS(1252),
     [anon_sym_runclosest] = ACTIONS(1252),
@@ -90527,12 +91370,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1231),
     [anon_sym_normal] = ACTIONS(1231),
     [anon_sym_objectives] = ACTIONS(1231),
+    [anon_sym_of] = ACTIONS(1231),
     [anon_sym_off] = ACTIONS(1231),
     [anon_sym_offhand] = ACTIONS(1231),
     [anon_sym_on] = ACTIONS(1231),
     [anon_sym_only] = ACTIONS(1231),
     [anon_sym_operation] = ACTIONS(1231),
     [anon_sym_outline] = ACTIONS(1231),
+    [anon_sym_pause] = ACTIONS(1231),
     [anon_sym_player] = ACTIONS(1231),
     [anon_sym_players] = ACTIONS(1231),
     [anon_sym_poi] = ACTIONS(1231),
@@ -90550,6 +91395,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1231),
     [anon_sym_resetthat] = ACTIONS(1231),
     [anon_sym_resetthese] = ACTIONS(1231),
+    [anon_sym_resume] = ACTIONS(1231),
     [anon_sym_revoke] = ACTIONS(1231),
     [anon_sym_roll] = ACTIONS(1231),
     [anon_sym_runclosest] = ACTIONS(1231),
@@ -90776,12 +91622,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1235),
     [anon_sym_normal] = ACTIONS(1235),
     [anon_sym_objectives] = ACTIONS(1235),
+    [anon_sym_of] = ACTIONS(1235),
     [anon_sym_off] = ACTIONS(1235),
     [anon_sym_offhand] = ACTIONS(1235),
     [anon_sym_on] = ACTIONS(1235),
     [anon_sym_only] = ACTIONS(1235),
     [anon_sym_operation] = ACTIONS(1235),
     [anon_sym_outline] = ACTIONS(1235),
+    [anon_sym_pause] = ACTIONS(1235),
     [anon_sym_player] = ACTIONS(1235),
     [anon_sym_players] = ACTIONS(1235),
     [anon_sym_poi] = ACTIONS(1235),
@@ -90799,6 +91647,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1235),
     [anon_sym_resetthat] = ACTIONS(1235),
     [anon_sym_resetthese] = ACTIONS(1235),
+    [anon_sym_resume] = ACTIONS(1235),
     [anon_sym_revoke] = ACTIONS(1235),
     [anon_sym_roll] = ACTIONS(1235),
     [anon_sym_runclosest] = ACTIONS(1235),
@@ -91025,12 +91874,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1239),
     [anon_sym_normal] = ACTIONS(1239),
     [anon_sym_objectives] = ACTIONS(1239),
+    [anon_sym_of] = ACTIONS(1239),
     [anon_sym_off] = ACTIONS(1239),
     [anon_sym_offhand] = ACTIONS(1239),
     [anon_sym_on] = ACTIONS(1239),
     [anon_sym_only] = ACTIONS(1239),
     [anon_sym_operation] = ACTIONS(1239),
     [anon_sym_outline] = ACTIONS(1239),
+    [anon_sym_pause] = ACTIONS(1239),
     [anon_sym_player] = ACTIONS(1239),
     [anon_sym_players] = ACTIONS(1239),
     [anon_sym_poi] = ACTIONS(1239),
@@ -91048,6 +91899,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1239),
     [anon_sym_resetthat] = ACTIONS(1239),
     [anon_sym_resetthese] = ACTIONS(1239),
+    [anon_sym_resume] = ACTIONS(1239),
     [anon_sym_revoke] = ACTIONS(1239),
     [anon_sym_roll] = ACTIONS(1239),
     [anon_sym_runclosest] = ACTIONS(1239),
@@ -91274,12 +92126,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1247),
     [anon_sym_normal] = ACTIONS(1247),
     [anon_sym_objectives] = ACTIONS(1247),
+    [anon_sym_of] = ACTIONS(1247),
     [anon_sym_off] = ACTIONS(1247),
     [anon_sym_offhand] = ACTIONS(1247),
     [anon_sym_on] = ACTIONS(1247),
     [anon_sym_only] = ACTIONS(1247),
     [anon_sym_operation] = ACTIONS(1247),
     [anon_sym_outline] = ACTIONS(1247),
+    [anon_sym_pause] = ACTIONS(1247),
     [anon_sym_player] = ACTIONS(1247),
     [anon_sym_players] = ACTIONS(1247),
     [anon_sym_poi] = ACTIONS(1247),
@@ -91297,6 +92151,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1247),
     [anon_sym_resetthat] = ACTIONS(1247),
     [anon_sym_resetthese] = ACTIONS(1247),
+    [anon_sym_resume] = ACTIONS(1247),
     [anon_sym_revoke] = ACTIONS(1247),
     [anon_sym_roll] = ACTIONS(1247),
     [anon_sym_runclosest] = ACTIONS(1247),
@@ -91523,12 +92378,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1257),
     [anon_sym_normal] = ACTIONS(1257),
     [anon_sym_objectives] = ACTIONS(1257),
+    [anon_sym_of] = ACTIONS(1257),
     [anon_sym_off] = ACTIONS(1257),
     [anon_sym_offhand] = ACTIONS(1257),
     [anon_sym_on] = ACTIONS(1257),
     [anon_sym_only] = ACTIONS(1257),
     [anon_sym_operation] = ACTIONS(1257),
     [anon_sym_outline] = ACTIONS(1257),
+    [anon_sym_pause] = ACTIONS(1257),
     [anon_sym_player] = ACTIONS(1257),
     [anon_sym_players] = ACTIONS(1257),
     [anon_sym_poi] = ACTIONS(1257),
@@ -91546,6 +92403,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1257),
     [anon_sym_resetthat] = ACTIONS(1257),
     [anon_sym_resetthese] = ACTIONS(1257),
+    [anon_sym_resume] = ACTIONS(1257),
     [anon_sym_revoke] = ACTIONS(1257),
     [anon_sym_roll] = ACTIONS(1257),
     [anon_sym_runclosest] = ACTIONS(1257),
@@ -91775,12 +92633,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1252),
     [anon_sym_normal] = ACTIONS(1252),
     [anon_sym_objectives] = ACTIONS(1252),
+    [anon_sym_of] = ACTIONS(1252),
     [anon_sym_off] = ACTIONS(1252),
     [anon_sym_offhand] = ACTIONS(1252),
     [anon_sym_on] = ACTIONS(1252),
     [anon_sym_only] = ACTIONS(1252),
     [anon_sym_operation] = ACTIONS(1252),
     [anon_sym_outline] = ACTIONS(1252),
+    [anon_sym_pause] = ACTIONS(1252),
     [anon_sym_player] = ACTIONS(1252),
     [anon_sym_players] = ACTIONS(1252),
     [anon_sym_poi] = ACTIONS(1252),
@@ -91798,6 +92658,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1252),
     [anon_sym_resetthat] = ACTIONS(1252),
     [anon_sym_resetthese] = ACTIONS(1252),
+    [anon_sym_resume] = ACTIONS(1252),
     [anon_sym_revoke] = ACTIONS(1252),
     [anon_sym_roll] = ACTIONS(1252),
     [anon_sym_runclosest] = ACTIONS(1252),
@@ -92023,12 +92884,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1257),
     [anon_sym_normal] = ACTIONS(1257),
     [anon_sym_objectives] = ACTIONS(1257),
+    [anon_sym_of] = ACTIONS(1257),
     [anon_sym_off] = ACTIONS(1257),
     [anon_sym_offhand] = ACTIONS(1257),
     [anon_sym_on] = ACTIONS(1257),
     [anon_sym_only] = ACTIONS(1257),
     [anon_sym_operation] = ACTIONS(1257),
     [anon_sym_outline] = ACTIONS(1257),
+    [anon_sym_pause] = ACTIONS(1257),
     [anon_sym_player] = ACTIONS(1257),
     [anon_sym_players] = ACTIONS(1257),
     [anon_sym_poi] = ACTIONS(1257),
@@ -92046,6 +92909,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1257),
     [anon_sym_resetthat] = ACTIONS(1257),
     [anon_sym_resetthese] = ACTIONS(1257),
+    [anon_sym_resume] = ACTIONS(1257),
     [anon_sym_revoke] = ACTIONS(1257),
     [anon_sym_roll] = ACTIONS(1257),
     [anon_sym_runclosest] = ACTIONS(1257),
@@ -92271,12 +93135,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1223),
     [anon_sym_normal] = ACTIONS(1223),
     [anon_sym_objectives] = ACTIONS(1223),
+    [anon_sym_of] = ACTIONS(1223),
     [anon_sym_off] = ACTIONS(1223),
     [anon_sym_offhand] = ACTIONS(1223),
     [anon_sym_on] = ACTIONS(1223),
     [anon_sym_only] = ACTIONS(1223),
     [anon_sym_operation] = ACTIONS(1223),
     [anon_sym_outline] = ACTIONS(1223),
+    [anon_sym_pause] = ACTIONS(1223),
     [anon_sym_player] = ACTIONS(1223),
     [anon_sym_players] = ACTIONS(1223),
     [anon_sym_poi] = ACTIONS(1223),
@@ -92294,6 +93160,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1223),
     [anon_sym_resetthat] = ACTIONS(1223),
     [anon_sym_resetthese] = ACTIONS(1223),
+    [anon_sym_resume] = ACTIONS(1223),
     [anon_sym_revoke] = ACTIONS(1223),
     [anon_sym_roll] = ACTIONS(1223),
     [anon_sym_runclosest] = ACTIONS(1223),
@@ -92519,12 +93386,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1247),
     [anon_sym_normal] = ACTIONS(1247),
     [anon_sym_objectives] = ACTIONS(1247),
+    [anon_sym_of] = ACTIONS(1247),
     [anon_sym_off] = ACTIONS(1247),
     [anon_sym_offhand] = ACTIONS(1247),
     [anon_sym_on] = ACTIONS(1247),
     [anon_sym_only] = ACTIONS(1247),
     [anon_sym_operation] = ACTIONS(1247),
     [anon_sym_outline] = ACTIONS(1247),
+    [anon_sym_pause] = ACTIONS(1247),
     [anon_sym_player] = ACTIONS(1247),
     [anon_sym_players] = ACTIONS(1247),
     [anon_sym_poi] = ACTIONS(1247),
@@ -92542,6 +93411,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1247),
     [anon_sym_resetthat] = ACTIONS(1247),
     [anon_sym_resetthese] = ACTIONS(1247),
+    [anon_sym_resume] = ACTIONS(1247),
     [anon_sym_revoke] = ACTIONS(1247),
     [anon_sym_roll] = ACTIONS(1247),
     [anon_sym_runclosest] = ACTIONS(1247),
@@ -92767,12 +93637,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1235),
     [anon_sym_normal] = ACTIONS(1235),
     [anon_sym_objectives] = ACTIONS(1235),
+    [anon_sym_of] = ACTIONS(1235),
     [anon_sym_off] = ACTIONS(1235),
     [anon_sym_offhand] = ACTIONS(1235),
     [anon_sym_on] = ACTIONS(1235),
     [anon_sym_only] = ACTIONS(1235),
     [anon_sym_operation] = ACTIONS(1235),
     [anon_sym_outline] = ACTIONS(1235),
+    [anon_sym_pause] = ACTIONS(1235),
     [anon_sym_player] = ACTIONS(1235),
     [anon_sym_players] = ACTIONS(1235),
     [anon_sym_poi] = ACTIONS(1235),
@@ -92790,6 +93662,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1235),
     [anon_sym_resetthat] = ACTIONS(1235),
     [anon_sym_resetthese] = ACTIONS(1235),
+    [anon_sym_resume] = ACTIONS(1235),
     [anon_sym_revoke] = ACTIONS(1235),
     [anon_sym_roll] = ACTIONS(1235),
     [anon_sym_runclosest] = ACTIONS(1235),
@@ -93015,12 +93888,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1239),
     [anon_sym_normal] = ACTIONS(1239),
     [anon_sym_objectives] = ACTIONS(1239),
+    [anon_sym_of] = ACTIONS(1239),
     [anon_sym_off] = ACTIONS(1239),
     [anon_sym_offhand] = ACTIONS(1239),
     [anon_sym_on] = ACTIONS(1239),
     [anon_sym_only] = ACTIONS(1239),
     [anon_sym_operation] = ACTIONS(1239),
     [anon_sym_outline] = ACTIONS(1239),
+    [anon_sym_pause] = ACTIONS(1239),
     [anon_sym_player] = ACTIONS(1239),
     [anon_sym_players] = ACTIONS(1239),
     [anon_sym_poi] = ACTIONS(1239),
@@ -93038,6 +93913,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1239),
     [anon_sym_resetthat] = ACTIONS(1239),
     [anon_sym_resetthese] = ACTIONS(1239),
+    [anon_sym_resume] = ACTIONS(1239),
     [anon_sym_revoke] = ACTIONS(1239),
     [anon_sym_roll] = ACTIONS(1239),
     [anon_sym_runclosest] = ACTIONS(1239),
@@ -93263,12 +94139,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1270),
     [anon_sym_normal] = ACTIONS(1270),
     [anon_sym_objectives] = ACTIONS(1270),
+    [anon_sym_of] = ACTIONS(1270),
     [anon_sym_off] = ACTIONS(1270),
     [anon_sym_offhand] = ACTIONS(1270),
     [anon_sym_on] = ACTIONS(1270),
     [anon_sym_only] = ACTIONS(1270),
     [anon_sym_operation] = ACTIONS(1270),
     [anon_sym_outline] = ACTIONS(1270),
+    [anon_sym_pause] = ACTIONS(1270),
     [anon_sym_player] = ACTIONS(1270),
     [anon_sym_players] = ACTIONS(1270),
     [anon_sym_poi] = ACTIONS(1270),
@@ -93286,6 +94164,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1270),
     [anon_sym_resetthat] = ACTIONS(1270),
     [anon_sym_resetthese] = ACTIONS(1270),
+    [anon_sym_resume] = ACTIONS(1270),
     [anon_sym_revoke] = ACTIONS(1270),
     [anon_sym_roll] = ACTIONS(1270),
     [anon_sym_runclosest] = ACTIONS(1270),
@@ -93511,12 +94390,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1231),
     [anon_sym_normal] = ACTIONS(1231),
     [anon_sym_objectives] = ACTIONS(1231),
+    [anon_sym_of] = ACTIONS(1231),
     [anon_sym_off] = ACTIONS(1231),
     [anon_sym_offhand] = ACTIONS(1231),
     [anon_sym_on] = ACTIONS(1231),
     [anon_sym_only] = ACTIONS(1231),
     [anon_sym_operation] = ACTIONS(1231),
     [anon_sym_outline] = ACTIONS(1231),
+    [anon_sym_pause] = ACTIONS(1231),
     [anon_sym_player] = ACTIONS(1231),
     [anon_sym_players] = ACTIONS(1231),
     [anon_sym_poi] = ACTIONS(1231),
@@ -93534,6 +94415,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1231),
     [anon_sym_resetthat] = ACTIONS(1231),
     [anon_sym_resetthese] = ACTIONS(1231),
+    [anon_sym_resume] = ACTIONS(1231),
     [anon_sym_revoke] = ACTIONS(1231),
     [anon_sym_roll] = ACTIONS(1231),
     [anon_sym_runclosest] = ACTIONS(1231),
@@ -93759,12 +94641,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1227),
     [anon_sym_normal] = ACTIONS(1227),
     [anon_sym_objectives] = ACTIONS(1227),
+    [anon_sym_of] = ACTIONS(1227),
     [anon_sym_off] = ACTIONS(1227),
     [anon_sym_offhand] = ACTIONS(1227),
     [anon_sym_on] = ACTIONS(1227),
     [anon_sym_only] = ACTIONS(1227),
     [anon_sym_operation] = ACTIONS(1227),
     [anon_sym_outline] = ACTIONS(1227),
+    [anon_sym_pause] = ACTIONS(1227),
     [anon_sym_player] = ACTIONS(1227),
     [anon_sym_players] = ACTIONS(1227),
     [anon_sym_poi] = ACTIONS(1227),
@@ -93782,6 +94666,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1227),
     [anon_sym_resetthat] = ACTIONS(1227),
     [anon_sym_resetthese] = ACTIONS(1227),
+    [anon_sym_resume] = ACTIONS(1227),
     [anon_sym_revoke] = ACTIONS(1227),
     [anon_sym_roll] = ACTIONS(1227),
     [anon_sym_runclosest] = ACTIONS(1227),
@@ -94007,12 +94892,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1243),
     [anon_sym_normal] = ACTIONS(1243),
     [anon_sym_objectives] = ACTIONS(1243),
+    [anon_sym_of] = ACTIONS(1243),
     [anon_sym_off] = ACTIONS(1243),
     [anon_sym_offhand] = ACTIONS(1243),
     [anon_sym_on] = ACTIONS(1243),
     [anon_sym_only] = ACTIONS(1243),
     [anon_sym_operation] = ACTIONS(1243),
     [anon_sym_outline] = ACTIONS(1243),
+    [anon_sym_pause] = ACTIONS(1243),
     [anon_sym_player] = ACTIONS(1243),
     [anon_sym_players] = ACTIONS(1243),
     [anon_sym_poi] = ACTIONS(1243),
@@ -94030,6 +94917,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1243),
     [anon_sym_resetthat] = ACTIONS(1243),
     [anon_sym_resetthese] = ACTIONS(1243),
+    [anon_sym_resume] = ACTIONS(1243),
     [anon_sym_revoke] = ACTIONS(1243),
     [anon_sym_roll] = ACTIONS(1243),
     [anon_sym_runclosest] = ACTIONS(1243),
@@ -94255,12 +95143,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1268),
     [anon_sym_normal] = ACTIONS(1268),
     [anon_sym_objectives] = ACTIONS(1268),
+    [anon_sym_of] = ACTIONS(1268),
     [anon_sym_off] = ACTIONS(1268),
     [anon_sym_offhand] = ACTIONS(1268),
     [anon_sym_on] = ACTIONS(1268),
     [anon_sym_only] = ACTIONS(1268),
     [anon_sym_operation] = ACTIONS(1268),
     [anon_sym_outline] = ACTIONS(1268),
+    [anon_sym_pause] = ACTIONS(1268),
     [anon_sym_player] = ACTIONS(1268),
     [anon_sym_players] = ACTIONS(1268),
     [anon_sym_poi] = ACTIONS(1268),
@@ -94278,6 +95168,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1268),
     [anon_sym_resetthat] = ACTIONS(1268),
     [anon_sym_resetthese] = ACTIONS(1268),
+    [anon_sym_resume] = ACTIONS(1268),
     [anon_sym_revoke] = ACTIONS(1268),
     [anon_sym_roll] = ACTIONS(1268),
     [anon_sym_runclosest] = ACTIONS(1268),
@@ -94503,12 +95394,14 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_noon] = ACTIONS(1261),
     [anon_sym_normal] = ACTIONS(1261),
     [anon_sym_objectives] = ACTIONS(1261),
+    [anon_sym_of] = ACTIONS(1261),
     [anon_sym_off] = ACTIONS(1261),
     [anon_sym_offhand] = ACTIONS(1261),
     [anon_sym_on] = ACTIONS(1261),
     [anon_sym_only] = ACTIONS(1261),
     [anon_sym_operation] = ACTIONS(1261),
     [anon_sym_outline] = ACTIONS(1261),
+    [anon_sym_pause] = ACTIONS(1261),
     [anon_sym_player] = ACTIONS(1261),
     [anon_sym_players] = ACTIONS(1261),
     [anon_sym_poi] = ACTIONS(1261),
@@ -94526,6 +95419,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_resetclosest] = ACTIONS(1261),
     [anon_sym_resetthat] = ACTIONS(1261),
     [anon_sym_resetthese] = ACTIONS(1261),
+    [anon_sym_resume] = ACTIONS(1261),
     [anon_sym_revoke] = ACTIONS(1261),
     [anon_sym_roll] = ACTIONS(1261),
     [anon_sym_runclosest] = ACTIONS(1261),
