@@ -1797,6 +1797,10 @@
     "named": false
   },
   {
+    "type": "mob.inventory",
+    "named": false
+  },
+  {
     "type": "modifier",
     "named": false
   },

@@ -162,7 +162,7 @@ item contents container.50 hotbar.7 inventory.* enderchest.$(macro) villager.5 h
 	weapon weapon.mainhand weapon.offhand \
 	armor.head armor.chest armor.legs armor.feet armor.body \
 	horse.saddle horse.chest \
-	player.cursor player.crafting.2
+	player.cursor player.crafting.2 mob.inventory.6
 
 ------------------
 
@@ -194,5 +194,7 @@ item contents container.50 hotbar.7 inventory.* enderchest.$(macro) villager.5 h
     (item_slot)
     (backslash)
     (item_slot)
+    (item_slot
+      (integer))
     (item_slot
       (integer))))

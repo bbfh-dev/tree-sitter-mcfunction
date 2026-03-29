@@ -1501,6 +1501,23 @@
           "members": [
             {
               "type": "STRING",
+              "value": "mob.inventory"
+            },
+            {
+              "type": "STRING",
+              "value": "."
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_item_slot_identifier"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
               "value": "enderchest"
             },
             {

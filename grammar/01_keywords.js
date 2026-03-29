@@ -81,6 +81,7 @@ module.exports = {
 			seq("container", ".", $._item_slot_identifier),
 			seq("hotbar", ".", $._item_slot_identifier),
 			seq("inventory", ".", $._item_slot_identifier),
+			seq("mob.inventory", ".", $._item_slot_identifier),
 			seq("enderchest", ".", $._item_slot_identifier),
 			token(seq("villager", ".", /[\*0-9]+/)),
 			token(seq("horse", ".", /[\*0-9]+/)),
