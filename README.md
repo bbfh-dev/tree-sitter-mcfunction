@@ -1,6 +1,6 @@
 # Tree-sitter for MCFunction
 
-Tree-sitter grammar for Minecraft 1.21.11+ data pack function language.
+Tree-sitter grammar for modern Minecraft data pack function language. Supports 26.1 and earlier versions.
 
 - [x] Supports macros.[⁽¹⁾](#1-macros)
 - [x] Tested on `>146,314` lines of code.[⁽²⁾](#2-testing)
