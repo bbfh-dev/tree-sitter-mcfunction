@@ -46,6 +46,36 @@ return {
 }
 ```
 
+> [!IMPORTANT]
+> [neovim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) has been archived as of April 4, 2026. You **may** need to use a slightly different config instead:
+>
+> ```lua
+> return {
+>     "bbfh-dev/tree-sitter-mcfunction",
+>     config = function()
+>         vim.api.nvim_create_autocmd("User", {
+>             pattern = "TSUpdate",
+>             callback = function()
+>                 require("nvim-treesitter.parsers").mcfunction = {
+>                     install_info = {
+>                         url = "https://github.com/bbfh-dev/tree-sitter-mcfunction",
+>                         files = { "src/parser.c" },
+>                         branch = "main",
+>                         queries = "queries/mcfunction",
+>                     },
+>                 }
+>             end,
+>         })
+>
+>         vim.filetype.add({
+>             extension = {
+>                 mcfunction = "mcfunction",
+>             },
+>         })
+>     end,
+> }
+> ```
+
 If needed, run: `:TSInstall mcfunction`.
 
 # Other editors

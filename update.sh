@@ -11,6 +11,7 @@ tree-sitter version $VERSION
 npx tree-sitter-cli@0.26.7 generate
 cargo test
 ts_query_ls check -f queries/
-git commit -am "Release $VERSION"
-git tag -- v$VERSION
+input=$(gum input)
+git commit -am "Release $VERSION\n\n$input"
+git tag -m "$input" -- v$VERSION
 git push --tags origin main
