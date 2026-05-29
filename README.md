@@ -23,7 +23,7 @@ For **Neovim 0.12** and later:
 
 ```lua
 -- Install the package
-vim.pack.add { { src = 'https://github.com/bbfh-dev/tree-sitter-mcfunction' } }
+vim.pack.add { 'https://github.com/bbfh-dev/tree-sitter-mcfunction' }
 
 -- Add TS configuration
 vim.api.nvim_create_autocmd('User', {
