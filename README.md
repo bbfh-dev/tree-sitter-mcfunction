@@ -19,9 +19,39 @@ If you have any issues with parsing/highlighting, feel free to [create an issue]
 
 # Neovim installation
 
-Using lazy:
+For **Neovim 0.12** and later:
 
 ```lua
+-- Install the package
+vim.pack.add { { src = 'https://github.com/bbfh-dev/tree-sitter-mcfunction' } }
+
+-- Add TS configuration
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'TSUpdate',
+  callback = function()
+    require('nvim-treesitter.parsers').mcfunction = {
+      install_info = {
+        url = 'https://github.com/bbfh-dev/tree-sitter-mcfunction',
+        files = { 'src/parser.c' },
+        branch = 'main',
+        queries = 'queries/mcfunction',
+      },
+    }
+  end,
+})
+
+-- Create an mcfunction extension if it doesn't exist yet
+vim.filetype.add {
+  extension = {
+    mcfunction = 'mcfunction',
+  },
+}
+```
+
+For **Neovim 0.11** and earlier:
+
+```lua
+-- Using lazy.nvim (adapt to package manager of your liking)
 return {
     "bbfh-dev/tree-sitter-mcfunction",
     config = function()
@@ -45,36 +75,6 @@ return {
     end,
 }
 ```
-
-> [!IMPORTANT]
-> [neovim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) has been archived as of April 4, 2026. You **may** need to use a slightly different config instead:
->
-> ```lua
-> return {
->     "bbfh-dev/tree-sitter-mcfunction",
->     config = function()
->         vim.api.nvim_create_autocmd("User", {
->             pattern = "TSUpdate",
->             callback = function()
->                 require("nvim-treesitter.parsers").mcfunction = {
->                     install_info = {
->                         url = "https://github.com/bbfh-dev/tree-sitter-mcfunction",
->                         files = { "src/parser.c" },
->                         branch = "main",
->                         queries = "queries/mcfunction",
->                     },
->                 }
->             end,
->         })
->
->         vim.filetype.add({
->             extension = {
->                 mcfunction = "mcfunction",
->             },
->         })
->     end,
-> }
-> ```
 
 If needed, run: `:TSInstall mcfunction`.
 
